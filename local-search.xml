@@ -11,6 +11,12 @@
     <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">其实想这样搭个博客已经很久了，原本预定的是高考完就搭的，<br>但是由于当时的懒癌，以及状态的未能调整，导致咕到现在。<br></code></pre></td></tr></table></figure><p>其实远没有想象中的呢么难(指搭blog)。但是还是一直咕到了现在，这个寒假也是，感觉学了好多东西，但好多都是浅浅一瞥，未能深入进行。大部分的时间还都是浪费了，这样不好。<br>然后我看到<a href="https://xorex.space/">xorex</a>的blog，看到了他的寒假计划，忽然觉得自己的寒假太空虚了，以及确实需要一个东西来记录并鞭策一下自己。</p><p>想想，寒假都干了些什么呢？   </p><blockquote><ul><li>学了一点高数下（只有一点   </li><li>学了py的基础语法，通过外源库写了几个小工具</li><li>学了些OpenGL相关的东西，然后由于配置的是工程环境便学了些工程相关的东西（学的太少了感觉很快就会忘</li><li>学了博弈论，这原本是和两位学长组队时就定的目标，但是当时一知半解，于是寒假进行了比较深入的认知</li><li>dp的进阶，dp这块在高中确实没怎么学过，遇到dp的题一般都是靠直觉，寒假里花了几天看了单调队列优化以及斜率优化等，然后也看了些状压以及数位dp，可能还需要一定量的刷题才能更加牢固</li><li>由于辅导员发了电商模拟赛便花了两天找素材并准备学习做app，然后发现别人都是从去年10月就准备的便放弃了(不过学习了如何把py部署至移动端，可能还算有点收获？)</li><li>和寒假新认识的朋友一起画画，大概是聪2月20号左右开始的吧，每天有大概1h，目前是在练习抓型（用csi来切物体的形体</li></ul></blockquote><hr><p>啊，大概发现问题了<br>自己学的东西明明<strong>很少</strong>，很多时间都用来划水了(<em>nier二三周目？VA-11 Hall-A？<del>哦对，你写了个记录cyberpunk里不认识的单词的py小工具然后完成后就不再玩了？？</del></em>)，但是由于面比较广(广？)，就造成了一种学的很多的错觉。</p><p><strong>实际上你划水划了一寒假啊</strong></p><p><img src="https://s3.ax1x.com/2021/02/27/6SX50s.jpg"></p><blockquote><p>曾和老裴说过，非常怀念高四的生活，因为呢一段时间有帮助自己的老师们，有一同学习的同学们，有着可以为之而奋斗的目标。</p><p>你在大学里做到了高四的多少呢？</p></blockquote><p>啊，忽然想起来，这是记于博客初创，不是自省帖子。<br>呢么记于blog的开始，希望能在大学期间能有高四的努力(<del>加速卷</del>)。</p><p>毕竟<br><img src="https://s3.ax1x.com/2021/02/27/6SX7t0.png"></p>]]></content>
     
     
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
     
     <tags>
       
@@ -29,6 +35,14 @@
     
     <content type="html"><![CDATA[<p>我们所研究的博弈，实际上是一种组合游戏。这是一种双人之间进行的公平的完全信息博弈,并且一定可以在有限步数内结束。<br>所以在双方都采取最优策略的前提下,一个状态要么是必胜态要么是必败态,没有第三种情况.<br>而判定必胜态和必败态最原始的方法就是:</p><ul><li>必胜态可以转移到必败态.</li><li>必败态只能转移到必胜态.</li><li>终止状态的胜负需由规则而定,多数是无法操作者败.</li></ul><p>假如把每一个状态都当作无向图中的一个点，状态和状态之间的转移为点之间的边，<br>呢么可以将这个组合游戏看作是一个有向图游戏(状态转移图)<br>在此我们引入SG函数，SG[i]=mex(i的子状态)。理解上可以把SG当作一个状态(i)的总结。<br>mex(ai)运算返回不存在于a数组中最小的非负数。(例:max(0,1,2,4,6)=3)</p><blockquote><p>我在最开始学习的时候认为SG函数以及mex运算只是为了区别0(通常设为必败态)与非0。但实际上理解后发现，<br>SG的非零取值所代表的不同状态不同。<br>并且假如一个状态的SG为i，呢么从0~i-1的状态都能同过该状态一步达到。<br>因此假如有多个游戏(也就是多个的有向图)，我们通过异或可以得到总局面的SG值。</p></blockquote><p>为什么呢，首先我们知道，对手将一个游戏转到了某种状态，你可以在其他的游戏中转到相同的状态，<br>假如你每一次都能做到相同的操作。呢么就是必胜的。<br>异或操作可以判别多种状态之间的联系，假如一个游戏和另一个游戏拥有部分相同的可以转到状态，异或操作可以将其抵消。<br>好了，我们已经学到了博弈游戏可以通过SG函数来进行推演，也了解到了SG函数的递推方式。<br>已经可以做一些凭依于SG函数的暴力DP题目了。<br>但是博弈更多的，是复杂的情况，复杂的通过SG递推方式可以完成任务但是复杂度过高(所以可以将SG递推理解成博弈里的暴力(雾))<br>（当然也有可能是需要将原问题进行转化转化成便于进行SG递推的形式(比较难。<del>不对，是非常难</del>)<br>所以更多的情况下我们需要找规律(打表)， <strong>或者总结一些泛用的博弈游戏模型：</strong></p><h3 id="巴什博奕："><a href="#巴什博奕：" class="headerlink" title="巴什博奕："></a>巴什博奕：</h3><pre><code>有n个石子，每人可以随便拿1−m个石子，不能拿的人为败者，问谁会胜利</code></pre><p>设当前的石子数为n=k∗(m+1)+r：先手会首先拿走r个，接下来假设后手拿走x个，先手会拿走m+1−x个，这样博弈下去后手最终一定失败<br>设当前的石子数为n=k∗(m+1)：假设先手拿x个，后手一定会拿m+1−x个，这样下去先手一定失败</p><h3 id="nim游戏"><a href="#nim游戏" class="headerlink" title="nim游戏"></a>nim游戏</h3><pre><code>有n堆石子，两个人可以从任意一堆石子中拿任意多个石子(不能不拿)，没法拿的人失败。问谁会胜利</code></pre><p>当n堆石子的数量异或和等于0时，先手必胜，否则先手必败</p><h3 id="Anti-Nim游戏"><a href="#Anti-Nim游戏" class="headerlink" title="Anti-Nim游戏"></a>Anti-Nim游戏</h3><pre><code>有n堆石子，两个人可以从任意一堆石子中拿任意多个石子(不能不拿)，拿走最后一个石子的人失败。问谁会胜利</code></pre><p>当每堆石子都只有一个，且游戏的SG值为0，或者至少一堆石子多于一个，且游戏的SG值不为0，先手必胜</p><h3 id="Multi-Nim游戏"><a href="#Multi-Nim游戏" class="headerlink" title="Multi-Nim游戏"></a>Multi-Nim游戏</h3><pre><code>有n堆石子，两个人可以从任意一堆石子中拿任意多个石子(不能不拿)或把一堆数量不少于2石子分为两堆不为空的石子，没法拿的人失败。问谁会胜利</code></pre><p>通过SG函数操作可以模拟，但是观察后可发现性质：</p><blockquote><p>SG(x)=x−1 (x%4 == 0)<br>SG(x)=x   (x%4 == 1||2)<br>SG(x)=x+1 (x%4 == 3)</p></blockquote><h3 id="斐波那契博弈"><a href="#斐波那契博弈" class="headerlink" title="斐波那契博弈"></a>斐波那契博弈</h3><pre><code>有一堆石子，先取者可以取走任意多个，但不能全取完，以后每人取的石子数不能超过上个人的两倍</code></pre><p>先手必败，当且仅当石子数为斐波那契数（神奇</p><h3 id="威佐夫博弈"><a href="#威佐夫博弈" class="headerlink" title="威佐夫博弈"></a>威佐夫博弈</h3><pre><code>有两堆石子，每次每个人可以从任意一堆石子中取任意多的石子或者从两堆石子中取同样多的石子，不能取的人输，分析谁会获得胜利</code></pre><p>假设两堆石子为(x,y)（其中x&lt;y）,那么先手必败，当且仅当(y−x)∗((√5+1)/2)=x ((√5+1)/2) 其实就是1.618，比较神奇<br>证明需要Betty定理，当时看的不太懂</p><h3 id="Every-SG游戏"><a href="#Every-SG游戏" class="headerlink" title="Every-SG游戏"></a>Every-SG游戏</h3><pre><code>给定一张无向图，上面有一些棋子，每人每次必须将可以移动的棋子进行移动，不能移动的人输</code></pre><p>题目中的要求实际是“不论前面输与否，只要最后一个棋子胜利，那么就算胜利”。这样的话，能赢得游戏必须赢<br>对于Every-SG游戏先手必胜当且仅当单一游戏中最大的step为奇数。<br>定理显然：最大的单一游戏步数如果是奇数的话那么肯定是先手取得进行最后一步，否则一定是对手取走最后一个棋子。</p><h3 id="树的删边游戏"><a href="#树的删边游戏" class="headerlink" title="树的删边游戏"></a>树的删边游戏</h3><pre><code>给出一个有 N个点的树，有一个点作为树的根节点。游戏者轮流从树中删去边，删去一条边后，不与根节点相连的部分将被移走。谁无法移动谁输。</code></pre><p>结论：叶子节点的SG值为0；中间节点的SG值为它的所有子节点的SG值加1后的异或和。</p><h3 id="无向图的删边游戏"><a href="#无向图的删边游戏" class="headerlink" title="无向图的删边游戏"></a>无向图的删边游戏</h3><pre><code>一个无相联通图，有一个点作为图的根。游戏者轮流从图中删去边，删去一条边后，不与根节点相连的部分将被移走。谁无路可走谁输。</code></pre><h5 id="Fusion-Principle定理："><a href="#Fusion-Principle定理：" class="headerlink" title="Fusion Principle定理："></a>Fusion Principle定理：</h5><p>我们可以对无向图做如下改动：将图中的任意一个偶环缩成一个新点，任意一个奇环缩成一个新点加一个新边；<br>所有连到原先环上的边全部改为与新点相连。这样的改动不会影响图的SG值。<br>定理显然。将图变换后就变为树的删边游戏了</p>]]></content>
     
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>博弈论</category>
+      
+    </categories>
     
     
     <tags>
@@ -50,6 +64,12 @@
     
     <content type="html"><![CDATA[<h1 id="This-is-the-test"><a href="#This-is-the-test" class="headerlink" title="This is the test"></a>This is the test</h1><h1 id="my-first-blog"><a href="#my-first-blog" class="headerlink" title="my first blog"></a>my first blog</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">代码框部分<br></code></pre></td></tr></table></figure><p><a href="https://www.cnblogs.com/xrblog/p/11585885.html">超链接</a>部分(指向的是帮助我搭好的blog)</p><p><img src="https://s2.ax1x.com/2019/01/21/kPlYAP.jpg" alt="添加的图片，也是感慨" title="千万别！"></p><blockquote><p>测试完了，去水去了。<br><del>老懒癌了</del></p></blockquote>]]></content>
     
+    
+    <categories>
+      
+      <category>test</category>
+      
+    </categories>
     
     
     <tags>
