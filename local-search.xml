@@ -29,31 +29,6 @@
   
   
   <entry>
-    <title>记于博客初创</title>
-    <link href="/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/"/>
-    <url>/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/</url>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">其实想这样搭个博客已经很久了，原本预定的是高考完就搭的，<br>但是由于当时的懒癌，以及状态的未能调整，导致咕到现在。<br></code></pre></td></tr></table></figure><p>其实远没有想象中的呢么难(指搭blog)。但是还是一直咕到了现在，这个寒假也是，感觉学了好多东西，但好多都是浅浅一瞥，未能深入进行。大部分的时间还都是浪费了，这样不好。<br>然后我看到<a href="https://xorex.space/">xorex</a>的blog，看到了他的寒假计划，忽然觉得自己的寒假太空虚了，以及确实需要一个东西来记录并鞭策一下自己。</p><p>想想，寒假都干了些什么呢？   </p><blockquote><ul><li>学了一点高数下（只有一点   </li><li>学了py的基础语法，通过外源库写了几个小工具</li><li>学了些OpenGL相关的东西，然后由于配置的是工程环境便学了些工程相关的东西（学的太少了感觉很快就会忘</li><li>学了博弈论，这原本是和两位学长组队时就定的目标，但是当时一知半解，于是寒假进行了比较深入的认知</li><li>dp的进阶，dp这块在高中确实没怎么学过，遇到dp的题一般都是靠直觉，寒假里花了几天看了单调队列优化以及斜率优化等，然后也看了些状压以及数位dp，可能还需要一定量的刷题才能更加牢固</li><li>由于辅导员发了电商模拟赛便花了两天找素材并准备学习做app，然后发现别人都是从去年10月就准备的便放弃了(不过学习了如何把py部署至移动端，可能还算有点收获？)</li><li>和寒假新认识的朋友一起画画，大概是聪2月20号左右开始的吧，每天有大概1h，目前是在练习抓型（用csi来切物体的形体</li></ul></blockquote><hr><p>啊，大概发现问题了<br>自己学的东西明明<strong>很少</strong>，很多时间都用来划水了(<em>nier二三周目？VA-11 Hall-A？<del>哦对，你写了个记录cyberpunk里不认识的单词的py小工具然后完成后就不再玩了？？</del></em>)，但是由于面比较广(广？)，就造成了一种学的很多的错觉。</p><p><strong>实际上你划水划了一寒假啊</strong></p><p><img src="https://s3.ax1x.com/2021/02/27/6SX50s.jpg"></p><blockquote><p>曾和老裴说过，非常怀念高四的生活，因为呢一段时间有帮助自己的老师们，有一同学习的同学们，有着可以为之而奋斗的目标。</p><p>你在大学里做到了高四的多少呢？</p></blockquote><p>啊，忽然想起来，这是记于博客初创，不是自省帖子。<br>呢么记于blog的开始，希望能在大学期间能有高四的努力(<del>加速卷</del>)。</p><p>毕竟<br><img src="https://s3.ax1x.com/2021/02/27/6SX7t0.png"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>随笔</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>随笔</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>谈一谈博弈</title>
     <link href="/2021/02/26/%E8%B0%88%E4%B8%80%E8%B0%88%E5%8D%9A%E5%BC%88/"/>
     <url>/2021/02/26/%E8%B0%88%E4%B8%80%E8%B0%88%E5%8D%9A%E5%BC%88/</url>
@@ -75,6 +50,31 @@
       <tag>博弈</tag>
       
       <tag>acm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>记于博客初创</title>
+    <link href="/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/"/>
+    <url>/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">其实想这样搭个博客已经很久了，原本预定的是高考完就搭的，<br>但是由于当时的懒癌，以及状态的未能调整，导致咕到现在。<br></code></pre></td></tr></table></figure><p>其实远没有想象中的呢么难(指搭blog)。但是还是一直咕到了现在，这个寒假也是，感觉学了好多东西，但好多都是浅浅一瞥，未能深入进行。大部分的时间还都是浪费了，这样不好。<br>然后我看到<a href="https://xorex.space/">xorex</a>的blog，看到了他的寒假计划，忽然觉得自己的寒假太空虚了，以及确实需要一个东西来记录并鞭策一下自己。</p><p>想想，寒假都干了些什么呢？   </p><blockquote><ul><li>学了一点高数下（只有一点   </li><li>学了py的基础语法，通过外源库写了几个小工具</li><li>学了些OpenGL相关的东西，然后由于配置的是工程环境便学了些工程相关的东西（学的太少了感觉很快就会忘</li><li>学了博弈论，这原本是和两位学长组队时就定的目标，但是当时一知半解，于是寒假进行了比较深入的认知</li><li>dp的进阶，dp这块在高中确实没怎么学过，遇到dp的题一般都是靠直觉，寒假里花了几天看了单调队列优化以及斜率优化等，然后也看了些状压以及数位dp，可能还需要一定量的刷题才能更加牢固</li><li>由于辅导员发了电商模拟赛便花了两天找素材并准备学习做app，然后发现别人都是从去年10月就准备的便放弃了(不过学习了如何把py部署至移动端，可能还算有点收获？)</li><li>和寒假新认识的朋友一起画画，大概是聪2月20号左右开始的吧，每天有大概1h，目前是在练习抓型（用csi来切物体的形体</li></ul></blockquote><hr><p>啊，大概发现问题了<br>自己学的东西明明<strong>很少</strong>，很多时间都用来划水了(<em>nier二三周目？VA-11 Hall-A？<del>哦对，你写了个记录cyberpunk里不认识的单词的py小工具然后完成后就不再玩了？？</del></em>)，但是由于面比较广(广？)，就造成了一种学的很多的错觉。</p><p><strong>实际上你划水划了一寒假啊</strong></p><p><img src="https://s3.ax1x.com/2021/02/27/6SX50s.jpg"></p><blockquote><p>曾和老裴说过，非常怀念高四的生活，因为呢一段时间有帮助自己的老师们，有一同学习的同学们，有着可以为之而奋斗的目标。</p><p>你在大学里做到了高四的多少呢？</p></blockquote><p>啊，忽然想起来，这是记于博客初创，不是自省帖子。<br>呢么记于blog的开始，希望能在大学期间能有高四的努力(<del>加速卷</del>)。</p><p>毕竟<br><img src="https://s3.ax1x.com/2021/02/27/6SX7t0.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随笔</tag>
       
     </tags>
     
