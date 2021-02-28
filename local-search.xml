@@ -84,5 +84,38 @@
   
   
   
+  <entry>
+    <title>ccpc 2016 C</title>
+    <link href="/2020/11/26/ccpc2016C%20Hdu5963/"/>
+    <url>/2020/11/26/ccpc2016C%20Hdu5963/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>B君在围观一群男生和一群女生玩游戏，具体来说游戏是这样的：</p><blockquote><p>给出一棵n个节点的树，这棵树的每条边有一个权值，这个权值只可能是0或1。 在一局游戏开始时，会确定一个节点作为根。接下来从女生开始，双方轮流进行 操作。<br>当一方操作时，他们需要先选择一个不为根的点，满足该点到其父亲的边权为1; 然后找出这个点到根节点的简单路径，将路径上所有边的权值翻转（即0变成1，1 变成0 )。<br>当一方无法操作时(即所有边的边权均为0)，另一方就获得了胜利。<br>如果在双方均采用最优策略的情况下，女生会获胜，则输出“Girls win!”，否则输 出“Boys win!”。</p></blockquote><p>为了让游戏更有趣味性，在每局之间可能会有修改边权的操作，而且每局游戏指 定的根节点也可能是不同的。<br>具体来说，修改边权和进行游戏的操作一共有m个，具体如下：</p><blockquote><p>“0 x”表示询问对于当前的树，如果以x为根节点开始游戏，哪方会获得胜利。<br>“1 x y z ”表示将x和y之间的边的边权修改为z。<br>B君当然知道怎么做啦！但是他想考考你。</p></blockquote><h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>包含至多5组测试数据。<br>第一行有一个正整数，表示数据的组数。<br>接下来每组数据第一行，有二个空格隔开的正整数n,m，分别表示点的个数，操 作个数。保证 <strong><em>n,m&lt; 40000</em></strong>。<br>接下来n-1行，每行三个整数x,y,z，表示树的一条边。保证 <strong><em>1 &lt; x &lt; n , 1 &lt; y &lt; n, 0 &lt;= z &lt;= 1。</em></strong><br>接下来m行，每行一个操作，含义如前所述。保证一定只会出现前文中提到的两 种格式。<br>对于操作0，保证 <strong><em>1 &lt;= x &lt;= n ;</em></strong> 对于操作1，保证 <strong><em>1 &lt;= x &lt;= n, 1 &lt;= y &lt;= n, 0 &lt;= z &lt;= 1</em></strong>，保证树上存在一条边连接x和y。</p><h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p>对于每组数据的每一个询问操作，输出一行“Boys win!”或者“Girls win!”。</p><h4 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h4><pre><code>22 31 2 00 11 2 1 10 24 111 2 12 3 13 4 00 10 20 30 41 2 1 00 10 20 31 3 4 10 30 4</code></pre><h4 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h4><pre><code>Boys win!Girls win!Girls win!Boys win!Girls win!Boys win!Boys win!Girls win!Girls win!Boys win!Girls win! </code></pre><hr><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>昨天刚刚简单了解了博弈论，虽然看出来了可是却不知道怎么处理，想着将没一条支链的01串怎么抑或成NIM的样子，但实际上完全想偏了<br>正解应该是：对于每个询问的root，我们看它的儿子，如果有一个儿子到root的权值为1，那么先手可以把它翻转，<br>那么后手如果在子树里选，那么这个边肯定要重新被翻转为1，那么先手就一直处于不败。综合考虑所有的root的儿子，<br>也就是看看权值为1的边有多少个，如果有奇数个那么就说明先手必胜，否则后手必胜。<br>可能有着用sg函数的解法或证明，但是连这个都想不到的林泽音就别扯证明了<br><strong>开拓思路，找到子问题，找到必败点，之后向上延申</strong>，这是这一道题目教给我的</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>博弈论</category>
+      
+      <category>题目</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>acm</tag>
+      
+      <tag>博弈</tag>
+      
+      <tag>ccpc</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>

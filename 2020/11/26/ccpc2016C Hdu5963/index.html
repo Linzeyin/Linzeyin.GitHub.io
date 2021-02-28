@@ -15,12 +15,12 @@
   
   <meta name="theme-color" content="#2f4154">
   
-    <meta name="description" content="这仅仅只是一个测试部分，此为摘要">
+    <meta name="description" content="脑力撕烤题">
   
   <meta name="author" content="emmm. . .Lzy?">
   <meta name="keywords" content="">
   
-  <title>test - Lin</title>
+  <title>ccpc 2016 C - Lin</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -177,7 +177,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="test">
+            <span class="h2" id="subtitle" title="ccpc 2016 C">
               
             </span>
 
@@ -187,8 +187,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-01-29 16:17" pubdate>
-        2021年1月29日 下午
+      <time datetime="2020-11-26 11:55" pubdate>
+        2020年11月26日 中午
       </time>
     </span>
   
@@ -199,7 +199,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      39 字
+      899 字
     </span>
   
 
@@ -209,7 +209,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      10
        分钟
     </span>
   
@@ -239,15 +239,55 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">test</h1>
+            <h1 style="display: none">ccpc 2016 C</h1>
             
             <div class="markdown-body">
-              <h1 id="This-is-the-test"><a href="#This-is-the-test" class="headerlink" title="This is the test"></a>This is the test</h1><h1 id="my-first-blog"><a href="#my-first-blog" class="headerlink" title="my first blog"></a>my first blog</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">代码框部分<br></code></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xrblog/p/11585885.html">超链接</a>部分(指向的是帮助我搭好的blog)</p>
-<p><img src="https://s2.ax1x.com/2019/01/21/kPlYAP.jpg" srcset="/img/loading.gif" alt="添加的图片，也是感慨" title="千万别！"></p>
+              <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>B君在围观一群男生和一群女生玩游戏，具体来说游戏是这样的：</p>
 <blockquote>
-<p>测试完了，去水去了。<br><del>老懒癌了</del></p>
+<p>给出一棵n个节点的树，这棵树的每条边有一个权值，这个权值只可能是0或1。 在一局游戏开始时，会确定一个节点作为根。接下来从女生开始，双方轮流进行 操作。<br>当一方操作时，他们需要先选择一个不为根的点，满足该点到其父亲的边权为1; 然后找出这个点到根节点的简单路径，将路径上所有边的权值翻转（即0变成1，1 变成0 )。<br>当一方无法操作时(即所有边的边权均为0)，另一方就获得了胜利。<br>如果在双方均采用最优策略的情况下，女生会获胜，则输出“Girls win!”，否则输 出“Boys win!”。</p>
 </blockquote>
+<p>为了让游戏更有趣味性，在每局之间可能会有修改边权的操作，而且每局游戏指 定的根节点也可能是不同的。<br>具体来说，修改边权和进行游戏的操作一共有m个，具体如下：</p>
+<blockquote>
+<p>“0 x”表示询问对于当前的树，如果以x为根节点开始游戏，哪方会获得胜利。<br>“1 x y z ”表示将x和y之间的边的边权修改为z。<br>B君当然知道怎么做啦！但是他想考考你。</p>
+</blockquote>
+<h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>包含至多5组测试数据。<br>第一行有一个正整数，表示数据的组数。<br>接下来每组数据第一行，有二个空格隔开的正整数n,m，分别表示点的个数，操 作个数。保证 <strong><em>n,m&lt; 40000</em></strong>。<br>接下来n-1行，每行三个整数x,y,z，表示树的一条边。保证 <strong><em>1 &lt; x &lt; n , 1 &lt; y &lt; n, 0 &lt;= z &lt;= 1。</em></strong><br>接下来m行，每行一个操作，含义如前所述。保证一定只会出现前文中提到的两 种格式。<br>对于操作0，保证 <strong><em>1 &lt;= x &lt;= n ;</em></strong> 对于操作1，保证 <strong><em>1 &lt;= x &lt;= n, 1 &lt;= y &lt;= n, 0 &lt;= z &lt;= 1</em></strong>，保证树上存在一条边连接x和y。</p>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p>对于每组数据的每一个询问操作，输出一行“Boys win!”或者“Girls win!”。</p>
+<h4 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h4><pre><code>2
+2 3
+1 2 0
+0 1
+1 2 1 1
+0 2
+4 11
+1 2 1
+2 3 1
+3 4 0
+0 1
+0 2
+0 3
+0 4
+1 2 1 0
+0 1
+0 2
+0 3
+1 3 4 1
+0 3
+0 4
+</code></pre>
+<h4 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h4><pre><code>Boys win!
+Girls win!
+Girls win!
+Boys win!
+Girls win!
+Boys win!
+Boys win!
+Girls win!
+Girls win!
+Boys win!
+Girls win! 
+</code></pre>
+<hr>
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>昨天刚刚简单了解了博弈论，虽然看出来了可是却不知道怎么处理，想着将没一条支链的01串怎么抑或成NIM的样子，但实际上完全想偏了<br>正解应该是：对于每个询问的root，我们看它的儿子，如果有一个儿子到root的权值为1，那么先手可以把它翻转，<br>那么后手如果在子树里选，那么这个边肯定要重新被翻转为1，那么先手就一直处于不败。综合考虑所有的root的儿子，<br>也就是看看权值为1的边有多少个，如果有奇数个那么就说明先手必胜，否则后手必胜。<br>可能有着用sg函数的解法或证明，但是连这个都想不到的林泽音就别扯证明了<br><strong>开拓思路，找到子问题，找到必败点，之后向上延申</strong>，这是这一道题目教给我的</p>
 
             </div>
             <hr>
@@ -257,7 +297,11 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/test/">test</a>
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E5%8D%9A%E5%BC%88%E8%AE%BA/">博弈论</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E5%8D%9A%E5%BC%88%E8%AE%BA/%E9%A2%98%E7%9B%AE/">题目</a>
                     
                   </div>
                 
@@ -265,9 +309,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/testfile/">testfile</a>
-                    
                       <a class="hover-with-bg" href="/tags/acm/">acm</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%9A%E5%BC%88/">博弈</a>
+                    
+                      <a class="hover-with-bg" href="/tags/ccpc/">ccpc</a>
                     
                   </div>
                 
@@ -284,21 +330,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/02/26/%E8%B0%88%E4%B8%80%E8%B0%88%E5%8D%9A%E5%BC%88/">
+                      <a href="/2021/01/29/test/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">谈一谈博弈</span>
+                        <span class="hidden-mobile">test</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2020/11/26/ccpc2016C%20Hdu5963/">
-                        <span class="hidden-mobile">ccpc 2016 C</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
@@ -316,8 +356,8 @@
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'http://example.com/2021/01/29/test/';
-        this.page.identifier = '/2021/01/29/test/';
+        this.page.url = 'http://example.com/2020/11/26/ccpc2016C%20Hdu5963/';
+        this.page.identifier = '/2020/11/26/ccpc2016C%20Hdu5963/';
       };
       Fluid.utils.waitElementVisible('disqus_thread', function () {
         var d = document, s = d.createElement('script');
