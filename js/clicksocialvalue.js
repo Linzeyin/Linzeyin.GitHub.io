@@ -1,19 +1,28 @@
-(function() {
-    var coreSocialistValues = ["到底是在追赶着谁呢", "夜空中有星辰点缀！", "我喜欢星星", "我在干什么啊", "林泽音真的存在吗？", "如梦似幻的衰败", "希望能好好睡一觉"],
-    index = Math.floor(Math.random() * coreSocialistValues.length);
-    
-    document.body.addEventListener('click',
-    function(e) {
-    //过滤a标签
-        if (e.target.tagName == 'A') {
-            return;
-        }
-        var x = e.pageX,
-        y = e.pageY,
-        span = document.createElement('span');
-        span.textContent = coreSocialistValues[index];
-        index = (index + 1) % coreSocialistValues.length;
-        span.style.cssText = ['z-index: 9999999; position: absolute; font-weight: bold; color: #ff6651; top: ', y - 20, 'px; left: ', x, 'px;'].join('');
-        document.body.appendChild(span);
-        animate(span);
-    });
+/* 鼠标特效 */
+var a_idx = 0; 
+jQuery(document).ready(function($) { 
+    $("body").click(function(e) { 
+        var a = new Array("到底是在追赶着谁呢", "夜空中有星辰点缀！", "我喜欢星星", "我在干什么啊", "林泽音真的存在吗？", "如梦似幻的衰败", "希望能好好睡一觉"); 
+        var $i = $("<span/>").text(a[a_idx]); 
+        a_idx = (a_idx + 1) % a.length; 
+        var x = e.pageX, 
+        y = e.pageY; 
+        $i.css({ 
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999, 
+            "top": y - 20, 
+            "left": x, 
+            "position": "absolute", 
+            "font-weight": "bold", 
+            "color": "#ff6651" 
+        }); 
+        $("body").append($i); 
+        $i.animate({ 
+            "top": y - 180, 
+            "opacity": 0 
+        }, 
+        1500, 
+        function() { 
+            $i.remove(); 
+        }); 
+    }); 
+}); 
