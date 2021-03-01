@@ -201,7 +201,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.7k 字
+      1.9k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      18
+      19
        分钟
     </span>
   
@@ -261,6 +261,9 @@
 <h3 id="nim游戏"><a href="#nim游戏" class="headerlink" title="nim游戏"></a>nim游戏</h3><pre><code>有n堆石子，两个人可以从任意一堆石子中拿任意多个石子(不能不拿)，没法拿的人失败。问谁会胜利
 </code></pre>
 <p>当n堆石子的数量异或和等于0时，先手必胜，否则先手必败</p>
+<h3 id="平衡博弈"><a href="#平衡博弈" class="headerlink" title="平衡博弈"></a>平衡博弈</h3><pre><code>最开始有一堆石子，每人每次可以对于一堆石子拿走k(k不大于石子个数的一半)个并将这一堆剩下的石子分为一堆或是石子数任意的两堆。当某一堆石子个数为1时可以直接拿完，问谁会胜利
+</code></pre>
+<p>当n=2或3时后手必胜，其他情况都是先手必胜。<br>显然，当n为偶数时先手可取出两个并将这堆石子分成相同的两堆。当n为奇数时先手可取出三个并将这堆石子分成相同的两堆。重点是达到的两堆相等的状态。</p>
 <h3 id="Anti-Nim游戏"><a href="#Anti-Nim游戏" class="headerlink" title="Anti-Nim游戏"></a>Anti-Nim游戏</h3><pre><code>有n堆石子，两个人可以从任意一堆石子中拿任意多个石子(不能不拿)，拿走最后一个石子的人失败。问谁会胜利
 </code></pre>
 <p>当每堆石子都只有一个，且游戏的SG值为0，或者至少一堆石子多于一个，且游戏的SG值不为0，先手必胜</p>
@@ -538,5 +541,6 @@
   {% include '_third-party/comments/index.swig' %}
   <script type="text/javascript" src="/js/clicklove.js"></script>
   <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  
 </body>
 </html>
