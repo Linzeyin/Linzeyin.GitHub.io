@@ -64,7 +64,9 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
 
 
 <body>
@@ -201,7 +203,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      39 字
+      82 字
     </span>
   
 
@@ -247,6 +249,28 @@
               <h1 id="This-is-the-test"><a href="#This-is-the-test" class="headerlink" title="This is the test"></a>This is the test</h1><h1 id="my-first-blog"><a href="#my-first-blog" class="headerlink" title="my first blog"></a>my first blog</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">代码框部分<br></code></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xrblog/p/11585885.html">超链接</a>部分(指向的是帮助我搭好的blog)</p>
 <p><img src="https://s2.ax1x.com/2019/01/21/kPlYAP.jpg" srcset="/img/loading.gif" alt="添加的图片，也是感慨" title="千万别！"></p>
+
+        <div id="aplayer-cxDkIgxL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-cxDkIgxL"),
+            narrow: false,
+            autoplay: true,
+            showlrc: false,
+            music: {
+              title: "ノクターンとクラゲ",
+              author: "まじ娘",
+              url: "/music/まじ娘 - ノクターンとクラゲ.mp3",
+              pic: "/img/}$TO9$~}PDH@C[RL4X2GLA4.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
 <blockquote>
 <p>测试完了，去水去了。<br><del>老懒癌了</del></p>
 </blockquote>
@@ -498,5 +522,8 @@
 
 
 
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
 </body>
 </html>
