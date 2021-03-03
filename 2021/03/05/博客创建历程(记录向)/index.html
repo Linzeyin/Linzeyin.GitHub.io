@@ -6,6 +6,11 @@
 
 
 <head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
   <link rel="icon" href="/img/favicon.png">
@@ -213,7 +218,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      1.5k 字
     </span>
   
 
@@ -223,7 +228,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      14
+      17
        分钟
     </span>
   
@@ -277,8 +282,12 @@
 <hr>
 <h3 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h3><p>安装<strong>hexo-blog-encrypt</strong> 拓展<br><code>npm install --save hexo-blog-encrypt</code><br>使用方式直接在博文文件头处添加即可</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">test</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2021-01-29 16:17:00</span><br><span class="hljs-attr">password:</span> <span class="hljs-number">123456</span><br><span class="hljs-attr">message:</span> <span class="hljs-string">测试加密，密码为123456，点击此处解密。</span><br><span class="hljs-comment">#输入处加密提示</span><br><span class="hljs-attr">abstract:</span> <span class="hljs-string">这是一个加密文档</span><br><span class="hljs-comment">#简介处加密提示，注意，加密后文章原本摘要会被覆盖</span><br><span class="hljs-attr">wrong_pass_message:</span> <span class="hljs-string">密码错误</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
-
 <hr>
+<h3 id="添加B站视频"><a href="#添加B站视频" class="headerlink" title="添加B站视频`"></a>添加B站视频`</h3><p>先是下载了dplor拓展，然后发现无法获得直接的mp4地址(<em>据说大多数网站是将视频分成多端传输的，以前听Xorex说过抓包获得地址什么的但是自己一窍不通</em>)。便放弃了。<del>(不过意外发现了一个大佬博客，自卑++)</del><br>然后选择简单方式，直接从B站获得分享直链然后加入即可，但是这种方式在我这里出现了播放窗口大小异常的问题，百度之后解决。<br>需要在自己主题的head文件里加入<br><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://api.beixibaobao.com/css/bilibili-player/bofangqi.css&quot;&gt;</code><br>然后再将从B站获得的分享码的<code>iframe</code> 后面加上：<code>class=&quot;iframe_video&quot;</code>即可</p>
+<p>效果：</p>
+<blockquote>
+<p>我的<a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/01/29/test/">test页面</a><br>原博：<a target="_blank" rel="noopener" href="https://blog.beixibaobao.com/wailian-bilibili-videoplay/">北熙赤ちゃん</a></p>
+</blockquote>
 
             </div>
             <hr>
