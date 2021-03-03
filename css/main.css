@@ -1959,3 +1959,27 @@ note-default {
     margin-left: 1rem;
   }
 }
+/*鼠标样式*/
+body {
+  cursor: url("/cur/mouse.cur"), auto !important;
+}
+/* a, */
+img {
+  cursor: url("/cur/butt.cur"), auto !important;
+}
+/*a标签*/
+a:hover {
+  cursor: url("/cur/link.cur"), auto;
+}
+input:hover {
+  cursor: url("/cur/input.cur"), auto;
+}
+/*按钮*/
+button:hover {
+  cursor: url("/cur/butt.cur"), auto;
+}
+/*i标签*/
+i:hover {
+  cursor: url("/cur/link.cur"), auto;
+}
+/*鼠标样式END*/
