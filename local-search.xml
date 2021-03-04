@@ -258,5 +258,36 @@
   
   
   
+  <entry>
+    <title>位运算基础</title>
+    <link href="/2020/07/19/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    <url>/2020/07/19/%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote></blockquote><p>概述：<br>从现代计算机中所有的数据二进制的形式存储在设备中。即0、1两种状态，计算机对 二进制数据 进行的运算都是叫位运算，即将符号位共同参与运算的运算。</p><blockquote><blockquote><p>比如<br>int a = 35;<br>int b = 47;<br>int c = a + b;<br>计算两个数的和，因为在计算机中都是以二进制来进行运算，所以上面我们所给的int变量会在机器内部先转换为二进制在进行相加：<br>35:  0 0 1 0 0 0 1 1<br>47:  0 0 1 0 1 1 1 1<br>————————————————————<br>82:  0 1 0 1 0 0 1 0<br>位运算符直接对二进制的每一位进行操作（所以应该大概好像要快呢么一点点），同时也可以大大简便一些复杂的数位操作。</p></blockquote></blockquote><h2 id="符号："><a href="#符号：" class="headerlink" title="符号："></a>符号：</h2><h3 id="amp"><a href="#amp" class="headerlink" title="&amp;"></a>&amp;</h3><p><strong>与        两个位都为1时，结果才为1</strong><br>            &gt; 比如：0&amp;0=0  0&amp;1=0  1&amp;0=0  1&amp;1=1<br>    用途   （1）lowbit(n)   用于计算n的二进制表示中最低位1出现的位置：   <code>int lowbit(int n)&#123;return n&amp;(-n);&#125;</code><br>           （2）计算n的二进制表示中又几个1：<br>                <figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs excel"><span class="hljs-built_in">int</span> numOfOne(<span class="hljs-built_in">int</span> <span class="hljs-built_in">n</span>)<br>&#123;<br>    <span class="hljs-built_in">int</span> <span class="hljs-built_in">count</span>=<span class="hljs-number">0</span>;<br>    for(<span class="hljs-built_in">count</span>=<span class="hljs-number">0</span>;<span class="hljs-built_in">n</span>!=<span class="hljs-number">0</span>;<span class="hljs-built_in">n</span>=<span class="hljs-built_in">n</span>&amp;(<span class="hljs-built_in">n</span>-<span class="hljs-number">1</span>))<span class="hljs-built_in">count</span>++;<br>    return <span class="hljs-built_in">count</span>;<br>&#125;<br></code></pre></td></tr></table></figure><br>                (当然，也有另一种方式：<br>                <figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs excel"><span class="hljs-built_in">int</span> numOfOne(<span class="hljs-built_in">int</span> <span class="hljs-built_in">n</span>)<br>&#123;<br>    <span class="hljs-built_in">int</span> <span class="hljs-built_in">count</span>=<span class="hljs-number">0</span>;<br>    for(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">32</span>;i++)<br>        <span class="hljs-built_in">if</span>(<span class="hljs-built_in">n</span>&gt;&gt;i&amp;<span class="hljs-number">1</span>) <br>            <span class="hljs-built_in">count</span>++;<br>    return <span class="hljs-built_in">count</span>;<br>&#125;<br></code></pre></td></tr></table></figure><br>           （3）可以用来截取n的最低几位(本质上可以求任何位数，重点是常数的查找)<br>            &gt; 如:    n&amp;0177  (截取最低7位） n&amp;077（截取最低六位）</p><hr><h3 id=""><a href="#" class="headerlink" title="|"></a>|</h3><p><strong>或        两个位都为0时，结果才为0    比如：0|0=0  0|1=1  1|0=1  1|1=1</strong><br>    用途   （1） 将n的二进制中的某几位置1  如： n=n | 017  （将低4位置1）<br>            (2)  取n的二进制位0的个数（高位补0)<br>                <figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs excel"><span class="hljs-built_in">int</span> numOfZero(<span class="hljs-built_in">int</span> <span class="hljs-built_in">n</span>)<br>&#123;<br>    <span class="hljs-built_in">int</span> <span class="hljs-built_in">count</span>=<span class="hljs-number">0</span>;<br>    for(;<span class="hljs-built_in">n</span>+<span class="hljs-number">1</span>;<span class="hljs-built_in">count</span>++,<span class="hljs-built_in">n</span>=<span class="hljs-built_in">n</span>|(<span class="hljs-built_in">n</span>+<span class="hljs-number">1</span>));<br>    return <span class="hljs-built_in">count</span>;<br>&#125;<br></code></pre></td></tr></table></figure><br>                (当然，也有另一种方式：<br>                <figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs excel"><span class="hljs-built_in">int</span> numOfZero(<span class="hljs-built_in">int</span> <span class="hljs-built_in">n</span>)<br>&#123;<br>    <span class="hljs-built_in">int</span> <span class="hljs-built_in">count</span>=<span class="hljs-number">0</span>;<br>    for(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">32</span>;i++)<br>        <span class="hljs-built_in">if</span>(!(<span class="hljs-built_in">n</span>&gt;&gt;i&amp;<span class="hljs-number">1</span>))<br>            <span class="hljs-built_in">count</span>++;<br>    return <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure></p><hr><h3 id="-1"><a href="#-1" class="headerlink" title="^"></a>^</h3><p><strong>异或    两个位相同为0，相异为1      比如：0^0=0  0^1=1  1^0=1  1^1=0</strong></p><blockquote><p>性质:<br>1、交换律   <code>a^b=b^a  </code><br>2、结合律 <code>(a^b)^c=a^(b^c) </code><br>3、对于任何数x，都有 <code>x^x=0，x^0=x  </code><br>4、自反性: <code>a^b^b=a^0=a;</code></p></blockquote><p>用途<br>    1）翻转指定位    比如将数 X=1010 1110 的低4位进行翻转，只需要另找一个数Y，令Y的低4位为1，其余位为0，即Y=0000 1111，然后将X与Y进行异或运算（X^Y=1010 0001）即可得到。<br>    2）与0相异或值不变    例如：1010 1110 ^ 0000 0000 = 1010 1110<br>    3)将两个数翻转  <code>void Swap(int &amp;a, int &amp;b)&#123;a ^= b;b ^= a;a ^= b;&#125;</code></p><hr><h3 id="-2"><a href="#-2" class="headerlink" title="~"></a>~</h3><p><strong>取反    0变1，1变0</strong><br>    用途   生成与系统无关的常数（好吧这其实感觉没多大用但还是说一下？<br>    &gt; 如：n=n&amp;(~077)       将n的最低六位置0  (077二进制表示为111111）</p><p><code>&lt;&lt;</code>    左移    各二进位全部左移若干位，高位丢弃，低位补0,相当于乘上了二<br><code>&gt;&gt;</code>    右移    各二进位全部右移若干位，对无符号数，高位补0，有符号数，各编译器处理方法不一样，有的补符号位（算术右移），有的补0（逻辑右移）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>位运算</category>
+      
+      <category>基础</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>acm</tag>
+      
+      <tag>技巧</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
