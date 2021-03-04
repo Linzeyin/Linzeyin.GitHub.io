@@ -1961,10 +1961,10 @@ note-default {
 }
 /*鼠标样式*/
 body {
-  cursor: url("/cur/mouse.cur"), auto !important;
+  cursor: url("/cur/Arrow.cur"), auto !important;
 }
 div {
-  cursor: url("/cur/mouse.cur"), auto;
+  cursor: url("/cur/Arrow.cur"), auto;
 }
 /* a, */
 img {
