@@ -22,12 +22,12 @@
   
   <meta name="theme-color" content="#2f4154">
   
-    <meta name="description" content="原本应该是很基础的东西，但是由于高中阶段没有认真看黑书而遗失，长期更新">
+    <meta name="description" content="会一直这样下去吗">
   
   <meta name="author" content="emmm. . .Lzy?">
   <meta name="keywords" content="">
   
-  <title>一些细碎的知识点补充 - Lin</title>
+  <title>堕落 - Lin</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -199,12 +199,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/44d718972a176e05d6323a1728d4c7730e9d815b.png@1036w.png') no-repeat center center;
+         style="background: url('/img/53720997_p0.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="一些细碎的知识点补充">
+            <span class="h2" id="subtitle" title="堕落">
               
             </span>
 
@@ -214,8 +214,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-01 13:05" pubdate>
-        2021年3月1日 下午
+      <time datetime="2021-03-03 16:17" pubdate>
+        2021年3月3日 下午
       </time>
     </span>
   
@@ -226,7 +226,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      512 字
+      7 字
     </span>
   
 
@@ -236,7 +236,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      1
        分钟
     </span>
   
@@ -266,26 +266,21 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">一些细碎的知识点补充</h1>
+            <h1 style="display: none">堕落</h1>
             
             <div class="markdown-body">
-              <h3 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h3><blockquote>
-<p>直观用途：o(n)找出数组中每个数右边第一个比它大的元素</p>
-</blockquote>
-<pre><code>题目：给定一个整型数组，数组元素随机无序的，要求打印出所有元素右边第一个大于该元素的值。
-如数组A=[1,5,3,6,4,8,9,10] 输出[5, 6, 6, 8, 8, 9, 10, -1]
-如数组A=[8, 2, 5, 4, 3, 9, 7, 2, 5] 输出[9, 5, 9, 9, 9, -1, -1, 5, -1]
-</code></pre>
-<p>对于类似的这种问题,即可用单调栈来优化.<br> <strong>其实只用到了栈结构，即先进后出。</strong><br>遍历原数组，当遍历过i后将i加入栈。若i+1的值大于栈顶呢么一直出栈即可，直到遇到栈顶大于i+1的值，此时栈顶就是该点一侧的第一个大于该元素的值。<br>每个元素都会进栈一次最多出栈一次，故复杂度为O(2n)即O(n)算法。<br>证明显然，出栈的元素比小于当前点，呢么对之后点就无法起到贡献(因为当前点比出栈的元素大且靠近之后的点)，因此出栈点对后续操作没有影响</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs excel">void Work()<br>&#123;<br>    <span class="hljs-built_in">int</span> Stack[Maxn]=&#123;&#125;,<span class="hljs-built_in">now</span>=<span class="hljs-number">0</span>;//数组实现栈，<span class="hljs-built_in">now</span>是栈顶，入栈前自增，出栈--。<br>    for(<span class="hljs-built_in">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-built_in">n</span>;i++)<br>    &#123;<br>        while(Stack[<span class="hljs-built_in">now</span>]&lt;a[i])<span class="hljs-built_in">now</span>--;<br>        ans[i]=Stack[<span class="hljs-built_in">now</span>];<br>        Stack[++<span class="hljs-built_in">now</span>]=a[i];<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="约瑟夫环"><a href="#约瑟夫环" class="headerlink" title="约瑟夫环"></a>约瑟夫环</h3><blockquote>
-<p>有n个人围成一个圈，每 q个人踢掉一个人，问最后留下来的人是几号？</p>
-</blockquote>
-<p>模拟的复杂度肯定是不合要求的，在此不做多说。<br>以下是 <strong>logn复杂度</strong>求法</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">Ceil</span><span class="hljs-params">(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> x, <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> y)</span> </span>&#123;<span class="hljs-keyword">return</span> x / y + (x % y != <span class="hljs-number">0</span>);&#125;<br><span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">J</span><span class="hljs-params">(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> n, <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> q)</span> </span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> D=<span class="hljs-number">1</span>,<span class="hljs-built_in">end</span>=(q<span class="hljs-number">-1</span>)*n;<br>    <span class="hljs-keyword">while</span>(D&lt;=<span class="hljs-built_in">end</span>)<br>        D=Ceil(q*D,q<span class="hljs-number">-1</span>);<br>    <span class="hljs-keyword">return</span> q*n+<span class="hljs-number">1</span>-D;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> n,q;<br>    <span class="hljs-keyword">while</span>(~<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld%lld&quot;</span>,&amp;n,&amp;q))<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>, J(n,q));<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-<p>具体证明见<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/358255792/answer/974983270">godweiyang的回答</a></p>
-
+              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="null" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="dd7c6222e1b32111f3d82e47c9367f1c83486b2e5a37541bcfec53fe7549dd42">52a9e4d0424f0d8203f10989ab52d82a86b76470425ce0c18071d0c42c31efa9753715f629467e000c7def61bd7220f07aa429b6f425dcc914b5bb0102847aa9f66ec21f695598b001e547102ab463d9367eb6ba9a1f38ce8960b0b8739349be6f0c0b43375d0d65c73317d1ff09ae2e5c6c818d98c31e18970a607309c55356fbd6fcbff544ccf00ef991766a0cfb0977443cf01e8bd9bc559cc0e807cfecd9db97d2ecdb268e05cf3861307517c369ba28842e628cbd601fda6f7250e443d6ee3d487501ffb6a1bc7adb1ef873007f2fe6d4ef0f0fee66946a78f0fb2b2d5e1258e6a470ea73f6637c78b56f270d05bf69b4f33a68e02cf595749ac28be30659e8778e9f3a2c4c8176a830823d3e4caee120dbac316969479b73a5549257fc1e7362b17c00cf91caab5ca066076695d9317550217b1e477989e4df53b44ba4950f8429cdd2cf62da33c034fd27ffa91a94cdce7f7babf84cea46dc0d6bb99d2753f9b1771478272e8acdd2bf17e617e246096923f8b3e4764836a1930e846ddd9f5da213f81eeb5f19f74c6f63b8fa4412dde77bff388486f1bc01c9a070df534497cef33936b99962575ede51e77c928fa0efb8be05ac02f1b30c84af96760a4a7c44da270c01c9417edbd053c10b56c6591c83d983a646718a76c6da958ac82b5b11e89fdc27055334eacc81591ce550fe66d0ae48405d31a7d35383cc4fd66d8c069c504fc95f4738f13ef90ac9d6e2dc5ca98d35b0d6a0504774de4c44aa6e85658efbf5edaf3814deb8cce0e9be5700e74f6722e4022ed8aad1c59258fd324042eb34a56d38a876ed34c22289337d7db5a19da433faf637f53efe811361d260a2cae896ac0af1003e6a6243b03c027311120800b3fc2f74425a9c0cd55f543ba7c8aa45780919aa2baee5439b770e263e21a52e302fc714ceda953e2dc826413230d71d934ef560840ce75a0a4d0239af4ed095c232028fca649e078df4f27a67c7ec94395cef66fee93d748da6a840d6b78b1549ec1ee8635e73abb93069078503cf63ac785cf736607e74e46175040b72186e7dea5ca70ad686a6b37b724bdea7c3f02f0e839b89a10db60a9b13cd814561cf316b4cfca3168e966748250de9f45b471f24c1fa3de1fb37cc2daa19e723bb85ddcead10c2a139d22ba81be3cc11358a466eebac7da946aba01f98a6c9eb028b8c00643bcdc4d7db3ea51347ce2d7251c052202fa89243561841172bbe6cdc664b91deb930abd1b56243b33315875efc017065a3defabf83c74294eae9b68096a5d0910693daaad48c076c0125d9182f08e680128be8b6f051fc01c2a63426a681b825fa4f72abc3aa46480d26a37b22bb49aad998ba89dc336c3964b26b6f9c7faf244fefb76ee10c06ca8402d182979ab66cbe4713fe79ed18dd8c086b8e606de08a1845222916339c569f6339a9ae28212a5f025165c3d7f76d8d65846edb326be24e2fcedb320a4a3f71c7ad884a000a374cb4b0104d84be07b08886655fce047ba2b24ecc434d27d0d4ff913941e1ede40ba1c8b2ff9b92fb43bb0df1fd558c8379a547c334d97f94e861290e4dec8bcd1d26db355b5e35b725ab1c7fe8d0c14f6d0a4f0425e49acdabccbde1116f6266a82b5436f0ecb333303be406387b3893bd19cf2cf4f91a4738a5d0c2c84311de766fcd4db54bb591ff489610896636895a04c84fe2f4966806cca8d8b5eee29bbc37a621beb8a984166684d07cc3fb78f4f60a9497ec82b5454da0eceb94826e393f3f595620da958b3106278edb565f5cddb4922076ec6cefad1be731a39b2cec46a56817702ecead05eb8af87590f950c1bbfe48a7f42a9e078eee5abc55bbb07457a12fb89e0c0439cc8a029d2a5ba24fa31b30bdd6be67e73231d40fc4cdb403b25c9ee65cbe1d5ac61a3d6155c107d3e3ce7975d22b7808648a62f35d463305dc8ff1511440aa407ef1f9938f077cec12172f6e1382c34b3b3f2a7612b7402c9ee84e3d131a6871c670f0e6e92d11430300a8a95d17d596d89d6626c1259966d81ba3c0e60a55bfc77e4e4f55b6f2b9893b0dea16a6138e5209626fa083cf959e55de75acefdb11c138def32e0741dc10c9b8bab5c4b3b2c1770415b908b334fb74635539d6466f40a932c736c340b1ca90e3a6c108cffe343382d35f8c80996a54684ecabe211e5e91377932f8a418f985f753b5d0371962666711b0a56d791d95008b81af3b55c06a07cba699c9bfbb4fe60c7bcc0eb6325cda97a2b4036d9bee9ca973972be49656ee41a26de9bd5079c847c5a31155eff0f59c21142ef09f95e5fd3b998a11e00e5132e2090392575aef2a</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">我究竟是谁呢</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
             </div>
             <hr>
             <div>
@@ -294,9 +289,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-                    
-                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E5%85%B6%E4%BB%96/">其他</a>
+                      <a class="hover-with-bg" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
                     
                   </div>
                 
@@ -304,7 +297,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/acm/">acm</a>
+                      <a class="hover-with-bg" href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8A%A0%E5%AF%86/">加密</a>
                     
                   </div>
                 
@@ -321,9 +316,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/03/03/%E5%A0%95%E8%90%BD/">
+                      <a href="/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">堕落</span>
+                        <span class="hidden-mobile">博客创建历程(记录向)</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -331,8 +326,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/02/28/%E6%A8%A1%E6%9D%BF%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/">
-                        <span class="hidden-mobile">模板补全计划</span>
+                      <a href="/2021/03/01/%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/">
+                        <span class="hidden-mobile">一些细碎的知识点补充</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -353,8 +348,8 @@
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'http://example.com/2021/03/01/%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/';
-        this.page.identifier = '/2021/03/01/%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/';
+        this.page.url = 'http://example.com/2021/03/03/%E5%A0%95%E8%90%BD/';
+        this.page.identifier = '/2021/03/03/%E5%A0%95%E8%90%BD/';
       };
       Fluid.utils.waitElementVisible('disqus_thread', function () {
         var d = document, s = d.createElement('script');
