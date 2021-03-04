@@ -1963,6 +1963,9 @@ note-default {
 body {
   cursor: url("/cur/mouse.cur"), auto !important;
 }
+div {
+  cursor: url("/cur/mouse.cur"), auto;
+}
 /* a, */
 img {
   cursor: url("/cur/butt.cur"), auto !important;
@@ -1982,4 +1985,4 @@ button:hover {
 i:hover {
   cursor: url("/cur/link.cur"), auto;
 }
-/*鼠标样式END*/
+/* 默认光标（通常是一个箭头) */
