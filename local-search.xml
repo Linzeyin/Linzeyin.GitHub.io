@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>数论总结</title>
+    <link href="/2021/03/06/%E6%95%B0%E8%AE%BA/"/>
+    <url>/2021/03/06/%E6%95%B0%E8%AE%BA/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>想着把所有内容都放在模板补全计划里势必会造成文章繁多难受，便新开一档<br>高中阶段曾经学习过一些，不过大多早已忘却，于今日开始补完<br>从基础的开始</p><h3 id="快速乘"><a href="#快速乘" class="headerlink" title="快速乘"></a>快速乘</h3><p>在遇到乘法两个数都很大的情况下，需要通过快速乘来保证在计算过程中间不会溢出<br>网上有多种快速乘方式，我在此仅提供一种</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">mul</span><span class="hljs-params">(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> x,<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> y)</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> z=(<span class="hljs-keyword">long</span> <span class="hljs-keyword">double</span>)x/p*y;<br><span class="hljs-keyword">return</span> ((<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>)x*y-(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>)z*mod+mod)%mod;<br>&#125;<br></code></pre></td></tr></table></figure><p>z就是$ \lfloor x \times y / mod \rfloor $,而我们要求的$ x \times y % mod $ 实际上与$ x \times y - \lfloor x \times y / mod \rfloor \times mod $ 是等价的<br>unsigned long long 保证了就算溢出，$ x \times y $ 和 $ \lfloor x \times y / mod \rfloor \times mod $的差值还是不变，因此即使溢出最后的结果仍然不变。时间复杂度 O(1)</p><p><del>(latex好麻烦，大幅度降低写文效率. . .)</del></p><hr><h3 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h3><p>很简单的原理，在此不做过多叙述<br>chty的一行快速幂：<br><code>long long fast(long long a,long long b)&#123;long long ans=1;for(;b;b&gt;&gt;=1,a=mul(a,a))if(b&amp;1)ans=mul(ans,a);return ans;&#125;</code><br>（syq学长好强啊</p><hr><h3 id="GCD"><a href="#GCD" class="headerlink" title="GCD"></a>GCD</h3><p>这个也算是入门级别的<br><code>inline long long gcd(a,b)&#123;return !b?a:gcd(b,a%b);&#125;</code></p><hr><h3 id="拓展GCD"><a href="#拓展GCD" class="headerlink" title="拓展GCD"></a>拓展GCD</h3><blockquote><p>裴蜀定理：丢番图方程（二元一次，下同）$ a \times x + b \times y = m $有解当且仅当$ m | ( a , b )$</p></blockquote><p>扩展gcd就是在求丢番图方程$ a \times x + b \times y  =gcd(a,b) $的整数解<br>证明：<br>$    a \times x_1 + b \times y_1 = gcd(a,b) $<br>$    b \times x_2 + (a % b) \times y_2 = gcd(b,a % b)$<br>$    因为 gcd(a,b) = gcd(b,a % b) $<br>$    得 a \times x_1 + b \times y_1 = b \times x_2 + ( a % b ) \times y_2 = b \times x_2 + ( a - a / b \times b ) \times y_2 = a \times y_2 + b \times (x_2 - a / b \times y_2 ) $<br>$    所以x_1=y_2,y_1=x_2-a/b \times y_2$<br>$    末状态：b=0,a = gcd(a,b)时，gcd(a,b) \times x=gcd(a,b),得x = 1$<br>代码如下：</p><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sas">void exgcd(int a,int b,int <span class="hljs-variable">&amp;x</span>,int <span class="hljs-variable">&amp;y</span>)<br>&#123;<br>    <span class="hljs-meta">if</span>(b==0)  &#123;<span class="hljs-meta">x</span>=1; y=0; <span class="hljs-meta">return</span>;&#125;<br>    exgcd(b,a<span class="hljs-name">%b</span>,<span class="hljs-meta">x</span>,y);<br>    int t=<span class="hljs-meta">x</span>;<span class="hljs-meta">x</span>=y;y=t-a/b<span class="hljs-comment">*y;</span><br>&#125;<br></code></pre></td></tr></table></figure><hr><p>待更</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>数论</category>
+      
+      <category>总结</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>acm</tag>
+      
+      <tag>技巧</tag>
+      
+      <tag>数论</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>博客创建历程(记录向)</title>
     <link href="/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/"/>
     <url>/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/</url>

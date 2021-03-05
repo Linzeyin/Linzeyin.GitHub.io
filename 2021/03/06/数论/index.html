@@ -22,12 +22,12 @@
   
   <meta name="theme-color" content="#2f4154">
   
-    <meta name="description" content="寒假的末尾搭好了blog，也算是对寒假的总结">
+    <meta name="description" content="数论是纯粹数学的分支之一，主要研究整数的性质。">
   
   <meta name="author" content="emmm. . .Lzy?">
   <meta name="keywords" content="">
   
-  <title>记于博客初创 - Lin</title>
+  <title>数论总结 - Lin</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -199,12 +199,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/favicon.png') no-repeat center center;
+         style="background: url('/img/asdoad.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="记于博客初创">
+            <span class="h2" id="subtitle" title="数论总结">
               
             </span>
 
@@ -214,8 +214,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-02-26 11:55" pubdate>
-        2021年2月26日 中午
+      <time datetime="2021-03-06 01:15" pubdate>
+        2021年3月6日 凌晨
       </time>
     </span>
   
@@ -226,7 +226,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      717 字
+      548 字
     </span>
   
 
@@ -236,7 +236,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      8
        分钟
     </span>
   
@@ -266,33 +266,27 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">记于博客初创</h1>
+            <h1 style="display: none">数论总结</h1>
             
             <div class="markdown-body">
-              <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">其实想这样搭个博客已经很久了，原本预定的是高考完就搭的，<br>但是由于当时的懒癌，以及状态的未能调整，导致咕到现在。<br></code></pre></td></tr></table></figure>
-<p>其实远没有想象中的呢么难(指搭blog)。但是还是一直咕到了现在，这个寒假也是，感觉学了好多东西，但好多都是浅浅一瞥，未能深入进行。大部分的时间还都是浪费了，这样不好。<br>然后我看到<a target="_blank" rel="noopener" href="https://xorex.space/">xorex</a>的blog，看到了他的寒假计划，忽然觉得自己的寒假太空虚了，以及确实需要一个东西来记录并鞭策一下自己。</p>
-<p>想想，寒假都干了些什么呢？   </p>
-<blockquote>
-<ul>
-<li>学了一点高数下（只有一点   </li>
-<li>学了py的基础语法，通过外源库写了几个小工具</li>
-<li>学了些OpenGL相关的东西，然后由于配置的是工程环境便学了些工程相关的东西（学的太少了感觉很快就会忘</li>
-<li>学了博弈论，这原本是和两位学长组队时就定的目标，但是当时一知半解，于是寒假进行了比较深入的认知</li>
-<li>dp的进阶，dp这块在高中确实没怎么学过，遇到dp的题一般都是靠直觉，寒假里花了几天看了单调队列优化以及斜率优化等，然后也看了些状压以及数位dp，可能还需要一定量的刷题才能更加牢固</li>
-<li>由于辅导员发了电商模拟赛便花了两天找素材并准备学习做app，然后发现别人都是从去年10月就准备的便放弃了(不过学习了如何把py部署至移动端，可能还算有点收获？)</li>
-<li>和寒假新认识的朋友一起画画，大概是聪2月20号左右开始的吧，每天有大概1h，目前是在练习抓型（用csi来切物体的形体</li>
-</ul>
-</blockquote>
+              <p>想着把所有内容都放在模板补全计划里势必会造成文章繁多难受，便新开一档<br>高中阶段曾经学习过一些，不过大多早已忘却，于今日开始补完<br>从基础的开始</p>
+<h3 id="快速乘"><a href="#快速乘" class="headerlink" title="快速乘"></a>快速乘</h3><p>在遇到乘法两个数都很大的情况下，需要通过快速乘来保证在计算过程中间不会溢出<br>网上有多种快速乘方式，我在此仅提供一种</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">mul</span><span class="hljs-params">(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> x,<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> y)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> z=(<span class="hljs-keyword">long</span> <span class="hljs-keyword">double</span>)x/p*y;<br>	<span class="hljs-keyword">return</span> ((<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>)x*y-(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>)z*mod+mod)%mod;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>z就是$ \lfloor x \times y / mod \rfloor $,而我们要求的$ x \times y % mod $ 实际上与$ x \times y - \lfloor x \times y / mod \rfloor \times mod $ 是等价的<br>unsigned long long 保证了就算溢出，$ x \times y $ 和 $ \lfloor x \times y / mod \rfloor \times mod $的差值还是不变，因此即使溢出最后的结果仍然不变。时间复杂度 O(1)</p>
+<p><del>(latex好麻烦，大幅度降低写文效率. . .)</del></p>
 <hr>
-<p>啊，大概发现问题了<br>自己学的东西明明<strong>很少</strong>，很多时间都用来划水了(<em>nier二三周目？VA-11 Hall-A？<del>哦对，你写了个记录cyberpunk里不认识的单词的py小工具然后完成后就不再玩了？？</del></em>)，但是由于面比较广(广？)，就造成了一种学的很多的错觉。</p>
-<p><strong>实际上你划水划了一寒假啊</strong></p>
-<p><img src="https://s3.ax1x.com/2021/02/27/6SX50s.jpg" srcset="/img/loading.gif"></p>
-<blockquote>
-<p>曾和老裴说过，非常怀念高四的生活，因为呢一段时间有帮助自己的老师们，有一同学习的同学们，有着可以为之而奋斗的目标。</p>
-<p>你在大学里做到了高四的多少呢？</p>
+<h3 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h3><p>很简单的原理，在此不做过多叙述<br>chty的一行快速幂：<br><code>long long fast(long long a,long long b)&#123;long long ans=1;for(;b;b&gt;&gt;=1,a=mul(a,a))if(b&amp;1)ans=mul(ans,a);return ans;&#125;</code><br>（syq学长好强啊</p>
+<hr>
+<h3 id="GCD"><a href="#GCD" class="headerlink" title="GCD"></a>GCD</h3><p>这个也算是入门级别的<br><code>inline long long gcd(a,b)&#123;return !b?a:gcd(b,a%b);&#125;</code></p>
+<hr>
+<h3 id="拓展GCD"><a href="#拓展GCD" class="headerlink" title="拓展GCD"></a>拓展GCD</h3><blockquote>
+<p>裴蜀定理：丢番图方程（二元一次，下同）$ a \times x + b \times y = m $有解当且仅当$ m | ( a , b )$</p>
 </blockquote>
-<p>啊，忽然想起来，这是记于博客初创，不是自省帖子。<br>呢么记于blog的开始，希望能在大学期间能有高四的努力(<del>加速卷</del>)。</p>
-<p>毕竟<br><img src="https://s3.ax1x.com/2021/02/27/6SX7t0.png" srcset="/img/loading.gif"></p>
+<p>扩展gcd就是在求丢番图方程$ a \times x + b \times y  =gcd(a,b) $的整数解<br>证明：<br>$    a \times x_1 + b \times y_1 = gcd(a,b) $<br>$    b \times x_2 + (a % b) \times y_2 = gcd(b,a % b)$<br>$    因为 gcd(a,b) = gcd(b,a % b) $<br>$    得 a \times x_1 + b \times y_1 = b \times x_2 + ( a % b ) \times y_2 = b \times x_2 + ( a - a / b \times b ) \times y_2 = a \times y_2 + b \times (x_2 - a / b \times y_2 ) $<br>$    所以x_1=y_2,y_1=x_2-a/b \times y_2$<br>$    末状态：b=0,a = gcd(a,b)时，gcd(a,b) \times x=gcd(a,b),得x = 1$<br>代码如下：</p>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sas">void exgcd(int a,int b,int <span class="hljs-variable">&amp;x</span>,int <span class="hljs-variable">&amp;y</span>)<br>&#123;<br>    <span class="hljs-meta">if</span>(b==0)  &#123;<span class="hljs-meta">x</span>=1; y=0; <span class="hljs-meta">return</span>;&#125;<br>    exgcd(b,a<span class="hljs-name">%b</span>,<span class="hljs-meta">x</span>,y);<br>    int t=<span class="hljs-meta">x</span>;<span class="hljs-meta">x</span>=y;y=t-a/b<span class="hljs-comment">*y;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<hr>
+<p>待更</p>
 
             </div>
             <hr>
@@ -302,7 +296,11 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E8%AE%BA/">数论</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E8%AE%BA/%E6%80%BB%E7%BB%93/">总结</a>
                     
                   </div>
                 
@@ -310,7 +308,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
+                      <a class="hover-with-bg" href="/tags/acm/">acm</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E5%B7%A7/">技巧</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E8%AE%BA/">数论</a>
                     
                   </div>
                 
@@ -327,18 +329,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/02/28/%E6%A8%A1%E6%9D%BF%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">模板补全计划</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/02/26/%E8%B0%88%E4%B8%80%E8%B0%88%E5%8D%9A%E5%BC%88/">
-                        <span class="hidden-mobile">谈一谈博弈</span>
+                      <a href="/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                        <span class="hidden-mobile">博客创建历程(记录向)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -359,8 +355,8 @@
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'http://example.com/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/';
-        this.page.identifier = '/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/';
+        this.page.url = 'http://example.com/2021/03/06/%E6%95%B0%E8%AE%BA/';
+        this.page.identifier = '/2021/03/06/%E6%95%B0%E8%AE%BA/';
       };
       Fluid.utils.waitElementVisible('disqus_thread', function () {
         var d = document, s = d.createElement('script');
