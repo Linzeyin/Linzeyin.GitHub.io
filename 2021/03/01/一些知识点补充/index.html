@@ -62,6 +62,10 @@
 
 <!-- 自定义样式保持在最底部 -->
 
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
@@ -187,7 +191,7 @@
           
             <li class="nav-item">
               <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.now.sh">
-                <i class="iconfont icon-docker"></i>
+                <i class="iconfont icon-train"></i>
                 开往
               </a>
             </li>
@@ -238,7 +242,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      512 字
+      745 字
     </span>
   
 
@@ -248,7 +252,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      10
        分钟
     </span>
   
@@ -297,7 +301,11 @@
 <p>模拟的复杂度肯定是不合要求的，在此不做多说。<br>以下是 <strong>logn复杂度</strong>求法</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">Ceil</span><span class="hljs-params">(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> x, <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> y)</span> </span>&#123;<span class="hljs-keyword">return</span> x / y + (x % y != <span class="hljs-number">0</span>);&#125;<br><span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">J</span><span class="hljs-params">(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> n, <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> q)</span> </span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> D=<span class="hljs-number">1</span>,<span class="hljs-built_in">end</span>=(q<span class="hljs-number">-1</span>)*n;<br>    <span class="hljs-keyword">while</span>(D&lt;=<span class="hljs-built_in">end</span>)<br>        D=Ceil(q*D,q<span class="hljs-number">-1</span>);<br>    <span class="hljs-keyword">return</span> q*n+<span class="hljs-number">1</span>-D;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> n,q;<br>    <span class="hljs-keyword">while</span>(~<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld%lld&quot;</span>,&amp;n,&amp;q))<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>, J(n,q));<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 <p>具体证明见<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/358255792/answer/974983270">godweiyang的回答</a></p>
-
+<h3 id="序列自动机"><a href="#序列自动机" class="headerlink" title="序列自动机"></a>序列自动机</h3><blockquote>
+<p>求s1是否是s2的子串，复杂度是 siz(s2)*26+siz(s1);空间只需要siz(s2)*26即可</p>
+</blockquote>
+<p>当时在太原五中看到的，整理旧blog时顺带补上<br>原理就是预处理出s2的每位后最靠前的26个字母，存起来之后把s1放到上面扫就行。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-built_in">string</span> s1,s2;<br><span class="hljs-keyword">int</span> a[<span class="hljs-number">27</span>][<span class="hljs-number">100010</span>];<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">memset</span>(a,<span class="hljs-number">-1</span>,<span class="hljs-keyword">sizeof</span>(a));<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=s1.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>;i&gt;=<span class="hljs-number">0</span>;i--)<br>	&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>;j&lt;=<span class="hljs-number">26</span>;j++)<br>			a[j][i]=a[j][i+<span class="hljs-number">1</span>];<br>		a[s1[i]-<span class="hljs-string">&#x27;a&#x27;</span>+<span class="hljs-number">1</span>][i]=i;<br>	&#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">work</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">cin</span>&gt;&gt;s2)<br>	&#123;<br>		<span class="hljs-keyword">int</span> kl=<span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>,j=<span class="hljs-number">0</span>;i&lt;s2.<span class="hljs-built_in">size</span>();i++)<br>		&#123;<br>			<span class="hljs-comment">//cout&lt;&lt;i&lt;&lt;&#x27; &#x27;&lt;&lt;a[s2[i]-&#x27;a&#x27;+1][j]&lt;&lt;endl;</span><br>			<span class="hljs-keyword">if</span>(a[s2[i]-<span class="hljs-string">&#x27;a&#x27;</span>+<span class="hljs-number">1</span>][j]!=a[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>])<br>				j=a[s2[i]-<span class="hljs-string">&#x27;a&#x27;</span>+<span class="hljs-number">1</span>][j];<br>			<span class="hljs-keyword">else</span><br>			&#123;kl=<span class="hljs-number">1</span>;<span class="hljs-keyword">break</span>;&#125;<br>		&#125;<br>		<span class="hljs-keyword">if</span>(kl==<span class="hljs-number">1</span>)<br>			<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;NO&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>		<span class="hljs-keyword">else</span><br>			<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;YES&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>	&#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
