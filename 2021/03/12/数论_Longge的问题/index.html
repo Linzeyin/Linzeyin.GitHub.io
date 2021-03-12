@@ -22,12 +22,12 @@
   
   <meta name="theme-color" content="#2f4154">
   
-    <meta name="description" content="数论是纯粹数学的分支之一，主要研究整数的性质。">
+    <meta name="description" content="看山是山，看山不是山，看山还是山">
   
   <meta name="author" content="emmm. . .Lzy?">
   <meta name="keywords" content="">
   
-  <title>数论总结 - Lin</title>
+  <title>数论题目 Longge的问题 - Lin</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -215,12 +215,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/asdoad.jpg') no-repeat center center;
+         style="background: url('/img/asfdasfe.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="数论总结">
+            <span class="h2" id="subtitle" title="数论题目 Longge的问题">
               
             </span>
 
@@ -230,8 +230,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-06 01:15" pubdate>
-        2021年3月6日 凌晨
+      <time datetime="2021-03-12 22:47" pubdate>
+        2021年3月12日 晚上
       </time>
     </span>
   
@@ -242,7 +242,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.5k 字
+      423 字
     </span>
   
 
@@ -252,7 +252,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      21
+      6
        分钟
     </span>
   
@@ -282,49 +282,25 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">数论总结</h1>
+            <h1 style="display: none">数论题目 Longge的问题</h1>
             
             <div class="markdown-body">
-              <p>想着把所有内容都放在模板补全计划里势必会造成文章繁多难受，便新开一档<br>高中阶段曾经学习过一些，不过大多早已忘却，于今日开始补完<br>从基础的开始</p>
-<h3 id="快速乘"><a href="#快速乘" class="headerlink" title="快速乘"></a>快速乘</h3><p>在遇到乘法两个数都很大的情况下，需要通过快速乘来保证在计算过程中间不会溢出<br>网上有多种快速乘方式，我在此仅提供一种</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">mul</span><span class="hljs-params">(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> x,<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> y)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> z=(<span class="hljs-keyword">long</span> <span class="hljs-keyword">double</span>)x/p*y;<br>	<span class="hljs-keyword">return</span> ((<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>)x*y-(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>)z*mod+mod)%mod;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>z就是$ \lfloor x \times y / mod \rfloor $,而我们要求的$ x \times y % mod $ 实际上与$ x \times y - \lfloor x \times y / mod \rfloor \times mod $ 是等价的<br>unsigned long long 保证了就算溢出，$ x \times y $ 和 $ \lfloor x \times y / mod \rfloor \times mod $的差值还是不变，因此即使溢出最后的结果仍然不变。时间复杂度 O(1)</p>
-<p><del>(latex好麻烦，大幅度降低写文效率. . .)</del></p>
-<hr>
-<h3 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h3><p>很简单的原理，在此不做过多叙述<br>chty的一行快速幂：<br><code>long long fast(long long a,long long b)&#123;long long ans=1;for(;b;b&gt;&gt;=1,a=mul(a,a))if(b&amp;1)ans=mul(ans,a);return ans;&#125;</code><br>（syq学长好强啊</p>
-<hr>
-<h3 id="GCD"><a href="#GCD" class="headerlink" title="GCD"></a>GCD</h3><p>这个也算是入门级别的<br><code>inline long long gcd(a,b)&#123;return !b?a:gcd(b,a%b);&#125;</code></p>
-<hr>
-<h3 id="拓展GCD"><a href="#拓展GCD" class="headerlink" title="拓展GCD"></a>拓展GCD</h3><blockquote>
-<p>裴蜀定理：丢番图方程（二元一次，下同）$ a \times x + b \times y = m $有解当且仅当$ m | ( a , b )$</p>
+              <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><blockquote>
+<p>给定整数N，求$ \sum_{ i = 1 } ^ n gcd(i,n)$。</p>
 </blockquote>
-<p>扩展gcd就是在求丢番图方程$ a \times x + b \times y  =gcd(a,b) $的整数解<br>证明：<br>$    a \times x_1 + b \times y_1 = gcd(a,b) $<br>$    b \times x_2 + (a % b) \times y_2 = gcd(b,a % b)$<br>$    因为 gcd(a,b) = gcd(b,a % b) $<br>$    得 a \times x_1 + b \times y_1 = b \times x_2 + ( a % b ) \times y_2 = b \times x_2 + ( a - a / b \times b ) \times y_2 = a \times y_2 + b \times (x_2 - a / b \times y_2 ) $<br>$    所以x_1=y_2,y_1=x_2-a/b \times y_2$<br>$    末状态：b=0,a = gcd(a,b)时，gcd(a,b) \times x=gcd(a,b),得x = 1$<br>代码如下：</p>
-<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sas">void exgcd(int a,int b,int <span class="hljs-variable">&amp;x</span>,int <span class="hljs-variable">&amp;y</span>)<br>&#123;<br>    <span class="hljs-meta">if</span>(b==0)  &#123;<span class="hljs-meta">x</span>=1; y=0; <span class="hljs-meta">return</span>;&#125;<br>    exgcd(b,a<span class="hljs-name">%b</span>,<span class="hljs-meta">x</span>,y);<br>    int t=<span class="hljs-meta">x</span>;<span class="hljs-meta">x</span>=y;y=t-a/b<span class="hljs-comment">*y;</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h3><blockquote>
-<p>对于一个正整数n，小于n且和n互质的正整数（包括1）的个数叫做欧拉函数，记作 $\phi(n)$ 。</p>
+<h3 id="输入格式-Input-Format"><a href="#输入格式-Input-Format" class="headerlink" title="输入格式 Input Format"></a>输入格式 Input Format</h3><p>一个整数$N。N&lt;=2 ^ {32} $</p>
+<h3 id="输出格式-Output-Format"><a href="#输出格式-Output-Format" class="headerlink" title="输出格式 Output Format"></a>输出格式 Output Format</h3><p>输出一个整数，表示满足条件的数对数量.</p>
+<h3 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h3><blockquote>
+<p>6</p>
 </blockquote>
-<p>一个很简明的想法是在1~n中找到n的约数，然后减去约数在n之内的倍数即可。<br>例：若n=12，呢么分解质因数则为$ 12 = 2 \times 2 \times 3 $<br>但是不能直接减12/2和12/3，因为会有6这个2，3的公倍数被减了两次<br>运用容斥的原理，我们可得一种简单的方法，令$ phi(n) = n \times \prod_{i=1}^k (1 - a_i)$(a是n因子的集合，k为a因子的个数)<br>直接分解质因数的复杂度会达到$ O(\sqrt n)$,求单个数时可用，但求n个数的欧拉函数时说不可用的<br>在求n个数的欧拉函数时，我们可以利用类似筛法的方式求得</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs excel">long long <span class="hljs-built_in">phi</span>[Maxn+<span class="hljs-number">10</span>];<br>void Euler()<br>&#123;<br>    <span class="hljs-built_in">phi</span>[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>    for(<span class="hljs-built_in">int</span> i=<span class="hljs-number">2</span>;i&lt;<span class="hljs-built_in">n</span>;i++)<br>    &#123;<br>        <span class="hljs-built_in">if</span>(!<span class="hljs-built_in">phi</span>[i])<br>        &#123;<br>            for(<span class="hljs-built_in">int</span> j=i;j&lt;<span class="hljs-built_in">n</span>;j+=i)<br>            &#123;<br>                <span class="hljs-built_in">if</span>(!<span class="hljs-built_in">phi</span>[j]) <span class="hljs-built_in">phi</span>[j]=j;<br>                <span class="hljs-built_in">phi</span>[j]=<span class="hljs-built_in">phi</span>[j]/i*(i-<span class="hljs-number">1</span>);<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>一些性质：</p>
-<blockquote>
-<p>欧拉函数是积性函数——若m,n互质，$ \phi(mn) = \phi(m) \times \phi(n) $<br>p为质数 $ \phi(p) = p-1 $   因为质数p除了1以外的因数只有p<br>如果 $ i % p = 0 $, 那么 $ \phi(i \times p) = \phi(i) \times p $<br>若 $ i % p ≠ 0 $,  那么$ \phi( i \times p ) = \phi(i) \times ( p - 1 ) $<br>如果n是素数，k是正整数，那么 $ \phi( n ^ k ) = (n-1) \times n^{k-1} $</p>
+<h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><blockquote>
+<p>15</p>
 </blockquote>
-<p>由这些性质，我们可以将复杂度进一步优化到$ O(n) $递推</p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs inform7">long long phi<span class="hljs-comment">[MaxN+10]</span>, prime<span class="hljs-comment">[MaxN+10]</span>;<br>void Euler()<br>&#123;<br>    phi<span class="hljs-comment">[1]</span>=1;<br>    for(int i=2;i&lt;N;++)<br>    &#123;<br>        if(!phi<span class="hljs-comment">[i]</span>)//第二条性质<br>        &#123;<br>            phi<span class="hljs-comment">[i]</span>=i-1;<br>            prime<span class="hljs-comment">[prime<span class="hljs-comment">[0]</span>++]</span>=i;<br>        &#125;<br>        for(int j=0;j&lt;prime<span class="hljs-comment">[0]</span>&amp;&amp;1ll*i*prime<span class="hljs-comment">[j]</span>&lt;N;j++)<br>        &#123;<br>            if(i%prime<span class="hljs-comment">[j]</span>)phi<span class="hljs-comment">[i*prime<span class="hljs-comment">[j]</span>]</span>=phi<span class="hljs-comment">[i]</span>*(prime<span class="hljs-comment">[j]</span>-1);//第三条性质<br>            else<br>            &#123;<br>                phi<span class="hljs-comment">[i*prime<span class="hljs-comment">[j]</span>]</span>=phi<span class="hljs-comment">[i]</span>*prime<span class="hljs-comment">[j]</span>;<br>                break;//优化成线性复杂度<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 <hr>
-<h3 id="乘法逆元"><a href="#乘法逆元" class="headerlink" title="乘法逆元"></a>乘法逆元</h3><blockquote>
-<p>对于正整数a和m，如果$ a \times x % m=1 $, 则x的最小正整数解称为a模m的逆元，表示为$ a ^{-1} (mod m)$</p>
-</blockquote>
-<p>（1）根据费马小定理：有$ a^{m-1} % m = 1 $,  即$ a \times a^{m-2} % m = 1 $, 所以$ a ^{m-2} $就是a模m的逆元。 （适用条件：m为素数）<br>（2）扩展欧几里得求解：$ a \times x % m = 1 $,即$ a \times x - m \times y = 1 $,解这个丢番图方程即可。(适用条件：gcd(a,m)=1)<br>（3）欧拉定理：若 $ gcd(a,m) = 1 $，则 $ a^{ \phi(m)} ≡ 1 (mod m) $<br>$ a^{-1}=a^{\phi(m)-1}$，使用欧拉函数+快速幂计算，复杂度同费马，但较费马而言，模数m可以不为质数，因此应用范围广一点<br>（4）线性递推：<br>规定m为质数，且$ 1^{-1} ≡ 1(mod m) $    设 $ m = k \times a + b (b &lt; a , 1 &lt; a &lt; m ) $,即$ k \times a + b ≡ 0(mod m) $<br>两边同时乘以$ a^{−1} \times b^{−1} $，得到 $ k \times b^{−1} + a^{−1} ≡ 0 (mod m) $<br>$ a^{-1} ≡ − k \times b^{−1}     (mod m) $<br>$ a^{−1} ≡ − m / a \times ( m % a )^{-1}      (mod m) $<br>从头开始扫一遍即可，时间复杂度O(n)         （适用条件：m为素数）</p>
-<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs q"><span class="hljs-built_in">inv</span>[<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>for(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++) <span class="hljs-built_in">inv</span>[i]=(<span class="hljs-built_in">mod</span>-(<span class="hljs-built_in">mod</span>/i))*<span class="hljs-built_in">inv</span>[<span class="hljs-built_in">mod</span>%i]%<span class="hljs-built_in">mod</span>;<br></code></pre></td></tr></table></figure>
-<hr>
-<h3 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h3><p> 假设整数 $ m_1,m_2,m_3…$ 两两互素，则对于任意的整数 $ a_1,a_2,a_3…$ ，方程组<br>$  \begin{cases}<br>    &amp; x \equiv a_1 (mod m_1)  \<br>    &amp; x \equiv a_2 (mod m_2)  \<br>    &amp; x \equiv a_3 (mod m_3)  \<br>    &amp; . . .  \<br>    \end{cases}$</p>
-<p>都存在整数解.<br>若多个数 $ x_1,x_2…$满足该方程，则必有 $ x_i \equiv x_j (mod M)$，其中 $ M = \prod_{i=1}^n m_i$<br>因此x在MOD M下有唯一解。<br>解为：$ x\equiv (a_1 M_1 M_1^{-1} + a_2 M_2 M_2^{-1} +…+a_n M_n M_n^{-1}) (mod M)$<br>其中 $ M_i = M / m_i $,$ M_i^{-1}$为 $ M_i $ 膜 $ m_i $的逆元。</p>
-<hr>
-
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>由题意可知，输入一个n，输出1~n所有数与n的最大公约数的个数和。<br>乍一看很难，实际上并不是，设k=gcd(i,n)，则 $ \frac {i}{k} $ 与 $ \frac {n}{k} $互质，<br>我们可以通过枚举k来得到所有与n的最大公约数为k的数<br>——也就是除以k之后与 $ \frac {n}{k} $ 互质，也就是说$ \frac {n}{k}$的欧拉函数值即为与n最大公约数为k的数的数目。</p>
+<p>之后用sum来累加$ k * \phi ( \frac {n}{k} ) $就是答案。</p>
+<p>PS：如果首先预处理的话，则会爆空间，所以说只能找到一个k再找$ \frac{n}{k} $的欧拉函数值（蜜汁不超时）。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;utility&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> n;<br><span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">phi</span><span class="hljs-params">(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">int</span> m=<span class="hljs-built_in">sqrt</span>((<span class="hljs-keyword">double</span>)x);<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> k=x;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> i=<span class="hljs-number">2</span>;i&lt;=m;i++)<br>	&#123;<br>        <span class="hljs-keyword">if</span>(x%i==<span class="hljs-number">0</span>)<br>		&#123;<br>            k=k/i*(i<span class="hljs-number">-1</span>);<br>            <span class="hljs-keyword">while</span>(x%i==<span class="hljs-number">0</span>)x/=i;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(x&gt;<span class="hljs-number">1</span>)k=k/x*(x<span class="hljs-number">-1</span>);<br>    <span class="hljs-keyword">return</span> k;<br>&#125;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> sum=<span class="hljs-number">0</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-built_in">cin</span>&gt;&gt;n;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i*i&lt;=n;i++)<br>	&#123;<br>		<span class="hljs-keyword">if</span>(n%i==<span class="hljs-number">0</span>)<br>		&#123;<br>			sum+=i*phi(n/i);<br>			<span class="hljs-keyword">if</span>(i*i&lt;n)<br>			sum+=(n/i)*phi(i);<br>			<span class="hljs-comment">//cout&lt;&lt;i&lt;&lt;&#x27; &#x27;&lt;&lt;n/i&lt;&lt;&#x27;:&#x27;&lt;&lt;phi[i]&lt;&lt;&#x27; &#x27;&lt;&lt;phi[n/i]&lt;&lt;&quot;    &quot;&lt;&lt;sum&lt;&lt;endl;</span><br>		&#125;<br>	&#125;<br>	<span class="hljs-built_in">cout</span>&lt;&lt;sum&lt;&lt;<span class="hljs-built_in">endl</span>;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -337,7 +313,7 @@
                     
                       <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E8%AE%BA/">数论</a>
                     
-                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E8%AE%BA/%E6%80%BB%E7%BB%93/">总结</a>
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E8%AE%BA/%E9%A2%98%E7%9B%AE/">题目</a>
                     
                   </div>
                 
@@ -345,11 +321,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/acm/">acm</a>
-                    
                       <a class="hover-with-bg" href="/tags/%E6%8A%80%E5%B7%A7/">技巧</a>
                     
                       <a class="hover-with-bg" href="/tags/%E6%95%B0%E8%AE%BA/">数论</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%AB%98%E4%B8%AD/">高中</a>
                     
                   </div>
                 
@@ -366,9 +342,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/03/12/%E6%95%B0%E8%AE%BA_Longge%E7%9A%84%E9%97%AE%E9%A2%98/">
+                      <a href="/2021/03/12/%E6%95%B0%E8%AE%BA_GCD/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数论题目 Longge的问题</span>
+                        <span class="hidden-mobile">数论题目 GCD</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -376,8 +352,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
-                        <span class="hidden-mobile">博客创建历程(记录向)</span>
+                      <a href="/2021/03/06/%E6%95%B0%E8%AE%BA/">
+                        <span class="hidden-mobile">数论总结</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -398,8 +374,8 @@
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'http://example.com/2021/03/06/%E6%95%B0%E8%AE%BA/';
-        this.page.identifier = '/2021/03/06/%E6%95%B0%E8%AE%BA/';
+        this.page.url = 'http://example.com/2021/03/12/%E6%95%B0%E8%AE%BA_Longge%E7%9A%84%E9%97%AE%E9%A2%98/';
+        this.page.identifier = '/2021/03/12/%E6%95%B0%E8%AE%BA_Longge%E7%9A%84%E9%97%AE%E9%A2%98/';
       };
       Fluid.utils.waitElementVisible('disqus_thread', function () {
         var d = document, s = d.createElement('script');
