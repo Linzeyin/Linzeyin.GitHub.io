@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="记录一下缝合blog的过程">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>博客创建历程(记录向) - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/87877136_p0_master1200.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="博客创建历程(记录向)">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-05 20:17" pubdate>
+        2021年3月5日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      35
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">博客创建历程(记录向)</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2022年2月12日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="萌新时期"><a href="#萌新时期" class="headerlink" title="萌新时期"></a>萌新时期</h2><p>实际上百度一下就有很多的资源，以前也看过xorex搭过，用的Hexo，关键词也很好得到，直接百度/知乎 hexo &amp;&amp; blog就行。<br>具体环境以及配置内容主要参考了<a target="_blank" rel="noopener" href="https://godweiyang.com/2018/04/13/hexo-blog/">韦阳的博客</a>,不过由于原博年代过久导致出现了版本不适配的过程，<br>比如博文中提供的Node.js需要最新版的，建议<strong>资源类配置自行寻至最新版本保证相互兼容</strong>。<br>以及<strong>配置git时需将github号码一并配置</strong>，否则以后上传时每一次都需要输入账号密码(不过有机会补救，具体见后文)<br>配置基础完成后，选择了原博推荐的主题，但是内容繁多，主题下载到本地后需要修改的东西以及配置时出现的未定义的错误较多，费了一番功夫后放弃了。<br>之后又找到了<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xrblog/p/11585885.html">月如霜的博客</a>，完善了一些配置并解决了需要一直输入账号密码的问题，详见他的<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xrblog/p/11585902.html">第二篇博文</a>。<br>不过这篇博客之后推荐的vim编辑方式不是很推荐，可能是我个人对命令行编写的不熟悉，导致写的很辛苦。<br>个人是直接选择了编辑器里直接修改posts文件夹里的博文，因为vscode也有Markdown的语法插件，并且编辑器写起来也很舒服。<br>vscode的直接下载支持Markdown语法的插件就行，我使用的是 <img src="/img/3Q25.png" srcset="/img/loading.gif" alt=""> 编辑好后直接<strong>Ctrl+Shift+v</strong>就可以预览。<br>然后选择了推荐的主题<a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole">Anatole主题</a>（在月如霜的第四篇博客。<br>这个主题十分精简，对于萌新来说十分友好，建议开始可以先使用简单的主题。</p>
+<hr>
+<h2 id="这里是我觉得开始进阶的时候"><a href="#这里是我觉得开始进阶的时候" class="headerlink" title="这里是我觉得开始进阶的时候"></a>这里是我觉得开始进阶的时候</h2><p>但是我在上传时出现了问题，友链页面本地运行可以打开，但是上传至Github上就是404<br>便学习了一些hexo _config.yml的相关配置，其中<a target="_blank" rel="noopener" href="https://blog.csdn.net/zemprogram/article/details/104288872">这篇博文</a>以及下方推荐的hexo文件结构帮助了不少。学习后变依靠原有的主题结构修改了一些东西。<br><em>(不过还是没有把友链整出来，以及主题框架原本就很简单，自己的改动增添也改不了多少，便又更换了主题</em></p>
+<p>目前使用的主题是<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/">fluid</a>，对于前端知识缺乏的人十分友好，因为格式很工整以及注释很详细(当然也有可能是在搭建blog过程中我个人对hexo的结构更加熟悉了而已)<br>具体的安装过程以及<strong>配置用法</strong>网站上很详细，在此不做叙述。<br>之后大概就是一些小功能的更新记录</p>
+<hr>
+<h3 id="点击特效"><a href="#点击特效" class="headerlink" title="点击特效"></a>点击特效</h3><p>百度到了简书上的<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6fe2b80c56de">做法</a>，其中第一个小心心的特效可以正常运行，但是文字输出部分(原文是社会主义核心价值观)出现问题无法输出。<br>然后去解码别人搭好的blog，试出了合适本主题的文字输出，由于搜索博文过多无法找到原博贴出，便直接贴出代码<br><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-comment">/* 鼠标特效 */</span><br><span class="hljs-keyword">var</span> a_idx = <span class="hljs-number">0</span>; <br>jQuery(document).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$</span>) </span>&#123; <br>    $(<span class="hljs-string">&quot;body&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>&#123; <br>        <span class="hljs-keyword">var</span> a = <span class="hljs-keyword">new</span> Array(<span class="hljs-string">&quot;你要输入的文字&quot;</span>, <span class="hljs-string">&quot;你要输入的文字&quot;</span>,<span class="hljs-string">&quot;你要输入的文字&quot;</span>,<span class="hljs-string">&quot;你要输入的文字&quot;</span>,<span class="hljs-string">&quot;你要输入的文字&quot;</span>); <br>        <span class="hljs-keyword">var</span> <span class="hljs-symbol">$i</span> = $(<span class="hljs-string">&quot;&lt;span/&gt;&quot;</span>).text(a[a_idx]); <br>        a_idx = (a_idx + <span class="hljs-number">1</span>) % a.length; <br>        <span class="hljs-keyword">var</span> x = e.pageX, <br>        y = e.pageY; <br>        <span class="hljs-symbol">$i</span>.css(&#123; <br>            <span class="hljs-string">&quot;z-index&quot;</span>: <span class="hljs-number">999999999999999999999999999999999999999999999999999999999999999999999</span>, <br>            <span class="hljs-string">&quot;top&quot;</span>: y - <span class="hljs-number">20</span>, <br>            <span class="hljs-string">&quot;left&quot;</span>: x, <br>            <span class="hljs-string">&quot;position&quot;</span>: <span class="hljs-string">&quot;absolute&quot;</span>, <br>            <span class="hljs-string">&quot;font-weight&quot;</span>: <span class="hljs-string">&quot;bold&quot;</span>, <br>            <span class="hljs-string">&quot;color&quot;</span>: <span class="hljs-string">&quot;#ff6651&quot;</span> <br>        &#125;); <br>        $(<span class="hljs-string">&quot;body&quot;</span>).append(<span class="hljs-symbol">$i</span>); <br>        <span class="hljs-symbol">$i</span>.animate(&#123; <br>            <span class="hljs-string">&quot;top&quot;</span>: y - <span class="hljs-number">180</span>, <br>            <span class="hljs-string">&quot;opacity&quot;</span>: <span class="hljs-number">0</span> <br>        &#125;, <br>        <span class="hljs-number">1500</span>, <br>        <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123; <br>            <span class="hljs-symbol">$i</span>.remove(); <br>        &#125;); <br>    &#125;); <br>&#125;); <br></code></pre></td></tr></table></figure><br>使用方法的话还是依照上面简书的教程，只不过将这个源码替换成简书提供的点击文字特效的源码即可。</p>
+<hr>
+<h3 id="添加音乐"><a href="#添加音乐" class="headerlink" title="添加音乐"></a>添加音乐</h3><p>hexo添加音乐搜索可得两种方案：</p>
+<ul>
+<li>在官方网站获取外链</li>
+<li>自己生成外链，插入文章</li>
+</ul>
+<p>第一种办法可能会受到版权的限制有些无法生成外链，会比较不自由<br>用第二种方法的话，需要将播放器加入hexo，我用的是<a target="_blank" rel="noopener" href="https://github.com/DIYgod/APlayer">APlayer</a><br>安装时直接在hexo根目录输入<code>npm install --save hexo-tag-aplayer</code>即可<br>安装好后可直接使用，具体使用方式为在需要添加音乐位置直接加入<code>&#123;% aplayer "歌曲名称" "作者" "音乐_url" "封面图片_url" "autoplay" %&#125;</code>即可<br>最终效果：<br><img src="/img/Mucis.png" srcset="/img/loading.gif" alt=""></p>
+<blockquote>
+<p>我的<a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/01/29/test/">test页面</a></p>
+</blockquote>
+<hr>
+<h3 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h3><p>安装<strong>hexo-blog-encrypt</strong> 拓展<br><code>npm install --save hexo-blog-encrypt</code><br>使用方式直接在博文文件头处添加即可<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">test</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2021-01-29 16:17:00</span><br><span class="hljs-attr">password:</span> <span class="hljs-number">123456</span><br><span class="hljs-attr">message:</span> <span class="hljs-string">测试加密，密码为123456，点击此处解密。</span><br><span class="hljs-comment">#输入处加密提示</span><br><span class="hljs-attr">abstract:</span> <span class="hljs-string">这是一个加密文档</span><br><span class="hljs-comment">#简介处加密提示，注意，加密后文章原本摘要会被覆盖</span><br><span class="hljs-attr">wrong_pass_message:</span> <span class="hljs-string">密码错误</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="添加B站视频"><a href="#添加B站视频" class="headerlink" title="添加B站视频`"></a>添加B站视频`</h3><p>先是下载了dplor拓展，然后发现无法获得直接的mp4地址(<em>据说大多数网站是将视频分成多端传输的，以前听Xorex说过抓包获得地址什么的但是自己一窍不通</em>)。便放弃了。<del>(不过意外发现了一个大佬博客，自卑++)</del><br>然后选择简单方式，直接从B站获得分享直链然后加入即可，但是这种方式在我这里出现了播放窗口大小异常的问题，百度之后解决。<br>需要在自己主题的head文件里加入<br><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://api.beixibaobao.com/css/bilibili-player/bofangqi.css&quot;&gt;</code><br>然后再将从B站获得的分享码的<code>iframe</code> 后面加上：<code>class=&quot;iframe_video&quot;</code>即可</p>
+<p>效果：</p>
+<blockquote>
+<p>我的<a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/01/29/test/">test页面</a><br>原博：<a target="_blank" rel="noopener" href="https://blog.beixibaobao.com/wailian-bilibili-videoplay/">北熙赤ちゃん</a></p>
+</blockquote>
+<hr>
+<h3 id="更改鼠标样式"><a href="#更改鼠标样式" class="headerlink" title="更改鼠标样式"></a>更改鼠标样式</h3><p>首先是得下载你所需的cur文件(鼠标文件格式)，百度即可。然后将鼠标文件放入你主题的source中新创建的cur文件夹中。<br>在css文件夹中找到main.styl,加入以下代码<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/*鼠标样式*/</span><br><span class="hljs-selector-tag">body</span><br>&#123;<br>  <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">/cur/mouse.cur</span>),<br>    auto <span class="hljs-meta">!important</span>;<br>&#125;<br> <br><span class="hljs-comment">/* a, */</span><br><span class="hljs-selector-tag">img</span> &#123;<br>  <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">/cur/butt.cur</span>),<br>    auto <span class="hljs-meta">!important</span>;<br>&#125;<br> <br><span class="hljs-comment">/*a标签*/</span><br><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> &#123;<br>  <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">/cur/link.cur</span>),<br>    auto;<br>&#125;<br> <br><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:hover</span>&#123;<br>  <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">/cur/input.cur</span>),<br>    auto;<br>&#125;<br><span class="hljs-comment">/*按钮*/</span><br><span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:hover</span> &#123;<br>  <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">/cur/butt.cur</span>),<br>    auto;<br>&#125;<br> <br><span class="hljs-comment">/*i标签*/</span><br><span class="hljs-selector-tag">i</span><span class="hljs-selector-pseudo">:hover</span> &#123;<br>  <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">/cur/link.cur</span>),<br>    auto;<br>&#125;<br><br><span class="hljs-comment">/*鼠标样式END*/</span><br></code></pre></td></tr></table></figure><br>根据个人的cur文件名自由更改即可。</p>
+<hr>
+<h4 id="update"><a href="#update" class="headerlink" title="update"></a>update</h4><blockquote>
+<p>部分浏览器以及服务器并不支持ani鼠标样式，推荐使用cur</p>
+</blockquote>
+<p>更新版本后ani动态鼠标样式无法实现，便将ani转成了cur<br>具体做法是下载 <a target="_blank" rel="noopener" href="http://www.pc0359.cn/downinfo/64516.html">cursorworkshop</a> (选择普通下载就莫得莫得捆绑)</p>
+<p>进入软件文件夹后，点开<strong>CursorWorkshop_Cracked.exe</strong>，我试的这个不需要注册码，把公司随便一填就可以使用。<br>（或者你也可以根据它的使用说明，不过不敢保证是否会顺便安装些什么其他东西</p>
+<p>点开ani文件会有逐帧的图片显示，复制一个想要转为cur的帧，然后新建，在新建的里面粘贴即可。<br>实际上可做的操作还有很多，你也可以通过这个软件改变原样式的大小(我目前使用的就是将32<em>32的样式转成了48</em>48样式)，也可以自己绘制鼠标样式。</p>
+<hr>
+<h3 id="背景加入彩带"><a href="#背景加入彩带" class="headerlink" title="背景加入彩带"></a>背景加入彩带</h3><p>先在js文件夹里新建文件<code>ribbon.js</code>，之后写入<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><code class="hljs processing"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Copyright (c) 2016 hustcc</span><br><span class="hljs-comment"> * License: MIT</span><br><span class="hljs-comment"> * Version: v1.0.1</span><br><span class="hljs-comment"> * GitHub: https://github.com/hustcc/ribbon.js</span><br><span class="hljs-comment">**/</span><br><span class="hljs-comment">/*jshint -W030 */</span><br>! function() &#123;<br>  function attr(node, attr, default_value) &#123;<br>    <span class="hljs-keyword">return</span> Number(node.getAttribute(attr)) || default_value;<br>  &#125;<br><br>  <span class="hljs-comment">// get user config</span><br>  var scripts = document.getElementsByTagName(<span class="hljs-string">&#x27;script&#x27;</span>),<br>    script = scripts[scripts.length - <span class="hljs-number">1</span>]; <span class="hljs-comment">// 当前加载的script</span><br>  config = &#123;<br>    z: attr(script, <span class="hljs-string">&quot;zIndex&quot;</span>, <span class="hljs-number">-1</span>), <span class="hljs-comment">// z-index</span><br>    a: attr(script, <span class="hljs-string">&quot;alpha&quot;</span>, <span class="hljs-number">0.6</span>), <span class="hljs-comment">// alpha</span><br>    s: attr(script, <span class="hljs-string">&quot;size&quot;</span>, <span class="hljs-number">90</span>), <span class="hljs-comment">// size</span><br>  &#125;;<br><br>  var canvas = document.createElement(<span class="hljs-string">&#x27;canvas&#x27;</span>),<br>    g2d = canvas.getContext(<span class="hljs-string">&#x27;2d&#x27;</span>),<br>    pr = window.devicePixelRatio || <span class="hljs-number">1</span>,<br>    <span class="hljs-built_in">width</span> = window.innerWidth,<br>    <span class="hljs-built_in">height</span> = window.innerHeight,<br>    f = config.s,<br>    q, t,<br>    m = Math,<br>    r = <span class="hljs-number">0</span>,<br>    pi = m.<span class="hljs-literal">PI</span>*<span class="hljs-number">2</span>,<br>    <span class="hljs-built_in">cos</span> = m.<span class="hljs-built_in">cos</span>,<br>    <span class="hljs-built_in">random</span> = m.<span class="hljs-built_in">random</span>;<br>  canvas.<span class="hljs-built_in">width</span> = <span class="hljs-built_in">width</span> * pr;<br>  canvas.<span class="hljs-built_in">height</span> = <span class="hljs-built_in">height</span> * pr;<br>  g2d.<span class="hljs-built_in">scale</span>(pr, pr);<br>  g2d.globalAlpha = config.a;<br>  canvas.style.cssText = <span class="hljs-string">&#x27;opacity: &#x27;</span> + config.a + <span class="hljs-string">&#x27;;position:fixed;top:0;left:0;z-index: &#x27;</span> + config.z + <span class="hljs-string">&#x27;;width:100%;height:100%;pointer-events:none;&#x27;</span>;<br>  <span class="hljs-comment">// create canvas</span><br>  document.getElementsByTagName(<span class="hljs-string">&#x27;body&#x27;</span>)[<span class="hljs-number">0</span>].appendChild(canvas);<br><br>  function <span class="hljs-built_in">redraw</span>() &#123;<br>    g2d.clearRect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>);<br>    q = [&#123;x: <span class="hljs-number">0</span>, y: <span class="hljs-built_in">height</span> * <span class="hljs-number">0.7</span> + f&#125;, &#123;x: <span class="hljs-number">0</span>, y: <span class="hljs-built_in">height</span> * <span class="hljs-number">0.7</span> - f&#125;];<br>    <span class="hljs-keyword">while</span>(q[<span class="hljs-number">1</span>].x &lt; <span class="hljs-built_in">width</span> + f) <span class="hljs-title">draw</span>(q[<span class="hljs-number">0</span>], q[<span class="hljs-number">1</span>]);<br>  &#125;<br>  function <span class="hljs-title">draw</span>(i, j) &#123;<br>    g2d.beginPath();<br>    g2d.moveTo(i.x, i.y);<br>    g2d.lineTo(j.x, j.y);<br>    var k = j.x + (<span class="hljs-built_in">random</span>()*<span class="hljs-number">2</span><span class="hljs-number">-0.25</span>)*f, n = <span class="hljs-built_in">line</span>(j.y);<br>    g2d.lineTo(k, n);<br>    g2d.closePath();<br>    r -= pi / <span class="hljs-number">-50</span>;<br>    g2d.fillStyle = <span class="hljs-string">&#x27;#&#x27;</span>+(<span class="hljs-built_in">cos</span>(r)*<span class="hljs-number">127</span>+<span class="hljs-number">128</span>&lt;&lt;<span class="hljs-number">16</span> | <span class="hljs-built_in">cos</span>(r+pi/<span class="hljs-number">3</span>)*<span class="hljs-number">127</span>+<span class="hljs-number">128</span>&lt;&lt;<span class="hljs-number">8</span> | <span class="hljs-built_in">cos</span>(r+pi/<span class="hljs-number">3</span>*<span class="hljs-number">2</span>)*<span class="hljs-number">127</span>+<span class="hljs-number">128</span>).toString(<span class="hljs-number">16</span>);<br>    g2d.<span class="hljs-built_in">fill</span>();<br>    q[<span class="hljs-number">0</span>] = q[<span class="hljs-number">1</span>];<br>    q[<span class="hljs-number">1</span>] = &#123;x: k, y: n&#125;;<br>  &#125;<br>  function <span class="hljs-built_in">line</span>(p)&#123;<br>    t = p + (<span class="hljs-built_in">random</span>() * <span class="hljs-number">2</span> - <span class="hljs-number">1.1</span>) * f;<br>    <span class="hljs-keyword">return</span> (t &gt; <span class="hljs-built_in">height</span> || t &lt; <span class="hljs-number">0</span>) ? <span class="hljs-built_in">line</span>(p) : t;<br>  &#125;<br><br>  document.onclick = <span class="hljs-built_in">redraw</span>;<br>  document.ontouchstart = <span class="hljs-built_in">redraw</span>;<br>  <span class="hljs-built_in">redraw</span>();<br>&#125;();<br></code></pre></td></tr></table></figure><br><strong>然后在<code>layout.ejs</code>的<code>&lt;body&gt;</code>里加入</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml">&lt;% if (theme.ribbon)&#123; %&gt;<br>    <span class="hljs-comment">&lt;!-- &lt;script src=&quot;https://g.joyinshare.com/hc/ribbon.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt; --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/js/ribbon.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>&lt;% &#125; %&gt;<br><br></code></pre></td></tr></table></figure></p>
+<blockquote>
+<p>看到的第一个bolg说是要在body外. . .搞的我还以为哪儿配错了</p>
+</blockquote>
+<p>最后在config中加上<code>ribbon: true</code>即可</p>
+<hr>
+<h3 id="Update-2021-03-06-补全ssh链接"><a href="#Update-2021-03-06-补全ssh链接" class="headerlink" title="Update 2021/03/06 补全ssh链接"></a>Update 2021/03/06 补全ssh链接</h3><p>出现了奇怪的bug，hexo-d又开始需要输入账号密码了<br>然后去找解决方案，东西扒凑终于知道为什么了。<br>我第一次设置的是用ssh密钥链接传github的，但是由于当时的网络状况问题并未成功链接，我当时以为是博客问题，便有换了篇博客重新搭，这篇博客用的是自引用账号密码的，是用https路径上传，可是我当时不知道（博主也不知道，他也是找的其他人的方法。成功了之后就一直以为自己是在用ssh连接上传。<br>今日按着步骤重新搭了一次ssh的配置，写一次update来检测是否配置成功。</p>
+<hr>
+<h3 id="Update-2021-03-10-数学公式渲染问题"><a href="#Update-2021-03-10-数学公式渲染问题" class="headerlink" title="Update 2021/03/10 数学公式渲染问题"></a>Update 2021/03/10 数学公式渲染问题</h3><p>在完善数论专题，学习了Latex并加入至了blog中<br>但是出现了无法换行的问题，确认公式无误后发现是blog问题。<br><img src="/img/efw.png" srcset="/img/loading.gif" alt="问题如图"><br>原本用的是mathjar渲染公式。但是百度后发现是使用的mathjar版本低无法渲染换行符<code>\\</code>，应该换用Katex渲染。<br>由于目前用数位板和触控屏很难控制<br>目前先咕一段时间。等新鼠标来了再改 <del>(懒癌)</del><br>记一下<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34769162/article/details/107687801">链接</a></p>
+<h4 id="Update-2021-03-29"><a href="#Update-2021-03-29" class="headerlink" title="Update 2021/03/29"></a>Update 2021/03/29</h4><p>更了更了<br>把mathjar改成了katex，<br>不用之前博文的呢么麻烦，输入指令直接下载就行<br><code>npm install @upupming/hexo-renderer-markdown-it-plus --save</code><br>然后<code>hexo clean</code>就行<br>测试了下还是有部分公式渲染不出来. . .<br>怪</p>
+<h3 id="2022-02-12-博客新创页面"><a href="#2022-02-12-博客新创页面" class="headerlink" title="2022/02/12 博客新创页面"></a>2022/02/12 博客新创页面</h3><p>发现了一个很棒的<a target="_blank" rel="noopener" href="https://sharkle.com/">前端网站</a>搬了一个变换的照片区域到blog上，由于html经过主题渲染会出问题，于是需要在hexo设置里关掉对呢个文件夹的渲染。<br>也就是<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34367257/article/details/89009088">这篇blog</a>里介绍的方式，很简单。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E9%A1%B9%E7%9B%AE/%E5%8D%9A%E5%AE%A2/">博客</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Github/">Github</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BA%92%E8%81%94%E7%BD%91/">互联网</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/06/%E6%95%B0%E8%AE%BA/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">数论总结</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/03/%E5%A0%95%E8%90%BD/">
+                        <span class="hidden-mobile">堕落</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

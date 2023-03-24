@@ -1,0 +1,720 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="计算机网络是指将地理位置不同的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统及网络通信协议的管理和协调下，实现信息传递的计算机系统。">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>计算机网络 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/dsahtruj76tir768r8oiuyfkjmhgjxfh.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="计算机网络">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-14 14:54" pubdate>
+        2022年3月14日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      70
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">计算机网络</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2022年3月19日 中午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>计算机网络的各层集齐协议的集合就是计算机网络的体系结构。计算机网络的体系结构就是这个计算机网络及其构件所应完成的功能的精确定义。<br>标准的体系结构为OSI的七层协议。OSI体系理论完整但是较为复杂。主流使用的是TCP/IP体系结构。<br><img src="/img/postpictures/sdgtrejhytkjyukghfjfgsdaf.jpg" srcset="/img/loading.gif" alt="关于OSI于TCP/IP体系的对比"><br>实质上来讲TCP/IP体系的体系结构主要是在网络层，运输层，应用层。再往下的数据链路层以及物理层没什么具体的内容（就是硬件从业人员要搞的了，不对，我好像就是硬件人员. . .）</p>
+<h2 id="TCP-IP体系结构"><a href="#TCP-IP体系结构" class="headerlink" title="TCP/IP体系结构"></a>TCP/IP体系结构</h2><p><img src="/img/postpictures/dfgtrhytrjusftgasdfweretewtretyg.jpg" srcset="/img/loading.gif" alt=""><br>按照从底往上的顺序讲解</p>
+<h3 id="网络接口层"><a href="#网络接口层" class="headerlink" title="网络接口层"></a>网络接口层</h3><h4 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h4><h4 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h4><h5 id="可靠传输"><a href="#可靠传输" class="headerlink" title="可靠传输"></a>可靠传输</h5><p>网络中的可靠传输一般分为三种方法。</p>
+<h6 id="停止-等待协议（SW）"><a href="#停止-等待协议（SW）" class="headerlink" title="停止-等待协议（SW）"></a>停止-等待协议（SW）</h6><p>发送端发送数据，之后进入等待区间，在等待区间内若是收到接收端返回的确认报表则继续发下一帧数据。若是等待区间结束仍未接收到返回的确认报表则重新发送数据，知道收到确认报表为止。接收端若是收到数据就会发送确认报表，若是发现下一次发来的数据仍是上次的数据则可认定是确认报表丢失或未在等待时间内到达发送端，则会继续发送确认报表直到发来新的数据。<br>简单，十分可靠，保证了不丢包，但是信道利用率较低，延时较长。<br><img src="/img/postpictures/dfhbsrtgjyukiuljhhmnfgcbxdfhbfd.jpg" srcset="/img/loading.gif" alt=""></p>
+<h6 id="后退n帧协议（GBN）"><a href="#后退n帧协议（GBN）" class="headerlink" title="后退n帧协议（GBN）"></a>后退n帧协议（GBN）</h6><p>对帧进行编号，一次性发送多个帧（W），若是收到接收端发送的收到确认，滑动发送窗口。接收端接收时接受多个帧后发送一次确认报表，若是收到错误帧则丢弃，并发送重复之前的确认报表。发送端收到重复的确认报表就会发起重传，由具体实现而定。<br>相比于停止-等待协议，信道利用率大大增加。发送方在收到确认之前会发送多个数据帧。<br>不过，当通信线路质量不好的时候回退N帧协议并不比停止等待协议的信道利用率高。<br><img src="/img/postpictures/asfdsgtrjuytcvbcvxhtreewsdfmjyh.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>学习来源于<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/405573476">这里</a></p>
+<h6 id="选择重传协议（SR）"><a href="#选择重传协议（SR）" class="headerlink" title="选择重传协议（SR）"></a>选择重传协议（SR）</h6><h5 id="以太网协议"><a href="#以太网协议" class="headerlink" title="以太网协议"></a>以太网协议</h5><h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><h4 id="ARP-RARP协议"><a href="#ARP-RARP协议" class="headerlink" title="ARP/RARP协议"></a>ARP/RARP协议</h4><h4 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h4><p>IP协议是TCP/IP协议栈中最核心的协议之一，通过IP地址，保证了联网设备的唯一性，实现了网络通信的面向无连接和不可靠的传输功能。它提供了无连接的数据传输服务，主要功能有路由选择、寻址、分段以及组装。上层的数据报文在传输层分成了若干个数据包，每一个数据包首先在源头的网关上进行路由匹配，然后一跳跳地穿越若干个设备（每个传输节点都需经历物理层，数据链路层，网络层三层），最终送到目标主机。数据包在传输的过程中，由于物理层最大传输单元长度的要求会被切割成若干小段，每一个小段都包含有完整的IP报文头部，但其中只有第一个小段包含了TCP头部。在穿越包过滤防火墙时，由于后续小段不包含TCP头部，将无法通过检测，在穿越状态检测防火墙时，则可以被检测通过。<br>IP协议接收来自更底层发来的数据包，然后把数据包传递给更高的一层TCP层(传输层)。同样，IP层也会接收来自TCP层的数据包，并传递给更底层。由于IP协议是无连接的，无法确认数据是否有丢失或破损。</p>
+<div class="note note-success">
+            <p>IP协议只能指明数据包的源通信方，<strong>但无法保证数据一定能传输到目标地址</strong></p>
+          </div>
+<h5 id="IP头"><a href="#IP头" class="headerlink" title="IP头"></a>IP头</h5><p>由于历史因素，目前IPv4仍有相当数量的网络在使用，因此于此将IPv4及IPv6的IP头均记下。<br><img src="/img/postpictures/dsgfdvjiodvjiocmokmdskocmopwefko.jpg" srcset="/img/loading.gif" alt="IPv4数据报"></p>
+<blockquote>
+<p>(1) 版本号：IP协议的版本。对于IPv4来说值是4<br>(2) 头部长度(IHL)：4位最大为0xF，注意该字段表示单位是字(4字节)<br>(3) 服务类型(Type Of Service)：该字段指定路由器在传送过程中如何处理数据报文，也即表示这个数据报文在由IPv4 网络中的路由器转发时所期待的服务。这个字段长度为8位。这个字段也可以解释为区分业务编码点（Differentiated Services Codepoints, DSCP)。RFC2474 提供了关于 DSCP 的详细定义。<br>(4) 总长度: 指整个IP数据报的长度，单位为字节，即IP数据报的最大长度为65535字节(长度为16)。由于MTU的限制，长度超过MTU的数据报都将被分片传输，所以实际传输的IP分片数据报的长度远没有达到最大值<br>(5)(6)(7)3个字段则描述如何实现分片:<br>(5) 标识：唯一地标识主机发送的每一个数据报，其初始值是随机的，每发送一个数据报其值就加1。同一个数据报的所有分片都具有相同的标识值<br>(6)标志: 位1保留，位2表禁止分片，若设置了此位IP模块将不对数据报进行分片，在此情况下若IP数据报超过MTU，IP模块将丢弃数据报并返回一个ICMP差错报文；位3标识更多分片(MF)，除了数据报的最后一个分片，其他分片都要把它设置为1<br>(7) 位偏移：分片相对原始IP数据报数据部分的偏移。实际的偏移值为该值左移3位后得到的，所以除了最后一个IP数据报分片外，每个IP分片的数据部分的长度都必须是8的整数倍<br>(8) 生存时间:数据报到达目的地之前允许经过的路由器跳数。TTL值被发送端设置，常设置为64。数据报在转发过程中每经过一个路由该值就被路由器减1.当TTL值为0时，路由器就将该数据包丢弃，并向源端发送一个ICMP差错报文。TTL可以防止数据报陷入路由循环<br>(9) 协议: 区分IP协议上的上层协议。在Linux系统的/etc/protocols文件中定义了所有上层协议对应的协议字段，ICMP为1，TCP为6，UDP为17<br>(10) 头部校验和： 由发送端填充接收端对其使用CRC算法校验，检查IP数据报头部在传输过程中是否损坏<br>(11) 源IP地址和目的IP地址: 表示数据报的发送端和接收端。一般情况下这两个地址在整个数据报传递过程中保持不变，不论中间经过多少个路由器<br>(12) 选项：可变长的可选信息，最多包含40字节。选项字段很少被使用。可用的IP可选项有：<br>  a. 记录路由: 记录数据包途径的所有路由的IP，这样可以追踪数据包的传递路径<br>  b. 时间戳: 记录每个路由器数据报被转发的时间或者时间与IP地址对，这样就可以测量途径路由之间数据报的传输的时间<br>  c. 松散路由选择: 指定路由器的IP地址列表数据发送过程中必须经过所有的路由器<br>  d. 严格路由选择: 数据包只能经过被指定的IP地址列表的路由器<br>  e. 上层协议(如TCP/UDP)的头部信息</p>
+</blockquote>
+<p><img src="/img/postpictures/dsvmomdsopkptiojidwhendunxlasmxlk.jpg" srcset="/img/loading.gif" alt="IPv6数据报"></p>
+<blockquote>
+<p>版本：版本字段用来表示IP数据报使用的是IPv6协议封装，占4位，对应值为6（0110）。<br>通信分类（Traffic Class）：通信分类字段用来标识对应IPv6的通信流类别，或者说是优先级别，占8位，类似于IPv4中的ToS（服务类型）字段。<br>流标签（Flow Label）：流标签字段时IPv6数据报中新增的一个字段，占20位，可用来标记报文的数据流类型，以便在网络层区分不同的报文。流标签字段有源节点分配，通过流标签、源地址、目的地址三元组方式就可以唯一标识一条通信流，而不用像IPv4那样需要使用五元组方式（源地址、目的地址、源端口、目的端口和传输层协议号）。这样发动的最大好处有两点：一是流标签可以和任意的关联，需要标识不同类型的流（可以是非五元组）时，无需对流标签做改动；二是流标签在IPv6基本头中，使用IPSec时此域对转发路由器可见，因此转发路由器可以在使用IPv6报文IPSec的情况下仍然可以通过三元组（流标签、源地址、目的地址）针对特定的流进行QoS（质量服务）处理。<br>有效载荷长度（PayLoad Length）：有效载荷长度字段是以字节为单位的标识IPv6数据报中有效载荷部分（包括所有扩展报头部分）的总长度，也就是除了IPv6的基本报头以外的其他部分的总长度，占20位。<br>下一个头部（Next Header）：下一个头部字段用来标识当前报头（或者扩展报头）的下一个头部类型，占8位。每种扩展报头都有其对应的值。下一个头部字段内定义的扩展报头类型与IPv4中的协议字段值类似，但在IPv6数据报中，紧接着IPv6报头的可能不是上层协议头部（当没有扩展报头或者为最后一个扩展报头时才是上层协议头），而是IPv6扩展报头。这一机制下处理扩展报头更搞笑，因为标识了数据报中对应的上层协议或者扩展报头类型，转发路由器只需处理必须处理的扩展报头，提高了转发效率。<br>跳数限制（Hop Limit）：跳数限制于IPv4报文中的TTL字段类似，指定了报文可以有效转发的次数，占8位。报文每经过一个路由器结点，跳数值就减1，当此字段值减到0时，则直接丢弃该报文。<br>源地址（Source IP Address）：源IP地址字段标识了发送该IPv6报文源节点的IPv6地址，占128位。<br>目的IP地址（Destination IP Address）：目的IP地址字段标识了IPv6报文的接受节点的IPv6地址，占128位。</p>
+</blockquote>
+<p>IPv6扩展报头：在各字段介绍中我们讲到了，IPv6报文中可以携带可选的IPv6扩展报头。IPv6扩展报头是跟在IPv6基本报头后面的可选报头。由于在IPv4的报头中包含了几乎所有的可选项，因此每个中间路由器都必须检查这些选项是否存在。在IPv6中，这些相关选项被统一移到了扩展报头中，这样中间路由器不必处理每一个可能出现的选项（仅有“逐跳选项”报头是必须要处理的），提高了处理器处理数据报文的速度，也提高了其转发的性能。<br>IPv6扩展报头附加在IPv6报头目的IP地址字段后面，可以有0个，或者多个扩展报头。主要的IPv6扩展报头有一下几类：</p>
+<blockquote>
+<p>逐跳选项头（Hop-by-hop Options Header）:本扩展报头类型值为0（在IPv6报头下一个头部字段中定义，下同）。此扩展报头须被转发路径所有节点处理。目前在路由告警（RSVP和MLDv1）与Jumbo帧处理中使用了逐跳选项头，因为路由告警需要通知到转发路径中所有结点，而Jumbo帧是长度超过65535字节的报文，传输这种报文需要转发路径中所有结点都能正常处理。<br>目的选项头（Destination Options Header）:本扩展报头类型值为60。只可能出现在两个位置：</p>
+<ol>
+<li>路由头前，这是此选项头被目的节点和路由头中指定的结点处理；</li>
+<li>上层头前（任何的ESP头后），此时只能被目的结点处理。</li>
+</ol>
+<p>移动IPv6中使用了目的选项头，称为家乡地址选项。家乡地址选项由目的选项头携带，用以移动结点离开“家乡”后通知接受节点此移动结点对应的家乡地址。接受节点收到带有家乡地址选项的报文后，会把家乡地址选项中的源地址（移动节点的家乡地址）和报文中源地址（移动节点的转交地址）交换，这样上层协议始终认为是在和移动节点的家乡地址通信，实现了移动漫游功能。<br>路由头（Routing Header）：本扩展报头类型值为43，用于源路由选项和移动IPv6<br>分段头：本扩展报头类型值为44，用于标识数据报的分段，在IPv4中就有对应的字段。当源节点发送的报文超过传输链路MTU（源节点和目的节点之间传输路径的MTU）时，需要对报文进行分段时使用。<br>认证头：本扩展报头类型值为51，用于IPSec，提供报文验证，完整性检查。<br>封装安全有效载荷头：本扩展头类型值为50，用于IPSec，提供报文验证、完整性检查差和加密。<br>上层头：这是用来标识数据报中上层协议类型，如TCP、UDP、ICMP等。</p>
+</blockquote>
+<hr>
+<h3 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h3><h4 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h4><p>传输控制协议TCP，提供了面向连接的，可靠的数据传输服务。<br>面向连接是指程序在使用TCP协议之前必须先建立TCP链接，在传输完数据后要释放连接。<br>TCP链接只能有两个端点，因此每一条TCP的链接为点对点的。<br>TCP协议提供<strong>全双工通信</strong>，允许通信的双方在任何时候都能发送数据。TCP链接的两端都设置有发送和接收缓存。可供应用程序随时取用。<br>TCP是面向字节流的，上层应用程序传给它的所有数据仅作为无结构的字节流，并不知道传送数据实际的含义。传输是会将字节流分为数据块传输，<strong>发送端输出的数据块和接收端向上层应用发送的数据块可以不一样，但是要保证上层应用向发送端输出的字节流和接收端向上层应用发送的字节流完全一样。</strong><br><img src="/img/postpictures/hfudvodsjvjdscomdsicdshcuis.jpg" srcset="/img/loading.gif" alt="TCP传输数据的组成"><br><div class="note note-success">
+            <p><strong>各个段位说明</strong><br><strong>源端口和目的端口</strong>:各占2字节.端口是传输层与应用层的服务接口.传输层的复用和分用功能都要通过端口才能实现<br><strong>序号</strong>:占 4 字节.TCP 连接中传送的数据流中的每一个字节都编上一个序号.序号字段的值则指的是本报文段所发送的数据的第一个字节的序号<br><strong>确认号</strong>:占 4 字节,是期望收到对方的下一个报文段的数据的第一个字节的序号<br><strong>数据偏移/首部长度</strong>:　　占 4 位,它指出 TCP 报文段的数据起始处距离 TCP 报文段的起始处有多远.“数据偏移”的单位是 32 位字(以 4 字节为计算单位)<br><strong>保留</strong>:　　占 6 位,保留为今后使用,但目前应置为 0<br><strong>紧急URG</strong>:　　当 URG=1 时,表明紧急指针字段有效.它告诉系统此报文段中有紧急数据,应尽快传送(相当于高优先级的数据)<br><strong>确认ACK</strong>:　　只有当 ACK=1 时确认号字段才有效.当 ACK=0 时,确认号无效<br><strong>PSH(PuSH)</strong>:　　接收 TCP 收到 PSH = 1 的报文段,就尽快地交付接收应用进程,而不再等到整个缓存都填满了后再向上交付<br><strong>RST (ReSeT)</strong>:　　当 RST=1 时,表明 TCP 连接中出现严重差错(如由于主机崩溃或其他原因),必须释放连接,然后再重新建立运输连接<br><strong>同步 SYN</strong>:　　同步 SYN = 1 表示这是一个连接请求或连接接受报文<br><strong>终止 FIN</strong>:　　用来释放一个连接.FIN=1 表明此报文段的发送端的数据已发送完毕,并要求释放运输连接<br><strong>检验和</strong>:　　占 2 字节.检验和字段检验的范围包括首部和数据这两部分.在计算检验和时,要在 TCP 报文段的前面加上 12 字节的伪首部<br><strong>紧急指针</strong>:　　占 16 位,指出在本报文段中紧急数据共有多少个字节(紧急数据放在本报文段数据的最前面)<br><strong>选项</strong>:　　长度可变.TCP 最初只规定了一种选项,即最大报文段长度 MSS.MSS 告诉对方 TCP：“我的缓存所能接收的报文段的数据字段的最大长度是 MSS 个字节.” [MSS(Maximum Segment Size)是 TCP 报文段中的数据字段的最大长度.数据字段加上 TCP 首部才等于整个的 TCP 报文段]<br><strong>填充</strong>:　　这是为了使整个首部长度是 4 字节的整数倍</p><p><strong>窗口扩大</strong>:　　占 3 字节,其中有一个字节表示移位值 S.新的窗口值等于TCP 首部中的窗口位数增大到(16 + S),相当于把窗口值向左移动 S 位后获得实际的窗口大小<br><strong>时间戳</strong>:　　占10 字节,其中最主要的字段时间戳值字段(4字节)和时间戳回送回答字段(4字节)<br><strong>选择确认</strong>:　　接收方收到了和前面的字节流不连续的两2字节.如果这些字节的序号都在接收窗口之内,那么接收方就先收下这些数据,但要把这些信息准确地告诉发送方,使发送方不要再重复发送这些已收到的数据</p>
+          </div></p>
+<h5 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h5><p>TCP建立连接的过程通常被称为三次握手，因为主要步骤有三步。</p>
+<blockquote>
+<p>第一次握手：请求端通过向服务器发送一个含有同步序列号的标志位的数据段请求建立连接，通过这个数据段，服务器可以了解到是请求端想要和你通信；以及可以用哪个序列号作为起始数据段来回应请求端。</p>
+<p>第二次握手：服务器收到请求端的请求后，用一个带有确认应答（ACK）和同步序列号（SYN）标志位的数据段响应请求端，请求端收到数据段后就可以知道服务器已经收到请求，可以传输数据；以及需要使用那个序列号作为起始数据段来回应服务器。</p>
+<p>第三次握手：请求端收到这个数据段后，再发送一个确认应答，确认已收到服务器的数据段，表明已收到回复，要开始传输实际数据了，这样3次握手就完成了，请求端和服务器就可以传输数据了。</p>
+</blockquote>
+<h5 id="传输过程"><a href="#传输过程" class="headerlink" title="传输过程"></a>传输过程</h5><div class="note note-success">
+            <p><strong>如何处理丢包问题</strong><br>发送端会首先将数据送到发送缓冲中，<br>TCP协议发送端发送时会在数据头中加入序列号以及本次发送数据的长度。接收端接收到后会返回ACK=序列号+长度 即下一段数据的起始位置。这样发送端就可以知道接收端已经接收到的位置，接收端也可以重构数据。若有丢包问题，则接收端不会返回新的起始位置，会要求发送端重传，达到不丢包的效果。<br>注意“TCP 标准没有规定对不按序到达的数据应如何处理.通常是先临时存放在接收窗口中,等到字节流中所缺少的字节收到后,再按序交付上层的应用进程</p>
+          </div>
+<h5 id="断开连接"><a href="#断开连接" class="headerlink" title="断开连接"></a>断开连接</h5><p>断开连接有四个步骤</p>
+<blockquote>
+<p>第一次： 当请求端完成数据传输后,将控制位FIN置1，提出停止TCP连接的请求 ；</p>
+<p>第二次： 服务器收到FIN后对其作出响应，确认来自该请求端上的TCP连接将关闭,将ACK置1；</p>
+<p>第三次： 由服务器端再提出反方向的关闭请求,将FIN置1 ；</p>
+<p>第四次： 请求端对服务器的请求进行确认，将ACK置1，双方向的关闭结束。</p>
+</blockquote>
+<h4 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h4><h4 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h4><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><h4 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h4><p>超文本传输协议，将超文本标记语言(HTML)从服务器传输到客户端的协议。它是通过TCP或通过TLS加密的 TCP 连接发送的应用层协议。<br><div class="note note-success">
+            <p><strong>特点</strong><br>简单易懂：传输的报表消息可以被测试人员直接理解运用，使测试更加简单。<br>传输效率高:<br>    HTTP 是无状态的：在同一连接上连续执行的两个请求之间没有链接。对于试图连贯地与某些页面交互的用户来说，这会立即成为问题，例如，使用电子商务购物篮。但是，虽然 HTTP 本身的核心是无状态的，但 HTTP cookie 允许使用有状态会话。使用标头可扩展性，HTTP Cookie 被添加到工作流中，允许在每个 HTTP 请求上创建会话以共享相同的上下文或相同的状态。<br>可靠性高:<br>兼容性好:<br>灵活度高:HTTP是可拓展的，允许传输任意类型的数据对象</p>
+          </div></p>
+<h5 id="建立链接步骤"><a href="#建立链接步骤" class="headerlink" title="建立链接步骤"></a>建立链接步骤</h5><ol>
+<li>打开TCP链接：TCP 连接用于发送一个或多个请求，并接收一个应答。客户端可以打开一个新的连接，重用一个现有的连接，或者打开几个到服务器的 TCP 连接。</li>
+<li>发送 HTTP 消息：HTTP 消息（在 HTTP/2 之前）是人类可读的。在 HTTP/2 中，这些简单的消息被封装在帧中，无法直接读取，但原理是一样的。</li>
+<li>服务器接受请求并返回HTTP响应:Web服务器解析请求，定位请求资源。服务器将资源复本写到TCP连接里，由客户端读取。一个响应由状态行、响应头部、空行和响应数据4部分组成。</li>
+<li>释放连接TCP连接</li>
+<li>客户端解析返回的数据：浏览器解析HTML内容，根据HTML的语法对其进行格式化，并在浏览器窗口中显示。<h2 id="专有名词"><a href="#专有名词" class="headerlink" title="专有名词"></a>专有名词</h2><h3 id="集线器"><a href="#集线器" class="headerlink" title="集线器"></a>集线器</h3>集线器（hub）属于纯硬件网络底层设备，基本上不具有类似于交换机的”智能记忆”能力和”学习”能力。它也不具备交换机所具有的MAC地址表，所以它发送数据时都是没有针对性的，而是采用广播方式发送。也就是说当它要向某节点发送数据时，不是直接把数据发送到目的节点，而是把数据包发送到与集线器相连的所有节点，因此在同一时间若是有两条线路在发送数据则会造成信息碰撞，用集线器链接的各设备处于<strong>同一冲突域</strong>内。<h3 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h3>相当于集线器的升级版，集线器只能进行两个端口之间的链接。交换机拥有高密度的接口并且有着mac表，每个端口都具有桥接功能，可以连接一个局域网或一台高性能服务器或工作站。实际上，交换机有时被称为多端口网桥。交换机允许许多组端口间的通道同时工作。所以，交换机的功能体现出不仅仅是一个网桥的功能，而是多个网桥功能的集合。<h3 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h3><h3 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h3>路由器（Router）是连接两个或多个网络的硬件设备，在网络间起网关的作用，是读取每一个数据包中的地址然后决定如何传送的专用智能性的网络设备。它能够理解不同的协议，例如某个局域网使用的以太网协议，因特网使用的TCP/IP协议。这样，路由器可以分析各种不同类型网络传来的数据包的目的地址，把非TCP/IP网络的地址转换成TCP/IP地址，或者反之；再根据选定的路由算法把各数据包按最佳路线传送到指定位置。所以路由器可以把非TCP/IP网络连接到因特网上。路由器具有防火墙的功能，因为其不传送不支持路由协议的数据，可防止广播风暴，而交换机没有这个功能。</li>
+</ol>
+<h4 id="关于猫"><a href="#关于猫" class="headerlink" title="关于猫"></a>关于猫</h4><p>猫的学名叫调制解调器，它的作用是将数字信号（电脑想要发送的信息）转换成模拟信号（网线中的电流脉冲）从而使信息在网线中传输。       由于计算机的一切信号都要由电流脉冲传送出去，因而猫是必须的。目前的家用路由器一般都是路由猫，即路由器兼顾了猫和简单交换机的功能</p>
+<h3 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h3><h3 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h3><p>人们通过例如 google.com 等域名在线访问信息。Web 浏览器通过IP地址进行交互。DNS将域名转换为IP地址，以便浏览器能够加载互联网资源。连接到 Internet 的每个设备都有一个唯一 IP 地址，其他计算机可使用该 IP 地址查找此设备。DNS 服务器使人们无需存储一个32位的和人类理解范畴中与目标网站毫无关联的数，便利了用户使用。<br><img src="/img/postpictures/dsgfadsrahgtrjhytjhgfdjhgjhgjdtg.jpg" srcset="/img/loading.gif" alt=""><br>DNS系统是一个树的结构，所有的请求都会先发送到根服务器中，DNS的根服务器有十三组，每一组又有数量不一的多台服务器，散布在世界各地。用户在访问一个根服务器所对应的ip时，会优先选择对应该ip的根服务器的物理距离最近的一台。<br>用户个人机上也存在有一定的DNS缓存，存放了最近使用DNS系统进行的查询的相关数据，本地储存最大的优势在于极其优秀且稳定的速度。减少了延迟。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%B7%A5%E7%A8%8B/">工程</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/03/15/python%E5%B0%8F%E5%B7%A5%E5%85%B7/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">python小工具</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/03/%E5%A4%A7%E4%BA%8C%E4%B8%8B%20Plan/">
+                        <span class="hidden-mobile">大二下 Plan</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

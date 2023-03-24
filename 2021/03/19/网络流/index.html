@@ -1,0 +1,688 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="网络流(network-flows)是一种类比水流的解决问题方法，与线性规划密切相关。">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>关于网络流的一些整合 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/asfqwerfsv%20zxvcs.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="关于网络流的一些整合">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-19 11:33" pubdate>
+        2021年3月19日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      15
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">关于网络流的一些整合</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年10月3日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>高中时期关于网络流仅仅只是学习了EK求最大流，现进行重新学习并于此补充。</p>
+<h3 id="最大流问题"><a href="#最大流问题" class="headerlink" title="最大流问题"></a>最大流问题</h3><h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><p>最大流原理就是不停的寻找增广路，最后无流可走就是最大流，其中很妙的一点是增添了反向边这个东西，使得之前未走最优的路径可以通过反向边“反悔”，其他细节的部分源码中有注释。</p>
+<p><strong>Edmond_Karp</strong><br>EK算法是在源点和汇点当中反复使用bfs寻找增广路，每找到一条可行路径就用数组记录下来并增加流量，复杂度就是O(nm^2)<br><a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/02/28/%E6%A8%A1%E6%9D%BF%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/#Edmond-Karp%E6%B1%82%E6%9C%80%E5%A4%A7%E6%B5%81">源码</a></p>
+<p><strong>Dinic</strong><br>Dinic是在EK的基础上进行了优化，用bfs找到增广路之后用dfs寻找所有路径并增加流量，添加了深度数组保证一次dfs可以找到多条可行路径，时间复杂度O(n^2m)，这里是<a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/02/28/%E6%A8%A1%E6%9D%BF%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/#Dinic%E6%B1%82%E6%9C%80%E5%A4%A7%E6%B5%81">源码</a>。<br><a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/02/28/%E6%A8%A1%E6%9D%BF%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/#%E5%BD%93%E5%89%8D%E5%BC%A7%E4%BC%98%E5%8C%96%E7%9A%84Dinic">这个是当前弧优化版本的Dinic，优化效果显著</a><br>实际中遇到的多是最大流问题的变种，需要良好的建模能力才能准确应用</p>
+<hr>
+<h4 id="最小割问题-顶点容量流"><a href="#最小割问题-顶点容量流" class="headerlink" title="最小割问题||顶点容量流"></a>最小割问题||顶点容量流</h4><p>最大流最小割定理:网络的最大流等于最小割<br>这个等于是指在数值上的等于，具体证明不再赘述。最小割主要是分为割点和割边，割边就是明显的最大流问题，割点的话就需要对原图进行拆点转化<br>割点将一个点分为两个点，中间连上一条单向边，流量设为1.而原边的流量设置为极大数。显然，转变后两点之间流量为1的边才是有效边，而原边不会对流量产生干扰，如此将割点转换成割边的问题。<br><img src="/img/adsgerwqxc.jpg" srcset="/img/loading.gif" alt="大概就像这样"><br>如图所示，在此时的图上跑最大流，红色边(原边)对答案起不到任何干扰，绿边(新创的边)才会制约答案。原理显然。<br>顶点容量流也和最小割点一样，使用拆点成边即可，不过此时新边为点的容量，原边容量不变</p>
+<hr>
+<h4 id="最大权闭合子图"><a href="#最大权闭合子图" class="headerlink" title="最大权闭合子图"></a>最大权闭合子图</h4><p>闭合图：对于一个有向图G，存在点集合V，任取点u属于V，u的出边的另一个点也属于V，则为闭合图。<br>就是在闭合图内任取一起点，途径的点和终点必定都属于该闭合图。<br>最大权闭合子图：当每个点有一个权值w（有正有负），点权和最大的闭合图为最大权闭合子图。<br><img src="/img/postpictures/aasdfsfervcxvz.png" srcset="/img/loading.gif" alt="举个例子"><br>就像这张图片里的图，其中{1,2,3,4},{6,5,4},{7,4}为该图中的三个闭合图，而最大全闭合子图是{7,4}，权值为114514+1=114515.<br>这种题目也是通过最大流来解决，建立一个源点S和所有权值为正的点连边(源点→权值为正的点)，权值为该点的权值;再建立汇点E和所有权值为负的点连边(权值为负的点→汇点)，权值为该点的权值的绝对值。其他边的权值设为极大值。<br><img src="/img/postpictures/asddvreqgtgz.png" srcset="/img/loading.gif" alt="就像这样"><br>然后在新图上跑最大流，最终最大权闭合子图的值就是<strong>所有点权为正的权值之和-新图上的最大流</strong><br>根据图片演示，应该很容易想到原理。<br>我们首先定义一个 <strong>“有效”的闭合子图</strong>为该图内所有点权之和大于0。由于闭合图的性质，我们可以得出所有有效的闭合子图就之和是我们所需的答案。<br>模拟一下网络流的过程，以一个节点开始必然会经过它之后的所有的节点，流向汇点E的部分就是<strong>所有有效的闭合子图的负权值之和</strong>。因为流向汇点的点均为负值节点。大于其边权的流量只能有该边权的流量通过;小于其边权的流量代表这个子图的总权值为负值，这个子图最终流向汇点的权值是其正值权值的总和，这部分权值不会计算在内，会在最后一步减去;而流向汇点的流量为0的边权则代表该点并不是有效的闭合子图的一部分。<br>因此得证 <strong>大权闭合子图的值 = 所有点权为正的权值之和 - 新图上的最大流</strong></p>
+<hr>
+<h3 id="最小费用最大流"><a href="#最小费用最大流" class="headerlink" title="最小费用最大流"></a>最小费用最大流</h3><p>给定一个网络，每条边除了有容量限制，还有一个单位流量的费用。<br>当一条边的的流量为$f_i$ 时，需要花费$f_i \times Cost_i$的费用。则该网络中总花费最小的最大流称为 最小费用最大流.</p>
+<h4 id="SSP算法"><a href="#SSP算法" class="headerlink" title="SSP算法"></a>SSP算法</h4><p>SSP（Successive Shortest Path）是一个贪心的算法，每一次找到最短的可增广路进行增广，直到图上不存在增广路即可。<br>算法很简单，只要把EK或Dinic中的寻找增广路的部分换成SPFA即可，这里是<a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/02/28/%E6%A8%A1%E6%9D%BF%E8%A1%A5%E5%85%A8%E8%AE%A1%E5%88%92/#%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%9C%80%E5%A4%A7%E6%B5%81-EK-SPFA">EK替换后的源码</a>。设网络最大流为f，呢么时间复杂度最坏情况为O(nmf)的</p>
+<div class="note note-warning"><p>
+这并不是一个多项式时间复杂度，因为多项式时间复杂度要求算法花费的时间可以表示为一个关于输入数据规模$n$的多项式函数。
+而在SSP算法中，最大流$f$并不一定能表示为关于$n$的多项式函数。假如构造$m=n^2 , f=2^{n/2}$的网络，该情况下 SSP 算法的时间复杂度将达到指数时间复杂度。
+</p></div>
+
+<h4 id="Primal-Dual-原始对偶算法"><a href="#Primal-Dual-原始对偶算法" class="headerlink" title="Primal-Dual 原始对偶算法"></a>Primal-Dual 原始对偶算法</h4><p>学习了<a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/21/DJ%20%E7%9A%84%E8%B4%9F%E6%9D%83%E5%9B%BE%E4%BC%98%E5%8C%96/">Johnson算法</a>后我们可以尝试使用DJ来代替SPFA进行最短路的查找。此时要解决的是势能设定问题，因为每跑一次费用流流量均会发生改变，相应的单位权值乘上流量变化量形成的权值增量也会改变。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%80%BB%E7%BB%93/">总结</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/acm/">acm</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%9C%80%E5%A4%A7%E6%B5%81/">最大流</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%9C%80%E5%B0%8F%E5%89%B2/">最小割</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/21/DJ%20%E7%9A%84%E8%B4%9F%E6%9D%83%E5%9B%BE%E4%BC%98%E5%8C%96/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Johnson 算法-Dijkstra的负权图优化</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/15/%E7%94%A8matlab%E8%BF%9B%E8%A1%8C%E4%B8%89%E7%BB%B4%E5%87%BD%E6%95%B0%E7%BB%98%E5%88%B6/">
+                        <span class="hidden-mobile">使用matlab进行三维函数的绘制</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

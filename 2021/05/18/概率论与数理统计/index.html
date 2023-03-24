@@ -1,0 +1,829 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="概率论是数学的一个有特色且又十分活跃的分支，是近代数学的重要组成部分。">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>概率论与数理统计 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/sagfdsauocixm.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="概率论与数理统计">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-05-18 18:54" pubdate>
+        2021年5月18日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">概率论与数理统计</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年6月13日 凌晨
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><pre><code>这里记录了一些关于概率论的学习总结，目的是为了加深记忆以及提升Latex编辑技巧
+</code></pre><hr>
+<h3 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h3><pre><code>一些基础的比较重要的但是没啥可说的都放到这里，想到啥写啥。
+</code></pre><h4 id="排列数"><a href="#排列数" class="headerlink" title="排列数"></a>排列数</h4><p>从n个不同的元素中，任取其中m个元素按照一定的顺序排成一列，叫做从n个不同元素中取出m个元素的一个排列。从n个不同的元素中，任取其中m个元素组成的排列的个数，叫做 <strong>从n个不同元素中取出m个元素的排列数</strong>，用符号 $P^m_n或 A^m_n$表示。<br><strong>计算公式 $A^m_n=n(n-1)…(n-m+1)=\frac{n!}{(n-m)!}$. 规定 0!=1;</strong></p>
+<p><strong>注意：</strong><br>    当m = n时，称$A^m_n$为全排列;当m &lt; n时，称$A^m_n$为选排列<br>    全排列$A^n_n=n!$</p>
+<h4 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h4><p>从n个不同的元素中，任取其中m个元素构成一组，叫做从n个不同元素中取出m个元素的一个组合。从n个不同的元素中，任取其中m个元素组成的组合的个数，叫做 <strong>从n个不同元素中取出m个元素的组合数</strong>，用符号$C^{m}_{n}$或$(^m_n)$表示。<br><strong>计算公式 $C^m_n = \frac{A^m_n}{m!}= \frac{n!}{m!(n-m)!}$.</strong></p>
+<p><strong>基本的组合恒等式</strong> </p>
+<script type="math/tex; mode=display">\begin{align*}
+& C^{r}_{n} = C^{n-r}_n \\
+& C_{n+1}^{r+1} = C_n^{r+1} + C_{n}^{r} \\
+& k \times C_{n}^{k}=n\times C^{k-1}_{n-1} \\
+& \sum_{k=0}^n C^{k}_{n_1} * C^{n-k}_{n_2}=C^{n}_{n_1+n_2} \\
+& C_{n}^{r} * C_r^m =C_{n}^{m}*C_{n-m}^{r-m} \\
+& \sum_{k=0}^n C^{k}_{n}=2^{n} \\
+& \sum_{k=0}^n (-1)^{k} * C^{k}_{n}=0 (由对称性易得)\\
+& \sum_{k=r}^n C_{k}^{r}=C^{r+1}_{k+1}
+\end{align*}</script><hr>
+<h3 id="第一章-随机事件与概率"><a href="#第一章-随机事件与概率" class="headerlink" title="第一章 随机事件与概率"></a>第一章 随机事件与概率</h3><pre><code>这一章大多数内容都是高中知识，简单记一下知识点就可以了~~(bushi)~~
+</code></pre><h4 id="事件之间的关系与运算"><a href="#事件之间的关系与运算" class="headerlink" title="事件之间的关系与运算"></a>事件之间的关系与运算</h4><p><strong>包含</strong> A发生必然导致 B发生. $A \subset B$<br><strong>互斥</strong> A 和 B 不可能同时发生. <script type="math/tex">A \cap B= \emptyset</script><br><strong>独立</strong> 两事件相互独立与两事件互斥二者之间没有必然联系,满足<script type="math/tex">P(A)P(B)=P(AB)</script></p>
+<p class="note note-danger">注意，ABC两两独立推不出来ABC相互独立，即$P(A)P(B)=P(AB);P(B)P(C)=P(BC);P(C)P(A)=P(CA)$无法推出$P(A)P(B)P(C)=P(ABC)$</p>
+
+<p><strong>并事件(和事件)</strong> A 与 B 至少有一发生. $A \cup B$<br><strong>积事件(交事件)</strong> A 与 B 同时发生. $A \cap B$<br><strong>逆事件(对立事件)</strong> A 和 B 满足 <script type="math/tex">A \cup B = \Omega</script> 且 <script type="math/tex">AB= \emptyset , B= \overline{A}</script><br><strong>差事件</strong> A 发生，B 不发生. <script type="math/tex">A-B=A \cap \overline{B}=A \overline{B}</script></p>
+<hr>
+<p><strong>事件的运算律</strong><br><strong>交换律</strong> <script type="math/tex">A \cap B =B\cap A ; A \cup B =B\cup A</script> ;<br><strong>结合律</strong> <script type="math/tex">A \cup (B \cup C)=(A \cup B)\cup C ; A \cap (B \cap C)=(A \cap B)\cap C</script> ;<br><strong>分配律</strong> <script type="math/tex">A \cup (B \cap C)=(A \cup B)\cap (A \cup C) ; A \cap (B \cup C)=(A \cap B)\cup (A \cap C)</script> ;<br><strong>德摩根律</strong> <script type="math/tex">\overline{A \cup B} = \overline{A} \cap \overline{B} ; \overline{A \cap B} = \overline{A} \cup \overline{B}</script></p>
+<hr>
+<h4 id="奇怪的概型"><a href="#奇怪的概型" class="headerlink" title="奇怪的概型"></a>奇怪的概型</h4><p><strong>古典概型</strong><br>有限元素，可能性相同，概率为$P(A)=\frac{事件A中样本点数目}{样本点总数}$<br>超几何分布 共有N个样本点，其中有D个标记点，从中任取n件，其中恰有k个标记点的概率<br>$P(X=k)=\frac{C^{n-k}_{N-D}C^k_D}{C^n_N}$</p>
+<p><strong>几何概型</strong></p>
+<p>设 $\Omega$ 是欧氏空间的有限区域，样本空间的每个点取到是有可能的，这样的概型为几何概型。</p>
+<p><strong>伯努利概型</strong><br>伯努利试验E：只有两个结果的试验。（例：正反、黑白球、成败等。）<br>n重伯努利试验: n次独立重复的伯努里试验。(相同条件,各次试验每个结果概率不变,各次试验结果独立)<br>定理(二项概率公式)：设事件A在一次实验中出现的概率为p，则在n重伯努利试验中A恰好出现k次的概率为$P_n(k)= C^k_n p^k(1-p)^{n-k} (k=0,1…n)$</p>
+<hr>
+<h4 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h4><p><strong>乘法公式</strong>  由条件概率定义可得$P(AB)=P(B)P(A|B)$<br><strong>全概率公式</strong>  假如 <script type="math/tex">A_1,A_2...A_n</script> 为 <script type="math/tex">\Omega</script> 的一个划分，则对任一随机事件B有 <script type="math/tex">P(B)=\sum_{i=1}^{n}P(A_i)P(B|A_i)</script><br><strong>贝叶斯公式</strong> B为<script type="math/tex">\Omega</script>中的一个事件，<script type="math/tex">A_1,A_2...A_n为\Omega</script>的一个有穷剖分,</p>
+<script type="math/tex; mode=display">P(A_i|B)= \frac{P(A_i) P(B|A_i)}{ \sum^n_{i=1}P(A_i)P(B|A_i)}(i=1,2...n)</script><pre><code>乘法公式是求“几个事件同时发生”的概率；
+全概率公式可看作是求“最后结果”的概率；
+贝叶斯公式可看作是已知“最后结果” ，求“原因”的概率.
+</code></pre><hr>
+<h3 id="第二章-一维随机变量及分布"><a href="#第二章-一维随机变量及分布" class="headerlink" title="第二章 一维随机变量及分布"></a>第二章 一维随机变量及分布</h3><p>随机变量分布函数<script type="math/tex">F(x)=P(X(\omega) \leq x)</script>的性质<br>1.F(x)单调非降<script type="math/tex">F(x_2)-F(x_1)=P(x_1 < X(\omega) < x_2 ) \geq 0</script><br>2.<script type="math/tex">0 \leq F(x) \leq 1, F(- \infty)=lim_{x \rightarrow -\infty}F(x)=0,F(+ \infty)=lim_{x \rightarrow +\infty}F(x)=1</script><br>3.F(x)在任何一点都是右连续的<script type="math/tex">F(x+0)=F(x)</script><br>任何随机变量的额分布满足这一性质(无论是连续还是离散)，具有这些性质的函数必为某一随机变量的分布函数。<br>边沿分布概率函数</p>
+<h4 id="分布类型"><a href="#分布类型" class="headerlink" title="分布类型"></a>分布类型</h4><table class="table table-bordered table-striped table-condensed">
+        <tr>
+            <th width=30%>分布类型</th>
+            <th width=20%>记号</th>
+            <th width=30%>密度函数</th>
+            <th width=10%>期望</th>
+            <th width=10%>方差</th>
+        </tr>
+        <tr><td colspan=5 align=center>离散型随机变量的分布</th></tr>
+        <tr>
+            <th rowspan=1>伯努利分布/0-1分布</th>
+            <th>$$X \sim 0-1(p)$$</th>
+            <th>$$P(x=1)=p$$</th>
+            <th>$$p$$</th>
+            <th>$$p(1-p)$$</th>
+        </tr>
+        <tr>
+            <th rowspan=1>二项分布/n重伯努利分布</th>
+            <th>$$X \sim B(n,p)$$</th>
+            <th>$$P(X=k)=C_n^k p^k(1-p)^{n-k}$$</th>
+            <th>$$np$$</th>
+            <th>$$np(1-p)$$</th>
+        </tr>
+        <tr>
+            <th rowspan=1>几何分布</th>
+            <th>$$X \sim G(p)$$</th>
+            <th>$$P(x=k)=p(1-p)^{k-1}$$</th>
+            <th>$$1/p$$</th>
+            <th>$$(1-p)/p^2$$</th>
+        </tr>
+        <tr>
+            <th rowspan=1>泊松分布</th>
+            <th>$$X \sim \pi(\lambda)$$</th>
+            <th>$$P(x=k)=\frac{\lambda e^{- \lambda}}{k!}$$</th>
+            <th>$$\lambda$$</th>
+            <th>$$\lambda$$</th>
+        </tr>
+        <tr><td colspan=5 align=center>连续型随机变量的分布</th></tr>
+        <tr>
+            <th rowspan=1>均匀分布</th>
+            <th>$$X \sim U(a,b)$$</th>
+            <th>$$f(x)=\frac{1}{b-a} x\in (a,b)$$
+            $$f(x)=0 其他$$</th>
+            <th>$$\frac{a+b}{2}$$</th>
+            <th>$$\frac{(b-a)^2}{12}$$</th>
+        </tr>
+        <tr>
+            <th rowspan=1>指数分布</th>
+            <th>$$X \sim E(\lambda)$$</th>
+            <th>$$f(x)=\lambda e^{-\lambda x},x>0$$
+            $$f(x)=0,其他$$
+            </th>
+            <th>$$\frac{1}{\lambda}$$</th>
+            <th>$$\frac{1}{\lambda^2}$$</th>
+        </tr>
+        <tr>
+            <th rowspan=1>正态分布</th>
+            <th>$$X \sim N(\mu,\sigma^2)$$</th>
+            <th>$$f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$</th>
+            <th>$$\mu$$</th>
+            <th>$$\sigma^2$$</th>
+        </tr>
+        <tr>
+            <th rowspan=1>标准正态分布</th>
+            <th>$$X \sim N(0,1)$$</th>
+            <th>$\varphi(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}$ <br> 正态分布转标准正态分布的公式为$Z=\frac{X-\mu}{\sigma}$</th>
+            <th>$$0$$</th>
+            <th>$$1$$</th>
+        </tr>
+        <tr>
+            <th rowspan=1> $$ \mathcal{X}^2分布 $$ </th>
+            <th>$$Z \sim \mathcal{X}^2(n)$$</th>
+            <th> 设$(X_1,X_2,...,X_n)$均满足标准正态分布，令$Z=\sum_{i=1}^n X_i^2$，则Z服从的分布为$ \mathcal{X}^2 $ 分布<br>满足$\frac{(n-1)S^2}{\sigma ^2}=\sim \mathcal{X}^2(n-1)$的性质
+            </th>
+            <th>$$E \mathcal{X}^2(n)=n$$</th>
+            <th>$$D \mathcal{X}^2(n)=2n$$</th>
+        </tr>
+        <tr>
+            <th rowspan=1>  t分布  </th>
+            <th>$$Z \sim t(n)$$</th>
+            <th> 若$X\sim N(0,1),Y\sim \mathcal{X}^2(n)$，令$Z=\frac{X}{\sqrt{Y}/n}$，则Z服从的分布为t分布 
+            <br>满足$\frac{\overline{X}-\mu}{\frac{S}{\sqrt{n}}}=\sim t(n-1)$的性质</th>
+            <th>$$EZ=0$$</th>
+            <th>$$DZ=\frac{n}{n-2}$$</th>
+        </tr>
+</table>
+
+<h3 id="第三章-分布函数"><a href="#第三章-分布函数" class="headerlink" title="第三章 分布函数"></a>第三章 分布函数</h3><h4 id="概率密度函数"><a href="#概率密度函数" class="headerlink" title="概率密度函数"></a>概率密度函数</h4><p>就是取到该点的概率。<br>没啥可说的</p>
+<h4 id="边缘密度函数"><a href="#边缘密度函数" class="headerlink" title="边缘密度函数"></a>边缘密度函数</h4><p>实际上有很多种算法，举个例子，<br>关于x的边缘密度函数<script type="math/tex">Fx(x)=</script> <script type="math/tex">\begin{cases}  F(x,+\infty)=lim_{y\to \infty}F(x,y) \\ \int_{-\infty}^{x}f(x,y)dy \end{cases}</script><br>也就是对概率密度函数求正积分，对概率分布函数求歪导，就是某一个为变量时求以（它，另一个坐标无穷）为坐标为右上角的区块面积。</p>
+<h3 id="第四章-随机变量的数字特征"><a href="#第四章-随机变量的数字特征" class="headerlink" title="第四章 随机变量的数字特征"></a>第四章 随机变量的数字特征</h3><h4 id="数学期望"><a href="#数学期望" class="headerlink" title="数学期望"></a>数学期望</h4><p>本质是概率分布的平均值</p>
+<blockquote>
+<p>定义式：<br>离散型：<script type="math/tex">E(X)=\sum_k^n xp_k</script><br>连续型：<script type="math/tex">E(X)=\int_{-\infty}^{\infty}xf(x)dx</script></p>
+</blockquote>
+<p>1.<script type="math/tex">E(c)=c</script>(c是常数)<br>2.<script type="math/tex">E(aX+b)=aE(X)+b</script>(ab是常数)<br>3.<script type="math/tex">E(X+Y)=E(X)+E(Y);E(X-Y)=E(X)-E(Y)</script><br>4.当<script type="math/tex">XY</script>独立时,<script type="math/tex">E(XY)=E(X)E(Y)</script><br>5.<script type="math/tex">(EXY)^2 \leq EX^2 EY^2</script></p>
+<h4 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h4><p>本质是概率分布的离散程度</p>
+<blockquote>
+<p>定义式：<br>离散型：<script type="math/tex">D(X)=\sum_k p_k(X_k-\mu)^2</script><br>连续型：<script type="math/tex">D(X)=\int_{-\infty}^{\infty}(x-\mu)^2f(x)dx</script></p>
+</blockquote>
+<p>1.<script type="math/tex">D(x)=E(X^2)-(E(X))^2=(np)</script><br>2.<script type="math/tex">D(c)=0</script>(c是常数)<br>3.<script type="math/tex">D(aX+b)=a^2E(X)</script>(ab是常数)<br>4.当<script type="math/tex">XY</script>相互独立时,<script type="math/tex">D(\sum (X_i or -X_i))=\sum D(X_i)</script>,注意，无论和或是差的方差，均为方差的和。</p>
+<h4 id="切比雪夫不等式"><a href="#切比雪夫不等式" class="headerlink" title="切比雪夫不等式"></a>切比雪夫不等式</h4><p>前提<script type="math/tex">D(x),E(x)</script>存在,呢么就有<script type="math/tex">P(X-E(X)>=\Delta)<= \frac{D(X)}{\Delta^2}</script>。</p>
+<h4 id="协方差"><a href="#协方差" class="headerlink" title="协方差"></a>协方差</h4><p>衡量了随机变量XY之间的总体误差<br>由方差引申而来，若XY不独立，就会出现协方差项。</p>
+<blockquote>
+<p>定义式：<br>    离散型：<script type="math/tex">D(X)=\sum_k p_k(X_k-\mu)^2</script><br>    连续型：<script type="math/tex">D(X)=\int_{-\infty}^{\infty}(x-\mu)^2f(x)dx</script></p>
+</blockquote>
+<p>1.<script type="math/tex">Cov(x)=E(XY)-E(X)E(Y)</script><br>由此我们可以知道，方差可以看作是协方差的推广<br>2.<script type="math/tex">Cov(X,Y)=Cov(Y,X)</script><br>3.<script type="math/tex">Cov(aX,bY)=abCov(X,Y)</script>(ab是常数)<br>4.<script type="math/tex">Cov(X_1+X_2,Y)=Cov(X_1,Y)+Cov(X_2,Y)</script><br>5.当<script type="math/tex">XY</script>相互独立时,<script type="math/tex">Cov(X,Y)=0</script><br>6.<script type="math/tex">Cov(X,X)=D(X)</script><br>7.<script type="math/tex">D(X+Y)=D(X)+D(Y)+2Cov(X,Y)</script><br>引申之后可得：<script type="math/tex">D(\sum X_i)=\sum D(X_i)+2\sum \sum_{i < j}Cov(X_i,X_j)</script><br>8.<script type="math/tex">D(aX+bY)=a^2D(X)+b^2D(Y)+2abCov(X,Y)</script><br>9.<script type="math/tex">D(aX-bY)=a^2D(X)+b^2D(Y)-2abCov(X,Y)</script></p>
+<h4 id="相关系数"><a href="#相关系数" class="headerlink" title="相关系数"></a>相关系数</h4><p>反映了XY这两个变量之间的关系以及相关方向<br>实际上反应的是XY的线性相关程度，也就是说即使<script type="math/tex">\rho=0</script>，也只能说明XY无线性相关关系，但是无法说明XY是否含有曲线相关关系(如<script type="math/tex">X^2+Y^2=1</script>)<br>即：若XY独立，则XY必不相关；若XY不相关，XY则不一定独立。(特例是二维正态分布，对于这个独立就是不相关)<br>定义式：<script type="math/tex">\rho_{XY}=\frac{Cov(X,Y)}{\sqrt{D(X)}{D(Y)}}=\frac{\sigma_{XY}}{\sigma_X \sigma_Y}</script><br>1.<script type="math/tex">|\rho| \leq 1</script><br>2.当XY相互独立时，<script type="math/tex">\rho_{XY}=0</script><br>3.<script type="math/tex">|\rho_{XY}|=1</script>成立的充分必要条件是存在常数<script type="math/tex">ab</script>，使得<script type="math/tex">P(Y=a+bX)=1</script></p>
+<p class="note note-danger">注意，相关系数为零，只能说明XY不相关，无法说明XY独立！！<br>不相关和独立是两个概念。X与Y不相关是指X与Y之间不存在线性关系，不排除X与y之间存在某种曲线关系(如$X^2+Y^2=1$).若X和Y独立，则X与Y一定不相关;反之，若X与Y不相关,则X与Y未必独立.<br>既然是非线性关系，呢么对于 和差方差等于方差和 和 和差期望等于期望和差 来说不相关与独立体现是一样的，因此不相关这两个公式也能适用。<br>以及，（只）对于二维正态分布来说，不相关就是独立（必要充分条件）</p>
+
+<h4 id="矩"><a href="#矩" class="headerlink" title="矩"></a>矩</h4><p>随机变量关于常数a的k阶矩：<script type="math/tex">E[(X-a)^k]</script>,其中k为正整数。<br>当a=O时的k阶矩称为k阶原点矩，记为<script type="math/tex">v_k= E(X^k)</script><br>当a=E(X)时的k阶矩称为k阶中心矩,记为<script type="math/tex">\mu_k=E[(X-E(X))^k]</script><br>数学期望是随机变量的一阶原点矩;方差是随机变量的二阶中心矩.</p>
+<h5 id="定理-高阶矩存在则必定低阶矩存在"><a href="#定理-高阶矩存在则必定低阶矩存在" class="headerlink" title="定理(高阶矩存在则必定低阶矩存在)"></a>定理(高阶矩存在则必定低阶矩存在)</h5><p>设随机变量X的s阶矩存在，若0 &lt; k &lt; s，则<script type="math/tex">E(X^K)</script>也存在</p>
+<h5 id="定理（中心矩与原点矩的关系"><a href="#定理（中心矩与原点矩的关系" class="headerlink" title="定理（中心矩与原点矩的关系)"></a>定理（中心矩与原点矩的关系)</h5><p>（这是防止公式渲染错误的头文字前缀请忽略）<script type="math/tex">\mu_k=\sum_{j=0}^k C_k^j v_j(-V_1)^{k-j}</script>,<br>（这是防止公式渲染错误的头文字前缀请忽略）<script type="math/tex">v_k=\sum_{j=0}^k C_k^j \mu_j V_1^{k-j}</script>,</p>
+<h3 id="第五章-大数定律和中心极限定律"><a href="#第五章-大数定律和中心极限定律" class="headerlink" title="第五章 大数定律和中心极限定律"></a>第五章 大数定律和中心极限定律</h3><h4 id="切比雪夫不等式-1"><a href="#切比雪夫不等式-1" class="headerlink" title="切比雪夫不等式"></a>切比雪夫不等式</h4><p>如果一个随机变量的方差非常小的话，那么这个随机变量取到远离均值$\mu$的概率也是非常小的，这个说实话也非常直观，同样有一个专门的不等式来描述他，就是切比雪夫不等式</p>
+<script type="math/tex; mode=display">P(|X-\mu| \geq \varepsilon) \leq \frac{\sigma^2}{\varepsilon^2}</script><h4 id="大数定律"><a href="#大数定律" class="headerlink" title="大数定律"></a>大数定律</h4><blockquote>
+<p>指某个随机事件在单次试验中可能发生也可能不发生，但在大量重复实验中往往呈现出明显的规律性，即该随机事件发生的频率会向某个常数收敛，该常数值即该事件发生的概率。<br>就是能用频率近似代替概率；能用样本均值近似代替总体均值得意思。</p>
+</blockquote>
+<p class="note note-danger">大数定律发挥作用，是靠大数对小数的稀释作用。而不是依靠后面的失衡的出现去平衡前期的失衡！！！</p>
+
+<h5 id="切比雪夫大数定律"><a href="#切比雪夫大数定律" class="headerlink" title="切比雪夫大数定律"></a>切比雪夫大数定律</h5><p>假设<script type="math/tex">\xi_n</script>为一个随机变量序列，<script type="math/tex">E(X)=\mu,D(X)=\sigma^2</script>.如果<script type="math/tex">D(S_n) < o(n^2)</script>,呢么当<script type="math/tex">n \rightarrow \infty,P(\omega:|\frac{1}{n}\sum_{k=1}^n X_i - \frac{1}{n}\sum_{k=1}^n \mu_k|>\varepsilon) \rightarrow 0</script><br>适用条件：<script type="math/tex">D(S_n) < o(n^2)</script></p>
+<h4 id="Levi-Lindeberg定理-中心极限定理"><a href="#Levi-Lindeberg定理-中心极限定理" class="headerlink" title="Levi-Lindeberg定理(中心极限定理)"></a>Levi-Lindeberg定理(中心极限定理)</h4><p>不论<script type="math/tex">X_i</script>属于什么分布类型，<script type="math/tex">\mu=EX_i,\sigma=DX_i \to \sum_{i=1}^n X_i \overset{n\to \infty}{\sim} N(n\mu,n\sigma^2)</script>.<br>呢么，<script type="math/tex">\frac{\sum_{i=1}^n X_i -n\mu}{\sqrt{n}\sigma} \overset{n\to \infty}{\sim} N(0,1)</script>,即<script type="math/tex">lim_{n \to \infty }P \left\{ \frac{\sum_{i=1}^n X_i -n\mu}{\sqrt{n}\sigma} \leq x \right\} =\Phi(x)</script></p>
+<p class="note note-danger">本质上是在说一个随机数期望的分布是按照正态分布的，且与期望值和方差有关</p>
+
+<h3 id="数理统计"><a href="#数理统计" class="headerlink" title="数理统计"></a>数理统计</h3><h4 id="一些名词"><a href="#一些名词" class="headerlink" title="一些名词"></a>一些名词</h4><ol>
+<li>联合分布函数：设总体X的分布函数为F(x)，则样本<script type="math/tex">(X_1,X_2,...,X_n)</script>的分布函数为<script type="math/tex">F(X_1,X_2,...,X_n)=\prod_{i=1}^n F(x_i)</script></li>
+<li>联合分布律：设总体X的概率分布律为P(X=x)=p(x)，则样本<script type="math/tex">(X_1,X_2,...,X_n)</script>的分布函数为<script type="math/tex">P(X_1,X_2,...,X_n)=\prod_{i=1}^n p(x_i)</script></li>
+<li>联合分布密度：设总体X的概率密度为f(x)，则样本<script type="math/tex">(X_1,X_2,...,X_n)</script>的分布函数为<script type="math/tex">f(X_1,X_2,...,X_n)=\prod_{i=1}^n f(x_i)</script></li>
+<li>样本均值：<script type="math/tex">\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_i</script></li>
+<li>样本方差：<script type="math/tex">S_n^2=\frac{1}{n}\sum_{i=1}^{n}(X_i-\overline{X})^2</script><br>样本标准差：<script type="math/tex">S_n</script></li>
+<li>修正样本方差：<script type="math/tex">S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^2</script></li>
+<li>样本矩：<br>k阶矩：<script type="math/tex">A_k=\frac{1}{n}\sum_{i=1}^n X_i^k</script><br>k阶中心矩：<script type="math/tex">B_k=\frac{1}{n}\sum_{i=1}^n (X_i-\overline{X})^k</script></li>
+<li>样本k阶原点矩：<script type="math/tex">A_k=\frac{1}{n}\sum_{i=1}^{n}X_i^k</script></li>
+<li>样本k阶中心矩：<script type="math/tex">B_k=\frac{1}{n}\sum_{i=1}^{n}(X_i-\overline{X})^k</script></li>
+</ol>
+<h4 id="抽样分布"><a href="#抽样分布" class="headerlink" title="抽样分布"></a>抽样分布</h4><h5 id="mathcal-X-2分布"><a href="#mathcal-X-2分布" class="headerlink" title="\mathcal{X}^2分布"></a><script type="math/tex">\mathcal{X}^2分布</script></h5><h5 id="t分布"><a href="#t分布" class="headerlink" title="t分布"></a>t分布</h5><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/">大学课程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/">大学基础课程</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/05/27/%E5%B7%AE1RMQ/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">±1RMQ（约束RMQ）</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/05/17/icpc%E9%93%B6%E5%B7%9D2021/">
+                        <span class="hidden-mobile">ICPC 2021 银川站游记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

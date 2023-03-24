@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="关于线段树知识的一些整合">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>线段树知识整合 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/dsfvbrtutvuifhdiund.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="线段树知识整合">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-08-24 18:23" pubdate>
+        2021年8月24日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      28
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">线段树知识整合</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年10月3日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>线段树是常用的用来维护 <strong>区间信息</strong> 的数据结构。</p>
+<p>线段树可以在 <script type="math/tex">O(logn)</script> 的时间复杂度内实现单点修改、区间修改、区间查询（区间求和，求区间最大值，求区间最小值）等操作。<br>（基础的入门操作就不说了</p>
+<h3 id="动态开点线段树"><a href="#动态开点线段树" class="headerlink" title="动态开点线段树"></a>动态开点线段树</h3><p>一般的线段树我们需要开四倍空间，但是某些时候空间限制无法直接开这么大的空间，这时需要动态开点来节省空间。<br>动态开点指的是在建树时只建立所需区间的部分，这样空间复杂度会降低到 <script type="math/tex">O(nlogn)</script> 。<br>实现的话需要记录左右儿子的id，需要用新点时候开。<br>代码大概是这样：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">inline</span> <span class="hljs-type">void</span> <span class="hljs-keyword">update</span>(<span class="hljs-type">int</span> &amp;now,<span class="hljs-type">int</span> l,<span class="hljs-type">int</span> r,<span class="hljs-type">int</span> x)&#123;<br>    <span class="hljs-keyword">if</span>(!now)now=++kl;//<span class="hljs-keyword">if</span> &quot;now&quot; <span class="hljs-keyword">is</span> a <span class="hljs-built_in">new</span> <span class="hljs-type">point</span>,<span class="hljs-keyword">create</span> it.<br>    <span class="hljs-keyword">if</span>(l==r)&#123;<span class="hljs-keyword">return</span>;&#125;//<span class="hljs-keyword">Do</span> whatever you want<br>    <span class="hljs-type">int</span> mid=(l+r)&gt;&gt;<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">if</span>(x&lt;=mid)<span class="hljs-keyword">update</span>(lc[now],l,mid,x,val);<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">update</span>(rc[now],mid+<span class="hljs-number">1</span>,r,x,val);<br>    pushup(now);// upload it<span class="hljs-string">&#x27;s elements.</span><br><span class="hljs-string">&#125;</span><br></code></pre></td></tr></table></figure>
+<p>很简单，并且用处很大。</p>
+<p>动态开点的合并代码：<br><figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs llvm">int merge(int <span class="hljs-keyword">x</span><span class="hljs-punctuation">,</span>int y)<br>&#123;<br>    if(<span class="hljs-title">!x</span>)return y<span class="hljs-comment">;//if anynode isn&#x27;t exist,return the other.</span><br>    if(<span class="hljs-title">!y</span>)return <span class="hljs-keyword">x</span><span class="hljs-comment">;</span><br>    sum[<span class="hljs-keyword">x</span>]+<span class="hljs-operator">=</span>sum[y]<span class="hljs-comment">;//add the other node&#x27;s information into this node</span><br>    lc[<span class="hljs-keyword">x</span>]<span class="hljs-operator">=</span>merge(lc[<span class="hljs-keyword">x</span>]<span class="hljs-punctuation">,</span>lc[y])<span class="hljs-comment">;</span><br>    rc[<span class="hljs-keyword">x</span>]<span class="hljs-operator">=</span>merge(rc[<span class="hljs-keyword">x</span>]<span class="hljs-punctuation">,</span>rc[y])<span class="hljs-comment">;</span><br>    return <span class="hljs-keyword">x</span><span class="hljs-comment">;//only return one ,and it means delate the otherone</span><br>&#125;<br></code></pre></td></tr></table></figure></p>
+<h3 id="主席树"><a href="#主席树" class="headerlink" title="主席树"></a>主席树</h3><p>可以理解为很多棵线段树，假如每棵线段树都建一棵完整的树呢么会有空间问题，假如有一些部分相同，我们建树的时候就可以直接使用这部分，这需要用到动态开点的手法。<br>实际上就是每次动态开点的时候连接到之前版本的节点上。<br>一般用的主席树就是大概是这样：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3919">例题</a>,常规的历史版本咨询。<br>这是源码：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 1000005</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> data=<span class="hljs-number">0</span>,w=<span class="hljs-number">1</span>;<span class="hljs-keyword">char</span> ch=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(ch!=<span class="hljs-string">&#x27;-&#x27;</span> &amp;&amp; (ch&lt;<span class="hljs-string">&#x27;0&#x27;</span>||ch&gt;<span class="hljs-string">&#x27;9&#x27;</span>))ch=getchar();<br>    <span class="hljs-keyword">if</span>(ch==<span class="hljs-string">&#x27;-&#x27;</span>)w=<span class="hljs-number">-1</span>,ch=getchar();<br>    <span class="hljs-keyword">while</span>(ch&gt;=<span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; ch&lt;=<span class="hljs-string">&#x27;9&#x27;</span>)data=data*<span class="hljs-number">10</span>+ch-<span class="hljs-string">&#x27;0&#x27;</span>,ch=getchar();<br>    <span class="hljs-keyword">return</span> data*w;<br>&#125;<br><span class="hljs-keyword">int</span> a[MAXN*<span class="hljs-number">20</span>],n,m,rt[MAXN*<span class="hljs-number">20</span>],lc[MAXN*<span class="hljs-number">20</span>],rc[MAXN*<span class="hljs-number">20</span>],val[MAXN*<span class="hljs-number">20</span>],kl=<span class="hljs-number">0</span>;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;now,<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r)</span></span><br><span class="hljs-function"></span>&#123;<br>    now=++kl;<span class="hljs-comment">//开点</span><br>    <span class="hljs-keyword">if</span>(l==r)&#123;val[now]=a[l];<span class="hljs-keyword">return</span>;&#125;<br>    <span class="hljs-keyword">int</span> mid=(l+r)&gt;&gt;<span class="hljs-number">1</span>;<br>    build(lc[now],l,mid);build(rc[now],mid+<span class="hljs-number">1</span>,r);<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;now,<span class="hljs-keyword">int</span> pre,<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r,<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> v)</span></span><br><span class="hljs-function"></span>&#123;<br>    now=++kl;<br>    lc[now]=lc[pre];rc[now]=rc[pre];val[now]=val[pre];<br>    <span class="hljs-keyword">if</span>(l==r)&#123;val[now]=v;<span class="hljs-keyword">return</span>;&#125;<br>    <span class="hljs-keyword">int</span> mid=(l+r)&gt;&gt;<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">if</span>(x&lt;=mid)insert(lc[now],lc[pre],l,mid,x,v);<br>    <span class="hljs-keyword">else</span> insert(rc[now],rc[pre],mid+<span class="hljs-number">1</span>,r,x,v);<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">query</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;now,<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r,<span class="hljs-keyword">int</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span>(l==r)<span class="hljs-keyword">return</span> val[now];<br>    <span class="hljs-keyword">int</span> mid=(l+r)&gt;&gt;<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">if</span>(x&lt;=mid)<span class="hljs-keyword">return</span> query(lc[now],l,mid,x);<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> query(rc[now],mid+<span class="hljs-number">1</span>,r,x);<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    n=<span class="hljs-built_in">read</span>();m=<span class="hljs-built_in">read</span>();<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)a[i]=<span class="hljs-built_in">read</span>();<br>    build(rt[<span class="hljs-number">0</span>],<span class="hljs-number">1</span>,n);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>,jkl,pre,l;i&lt;=m;i++)<br>	&#123;<br>        pre=<span class="hljs-built_in">read</span>(),jkl=<span class="hljs-built_in">read</span>(),l=<span class="hljs-built_in">read</span>();<br>        <span class="hljs-keyword">if</span>(jkl==<span class="hljs-number">1</span>)<br>		&#123;<br>            <span class="hljs-keyword">int</span> v=<span class="hljs-built_in">read</span>();<br>            insert(rt[i],rt[pre],<span class="hljs-number">1</span>,n,l,v);<span class="hljs-comment">//保存修改后的版本</span><br>        &#125;<br>		<span class="hljs-keyword">else</span> <br>		&#123;<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,query(rt[pre],<span class="hljs-number">1</span>,n,l));<br>			rt[i]=rt[pre];<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>假如要做区间第k大，可以把每棵线段树变为权值线段树，然后按照数列顺序插入主席树，求[l,r]区间的第k大就是同时在l和r这两个版本的书上找，类似前缀和的思想，找到相差k的子树再搞就行了。<br>（不过这个我一般都是用树状数组来搞的，比主席树好写多了，就不写主席树写法了。</p>
+<h3 id="一些奇怪的用法"><a href="#一些奇怪的用法" class="headerlink" title="一些奇怪的用法"></a>一些奇怪的用法</h3><p>后面的不太清楚到底是一种新算法还只是思路的延申，就记录下来充作小点。</p>
+<h4 id="差分主席树？（雾"><a href="#差分主席树？（雾" class="headerlink" title="差分主席树？（雾"></a>差分主席树？（雾</h4><p>这中写法我没找到确切的算法介绍，是在看<a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/19646/J">2020icpc沈阳j</a>时看他人代码发现的，感觉是一种奇怪的主席树写法，但是和以前碰到的主席树用法不太一样。又感觉像是把差分数组建成了一颗树，觉得很妙，记了下来。<br>这道题题意大体是这样：给你一个初始为0的序列，一个操作是将区间[l,r]的所有值为v的数加一，另一个操作是询问区间[l,r]的最值。<br>以下是算法详解（具体看源码）<br>这个算法也是建立了多棵树，第i棵树的[l,r]区间数的个数减去第i-1棵树的[l,r]区间数的个数表示第值为i的数的存在情况，最开始每棵树都是<strong>包含区间[1,n]的完整的线段树</strong>，然后当我们执行一次修改操作（将[l,r]的所有值为v的数加一）时，找到第v棵树，第v-1棵树所代表的区间，然后取差。假如差为0代表这个区间无v直接返回，假如有则新建节点接到第v棵树上（负责把第v棵树的这个区间“归零”）。<br>很显然，我们构造的这个区间在不同树之间是一个严格不减的“区间序列”（就是呢个意思，你懂. . .），每次操作相当于把第i棵树这个区间清零，以及让i+1这颗树加上第i棵树的答案。（由差分易得：将一个数加到后面的呢个数上只需要把这个数在差分序列里对应的呢个数变为前一项即可。）<br>用差分的一个好处就是可以在查询的时候用二分来找到一个区间的最大的v，由于我们建立的这个“差分主席树”的性质，假如一个区间最大值为v，呢么v以后的区间和不变并且v以前的区间和单调不减。（我最开始想用单纯的主席树搞的，但是就是卡在了查询这一步。加了差分这一性质就让这题可做了。）<br>以下是源码（看的呢份源码写的多了很多不必要的东西. .. 可读性很差，便删改了以下（可能是比赛代码加了些保全？））</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rep(i,x,y) for(int i=x; i&lt;=y; ++i)</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> mid (l+r&gt;&gt;1)</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> N=<span class="hljs-number">500005</span>,M=<span class="hljs-number">20000005</span>;<br><span class="hljs-keyword">int</span> n,q,ql,qr,tp,x,root[N],ls[M],rs[M],sonnum[M],tot;<br>   <br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">char</span> ch;<br>    <span class="hljs-keyword">while</span>(!<span class="hljs-built_in">isdigit</span>(ch=getchar()));<br>    <span class="hljs-keyword">int</span> x=ch<span class="hljs-number">-48</span>;<br>    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">isdigit</span>(ch=getchar())) x=x*<span class="hljs-number">10</span>+ch<span class="hljs-number">-48</span>;<br>    <span class="hljs-keyword">return</span> x;<br>&#125;<br>   <br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r,<span class="hljs-keyword">int</span> &amp;rt)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span>(!rt) rt=++tot;<br>    <span class="hljs-keyword">if</span>(l==r) &#123;sonnum[rt]=<span class="hljs-number">1</span>; <span class="hljs-keyword">return</span>;&#125;<br>    build(l,mid,ls[rt]);<br>    build(mid+<span class="hljs-number">1</span>,r,rs[rt]);<br>    sonnum[rt]=sonnum[ls[rt]]+sonnum[rs[rt]];<br>&#125;<br>   <br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">query</span><span class="hljs-params">(<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r,<span class="hljs-keyword">int</span> rt)</span><span class="hljs-comment">//求该树该区间的节点个数</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span>(ql&lt;=l &amp;&amp; r&lt;=qr) <span class="hljs-keyword">return</span> sonnum[rt];<br>    <span class="hljs-keyword">if</span>(qr&lt;=mid) <span class="hljs-keyword">return</span> query(l,mid,ls[rt]);<br>    <span class="hljs-keyword">if</span>(ql&gt;mid) <span class="hljs-keyword">return</span> query(mid+<span class="hljs-number">1</span>,r,rs[rt]);<br>    <span class="hljs-keyword">return</span> query(l,mid,ls[rt])+query(mid+<span class="hljs-number">1</span>,r,rs[rt]);<br>&#125;<br>   <br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ins</span><span class="hljs-params">(<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r,<span class="hljs-keyword">int</span> &amp;rt,<span class="hljs-keyword">int</span> lastrt)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span>(sonnum[rt]-sonnum[lastrt]&lt;=<span class="hljs-number">0</span>) <span class="hljs-keyword">return</span>;<br>    <span class="hljs-keyword">if</span>(ql&lt;=l &amp;&amp; r&lt;=qr) &#123;rt=lastrt; <span class="hljs-keyword">return</span>;&#125;<br>    ++tot,ls[tot]=ls[rt],rs[tot]=rs[rt],rt=tot;<br>    <span class="hljs-keyword">if</span>(ql&lt;=mid) ins(l,mid,ls[rt],ls[lastrt]);<br>    <span class="hljs-keyword">if</span>(mid&lt;qr) ins(mid+<span class="hljs-number">1</span>,r,rs[rt],rs[lastrt]);<br>    sonnum[rt]=sonnum[ls[rt]]+sonnum[rs[rt]];<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">//freopen(&quot;a.in&quot;,&quot;r&quot;,stdin);</span><br>    <span class="hljs-comment">//freopen(&quot;a.out&quot;,&quot;w&quot;,stdout);</span><br>    n=<span class="hljs-built_in">read</span>(),q=<span class="hljs-built_in">read</span>();<br>    build(<span class="hljs-number">1</span>,n,root[<span class="hljs-number">0</span>]);<br>    rep(i,<span class="hljs-number">1</span>,q) root[i]=root[<span class="hljs-number">0</span>];<br>    rep(i,<span class="hljs-number">1</span>,q)<br>    &#123;<br>        <span class="hljs-keyword">int</span> tp=<span class="hljs-built_in">read</span>();ql=<span class="hljs-built_in">read</span>(),qr=<span class="hljs-built_in">read</span>();<br>        <span class="hljs-keyword">if</span>(tp==<span class="hljs-number">1</span>)<br>        &#123;<br>            x=<span class="hljs-built_in">read</span>();<br>            <span class="hljs-keyword">int</span> lastroot=x?root[x<span class="hljs-number">-1</span>]:<span class="hljs-number">0</span>;<br>            ins(<span class="hljs-number">1</span>,n,root[x],lastroot);<br>        &#125;<br>        <span class="hljs-keyword">else</span><br>        &#123;<br>            <span class="hljs-keyword">int</span> l=<span class="hljs-number">0</span>,r=q;<br>            <span class="hljs-keyword">while</span>(l&lt;=r)<br>            &#123;<br>                <span class="hljs-keyword">int</span> L=mid?query(<span class="hljs-number">1</span>,n,root[mid<span class="hljs-number">-1</span>]):<span class="hljs-number">0</span>;<br>                <span class="hljs-keyword">int</span> R=r&gt;=<span class="hljs-number">0</span>?query(<span class="hljs-number">1</span>,n,root[r]):<span class="hljs-number">0</span>;<br>                <span class="hljs-keyword">if</span>(R-L) l=mid+<span class="hljs-number">1</span>; <span class="hljs-keyword">else</span> r=mid<span class="hljs-number">-1</span>;<br>            &#125;<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,l<span class="hljs-number">-1</span>);<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="线段树辅助建图"><a href="#线段树辅助建图" class="headerlink" title="线段树辅助建图"></a>线段树辅助建图</h4><p>老算法了，整合一下<br><a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/30/%E5%A4%A9%E6%A2%AF%E8%B5%9B%E9%80%89%E6%8B%94-%E7%BA%BF%E6%AE%B5%E6%A0%91%E8%BE%85%E5%8A%A9%E5%BB%BA%E5%9B%BE/">快速跳转</a></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E5%B7%A7/">技巧</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98/">区间问题</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%BB%E5%B8%AD%E6%A0%91/">主席树</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/09/02/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">字符串总结</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/08/20/%E6%95%B0%E8%AE%BA%20%E7%B1%BB%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97/">
+                        <span class="hidden-mobile">2020沈阳icpc I 类欧几里得</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

@@ -1,0 +1,763 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="电路分析是电信等专业有关的一门基础学科。目的是在给定电路模型的情况下计算电路中各部分的电流电压等相关信息">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>电路分析基础学习笔记 二 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/dsafgvdsgtrjhjk.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="电路分析基础学习笔记 二">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-05-05 00:26" pubdate>
+        2021年5月5日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      24
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">电路分析基础学习笔记 二</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年5月24日 下午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><pre><code>这里是一部分动态电路的内容
+各种分析方法还和静态电路是一样的，只是电流和电压都是动态变化的。
+本质上还是kvl，kcl，var的应用。
+</code></pre><p>静态电路的分析<a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/23/%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%801/">记在了这里</a>,内容有点太多了，所以新开这一页记录动态电路的分析。</p>
+<hr>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="1-电容元件"><a href="#1-电容元件" class="headerlink" title="1.电容元件:"></a><strong>1.电容元件:</strong></h3><p>两块金属板用绝缘介质隔开就构成了一个实际电容器。<br>能够在q－u平面内用一条曲线（称为库伏特性曲线）来描述的二端元件称为电容元件，即电荷q和电压u存在着代数关系。若该曲线是过原点的直线，则称为线性电容元件，否则就称为非线性电容元件。</p>
+<h4 id="电容电压的连续性质和记忆性质"><a href="#电容电压的连续性质和记忆性质" class="headerlink" title="电容电压的连续性质和记忆性质"></a>电容电压的连续性质和记忆性质</h4><p>电容的动态特性：电压有变化时，才有电流。</p>
+<script type="math/tex; mode=display">i_c(t)=C\frac{du_c(t)}{dt}</script><p>任何时刻，通过电容元件的电流与该时刻的电压变化率成正比。如果电容两端加直流电压，则<script type="math/tex">i_c=0</script>，电容元件相当于开路。故电容元件具有隔直流、通交流作用.<br>在实际电路中，通过电容的电流ic总是为有限值，这意味着<script type="math/tex">\frac{du}{dt}</script>必须为有限值，也就是说，电容两端电压<script type="math/tex">u_c</script>必定是时间t的连续函数，而不能跃变。</p>
+<p class="note note-info"><b><font size="2" >注意：电容电流有可能发生跃变。若电容电压在t时刻发生了跃变，则t时刻电容电流为无穷大</font></b></p>
+
+<p>电容电压对电流有记忆作用。在任一时刻t，电容电压uc是此时刻以前的电流作用的结果，它“记载”了已往的全部历史，所以称电容为记忆元件。相应地，电阻为无记忆元件。<br>电容的电压关系式：<script type="math/tex">u_c(t)=\frac{1}{C} \int_{-\infty}^t i_c(\xi)d\xi</script><br>电容吸收能量：<script type="math/tex">W_C(t)=\frac{1}{2}cu_c^2(t)</script><br>电容是贮能元件，它不消耗能量，也不产生能量，只是吸收和放出能量，实行能量的转换，是无源元件。</p>
+<h4 id="多电容串并联关系"><a href="#多电容串并联关系" class="headerlink" title="多电容串并联关系"></a>多电容串并联关系</h4><p>多电容串联:<script type="math/tex">\frac{1}{C}=\sum \frac{1}{C_i}</script><br>多电容并联:<script type="math/tex">C=\sum C_i</script></p>
+<hr>
+<h3 id="2-电感元件"><a href="#2-电感元件" class="headerlink" title="2.电感元件:"></a><strong>2.电感元件:</strong></h3><p>电感器：将导线绕成线圈的形式，也称为电感线圈。线圈中不含铁磁物质时，称为线性电感线圈<br>在ψ-i平面中能用一条曲线（称韦安特性曲线）来描述的二端元件称为电感元件。当曲线为过原点的直线时,称为线性电感元件。<br>定义式：ψ(t)＝LI(t)</p>
+<h4 id="电感电流的连续性质和记忆性质"><a href="#电感电流的连续性质和记忆性质" class="headerlink" title="电感电流的连续性质和记忆性质"></a>电感电流的连续性质和记忆性质</h4><p>电感的动态特性：电流有变化时，才有电压。具有通直流、阻交流作用，在直流稳态电路中，电感可视作短路。<br>电感电流的连续性（又称电感的惯性）：若电容电压有界，则电感电流不跃变。</p>
+<p class="note note-info"><b><font size="2" >注意：电感电压有可能发生跃变。若电感电流在t0时刻发生了跃变，则t0时刻电感电压为无穷大</font></b></p>
+
+<p>电感电流具有记忆性和连续性:<script type="math/tex">i(t)=i(t_0)+\frac{1}{L}\int_{t_0}^t u(\xi)d\xi</script><br>在<script type="math/tex">t_1-t_2</script>时间内，电感贮存的能量为：<script type="math/tex">W_L(t_1,t_2)=\frac{1}{2}Li_l^2(t_2)-\frac{1}{2}Li_l^2(t_1)=W_L(t_2)-W_L(t_1)</script><br>电感在任一时间t时的贮能为：<script type="math/tex">W_L(t)=\frac{1}{2}Li_l^2(t)</script></p>
+<h4 id="多电感串并联关系"><a href="#多电感串并联关系" class="headerlink" title="多电感串并联关系"></a>多电感串并联关系</h4><p>多电感串联:<script type="math/tex">L=\sum L_i</script><br>多电感并联:<script type="math/tex">\frac{1}{L}=\sum \frac{1}{L_i}</script></p>
+<hr>
+<h3 id="3-一阶电路"><a href="#3-一阶电路" class="headerlink" title="3.一阶电路"></a><strong>3.一阶电路</strong></h3><p>动态元件的电流与电压的约束关系是导数与积分关系，因此根据KCL、KVL和元件的VAR所建立的电路方程是以电流、电压为变量的微分方程或微分—积分方程。如果电路中的无源元件都是线性时不变的，那么动态电路方程是线性常系数微分方程。<strong><em>如果电路中只有一个动态元件，则所得的是一阶微分方程，相应的电路称为一阶电路 。</em></strong></p>
+<h4 id="一阶非齐次方程的求解"><a href="#一阶非齐次方程的求解" class="headerlink" title="一阶非齐次方程的求解"></a>一阶非齐次方程的求解</h4><p>这一部分牵扯到高数知识，推导所需latex公式较为繁琐，故在此直接给出结论。<br><img src="/img/postpictures/sadgfdhbgfnhgfvc.png" srcset="/img/loading.gif" alt="大概就是这样"></p>
+<h4 id="零状态响应"><a href="#零状态响应" class="headerlink" title="零状态响应"></a>零状态响应</h4><p>若电路原始状态为零，则电路中响应称为零状态响应，零状态响应仅由电源产生。<br>可以推出零状态相应动态原件的电流时间的关系函数，推导公式省略，这里直接给出结论。<br>一阶RC电路的零状态响应：<script type="math/tex">U_c=U_s(1-e^{-\frac{t}{RC}});i=C\frac{du_c}{dt}=\frac{U_s}{R}e^{-\frac{t}{RC}}</script><br>一阶RL电路的零状态响应：<script type="math/tex">U_L=L\frac{di_L}{dt}=U_se^{-\frac{R}{L} t};i=\frac{U_s}{R}(1-e^{-\frac{R}{L} t})=i_l(\infty)(1-e^{-\frac{R}{L} t})</script></p>
+<h4 id="零输入响应"><a href="#零输入响应" class="headerlink" title="零输入响应"></a>零输入响应</h4><p>无源（独立源）一阶电路，产生响应的原因是电路的初始贮能，这种响应称为一阶电路的零输入响应。<br>初始值可以通过分析换路前电路（稳态）求出<script type="math/tex">U_C(0_-),I_L(0_-)</script>,根据换路定理这两个量不变得到<script type="math/tex">U_C(0_+),I_L(0_+)</script>，然后求的所需要的<script type="math/tex">(0_+)</script>值。</p>
+<h5 id="RC电路的零输入响应"><a href="#RC电路的零输入响应" class="headerlink" title="RC电路的零输入响应"></a>RC电路的零输入响应</h5><p>响应的原因是<script type="math/tex">U_C(0_-)</script>，其中R为电容C两端的等效电阻：<script type="math/tex">U_C(t)=U_C(0^+)e^{-\frac{t}{RC}}</script><br>时间常数RC决定了响应衰减的快慢，RC越大响应衰减的越慢，反之衰减的越快。<br>由于电容相当于是电压源，因此在其他原件均为线性原件的基础上，RC电路任意支路的零输入响应的形式为<script type="math/tex">f(t)=f(0^+)e^{-\frac{t}{RC}}</script><br>整个过程电阻消耗的电能等于电容的原始储能<script type="math/tex">W_R=\frac{1}{2}CU_0^2</script>。</p>
+<h5 id="RL电路的零输入响应"><a href="#RL电路的零输入响应" class="headerlink" title="RL电路的零输入响应"></a>RL电路的零输入响应</h5><p>响应的原因是<script type="math/tex">I_L(0_-)</script>，其中R为电感C两端的等效电阻：<script type="math/tex">I_L(t)=I_L(0^+)e^{-\frac{tR}{L}},U_L(t)=L\frac{di_L}{dt}=-RI_0e^{-\frac{tR}{L}}</script><br>时间常数<script type="math/tex">\frac{L}{R}</script>决定了过渡时间的快慢，<script type="math/tex">\frac{L}{R}</script>越大过渡时间越长，反之衰减的越快。<br>整个过程电阻消耗的电能等于电感的原始储能<script type="math/tex">W_R=\frac{1}{2}Li_0^2</script>。</p>
+<h4 id="暂态和稳态"><a href="#暂态和稳态" class="headerlink" title="暂态和稳态"></a>暂态和稳态</h4><p>微分方程通解中的齐次方程解又称为 <strong>固有响应（natural response）</strong> 分量，它的模式与输入无关，也就是说，不论是什么样的输人，这一分量一般具有<script type="math/tex">Ke^{st}</script>的形式，只是K的具体数值一般与输入有关。这一分量的变化方式（如按指数规律变化，变化的快慢等）完全由电路本身所确定，具体说，是由特征根S所确定的，输入仅仅影响这一分量的大小。在有损耗的电路中，这一分量是随着时间的增长而衰减到零的，在这种情况下，这一分量又可称为 <strong>暂态响应（transient respose）</strong> 分量。 微分方程通解中的特解又称为 <strong>强制响应（forceced response）</strong> 分量，其形式一般与输入形式相同。如强制响应为常量或周期函数，则这一分量又可称为 <strong>稳态响应（steady state respone）</strong><br>三要素公式中的无穷时间量就是稳态响应量，含有时间的量就是暂态响应量。</p>
+<hr>
+<h3 id="4-二阶电路"><a href="#4-二阶电路" class="headerlink" title="4.二阶电路"></a><strong>4.二阶电路</strong></h3><p>当电路中包含有两个独立的动态元件时，描述电路的方程是二阶线性常系数微分方程。这就是二阶电路，在这种电路中，给定的初始条件有两个，</p>
+<h4 id="RLC串联二阶电路的零输入响应"><a href="#RLC串联二阶电路的零输入响应" class="headerlink" title="RLC串联二阶电路的零输入响应"></a>RLC串联二阶电路的零输入响应</h4><p>它们由储能元件的初始值决定，初始状态情况有三种：<script type="math/tex">\begin{cases}  1.U_C(0)=U_0,I_L(0)=0 \\ 2.U_C(0)=0,I_L(0)=I_0 \\ 3.U_C(0)=0,I_L(0)=0   \end{cases}</script><br>经过数学分析（比较繁琐这里暂不给出），由电路自身性质可以将电压情况分为四种：过阻尼，临界阻尼，欠阻尼和零阻尼。<br><img src="/img/postpictures/asfgabcxzrttrjtyses.png" srcset="/img/loading.gif" alt="四种图像"><br><strong>过阻尼：</strong> <script type="math/tex">R>2\sqrt{\frac{L}{C}}</script> 特征根为两个不相等的负实根<br><img src="/img/postpictures/asdfsdgfdhbcxvbtr.png" srcset="/img/loading.gif" alt="过阻尼"><br><strong>临界阻尼：</strong> <script type="math/tex">R=2\sqrt{\frac{L}{C}}</script> 特征根为两个相等的负实根,<script type="math/tex">u_c,i_L</script> 波形图与过阻尼情况类似。<br><strong>欠阻尼：</strong> <script type="math/tex">R<2\sqrt{\frac{L}{C}}</script> 特征根为一对共轭复根,<script type="math/tex">u_c,i_L</script> 均是幅值按指数规律衰减的正弦函数，实际上是两个储能原件的能量相互转化。<br><strong>零阻尼：</strong> <script type="math/tex">R=0</script> 特征根为两个不相等的负实根，相当于电路没有电阻消耗电能，能量转化能一直继续下去。</p>
+<p><img src="/img/postpictures/safdsgvrhtytefgzsd.png" srcset="/img/loading.gif" alt="听老师说考试时候会给出，需要会用"></p>
+<h4 id="RLC串联二阶电路的全响应"><a href="#RLC串联二阶电路的全响应" class="headerlink" title="RLC串联二阶电路的全响应"></a>RLC串联二阶电路的全响应</h4><p>电路响应由电源和电路的原始储能共同产生。<br>电路的全响应由对应齐次微分方程的通解与微分方程的特解之和组成<script type="math/tex">U_C(t)=U_{Ch}(t)+U_{Cp}(t)</script>,电路的固有频率为<script type="math/tex">S_{1,2}=-\frac{R}{2L}±\sqrt{(\frac{R}{2L})^2 - \frac{1}{LC}}</script>。<br><strong>当电路的固有频率s1!=s2时，对应齐次微分方程的通解为<script type="math/tex">U_ch(t)=K_1e^{s_1t}+K_2e^{s_2t}</script>。微分方程特解为<script type="math/tex">u_{cp}(t)=U_S</script>,<script type="math/tex">U_C(t)=U_{Ch}(t)+U_{Cp}(t)=K_1e^{s_1t}+K_2e^{s_2t}+U_S</script>。</strong><br>已知初始条件<script type="math/tex">U_C(0),\frac{dU_c(t)}{dt}|_{t=0}=\frac{i_C(0)}{C}</script>，可以得到<script type="math/tex">\begin{cases}  U_C(0)=K_1+K_2+U_S \\  \frac{dU_c(t)}{dt}|_{t=0}=K_1 S_1+K_2 S_2=\frac{i_C(0)}{C}  \end{cases}</script>，求解这两个方程得到常数<script type="math/tex">K_{1,2}</script>后即可得到<script type="math/tex">U_C(t)</script> </p>
+<h4 id="GLC并联电路的分析"><a href="#GLC并联电路的分析" class="headerlink" title="GLC并联电路的分析"></a>GLC并联电路的分析</h4><p>是RLC串联电路的对偶电路,特征根为<script type="math/tex">S_{1,2}=-\frac{G}{2C}±\sqrt{(\frac{G}{2C})^2 - \frac{1}{LC}}</script><br>实际上是<br><strong>过阻尼：</strong> <script type="math/tex">G>2\sqrt{\frac{C}{L}}</script><br><strong>临界阻尼：</strong> <script type="math/tex">G=2\sqrt{\frac{C}{L}}</script><br><strong>欠阻尼：</strong> <script type="math/tex">G<2\sqrt{\frac{C}{L}}</script><br><strong>零阻尼：</strong> <script type="math/tex">G=0</script><br>对偶电路，实际上和RLC的是差不多的。</p>
+<h3 id="5-正弦电流电路"><a href="#5-正弦电流电路" class="headerlink" title="5.正弦电流电路"></a><strong>5.正弦电流电路</strong></h3><p>激励和响应均为同频率的正弦量的线性电路（正弦稳态电路）称为正弦电路或交流电路。正弦信号是一种基本信号，任何非正弦周期信号可以分解为按正弦规律变化的分量。<br>正弦量计算实际上是对动态元件计算的一个简化（我理解上的），因为由于正弦函数求导求积分的性质，可以杜绝解繁琐的微分方程，可以将电路中的电流电压等要素统一使用正弦量来表示。</p>
+<h4 id="正弦量的三要素"><a href="#正弦量的三要素" class="headerlink" title="正弦量的三要素"></a>正弦量的三要素</h4><p>正弦量表达式为：<script type="math/tex">i(t)=I_m cos(\omega t+\phi)</script> (不对，这明明是余弦为啥老师ppt上说是正弦？)</p>
+<blockquote>
+<p>(1) 幅值 (振幅、最大值)<script type="math/tex">I_m</script>:反映正弦量变化幅度的大小。<br>(2) 角频率<script type="math/tex">\omega</script>:相位变化的速度，反映正弦量变化快慢。<script type="math/tex">\omega=2\pi f=\frac{2\pi}{T}</script><br>(3) 初相位<script type="math/tex">\phi</script>:反映正弦量的计时起点，常用角度表示</p>
+</blockquote>
+<h4 id="相量法表示"><a href="#相量法表示" class="headerlink" title="相量法表示"></a>相量法表示</h4><p>正弦稳态电路中，各个电压、电流相应与激励均为同频率的正弦波，因此正弦波的三特征可以降为两特征,即<strong>振幅和相位</strong>。<br>以电压举例子：即<script type="math/tex">U(t)=U_m cos(\omega t+\phi)</script>可以表示为<script type="math/tex">U(t)=Re[U_m e^{j(\omega t+\theta)}]=Re[U_m e^{j\omega t}e^{j\theta}]</script>,由于<script type="math/tex">e^{j\theta}</script>为一常数,因此可与Um合并,合并后的常量用<script type="math/tex">\dot{U_m}</script>来表示,<script type="math/tex">U(t)=Re[\dot{U_m}e^{j\omega t}]=Re[\dot{U_m}\angle (\omega t)]</script><br>.<script type="math/tex">\dot{U_m}</script>被称为振幅相量。<br>我们相当于是虚构了一个函数<script type="math/tex">F(t)</script>，使得<script type="math/tex">F(t)=I_me^{j\phi}e^{j\omega t}=\dot{I_m}e^{j\omega t}</script><br>注意，用相量表示正弦量时，只有相量实部有具体物理含义，相量整体实际上是无物理含义的。(实际上可以将相量整体理解成一个数据和时间的混合量，虚部用来表示该数据的延后/提前程度)<br>并且取整Re[f(x)]不受微分积分的限制，可以跨过微分积分符号直接微分积分里面的函数。</p>
+<p class="note note-info"><b><font size="2" >
+相量法表示的优点：<br>
+把时域问题变为复数问题；<br>
+把微积分方程的运算变为复数方程运算；<br>
+可以把直流电路的分析方法直接用于交流电路。
+</font></b></p>
+
+<h4 id="电路元件的相量模型"><a href="#电路元件的相量模型" class="headerlink" title="电路元件的相量模型"></a>电路元件的相量模型</h4><p><strong>电阻</strong>:<br>时域方程:<script type="math/tex">u(t)=Ri(t)</script><br>相量形式方程:<script type="math/tex">\dot{U}=R\dot{I}</script><br>电阻并没有改变电流和电压的相位。只存在幅值的线性关系。<br>在相量域内ui重合。<br><strong>电感</strong>:<br>时域方程:<script type="math/tex">u(t)=L\frac{di}{dt}</script><br>相量形式方程:<script type="math/tex">\dot{U}=j\omega L\dot{I}</script><br>电感改变了电流和电压的相位,<script type="math/tex">u</script>超前<script type="math/tex">i (\frac{\pi}{2})</script>弧度. <script type="math/tex">u</script>与<script type="math/tex">i</script>幅值之比等于<script type="math/tex">\omega L</script>。只存在幅值的线性关系。<script type="math/tex">\omega L</script>反映电感对正弦电流的阻碍作用，这一阻碍作用随着电源频率的升高而增大。<br>在相量域u在i前90°<br><strong>电容</strong>:<br>时域方程:<script type="math/tex">i(t)=C\frac{du}{dt}</script><br>相量形式方程:<script type="math/tex">\dot{I}=j\omega C\dot{U}</script><br>电容改变了电流和电压的相位,<script type="math/tex">u</script>滞后<script type="math/tex">i (\frac{\pi}{2})</script>弧度. <script type="math/tex">u</script>与<script type="math/tex">i</script>幅值之比等于<script type="math/tex">\frac{\omega}{C}</script>。只存在幅值的线性关系。<script type="math/tex">\frac{\omega}{C}</script>反映电容对正弦电流的阻碍作用，这一阻碍作用随着电源频率的升高而减小。<br>在相量域u在i后90°</p>
+<h4 id="不含独立源的单口网络端口的相量形式"><a href="#不含独立源的单口网络端口的相量形式" class="headerlink" title="不含独立源的单口网络端口的相量形式"></a>不含独立源的单口网络端口的相量形式</h4><p>网络<script type="math/tex">N_0</script>是正弦稳态电路中不含独立源的线性单口网络，<br>其电压为：<script type="math/tex">u=\sqrt{2}*Ucos(\omega t+\theta_u)</script><br>其电流为：<script type="math/tex">i=\sqrt{2}*Icos(\omega t+\theta_i)</script><br>用VAR写，就是：<script type="math/tex">\dot{U}=Z \dot{I}</script><br>写成实数方程为：<script type="math/tex">U=|Z|I,\theta_u=\theta_i+\theta_z</script><br>还可以写成导纳形式：<script type="math/tex">\dot{I}=Y \dot{U}</script><br>写成实数方程为：<script type="math/tex">I=|Y|U,\theta_i=\theta_Y+\theta_u</script><br>正弦稳态电路中网络端口特性由ZY来反应。    </p>
+<h3 id="6-阻抗导纳"><a href="#6-阻抗导纳" class="headerlink" title="6.阻抗导纳"></a>6.阻抗导纳</h3><p>阻抗可以类比电阻，导纳可以类比电导</p>
+<h4 id="阻抗"><a href="#阻抗" class="headerlink" title="阻抗"></a>阻抗</h4><p>设网络<script type="math/tex">N_0</script>是正弦稳态电路中不含独立源的线性单口网络.<br>定义<script type="math/tex">z=\frac{\dot{U}}{\dot{I}}</script>。称 Z 为网络 <script type="math/tex">N_0</script> 的输入阻抗（又称等效阻抗或简称为阻抗）<br>模<script type="math/tex">|Z|=\frac{U}{I}</script>,说明电压与电流间的大小关系.<br>幅角 <script type="math/tex">\phi_z=\theta_u-\theta_i</script>,表示电压电流的相位差.<br><strong>实部R－为等效电阻，代表电路的等效热损耗；</strong><br><strong>虚部X－等效电抗，表等效电、磁场能量存储。</strong><br><img src="/img/postpictures/asfssdvxctejhe.png" srcset="/img/loading.gif" alt="三者关系可以用阻抗三角形来表示"><br><strong>阻抗 Z 既表达了电压与电流二者之间的有效值关系，也指出了二者之间的相位关系，因而全面地反映了电路的正弦稳态性能</strong><br>阻抗相位大于0，U超前于I，电路为感性<br>阻抗相位小于0，U滞后于I，电路为容性<br>阻抗相位等于0，U与I同相，电路为阻性</p>
+<h4 id="RLC原件的阻抗"><a href="#RLC原件的阻抗" class="headerlink" title="RLC原件的阻抗"></a>RLC原件的阻抗</h4><p>电阻的感抗就是电阻<script type="math/tex">Z_R=R</script><br>电感的电抗（感抗）<script type="math/tex">Z_L=j\omega L=jX_L</script>,<script type="math/tex">X_L</script>也称为感抗。<script type="math/tex">X_L=\omega L,X_L>0</script><br>电容的电抗（容抗）<script type="math/tex">Z_C=-j\frac{1}{\omega C}=jX_C</script>,<script type="math/tex">X_C</script>也称为容抗。<script type="math/tex">X_C=-\frac{1}{\omega C},X_C<0</script></p>
+<h4 id="导纳"><a href="#导纳" class="headerlink" title="导纳"></a>导纳</h4><p>网络<script type="math/tex">N_0</script>是正弦稳态电路中不含独立源的线性单口网络，其电压和电流分别为：<br>定义<script type="math/tex">Y=\frac{\dot{I}}{\dot{U}}</script>。称 Y 为网络 <script type="math/tex">N_0</script> 的输入阻抗（又称等效阻抗或简称为阻抗）<br>模<script type="math/tex">|Y|=\frac{I}{U}=\frac{1}{|Z|}</script>,说明电压与电流间的大小关系.单位为西门子。<br>导纳相位大于0，U滞后于I，电路为容性<br>导纳相位小于0，U超前于I，电路为感性<br>导纳相位等于0，U与I同相，电路为阻性</p>
+<h4 id="RLC原件的导纳"><a href="#RLC原件的导纳" class="headerlink" title="RLC原件的导纳"></a>RLC原件的导纳</h4><p>电导的导纳就是电导<script type="math/tex">Y_R=G</script><br>电感的电纳（感纳）<script type="math/tex">Y_L=-j\frac{1}{\omega L}=jB_L</script>,<script type="math/tex">B_L</script>也称为感纳。<script type="math/tex">B_L=-\frac{1}{\omega L}</script><br>电容的电纳（容纳）<script type="math/tex">Y_C=j\omega C=jB_C</script>,<script type="math/tex">B_C</script>也称为容纳。<script type="math/tex">B_C=\omega C</script></p>
+<h3 id="7-动态电路中的功率和能量"><a href="#7-动态电路中的功率和能量" class="headerlink" title="7.动态电路中的功率和能量"></a>7.动态电路中的功率和能量</h3><h4 id="元件的功率和能量关系"><a href="#元件的功率和能量关系" class="headerlink" title="元件的功率和能量关系"></a>元件的功率和能量关系</h4><p>电流电压基本关系式：<script type="math/tex">U_R=Ri_R,U_L(t)=L\frac{di_L}{dt},I_C(t)=C\frac{du_C}{dt};</script><br>功率能量关系式：<script type="math/tex">p(t)=u(t)i(t)=\frac{dW(t)}{dt};w(t)=\int^t_{-\infty} p(t)dt=\int^t_{-\infty} uidt=</script> <script type="math/tex">\begin{cases}  \frac{1}{2}Li^2(t) \\\\ \frac{1}{2}Cu^2(t) \end{cases}</script><br><strong>电阻原件</strong><br>电阻电源电压关系：<script type="math/tex">u(t)=U_m cos(\omega t+\phi_u);i(t)=I_m cos(\omega t+\phi_i)</script><br>瞬时功率为：<script type="math/tex">p(t)=ui=UI[1+cos2 (\omega t+\phi_u)]</script>，恒大于0，故电阻只吸收能量。<br>平均功率为：<script type="math/tex">P=\frac{1}{2}U_mI_m=I^2R</script>,这里的UI为有效值，平均功率也称为有功功率，简称为功率。</p>
+<p class="note note-success"><b><font size="2" >
+对有功功率与无功功率的一些想法<br>
+在交流电路中，由电源供给负载的电功率有两种；一种是有功功率，一种是无功功率。有功功率是保持用电设备正常运行所需的电功率，也就是将电能转换为其他形式能量的功率。这一部分能量是做我们所需要的功的<br>
+无功功率比较抽象，它不做功是用于电路内电场与磁场的交换，并用来在电气设备中建立和维持磁场的电功率，电场能和磁场能大多数情况我们无法直接使用，因此只存在电磁的相互转换，没有（对我们需要的地方）做功。<br>
+无功功率决不是无用功率！！他的作用很大。通常从发电机和高压输电线供给的无功功率，远远满足不了负荷的需要，所以在电网中要设置一些无功补偿装置来补充无功功率，以保证用户对无功功率的需要，这样用电设备才能在额定电压下工作。<br>
+也可以这么理解，由于动态原件的作用导致电流和电压之间拥有了相位差，导致功率因数无法到达1，我们可以通过改变其相位来使其功率因数接近1，改变相位的方式就是通过无功功率(增加动态原件减小相位差)<br>
+</font></b></p>
+
+<p><strong>电感原件</strong><br>电感电源电压关系：<script type="math/tex">u_L(t)=U_{Lm} cos \omega t;i_L(t)=I_{Lm} cos(\omega t -90°)=I_{Lm}sin \omega t</script><br>瞬时功率为：<script type="math/tex">p(t)=U_{Lm}I_{Lm}cos \omega t sin \omega t=U_LI_Lsin2 \omega t</script>。<br>在一个周期内的平均功率为0,平均储能为：<script type="math/tex">W_L=\frac{1}{4}LI^2_{Lm}=\frac{1}{2}LI_L^2</script>。<br><strong>电容原件</strong><br>电容电源电压关系：<script type="math/tex">u_C(t)=U_{Cm} cos \omega t;i_C(t)=I_{Cm} cos(\omega t +90°)=-I_{Cm}sin \omega t</script><br>瞬时功率为：<script type="math/tex">p(t)=-U_{Cm}I_{Cm}cos \omega t sin \omega t=-U_CI_Csin2 \omega t</script>。<br>在一个周期内的平均功率为0,平均储能为：<script type="math/tex">W_L=\frac{1}{4}CU^2_{Cm}=\frac{1}{2}CU_C^2</script>。</p>
+<p><strong>无功功率</strong> <script type="math/tex">Q_L=U_LI_L,Q_C=-U_CI_C;</script></p>
+<p><strong>可以看出：只有电阻的平均功率大于零，而电感和电容的平均功率等于零。以后提到的平均功率简称为功率，是指电路中电阻消耗的功率，或指电源提供的功率，也称为有功功率。常说的功率都是指平均功率。</strong><br><strong>电容和电感不消耗也不再生能量，它只是从电源处吸收能量，贮存起来，在下一个时间再向外放出能量，它与电源进行能量的交换，无功功率则反映了这种交换的最大值及交换规模。</strong></p>
+<p class="note note-primary"><b><font size="2" >
+关于单口网络计算功率的一些Tips:<br>
+1.在求单口网络的功率能量时可以把单口网络当作一个原件，求单口网络的阻抗，网络消耗的功率等于端钮上电流有效值平方乘阻抗的实部。<br>
+2.单口网络中只有电阻消耗功率，所有电阻消耗功率的总和即为单口网络的功率。<br>
+3.单口网络平均功率守恒。单口网络从外电路吸收的总平均功率等于该网络内部各元件吸收的平均功率之和。<br>
+4.由R、L、C 组成的单口网络，网络吸收的总平均功率等于网络内各电阻元件平均功率之和<br>
+</font></b></p>
+
+<h4 id="视在功率和功率因数"><a href="#视在功率和功率因数" class="headerlink" title="视在功率和功率因数"></a>视在功率和功率因数</h4><p><strong>视在功率（表观功率）</strong>：指端口电压、电流有效值的乘积，反映了电气设备的容量或提供功率的最大值，电源设备的容量一般用视在功率表示。<br>定义： S＝UI 单位为 伏安（VA）<br><strong>功率因数</strong>；由于电流电压相位差的存在，导致实际中的<script type="math/tex">P=UIcos\phi=UI\lambda</script>达到不了S。我们设<script type="math/tex">\lambda=cos\phi=\frac{P}{S}</script>,称其为网络N的功率因数。</p>
+<p>若 <script type="math/tex">\lambda>0</script>，则网络 N 吸收电能。<br>若 <script type="math/tex">\lambda<0</script>，则网络 N 产生电能，N 中必含有源元件。<br>若网络 N 中无独立源，则$\phi$为该网络的阻抗角。<br>若网络N中仅含 R、L、C ，则必有$\lambda$&gt; 0，即</p>
+<hr>
+<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><h3 id="换路定理"><a href="#换路定理" class="headerlink" title="换路定理"></a>换路定理</h3><p class="note note-info"><b><font size="2" >
+换路瞬间，若电容电流保持为有限值，则电容电压（电荷）换路前后保持不变。<br>
+换路瞬间，若电感电压保持为有限值，则电感电流（磁链）换路前后保持不变。
+</font></b></p>
+<p class="note note-success"><b><font size="3" >电容电流和电感电压为有限值是换路定律成立的条件<br>换路定律反映了能量不能跃变。</font></b></p>
+
+
+<hr>
+<h2 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h2><h3 id="一阶电路的分解方法"><a href="#一阶电路的分解方法" class="headerlink" title="一阶电路的分解方法"></a>一阶电路的分解方法</h3><p class="note note-info"><b><font size="3" >
+将一阶电路分为电阻网络 N1 和动态元件两部分。<br>
+将 N1 用戴维南定理化简，得简单一阶电路.<br>
+求解简单一阶电路，得 $u_c(t)$ 或 $i_L(t)$ 。<br>
+回到原电路，将电容用一电压源(其值为 $u_c$ )置换，或将电感用一电流源(其值为 $i_L$ )置换，求出电路其余变量
+</font></b></p>
+
+<h3 id="零输入相应初始状态条件的确定"><a href="#零输入相应初始状态条件的确定" class="headerlink" title="零输入相应初始状态条件的确定"></a>零输入相应初始状态条件的确定</h3><p class="note note-info"><b><font size="3" >
+根据换路前的电路求出原始状态 $u_c(t_{0-})$ 和 $i_L(t_{0-})$。<br>
+依据换路定则确定初始状态 $u_c(t_{0＋})$ 和 $i_L(t_{0＋})$<br>
+作出 $t_{0＋}$ 时刻的等效电路，使用如下替换方法<br>
+每一电感用一电流源替换，其值为 $i_L(t_{0＋})$；<br>
+每一电容用一电压源替换，其值为 $u_c(t_{0＋})$；<br>
+对 $t_{0＋}$ 等效电路求解，求出所需初始电流和电压。
+</font></b></p>
+
+<h3 id="三要素法分析一阶电路"><a href="#三要素法分析一阶电路" class="headerlink" title="三要素法分析一阶电路"></a>三要素法分析一阶电路</h3><p>三要素分别是<strong>初始值<script type="math/tex">f(0+)</script>，稳态值<script type="math/tex">f(\infty)</script>，时间常数<script type="math/tex">RC,L/R</script></strong>（原本应该是“tao”这个字符的，但是好像不是希腊字母不知道latex中怎么打.. .就用TAO代替 ）<br>三要素公式：<script type="math/tex">f(t)=[f(0+)-f(\infty)]e^{\frac{t}{TAO}}+f(\infty)</script><br>使用前提为一阶电路，适用于所有支路电压和电流。<br>就是用叠加定理+动态原件的分析得出的。</p>
+<hr>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/">大学课程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/">大学基础课程</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/">电路分析</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/05/17/icpc%E9%93%B6%E5%B7%9D2021/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ICPC 2021 银川站游记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/05/03/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/">
+                        <span class="hidden-mobile">高等数学</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

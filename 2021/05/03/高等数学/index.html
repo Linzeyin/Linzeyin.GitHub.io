@@ -1,0 +1,735 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="高等数学研究的是非匀变量。是理、工科院校一门重要的基础学科。">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>高等数学 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/asdfsdgvsdaggf.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="高等数学">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-05-03 14:54" pubdate>
+        2021年5月3日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      38
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">高等数学</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年5月29日 凌晨
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><pre><code>直面自己的失败，请。
+</code></pre><hr>
+<h3 id="第一章-空间解析几何"><a href="#第一章-空间解析几何" class="headerlink" title="第一章 空间解析几何"></a>第一章 空间解析几何</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ol>
+<li>向量的方向角与方向余弦：非零向量a与三条坐标轴的夹角称为向量a的方向角，<script type="math/tex">a(a_x,a_y,a_z)</script>可以用它与三个坐标轴的夹角<script type="math/tex">\alpha , \beta, \gamma</script>来表示它的方向，称<script type="math/tex">\alpha , \beta, \gamma</script>为向量a的方向角，其余弦<script type="math/tex">cos\alpha , cos\beta, cos\gamma</script>称为a的方向余弦。</li>
+<li>向量的向量积： 设a和b是两个向量，则定义他们的向量积为<script type="math/tex">c=a\times b</script>，数值上等于<script type="math/tex">|c|=|a||b|sin\theta</script>，方向垂直于a和b所确定的平面，指向按右手法则从a转向b来确定。</li>
+<li>平面束：空间中通过同一条直线的所有平面的集合成为有轴平面束，这条直线成为平面束的轴。</li>
+</ol>
+<p class="note note-info">平面束表示本质上是表示直线的两平面的线性组合，这种表示方法给我们了一个可以通过直线表示通过该直线的平面的方式。</p>
+
+<ol>
+<li>曲面的一般方程为一个三元方程<script type="math/tex">F(x,y,z)=0</script>，曲线的一般方程为两个曲面的交线，即<script type="math/tex">\begin{cases}  F(x,y,z)=0 \\ G(x,y,z)=0 \end{cases}</script><br> 这里应该开始介绍一些曲面，等待更新。</li>
+</ol>
+<h4 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h4><ol>
+<li>平面的方程：<br> 点法式：<script type="math/tex">A(x-x_0)+B(y-y_0)+C(z-z_0)=0</script><br> 三点式：<script type="math/tex">\left| \begin{array}{cccc} x-x_1 & y-y_1 & z-z_1 \\\\ x_2-x_1 & y_2-y_1 & z_2-z_1 \\\\ x_3-x_1 & y_3-y_1 & z_3-z_1 \end{array} \right|=0</script><br> 一般式：<script type="math/tex">Ax+By+Cz+D=0</script></li>
+<li>两平面夹角余弦：<script type="math/tex">cos\theta=\frac{|A_1A_2+B_1B_2+C_1C_2|}{\sqrt{A_1^2+B_1^2+C_1^2}\sqrt{A_2^2+B_2^2+C_2^2}}</script></li>
+<li>点<script type="math/tex">P_0</script>到平面的距离：<script type="math/tex">d=\frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}</script></li>
+<li>直线的方程<br> 一般方程: <script type="math/tex">\begin{cases}  A_1x+B_1y+C_1z+D_1=0 \\\\ A_2x+B_2y+C_2z+D_2=0 \end{cases}</script><br> 对称式/点向式方程：<script type="math/tex">\frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}=t</script><br> 参数方程：<script type="math/tex">\begin{cases}  x=x_0+mt \\ y=y_0+nt \\ z=z_0+pt \end{cases}</script><br> 两点式方程：<script type="math/tex">\frac{x-x_1}{x_2-x_1}=\frac{y-y_1}{y_2-y_1}=\frac{z-z_1}{z_2-z_1}</script></li>
+<li><p>点<script type="math/tex">P_0</script>到直线的距离：<script type="math/tex">d=\frac{|s \times \overset{ \to }{ P_0 P } | }{|s|}</script></p>
+<p class="note note-danger">注意，分子上为叉积</p>
+</li>
+<li><p>平面束方程：<script type="math/tex">(A_1x+B_1y+C_1z+D_1)+\lambda(A_2x+B_2y+C_2z+D_2)=0</script></p>
+</li>
+</ol>
+<h3 id="第二章-多元函数微分学"><a href="#第二章-多元函数微分学" class="headerlink" title="第二章 多元函数微分学"></a>第二章 多元函数微分学</h3><h4 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h4><ol>
+<li>多元函数的极限：当点<script type="math/tex">P\to P_0</script>时，函数<script type="math/tex">f(P)</script>以A为极限的充要条件是点P以任何途径趋近于点<script type="math/tex">P_0</script>时，函数<script type="math/tex">f(P)</script>都无限趋近于<script type="math/tex">A</script>。需要指出的是，<script type="math/tex">lim_{\overset{x\to x_0}{y\to y_0}}f(x,y)</script>为二重极限，<script type="math/tex">lim_{x\to x_0}lim_{y\to y_0}f(x,y)</script>为二次极限。二重极限是xy同时不分先后趋近，而二次极限本质上还是一次函数的极限。</li>
+<li><p>偏导数：设函数<script type="math/tex">z=f(x,y)</script>在点<script type="math/tex">(x_0,y_0)</script>的某领域内有定义。如果<script type="math/tex">\frac{df(x,y_0)}{dx}|_{x=x_0}=lim_{h\to 0}\frac{f(x_0+h,y_0)-f(x_0,y_0)}{h}</script>存在，则称此极限为函数<script type="math/tex">z=f(x,y)</script>在点<script type="math/tex">(x_0,y_0)</script>处对x的偏导数。对y也同理。</p>
+<p class="note note-info">多元函数的偏导存在只能保证点(x,y)沿平行于坐标轴的直线$x=x_0,y=y_0$趋于点$(x_0,y_0)$时极限存在，因为偏导的本质只是在平行于x轴y轴方向上进行了求导</p>
+</li>
+<li><p>高阶偏导数：对于多元函数来说，若其一阶偏导数仍是关于每个自变量的函数，并且一阶偏导数对每个自变量的偏导数也存在，则说这个多元函数具有二阶偏导数。混合偏导数相等，和求导次序无关。<br><img src="/img/postpictures/jklgjlkgjh297.jpg" srcset="/img/loading.gif" alt=""></p>
+</li>
+<li><p>方向导数：如果函数<script type="math/tex">f(x,y)</script>在点<script type="math/tex">P(x_0,y_0)</script>处可微分，呢么函数在该点沿任意方向l的方向导数存在且有：<script type="math/tex">\frac{\partial f}{\partial l}|_{(x_0,y_0)}=f_x(x_0,y_0)cos\alpha+f_u(x_0,y_0)cos\beta</script>,其中<script type="math/tex">cos\alpha.cos\beta</script>是方向l1的方向余弦。</p>
+</li>
+<li><p>梯度：函数在某一点沿哪一方向增加的最快。由方向导数的定义易得，当向量与梯度方向一致时方向导数最大，即<script type="math/tex">\theta</script>方向导数和函数偏导组成的向量的夹角为0时最大。梯度的概念在任意维度的函数都存在，比如在一维函数中就是导数。</p>
+</li>
+<li><p>多元函数的极值：函数在此点的各个偏导均为0(必要条件)；设函数<script type="math/tex">z=f(x,y)</script>在点<script type="math/tex">(x_0,y_0)</script>的某邻域内连续且有一阶及二阶连续偏导数，又<script type="math/tex">f_x(x_0,y_0)=0,f_y(x_0,y_0)=0</script>,令<script type="math/tex">f_xx(x_0,y_0)=A,f_xy(x_0,y_0)=B,f_yy(x_0,y_0)=C</script>,则设<script type="math/tex">\Delta=AC-B^2</script>,则当<script type="math/tex">\Delta > 0</script>时具有极值，且A<0时有最大值，A>0是有最小值。当<script type="math/tex">\Delta < 0</script>时无极值。<script type="math/tex">\Delta = 0</script>时无法通过这种方法确定<br>最值的话就是将函数的所有驻点的函数值进行比较，从而找到最值。</p>
+</li>
+<li><p>条件极值 拉格朗日乘数法：要找函数<script type="math/tex">z=f(x,y)</script>在附加条件<script type="math/tex">\phi(x,y)=0</script>下的可能极值点，可以先作出拉格朗日函数<script type="math/tex">L(x,y)=f(x,y)+\lambda \phi(x,y)</script>，其中<script type="math/tex">\lambda</script>为参数，求其对x与y的一阶偏导数，并使其为零，然后与方程<script type="math/tex">\phi(x,y)=0</script>联立起来：<script type="math/tex">\begin{cases}  f_x(x,y)+\lambda \phi_x(x,y)=0 \\ f_y(x,y)+\lambda \phi_y(x,y)=0 \\ \phi(x,y)=0 \end{cases}</script><br>由这个方程解出<script type="math/tex">x,y,\lambda</script>，这样得到的<script type="math/tex">(x,y)</script>就是函数<script type="math/tex">f(x,y)</script>在附加条件<script type="math/tex">\phi(x,y)=0</script>下的可能极值点，这个方法可以推广至自变量多于两个而条件多余1个的情况。</p>
+</li>
+</ol>
+<h4 id="公式-1"><a href="#公式-1" class="headerlink" title="公式"></a>公式</h4><ol>
+<li>全微分在近似计算中的应用：<script type="math/tex">f(x+\Delta x,y+\Delta y)=f(x,y)+f_x(x,y)\Delta x + f_y(x,y)\Delta y</script></li>
+<li>多元函数求导的链式法则：<script type="math/tex">\frac{dw}{dt}=\sum_{i-1}^n \frac{\partial w}{\partial x_i} \frac{dx_i}{dt}</script></li>
+<li>隐函数微分法：对于在某点领域拥有连续偏导数的函数<script type="math/tex">F(x,y)=0</script>来说，其隐函数导数为：<script type="math/tex">\frac{dy}{dx}=-\frac{F_x}{F_y}</script></li>
+<li>空间曲线的参数方程：<script type="math/tex">\begin{cases}  x=\phi(t) \\ y=\omega(t) , t \in [\alpha,\beta]\\ z=\theta(t) \end{cases}</script>,该曲线在点<script type="math/tex">M(x_0,y_0,z_0)</script>处的切线方程为：<script type="math/tex">\frac{x-x_0}{\phi'(t_0)}=\frac{y-y_0}{\omega'(t_0)}=\frac{z-z_0}{\theta'(t_0)}</script>,法平面方程为：<script type="math/tex">(x-x_0)\phi'(t_0)+(y-y_0)\omega'(t_0)+(z-z_0)\theta'(t_0)=0</script></li>
+<li>曲面在点<script type="math/tex">M(x_0,y_0,z_0)</script>处的的切平面方程为：<script type="math/tex">F_x(x_0,y_0,z_0)(x-x_0)+F_y(x_0,y_0,z_0)(y-y_0)+F_z(x_0,y_0,z_0)(z-z_0)=0</script>,在点<script type="math/tex">M(x_0,y_0,z_0)</script>处的法线方程为：<script type="math/tex">\frac{(x-x_0)}{F_x(x_0,y_0,z_0)}=\frac{(y-y_0)}{F_y(x_0,y_0,z_0)}=\frac{(z-z_0)}{F_z(x_0,y_0,z_0)}</script></li>
+</ol>
+<h3 id="第三章-重积分"><a href="#第三章-重积分" class="headerlink" title="第三章 重积分"></a>第三章 重积分</h3><pre><code>一些基础的东西(比如一些一重积分可以类推的中值定理估值定理)就不在此赘述了，大一下主要学习的是二重积分的转化
+</code></pre><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ol>
+<li>二重积分不是二次积分，二重积分一般不能直接求的结果，大多都需转化为一重积分进行求解。</li>
+<li>坐标系之间的转化：<br>直角坐标系转极坐标系 <script type="math/tex">\begin{cases}  x= r cos \theta \\ y=r sin \theta \end{cases}</script> ,此时<script type="math/tex">\iint_{\Omega} f(x,y)dxdy=\iint_{\Omega} f(r cos \theta ,r sin \theta)rdrd \theta</script><br>直角坐标系转柱坐标系 <script type="math/tex">\begin{cases}  x= r cos \theta \\ y=r sin \theta \\ z=z \end{cases}</script> ,此时<script type="math/tex">\iiint_{\Omega} f(x,y,z)dv=\iiint_{\Omega} f(r cos \theta ,r sin \theta,z)rdrd \theta dz</script><br>直角坐标系转球坐标系 <script type="math/tex">\begin{cases}  x=\rho sin \phi cos \theta \\ y=\rho sin \phi sin \theta \\ z=\rho cos \theta \end{cases}</script> ,此时<script type="math/tex">\iiint_{\Omega} f(x,y,z)dv=\iiint_{\Omega} f( \rho sin \phi cos \theta ,\rho sin \phi sin \theta, \rho cos \theta) \rho^2 sin\phi d\rho d\theta d\phi</script></li>
+</ol>
+<h4 id="公式-2"><a href="#公式-2" class="headerlink" title="公式"></a>公式</h4><ol>
+<li>求曲面面积：<script type="math/tex">A=\iint_D \sqrt{1+(\frac{\partial z}{\partial x})^2+(\frac{\partial z}{\partial y})^2}dxdy</script>。这个是第一型曲面积分。</li>
+<li>求质心：<script type="math/tex">(\overline{x},\overline{y},\overline{z})=(\frac{1}{区域面积S}\iint_D xd\sigma,\frac{1}{区域面积S}\iint_D yd\sigma,\frac{1}{区域面积S}\iint_D zd\sigma)</script>，其中<script type="math/tex">d\sigma</script>为面积微元。</li>
+<li><p>第一类曲线积分：<script type="math/tex">\oint_L f(x,y,z) ds</script>,其中ds为弧长微元，f(x,y,z)为线密度，计算时可以将自变量用参数方程表示并带入。<script type="math/tex">\oint_L f(x,y,z) ds=\int_{\alpha}^{\beta} f(x(t),y(t),z(t))\sqrt{x^{'2}(t)+y^{'2}(t)}dt</script><br><img src="/img/postpictures/adfgfdhyfgjuykiulfh.png" srcset="/img/loading.gif" alt=""></p>
+</li>
+<li><p>第一类曲面积分：<script type="math/tex">\iint_{\sum} f(x,y,z) ds</script>,其中ds为面积微元，f(x,y,z)为区块密度，计算时可以使<script type="math/tex">Z=g(x,y);ds=\sqrt{1+z_x^{'2}+z_y^{'2}}dxdy</script>并带入。<script type="math/tex">\iint_{\sum} f(x,y,z) ds=\iint_{D_{xy}} f(x,y,g(x,y))\sqrt{1+z_x^{'2}+z_y^{'2}}dxdy</script>,然后再使用二重积分计算的方法计算。<strong>将曲面的方程代入被积函数的目的和意义是把被积函数化为二元函数</strong></p>
+</li>
+<li>第二类曲线积分:<script type="math/tex">\int_L P(x,y)dx+Q(x,y)dy</script>,相当于变力<script type="math/tex">f(x,y)=(P(x,y),Q(x,y))</script>沿曲线L做的功.我们可以将所有x和y都转化成参数形式变为，即<script type="math/tex">\int_L \vec{f}(x,y)*d \vec{r}=\int_L P(x,y)dx+Q(x,y)dy=\int_{\alpha}^{\beta}[P(x(t),y(t))x'(t)+Q(x(t),y(t))y'(t)]dt</script>.三维空间曲线的情况也可以推广。<br><img src="/img/postpictures/shtjytjkiuloijhbgyw.png" srcset="/img/loading.gif" alt=""></li>
+<li><p>第二类曲面积分:第二类曲面积分有些复杂，它是针对<strong>有向曲面</strong>所作的一个积分(这里的有向是指非封闭曲面的上或下，左或右侧；或是封闭曲面的内或外侧)，有向曲面的侧是由曲面法向量的指向决定的。<br><img src="/img/postpictures/asdfsdgvfdshwretgre.png" srcset="/img/loading.gif" alt="大概是这样"><br>可以将第二类曲面积分看作通过单位面积的流量计算<script type="math/tex">\iint_{\sum}P(x,y,z)dydz+Q(x,y,z)dzdx+R(x,y,z)dxdy=\iint \vec{f}{P}*\vec{n_0}dS=\iint \vec{f}{P}*d\vec{S}</script>，其中<script type="math/tex">dydz,dzdx,dxdy</script>分别表示dS在坐标面<script type="math/tex">yoz,xoz,xoy</script>的投影。</p>
+<script type="math/tex; mode=display">
+\begin{split}
+\iint_{\sum}P(x,y,z)dydz+Q(x,y,z)dzdx+R(x,y,z)dxdy  \\
+=\iint_{D_{xy}}(P(x,y,z(x,y))(-z_x)+Q(x,y,z(x,y))(-z_y)+R(x,y,z(x,y)))dxdy 上下面，上正下负\\
+=\iint_{D_{xy}}(P(x(y,z),y,z)+Q(x(y,z),y,z)(-x_y)+R(x(y,z),y,z)(-x_z))dydz 前后面，前正后负\\
+=\iint_{D_{xy}}(P(x,y(x,z),z)(-y_x)+Q(x,y(x,z),z)(-x_y)+R(x,y(x,z),z)(-y_z))dzdz 左右面,右正左负\\
+\end{split}</script></li>
+<li><p>格林公式：<script type="math/tex">\iint_D(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})dxdy=\oint_L Pdx+Qdy</script><br><img src="/img/postpictures/dshgtryjtygkdgh.png" srcset="/img/loading.gif" alt=""></p>
+</li>
+<li>高斯公式：<script type="math/tex">{\iiint}_{\omega}(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})dxdydz=\iint_{\sum} Pdydz+Qdzdx+Rdxdy</script><br><img src="/img/postpictures/fdashgrtjuykiukliuldsfg.png" srcset="/img/loading.gif" alt=""></li>
+</ol>
+<h3 id="第四章-级数"><a href="#第四章-级数" class="headerlink" title="第四章 级数"></a>第四章 级数</h3><p>级数，就是说无穷多个数相加在一起，也称作无穷级数。<br>记作：<script type="math/tex">\sum_{n=1}^{\infty}u_n=u_1+u_2+...+u_n+...</script>.<br>令<script type="math/tex">S(n)=\sum_{n=1}^{\infty}u_n</script>,若<script type="math/tex">lim_{n \to \infty}S(n)=A</script>极限存在，则级数收敛。反之级数发散。<br><img src="/img/postpictures/sdgfdbtyntydysrgsnf.png" srcset="/img/loading.gif" alt="一些相关性质"></p>
+<p>常用参照级数：<br>几何级数<script type="math/tex">\sum_{n=0}^{\infty} aq^n</script> <script type="math/tex">\begin{cases}  |q|<1 级数收敛 \\ |q|>1 级数发散 \end{cases}</script><br>调和级数<script type="math/tex">\sum_{n=1}^{\infty} \frac{1}{n}</script>为发散的，对于级数<script type="math/tex">\sum_{n=1}^{\infty} \frac{1}{n^p}</script> <script type="math/tex">\begin{cases}  |p|>1 级数收敛 \\ |p| <= 1 级数发散 \end{cases}</script></p>
+<p>对于级数收敛的研究思路总共有两个。齐次由于是趋于极限，所以在讨论是否收敛时，我们只需要知道后半部分是否收敛就好，在做题时就是要明白n比式子中的任何参数都大。<br>第二点要明白的就是由于收敛的必要条件是通项的极限为零，结合极限的保号性我们可以知道存在一个N，当n&gt;N,通项小于1，在做题时直接把通项当成小于1来对待就好。<br><strong>第一个思路：部分和单调有界</strong><br>在级数中我们将极限存在叫做级数收敛，所以我们可以通过判断部分和数列是否收敛来判断级数是否收敛，而我们知道当数列单调有界时，数列必收敛，所以由此引出研究级数是否收敛的第一个思路：部分和单调有界。<br>有一种情况比较特殊的是，当我们知道部分和本来就单调时，我们只需证明有界就好，正项级数就是这种情况，而且只要证明部分和小于某个数就代表级数收敛。<br><strong>第一个思路：利用通项</strong><br>但是上一个在应用时有太多局限性，而且并不方便，由此我们想到能否直接通过通项来直接判断是否收敛。进而我们为了讨论方便就对级数进行划分类型，分为正项，交错项，任意项每一种都有各自的验敛方法，而且主义该各方法只对其对应的类型有效，所以作级数的第一步就是<strong>分类</strong><br>正项级数：比值法和根值法，在极限值小于1时收敛，大于1时发散，等于1时该方法失效，此时可以通过通项大于零或者极限不为零判断是发散的，而且考试时十有八九在等于1时都是发散的；<br>比较法及其极限形式，已知收敛的级数指向的级数都收敛，发散的背向的级数发散，极限形式本身就是一个比较法，因为高阶无穷小，到后半部分一定是小于低级无穷小，而高阶比低阶就是0，低阶比高阶就是无穷，比值为常数时，就代表两个级数敛散性相同。由后面这个敛散相同，我们可以知道只要我们能找到通项在趋于0时的等价无穷小，并且我们知道这个无穷小的敛散性，那么我们就可以将敛散性判断转化为找等价无穷小的问题了，而等价无穷小又和泰勒公式是一脉相承的，所以可以借助泰勒公式来寻找等价无穷小。这其中比较常用的已知敛散性的级数就是p级数，所以就直接把<script type="math/tex">\frac{1}{n}</script>当成x就好，同时这个还有一个好处由于有比较法的存在对于如<script type="math/tex">sinx-2x</script>我们不能直接把<script type="math/tex">sinx</script>等价为x的情况时，我们可以利用不等式<script type="math/tex">sinx < x</script>，来使<script type="math/tex">sinx-2x < x</script>，间接就达到直接带入的目的了。（注意这个方法适用的前提是该级数是正项级数。）<br>常用放缩关系：<script type="math/tex">sin x < x < tan x,\frac{1}{x+1} < ln(x+1) < x (x>0),e^x>=x+1,x-1>=ln x (x>0)</script><br>计算级数通项极限：<script type="math/tex">阶乘 \to 比值法,指数 \to 根值法,初等函数 \to 极限法,这时可利用等价无穷小</script><br><strong>交错级数</strong><br>交错级数的验敛比较容易，分三步走，判断是交错级数，计算通项极限，做差或做商判断数列是否单调不增。注意交错级数的收敛要说明是条件收敛还是绝对收敛。<br>另外交错级数由于是一正一负，所以经常会用到裂项相消法，同时利用这个方法也可以证明部分和有界，这一个要注意，但要注意这个有一个前提就是通项的极限必须是零。<br>其实对于交错级数也是可以利用泰勒公式进行判断，但是一定要展开到<script type="math/tex">x^2</script>，之后进行判断收敛的依据和上面不一样，这里是<strong>利用收敛加减收敛还是收敛，收敛加减发散是发散，发散加减发散就无法判断，因此要分开各项单独判断。</strong><br>同时在判断是交错级数之后，要做的就是提出<script type="math/tex">(-1)^n</script>,而且尽可能让式子中只有一个<script type="math/tex">(-1)^n</script>，当<script type="math/tex">(-1)^n</script>在函数内部，如<script type="math/tex">ln(1+(-1)^nx)</script>时，要用泰勒展开式将其拆开后才能拿出来。常见的还有三角函数，根号，这两种一个采用角变换，一个采用平方差<br>这里还有可以再拉上一个知识点，就是中值定理，因为是相邻两项的差，常用的思路就是把导数的最值代替建立不等式，证明绝对收敛。<br>交错级数基本上都是要用到，收敛+收敛=收敛，发散+收敛=发散（发散+发散=不定），所以应该对其进行拆分<br><strong>任意项级数</strong><br>由于级数绝对收敛原函数也收敛，所以直接转化为正项级数，如果正项级数发散，那么就只能用夹逼准则或部分和单调有界进行判断了。<br>至此我们分好了类，并说明白了各自的应用，总结来说就是正项方法多，但是交错考法灵活，涉及多个知识点，任意项就是跑龙套的。<br>插播一点计算小思路：由于收敛级数的四则运算中并没有乘法，所以考试特爱考这个，这题对于正项级数来说有一个计算思路就是先确定各部分中是否有收敛的，如果有，则判断剩余部分是否小于1，注意要有n非常大的思想。另外夹逼准则在这个知识点的应用思路：就是把所有不随n变化的项尽可能删掉。特别是常数项。还有就是对于p级数要和其交错级数形式区别开，其交错形式只要是p&gt;0就收敛了。而且这个p级数经常用来举反例，比较典型就是调和级数。p级数的记忆：p=0时为常数1，发散，所有<script type="math/tex">p<=1</script>发散</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/">大学课程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/">大学基础课程</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/">高等数学</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/05/05/%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%802/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">电路分析基础学习笔记 二</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/27/%E6%97%A0%E5%86%85%E9%AC%BC%EF%BC%8C%E6%9D%A5%E7%82%B9%E5%A4%A7%E7%89%A9%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                        <span class="hidden-mobile">无内鬼，来点大物知识点</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

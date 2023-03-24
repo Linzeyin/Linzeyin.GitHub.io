@@ -1,0 +1,690 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="使用线段树的区间操作对图上连续各点之间的连边进行优化。">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>天梯赛选拔-线段树辅助建图 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/adfgdfsgvb.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="天梯赛选拔-线段树辅助建图">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-30 17:47" pubdate>
+        2021年3月30日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">天梯赛选拔-线段树辅助建图</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年4月8日 下午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>背景： 天梯赛选拔赛被打爆了. . .<br>复盘发现是由于在两道题上浪费了太多时间并且最后没修出来。<br>一道暴力题我最开始就没想到裸暴力能过便死在了繁杂的优化上，还有一道就是这道题。<br>我考试中有想到过大体的方向，就是把区间缩点，和正解大致思路是相同的<br><del>(所以我感觉我的方向是对的就几乎把时间全花在这上面了)</del><br>但我当时不知道有线段树辅助建图的这个方法，于是自己用了一种十分繁杂的办法排列建图区间的左右端点然后再扫一遍端点确定缩点的范围来建图. . .<br>然后改细节改到心态崩溃<br>最后一直在这两道题之间反复横跳(因为感觉自己能打就差一点)。<br><del>下来后HS说这玩意他用线段树秒了。</del>便学习了这个算法。</p>
+</blockquote>
+<p>先看一下题目吧。</p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><blockquote>
+<p>给定一个 n 个点的无向图。开始时图中没有边，之后yxh将进行 m 次加边操作，其中第 i 次操作具体描述如下：<br>每个操作的描述包含两个在 [1, n] 范围内的互不相同的整数 $l_i$, $r_i$，和一个正整数 $c_i$，对于所有满足$l_i$ ≤ s &lt; t ≤ $r_i$ 的点对 (s, t)，都在点 s 和点 t 之间加上一条长度为 $c_i$ 的无向边。<br>在所有加边操作完成后，yxh要求你计算出从节点 1 到节点 n 的最短路径。如果不存在任何从 1 到n 的路径，则输出 −1。</p>
+</blockquote>
+<h3 id="输入格式-Input-Format"><a href="#输入格式-Input-Format" class="headerlink" title="输入格式 Input Format"></a>输入格式 Input Format</h3><p>第一行包含两个个正整数 n, m(2 ≤ n, m ≤ $10^5$)，含义如上所示。<br>接下来的 m 行，每行都包含三个整数 $l_i$, $r_i$(1 ≤ $l_i$ &lt; $r_i$ ≤ n), $c_i$(1 ≤ $c_i$ ≤ $10^9$)，含义如上所示。</p>
+<h3 id="输出格式-Output-Format"><a href="#输出格式-Output-Format" class="headerlink" title="输出格式 Output Format"></a>输出格式 Output Format</h3><p>输出包含一行，代表从节点 1 到节点 n 的最短路径。如果不存在任何从 1 到 n 路径，则输出 −1。</p>
+<h3 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h3><blockquote>
+<p>4 3<br>1 3 2<br>2 4 3<br>1 4 6</p>
+</blockquote>
+<h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><blockquote>
+<p>5</p>
+</blockquote>
+<hr>
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>我自己考试时候的想法已经在背景里大致说了，<del>感觉应该可以搞但是麻烦到现在都不想打. . .</del>只讲一下线段树辅助建图吧。<br>我们可以根据题意将其简化为一个模型，<br>就是将每个区间连边操作都当作新建两个新节点(入节点和出节点)，然后保证这个区间里的所有点与入节点都能有一条权值为v的路，以及出节点与区间内所有点都能有一条权值为0的路，入节点和出节点连一条单向权值为0的边。<br>我们可以用线段树来简化这个操作，建两棵线段树，一棵由入节点组成且树上的边为指向父亲的权值为0的单向边；另一棵由出节点组成且树上的边为指向儿子的权值为0的单向边。<br>这样我们直接在树上进行连边操作即可。令一个线段树上的点代表其所属区间所有的集合，有新的区间建边操作时，在入节点线段树上找到属于该区间的所有小区间，并令这些小区间的代表点与新建的“操作点”连权值为v的边，出节点线段树的操作和入节点线段树上的操作几乎一样，只不过连的边相反并且边权均为0。<br>显然，每一次区间操作后连的边的期望为$log(区间长度)$,最终连的边数就是mlogn。<br>求最短路部分就用正常最短路算法即可，这里用的是堆优化的dj。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这个方法本质上使用线段树的性质是用一点来表示整个区间，从而不需要区间里的每个节点都进行连边，最终达到了简化的目的。<br>我感觉这也正是线段树优化的本质：即用一个节点来记录囊括所有子节点的所需的相关信息，在询问相关问题时就可以用一个节点直接返回答案，减少对子节点的重复访问。<br>这道题为每个节点附上了代表一处区间的含义，然后用大节点来减少小结点的重复访问(建边)。这实际上是对以往区间操作的认知<del>(区间加减乘除)</del>的一个拓展，也是对以后再看到区间相关的题目的一种启发。<br>这个算法目前我打的还是直球版本，由于入节点和出节点的线段树所有操作相同，所以获得两棵线段树之间的联系后应该还可以继续优化。</p>
+<hr>
+<h3 id="update-2021-4-8"><a href="#update-2021-4-8" class="headerlink" title="update 2021/4/8"></a>update 2021/4/8</h3><p>之前一直没提交，然后今天发现OJ上的提交通道开放了，便提交了一下，然后Wa了 . . .<br>然后改改wawa，wawa改改，最后改回了原样，结果就过了<br><img src="/img/postpictures/asfsdvxczgrtrh.png" srcset="/img/loading.gif" alt=""><br>然后发现自己在修改的第二个版本加了个打表一直没有删.  . .第一遍没过是因为没用long long。第四遍修改时把所有int改成了longlong，这个版本就应该过了，但是打表没删就一直卡着 . . .<br>菜且星际QAQ</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ss</span></span><br><span class="hljs-class">&#123;</span><br>    <span class="hljs-keyword">int</span> x,y,next,v;<br>&#125;e[<span class="hljs-number">100010</span>];<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">tree</span></span><br><span class="hljs-class">&#123;</span><br>    <span class="hljs-keyword">int</span> ll,rr,num;<br>&#125;;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">node</span> &#123;</span><br>    <span class="hljs-keyword">int</span> u,d;<br>    <span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span> &lt;(<span class="hljs-keyword">const</span> node&amp; rhs) <span class="hljs-keyword">const</span>&#123;<span class="hljs-keyword">return</span> d&gt;rhs.d;&#125;<br>&#125;;<br><span class="hljs-built_in">priority_queue</span>&lt;node&gt;Q; <br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> Link[<span class="hljs-number">100010</span>],jkl=<span class="hljs-number">0</span>,pointnum,n,m,tree1fa,tree2fa;<br>tree point1[<span class="hljs-number">100010</span>],point2[<span class="hljs-number">100010</span>];<span class="hljs-comment">//point1是入点线段树，point2为出点线段树</span><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span> xx,<span class="hljs-keyword">int</span> yy,<span class="hljs-keyword">int</span> vv)</span></span><br><span class="hljs-function"></span>&#123;<br>    e[++jkl].next=Link[xx];e[jkl].x=xx;e[jkl].y=yy;e[jkl].v=vv;Link[xx]=jkl;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">build1</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ll,<span class="hljs-keyword">int</span> rr)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> mid=(ll+rr)/<span class="hljs-number">2</span>,nowpoint=++pointnum;<br>    point1[nowpoint].num=pointnum;<br>    <span class="hljs-keyword">if</span>(ll==rr)<br>    &#123;<br>        point1[nowpoint].rr=point1[nowpoint].ll=ll;<br>        insert(ll,nowpoint,<span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">return</span> point1[nowpoint].num;<br>    &#125;<br>    point1[nowpoint].ll=build1(ll,mid);<br>    point1[nowpoint].rr=build1(mid+<span class="hljs-number">1</span>,rr);<br>    insert(point1[nowpoint].ll,nowpoint,<span class="hljs-number">0</span>);<span class="hljs-comment">//在入点线段树上建立0边</span><br>    insert(point1[nowpoint].rr,nowpoint,<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">return</span> point1[nowpoint].num;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">build2</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ll,<span class="hljs-keyword">int</span> rr)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> mid=(ll+rr)/<span class="hljs-number">2</span>,nowpoint=++pointnum;<br>    point2[nowpoint].num=pointnum;<br>    <span class="hljs-keyword">if</span>(ll==rr)<br>    &#123;<br>        point2[nowpoint].rr=point2[nowpoint].ll=ll;<br>        insert(nowpoint,ll,<span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">return</span> point2[nowpoint].num;<br>    &#125;<br>    point2[nowpoint].ll=build2(ll,mid);<br>    point2[nowpoint].rr=build2(mid+<span class="hljs-number">1</span>,rr);<br>    insert(nowpoint,point2[nowpoint].ll,<span class="hljs-number">0</span>);<span class="hljs-comment">//在出点线段树上建立0边</span><br>    insert(nowpoint,point2[nowpoint].rr,<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">return</span> point2[nowpoint].num;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">edge_in</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ll,<span class="hljs-keyword">int</span> rr,<span class="hljs-keyword">int</span> vv,<span class="hljs-keyword">int</span> nowll,<span class="hljs-keyword">int</span> nowrr,<span class="hljs-keyword">int</span> nowpoint)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> mid=(nowll+nowrr)/<span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span>(ll&lt;=nowll&amp;&amp;rr&gt;=nowrr)<br>    &#123;<br>        insert(nowpoint,pointnum,vv);<span class="hljs-comment">//入点线段树与区间节点建边</span><br>        <span class="hljs-keyword">return</span> ;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(ll&gt;nowrr||rr&lt;nowll)<span class="hljs-keyword">return</span> ;<br>    edge_in(ll,rr,vv,nowll,mid,point1[nowpoint].ll);edge_in(ll,rr,vv,mid+<span class="hljs-number">1</span>,nowrr,point1[nowpoint].rr);<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">edge_out</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ll,<span class="hljs-keyword">int</span> rr,<span class="hljs-keyword">int</span> vv,<span class="hljs-keyword">int</span> nowll,<span class="hljs-keyword">int</span> nowrr,<span class="hljs-keyword">int</span> nowpoint)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span>(ll&gt;nowrr||rr&lt;nowll)<span class="hljs-keyword">return</span> ;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> mid=(nowll+nowrr)/<span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span>(ll&lt;=nowll&amp;&amp;rr&gt;=nowrr)<br>    &#123;<br>        insert(pointnum,nowpoint,<span class="hljs-number">0</span>);<span class="hljs-comment">//区间节点与出点线段树建边</span><br>        <span class="hljs-keyword">return</span> ;<br>    &#125;<br>    <br>    edge_out(ll,rr,vv,nowll,mid,point2[nowpoint].ll);edge_out(ll,rr,vv,mid+<span class="hljs-number">1</span>,nowrr,point2[nowpoint].rr);<br>    <span class="hljs-keyword">return</span> ;<br>&#125;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> dis[<span class="hljs-number">100010</span>];<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">dj</span><span class="hljs-params">(<span class="hljs-keyword">int</span> st)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=pointnum;i++) dis[i]=<span class="hljs-number">100000000000ll</span>;<br>	dis[st]=<span class="hljs-number">0</span>;<br>	node minpoint;<br>	minpoint.u=st;minpoint.d=<span class="hljs-number">0</span>;<br>    Q.push(minpoint);<br>	<span class="hljs-keyword">while</span>(Q.<span class="hljs-built_in">size</span>())<br>	&#123;<br>        minpoint=Q.top();Q.pop();<br>        <span class="hljs-keyword">int</span> u=minpoint.u,d=minpoint.d;<br>		<span class="hljs-keyword">if</span> (dis[u]!=d) <span class="hljs-keyword">continue</span> ;<br>		<span class="hljs-comment">//cout&lt;&lt;u&lt;&lt;&#x27; &#x27;&lt;&lt;d&lt;&lt;endl;</span><br>        <span class="hljs-comment">//if (d!=dis[u]) continue;</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=Link[u];j;j=e[j].next)<span class="hljs-comment">//用最近的点来更新其他点的最近距离</span><br>		&#123;<span class="hljs-comment">//保证了前一步找最近的点时找到的就是该点的最短路</span><br>			<span class="hljs-keyword">if</span>(dis[e[j].y]&gt;d+e[j].v)<br>			&#123;<br>				dis[e[j].y]=d+e[j].v;<br>                Q.push((node)&#123;e[j].y,dis[e[j].y]&#125;);<br>			&#125;<br>		&#125;<br>	&#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    freopen(<span class="hljs-string">&quot;a.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,<span class="hljs-built_in">stdin</span>);<br>    freopen(<span class="hljs-string">&quot;a.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,<span class="hljs-built_in">stdout</span>);<br>    <span class="hljs-built_in">cin</span>&gt;&gt;n&gt;&gt;m;<br>    pointnum=n;<br>    tree1fa=build1(<span class="hljs-number">1</span>,n);tree2fa=build2(<span class="hljs-number">1</span>,n);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>,ll,rr,vv;i&lt;=m;i++)  <br>    &#123;<br>        <span class="hljs-built_in">cin</span>&gt;&gt;ll&gt;&gt;rr&gt;&gt;vv;<br>        pointnum++;<br>        edge_in(ll,rr,vv,<span class="hljs-number">1</span>,n,tree1fa);<br>        edge_out(ll,rr,vv,<span class="hljs-number">1</span>,n,tree2fa);<br>    &#125;<br>    <span class="hljs-comment">/*for(int i=1;i&lt;=pointnum;i++)</span><br><span class="hljs-comment">    &#123;</span><br><span class="hljs-comment">        cout&lt;&lt;i&lt;&lt;&#x27;:&#x27;;</span><br><span class="hljs-comment">        for(int j=Link[i];j;j=e[j].next)cout&lt;&lt;e[j].y&lt;&lt;&#x27; &#x27;;cout&lt;&lt;endl;</span><br><span class="hljs-comment">    &#125;*/</span><br>    dj(<span class="hljs-number">1</span>);<br>	<span class="hljs-comment">//cout&lt;&lt;n&lt;&lt;endl;</span><br>	<span class="hljs-comment">//for (int i=1;i&lt;=n;i++) printf(&quot;%d &quot;,dis[i]);</span><br>    <span class="hljs-keyword">if</span>(dis[n]!=dis[<span class="hljs-number">0</span>])<span class="hljs-built_in">cout</span>&lt;&lt;dis[n]&lt;&lt;<span class="hljs-built_in">endl</span>;<br>    <span class="hljs-keyword">else</span> <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-number">-1</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/">图论</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E9%A2%98%E7%9B%AE/">题目</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E5%B7%A7/">技巧</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/">最短路</a>
+                    
+                      <a class="hover-with-bg" href="/tags/ACM/">ACM</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/04/04/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E5%AD%A6%E4%B9%A0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">计算几何学习(待完善)</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/23/%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%801/">
+                        <span class="hidden-mobile">电路分析基础学习笔记 一</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

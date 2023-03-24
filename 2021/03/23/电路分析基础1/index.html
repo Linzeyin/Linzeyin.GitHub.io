@@ -1,0 +1,792 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="电路分析是电信等专业有关的一门基础学科。目的是在给定电路模型的情况下计算电路中各部分的电流电压等相关信息">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>电路分析基础学习笔记 一 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/sddvsxasr.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="电路分析基础学习笔记 一">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-23 12:26" pubdate>
+        2021年3月23日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      55
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">电路分析基础学习笔记 一</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年5月5日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><pre><code>记录了电路分析的学习，以总结为主复习时使用
+其中大多数内容来源于丁老师的PPT，自学的时候帮助很大，
+这里主要是整合划分以及总结一些自己觉得重要的点还有自己的理解
+</code></pre><p>静态电路的分析就记在这里，动态电路的分析再开一页<a target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/05/05/%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%802/">在这里！！</a></p>
+<hr>
+<h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><pre><code>一些基础的比较重要的但是没啥可说的都放到这里，想到啥写啥。
+</code></pre><hr>
+<h3 id="基础术语"><a href="#基础术语" class="headerlink" title="基础术语"></a>基础术语</h3><h4 id="1-二端元件two-terminal"><a href="#1-二端元件two-terminal" class="headerlink" title="1.二端元件two-terminal:"></a><strong>1.二端元件two-terminal:</strong></h4><p>指有两个引出端子的元件，具有两个以上端子的元件称为多端元件，像晶体管就是一种三端元件，变压器是一种四端元件。在集总参数假设条件下，通常只关心元件端子上的特性（称为外部特性），而不注意其内部的情况。</p>
+<h4 id="2-拓扑图topologic-graph"><a href="#2-拓扑图topologic-graph" class="headerlink" title="2.拓扑图topologic graph:"></a><strong>2.拓扑图topologic graph:</strong></h4><p>指用一条线段来代表元件后得到的几何结构图。又称线图，简称图graph。这个电路图就可简化为图(b)的拓扑图。<br><img src="/img/postpictures/drwxbhikkcaw.jpg" srcset="/img/loading.gif" alt=""></p>
+<h4 id="3-有向图directed-graph"><a href="#3-有向图directed-graph" class="headerlink" title="3.有向图directed graph:"></a><strong>3.有向图directed graph:</strong></h4><p>指标明参考方向的图。通常图中的参考方向与相应电路图中电流（或电压）的参考方向相同。</p>
+<h4 id="4-支路branch"><a href="#4-支路branch" class="headerlink" title="4.支路branch:"></a><strong>4.支路branch:</strong></h4><p>电路图中的每一个元件，即图中的每一条线段，称为支路。有时为了方便，也可把某些元件的串联组合或并联组合当作一条支路来看待。在图论中也称支路为边。</p>
+<h4 id="5-节点node"><a href="#5-节点node" class="headerlink" title="5.节点node:"></a><strong>5.节点node:</strong></h4><p>指支路的连接点。</p>
+<h4 id="6-路径path"><a href="#6-路径path" class="headerlink" title="6.路径path:"></a><strong>6.路径path:</strong></h4><p>从某一节点出发，连续地经过一些支路和节点(只能各经过一次)，到达另一节点，就构成路径。</p>
+<h4 id="7-回路loop"><a href="#7-回路loop" class="headerlink" title="7.回路loop:"></a><strong>7.回路loop:</strong></h4><p>如果路径的最后到达点就是出发点，这样的闭合路径称为回路。</p>
+<h4 id="8-网孔mesh"><a href="#8-网孔mesh" class="headerlink" title="8.网孔mesh:"></a><strong>8.网孔mesh:</strong></h4><p>在平面图中，构成回路的各支路围成一个区域。并且在区域内部不包含其它支路和节点的回路就称为网孔</p>
+<h4 id="9-电阻元件resistor"><a href="#9-电阻元件resistor" class="headerlink" title="9.电阻元件resistor:"></a><strong>9.电阻元件resistor:</strong></h4><p>分为 线性/非线性，时变/非时变等，本课程主要研究线性非时变电阻元件。</p>
+<h4 id="10-电压源"><a href="#10-电压源" class="headerlink" title="10.电压源:"></a><strong>10.电压源:</strong></h4><p>理想电压源是指不管外部电路如何，其两端电压总能保持定值或一定的时间函数的电源。</p>
+<h4 id="11-电流源"><a href="#11-电流源" class="headerlink" title="11.电流源:"></a><strong>11.电流源:</strong></h4><p>理想电流源是指不管外部电路如何，其输出电流(当方向与外电路电流相反时是吸收电功率)总能保持定值或一定的时间函数的电源。</p>
+<h4 id="12-受控源"><a href="#12-受控源" class="headerlink" title="12.受控源:"></a><strong>12.受控源:</strong></h4><p>是指大小、方向受<strong>电路中其它地方</strong>的电压或电流控制的电源。即电压源的电压或电流源的电流不是给定的时间函数，而是受电路中某支路电压或电流控制。有源的二端口元件，分为受控电流源以及受控电压源。<br><strong>无论是受控源还是电流源和电压源，都只用其输出/输入的性质，其本身的其余性质(电阻等)均忽略。</strong>(但是与回路中电流电压方向相反时实际上和电阻等效)</p>
+<h4 id="13-拓扑约束"><a href="#13-拓扑约束" class="headerlink" title="13.拓扑约束:"></a><strong>13.拓扑约束:</strong></h4><p>指组成电路的各个节点间电流及回路间电压的相互制约关系，这些关系仅由电路的结构(互连形式)决定，而与电路各支路中元件的电特性无关。该约束由基尔霍夫定律(KCL和KVL)体现。</p>
+<h4 id="14-元件约束"><a href="#14-元件约束" class="headerlink" title="14.元件约束:"></a><strong>14.元件约束:</strong></h4><p>来自元件自身的性质，即指每种元件对两个量(电压和电流)形成的一个约束。用VAR体现。<br><strong>这两类约束是解决集总电路问题的基本依据。</strong></p>
+<h4 id="15-网孔电流"><a href="#15-网孔电流" class="headerlink" title="15.网孔电流:"></a><strong>15.网孔电流:</strong></h4><p>指设想在电路的每个网孔里沿着构成该网孔的各支路循环流动的假想电流</p>
+<h4 id="16-自电阻"><a href="#16-自电阻" class="headerlink" title="16.自电阻:"></a><strong>16.自电阻:</strong></h4><p>指各自网孔内所有电阻的总和。</p>
+<h4 id="17-互电阻"><a href="#17-互电阻" class="headerlink" title="17.互电阻:"></a><strong>17.互电阻:</strong></h4><p>指网孔与网孔之间的工有电阻。</p>
+<h4 id="18-互异性"><a href="#18-互异性" class="headerlink" title="18.互异性:"></a><strong>18.互异性:</strong></h4><p>互易性是一类特殊的线性网络的重要性质。一个具有互易性的网络在输入端（激励）与输出端（响应）互换位置后，同一激励所产生的响应并不改变。</p>
+<h4 id="19-对偶性"><a href="#19-对偶性" class="headerlink" title="19.对偶性:"></a><strong>19.对偶性:</strong></h4><p>电路的对偶性体现在电路中的许多变量、元件、结构及定律都是成对出现，并且存在相类似的一一对应的特性。具有这样一一对应性质的一对元素（电路变量、 元件参数、 结构、 定律等），可称为对偶元素。<br>易知：<strong>如果电路中某一定理、公式或方程的表述是成立的，则将其中的元素用其相应对偶元素置换所得到的对偶表述也成立。</strong><br><img src="/img/postpictures/sadfsdvsdagv.PNG" srcset="/img/loading.gif" alt="大概就是这样"></p>
+<h4 id="20-线性电路"><a href="#20-线性电路" class="headerlink" title="20.线性电路:"></a><strong>20.线性电路:</strong></h4><p>－指由线性元件、线性受控源及独立源组成的电路。若某线性电阻电路有唯一解，则该电路中任一支路电流和电压均可表示为电路中所有独立源的线性组合。体现为两个主要特性－齐次性和叠加性。</p>
+<h4 id="21-齐次性"><a href="#21-齐次性" class="headerlink" title="21.齐次性:"></a><strong>21.齐次性:</strong></h4><p>设网络的输入为f(t)，输出为y(t)，若 <script type="math/tex">f(t)→y(t)</script>，则： <script type="math/tex">af(t)→ ay(t)</script></p>
+<h4 id="22-叠加性"><a href="#22-叠加性" class="headerlink" title="22.叠加性:"></a><strong>22.叠加性:</strong></h4><p>设网络的输入为f(t)，输出为y(t)，若 <script type="math/tex">f_1(t)→y_1(t),f_2(t)→y_2(t)</script>,则:<script type="math/tex">f_1(t)+f_2(t)→y_1(t)+y_2(t)</script><br><strong>所以我们可得出这么一个结论：若<script type="math/tex">f_1(t)→y_1(t),f_2(t)→y_2(t)</script>且<script type="math/tex">af_1(t) + bf_2(t)→ay_1(t)＋ by_2(t)</script>，呢么该系统就是线性系统。</strong></p>
+<h4 id="23-网络函数"><a href="#23-网络函数" class="headerlink" title="23.网络函数:"></a><strong>23.网络函数:</strong></h4><p>线性、时不变电路在单一激励下，指定的响应(输出)与激励(输入)之比，称为网络函数，记为H，即</p>
+<script type="math/tex; mode=display">H =\frac{输出向量}{输入向量}</script><p>输入(激励)是独立电压源或独立电流源，输出(响应)是感兴趣的某个电压或电流。</p>
+<h4 id="24-数模转换器"><a href="#24-数模转换器" class="headerlink" title="24.数模转换器:"></a><strong>24.数模转换器:</strong></h4><p>将输入的每一位二进制代码按其权的大小转换成相应的模拟量，然后将代表各位的模拟量相加，所得的总模拟量就与数字量成正比，这样便实现了从数字量到模拟量的转换。<br><img src="/img/postpictures/sadgerdgbvfxz.PNG" srcset="/img/loading.gif" alt="T型电阻网络DAC原理图"></p>
+<blockquote>
+<p>这种电路的特点：<br>①从任一结点向左或向右看，其等效电阻均为<script type="math/tex">2R</script>；<br>②任一开关接UREF时到地的等效电阻均为<script type="math/tex">3R</script>，即流经该开关的电流为<script type="math/tex">\frac{U_{REF}}{3R}</script>。<br>③电子开关<script type="math/tex">S_3～S_0</script>受输入二进制代码<script type="math/tex">d_3、d_2、d_1、d_0</script>的控制。</p>
+</blockquote>
+<h4 id="25-单口-one-port-网络"><a href="#25-单口-one-port-网络" class="headerlink" title="25.单口(one-port)网络:"></a><strong>25.单口(one-port)网络:</strong></h4><p>在电路分析中可以把互连的一组元件看作为一个整体，从而和其他部分区分开，若这个整体只有两个端钮与外部电路相连接，则不管它的内部结构如何，我们统称它为二端网络或单口网络。<strong>二端网络中从一个端钮流进的电流必定等于另一端钮流出的电流，一个单口网络对电路其余部分的影响，决定于其端口电流电压关系（VAR）</strong></p>
+<h4 id="26-输入电阻"><a href="#26-输入电阻" class="headerlink" title="26.输入电阻:"></a><strong>26.输入电阻:</strong></h4><p>输入电阻等于将独立电源置零后，从端口看进去的等效电阻。“电源置零“的含义是：将电压源短路，使其输出电压为零；将电流源断路，使其输出电流为零。</p>
+<hr>
+<h3 id="电路等效"><a href="#电路等效" class="headerlink" title="电路等效"></a>电路等效</h3><p><strong>1. 等效定义:</strong> 两部分电路 B 与 C， 若对任意外电路 A,二者相互代换能使外电路 A 中有相同的电压、电流、功率，则称 B 电路与 C 电路是互为等效的.<br><strong>2. 等效条件:</strong> B 与 C 电路具有相同的VAR 。<br><strong>3. 等效对象:</strong> 任意外电路 A 中的电流、电压、功率。<br><strong>4. 等效目的:</strong> 为简化电路方便分析(求解)</p>
+<hr>
+<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><h3 id="欧姆定律（VAR）"><a href="#欧姆定律（VAR）" class="headerlink" title="欧姆定律（VAR）"></a>欧姆定律（VAR）</h3><p class="note note-info"><b><font size="2" >在一个回路中，通过某段导体的电流和这段导体两端电压成正比，跟它的电阻却是成反比</font></b></p>
+中学阶段就已经很熟悉了，在此不做过多叙述
+<p class="note note-success"><b><font size="3" >欧姆定律解决的是元件上电压、电流的约束关系，这种约束取决于支路元件的性质，与电路结构无关；KCL和KVL阐述的是电路结构上电压、电流的约束关系，取决于电路的连接形式，与支路元件的性质无关。</font></b></p>
+
+<h3 id="基尔霍夫定律"><a href="#基尔霍夫定律" class="headerlink" title="基尔霍夫定律"></a>基尔霍夫定律</h3><h4 id="节点电流定律-KCL"><a href="#节点电流定律-KCL" class="headerlink" title="节点电流定律(KCL)"></a>节点电流定律(KCL)</h4><p class="note note-info"><b><font size="2" >任一瞬间，流向某一节点电流的代数和恒等于零。</font></b></p>
+
+<p>直戳了当的结论，就是对于节点i，和它链接的电流为$I_i$，呢么可知 $\sum I_i =0$.及一个节点上流入的电流和流出的电流的代数和总为0.</p>
+<blockquote>
+<p>所谓电荷守恒定律，即是说电荷既不能创造，也不能消灭。基于这条定律，对集总参数电路中某一支路的横截面来说，它“收支”是完全平衡的。即是说，流入横截面多少电荷即刻又从该横截面流出多少电荷，$\frac{dq}{dt}$在一条支路上应处处相等，这就是电流的连续性。那么对于集总参数电路中的节点，在任意时刻t, 它“收支”也是完全平衡的,因此KCL成立。</p>
+</blockquote>
+<p>①KCL是电荷守恒和电流连续性原理在电路中任意节点处的反映；<br>②KCL是对节点处支路电流加的约束，与支路上接什么元件无关，与电路是线性还是非线性无关；<br>③ KCL方程是按电流参考方向列写的，与电流实际方向无关。首先要设出每一支路电流的参考方向，然后依据参考方向是流入或流出取号(流出者取正号，流入者取负号，或者反之)列写出KCL方程。<br>④ KCL具有普遍意义，它适用于任意时刻、任何激励源(直流、交流或其他任意变动激励源)情况下的一切集总参数电路。</p>
+<h4 id="节点电压定律-KVL"><a href="#节点电压定律-KVL" class="headerlink" title="节点电压定律(KVL)"></a>节点电压定律(KVL)</h4><p class="note note-info"><b><font size="2" >
+对任何集总参数电路，在任意时刻，沿任意闭合路径巡行，各段电路电压的代数和恒等于零。
+其数学表示式为 $\sum^{m}_{k=1} U_k(t)=0$ (沿任一回路)
+$U_k(t)$表示各个元件上的电压，m为回路中包含元件的个数。(代数和是指与回路绕行方向一致的支路电压取正号，相反的取负号。)</font></b></p>
+
+<blockquote>
+<p>KVL的实质，反映了集总参数电路遵从能量守恒定律，或者说，它反映了保守场中做功与路径无关的物理本质。从电路中电压变量的定义容易理解KVL的正确性。如果自a点出发移动单位正电荷，沿着构成回路的各支路又“走”回到a点，相当求电压$u_{a-a}$, 显然应是$ V_a-V_a = 0$.</p>
+</blockquote>
+<p><strong>推论:</strong> 电路中任意两点间的电压等于两点间任一条路径经过的各元件电压的代数和。</p>
+<p class="note note-success"><b><font size="3" >KCL定律的推广应用主要应把握广义结点的正确识别；KVL定律的推广应用则要在充分理解电位单值性原理的基础上，正确列写式中各段电压的正、负。</font></b></p>
+
+<hr>
+<h3 id="特勒根定理"><a href="#特勒根定理" class="headerlink" title="特勒根定理"></a>特勒根定理</h3><h4 id="特勒根功率定理"><a href="#特勒根功率定理" class="headerlink" title="特勒根功率定理"></a>特勒根功率定理</h4><p class="note note-info"><b><font size="2" >任何时刻，一个具有n个结点和b条支路的集总电路，在支路电流和电压取关联参考方向下吸收的功率之和恒等于零</font></b></p>
+
+<h4 id="特勒根似功率定理"><a href="#特勒根似功率定理" class="headerlink" title="特勒根似功率定理"></a>特勒根似功率定理</h4><p class="note note-info"><b><font size="2" >任何时刻，对于两个具有n个结点和b条支路的集总电路，当它们具有相同的有向图，但由内容不同的支路构成，在支路电流和电压取关联参考方向下，满足A电压和B电流乘积等于B电压和A电流乘积。</font></b></p>
+
+<p>公式:$\sum U_A I_B=\sum U_B I_A$，满足U和I都是在有向图相同的支路上。该定理表明，在有向图相同的任意两个电路中，在任何瞬时t，任一电路的支路电压与另一电路相应的支路电流的乘积的代数和恒等于零。</p>
+<blockquote>
+<p>①电路中的支路电压必须满足KVL;<br>②电路中的支路电流必须满足KCL;<br>③电路中的支路电压和支路电流必须满足关联参考方向（否则公式中加负号）；<br>④定理的正确性与元件的特征全然无关。</p>
+</blockquote>
+<hr>
+<h4 id="互易定理"><a href="#互易定理" class="headerlink" title="互易定理"></a>互易定理</h4><p class="note note-info"><b><font size="2" >对一个仅含线性电阻的无源二端口电路$N_R$，其中一个端口加激励源，另一个端口作响应端口，在只有一个激励源的情况下，当激励与响应互换位置时，同一激励所产生的响应相同。</font></b></p>
+
+<p>大概满足以下三种情况：<br><div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/img/postpictures/uchdungoxj.jpg" srcset="/img/loading.gif" alt=""></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="/img/postpictures/vcdsvbtrwexsa.jpg" srcset="/img/loading.gif" alt=""></div><div class="group-image-wrap"><img src="/img/postpictures/trvccxeodfg.jpg" srcset="/img/loading.gif" alt=""></div></div></div><br>其实就是特勒根定律的特殊情况。<br>具有互易性的网络叫互易网络，互易定理是对电路的这种性质所进行的概括，它广泛的应用于网络的灵敏度分析和测量技术等方面。</p>
+<blockquote>
+<p>① 互易前后应保持网络的拓扑结构不变，仅理想电源搬移；<br>②互易前后端口处的激励和响应的极性保持一致（要么都关联，要么都非关联)；<br>③ 互易定理只适用于线性电阻网络在单一电源激励下，端口两个支路电压电流关系。<br>④含有受控源的网络，互易定理一般不成立。(update 2021/4/13需要受控源满足一定限制保证互易后相同)</p>
+</blockquote>
+<hr>
+<h3 id="叠加定理"><a href="#叠加定理" class="headerlink" title="叠加定理"></a>叠加定理</h3><p class="note note-info"><b><font size="2" > </font></b></p>
+
+<hr>
+<h3 id="齐次定理"><a href="#齐次定理" class="headerlink" title="齐次定理"></a>齐次定理</h3><p class="note note-info"><b><font size="2" >
+当一个激励源(独立电压源或独立电流源)作用于线性电路，其任意支路的响应(电压或电流)与该激励源成正比。</font></b></p>
+
+<p>齐次定理描述了线性电路的齐次性或比例性，若激励是电压源<script type="math/tex">u_S</script>，响应是某支路电流i，则<script type="math/tex">i = au_S</script></p>
+<hr>
+<h3 id="置换定理-substitution-theorem"><a href="#置换定理-substitution-theorem" class="headerlink" title="置换定理 substitution theorem"></a>置换定理 substitution theorem</h3><p class="note note-info"><b><font size="2" >
+具有唯一解的电路中，若知某支路k的电压为$u_k$，电流为$i_k$，且该支路与电路中其他支路无耦合,
+则无论该支路是由什么元件组成的，都可用<br>
+(1) 电压等于$u_k$的理想电压源；<br>
+(2) 电流等于$i_k$的理想电流源；<br>
+(3) 阻值为$\frac{u_k}{i_k}$的电阻<br>
+这三种原件去置换.</font></b></p>
+
+<blockquote>
+<p>① 替代定理既适用于线性电路，也适用于非线性电路。<br>② 替代后其余支路及参数不能改变。<br>③ 替代后电路必须有唯一解。</p>
+</blockquote>
+<p class="note note-danger"><b><font size="3" >
+注意： “置换”与“等效变换”是两个不同的概念。</font></b><br>
+“替代”是用独立电压源或电流源替代已知电压或电流的支路，在替代前后，被替代支路以外电路的拓扑结构和元件参数不能改变，因为一旦改变，替代支路的电压和电流也将发生变化；而“等效变换”是两个具有相同端口伏安特性的电路之间的相互转换，与变换以外电路的拓扑结构和元件参数无关。
+</p>
+
+<hr>
+<h3 id="戴维南定理"><a href="#戴维南定理" class="headerlink" title="戴维南定理"></a>戴维南定理</h3><p class="note note-info"><b><font size="2" >
+含独立电源的线性电阻单口网络N，就端口特性而言，可以等效为一个电压源和电阻串联的单口网络。</font></b></p>
+
+<p>起到的作用是简化电路，需要求出端口的VAR方程然后根据需要进行等效。</p>
+<hr>
+<h3 id="诺顿定理"><a href="#诺顿定理" class="headerlink" title="诺顿定理"></a>诺顿定理</h3><p class="note note-info"><b><font size="2" >
+含独立电源的线性电阻单口网络N，就端口特性而言，可以等效成一个电流源与电阻并联的网络</font></b></p>
+
+<p>戴维南等效电路可等效变换为诺顿等效电路。所以只要求得Uoc、Isc、 R0中任意两个，则可得等效电路。本质上是相同的俩个东西。因为可以通过电路等效变化进行代换。</p>
+<hr>
+<h2 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h2><h3 id="2b方程法"><a href="#2b方程法" class="headerlink" title="2b方程法"></a>2b方程法</h3><pre><code>指以支路电流和支路电压为变量列方程求解电路的方法。若电路有b条支路，则共有2b个变量。
+</code></pre><p><b>KCL独立方程(n-1)个 &amp;&amp; KVL独立方程(b-n+1个) &amp;&amp; 支路方程(b个) 一共2b个</b></p>
+<p class="note note-danger">显而易见的是，2b法未知量较多，方程数目也很多，较为复杂，不建议使用。因此不在此详细说明。</p>
+
+<h3 id="支路电流法和支路电压法"><a href="#支路电流法和支路电压法" class="headerlink" title="支路电流法和支路电压法"></a>支路电流法和支路电压法</h3><pre><code>支路电流/电压法实际上就是2b法消去部分方程的结果，因此相比于2b法更易计算。
+</code></pre><p>支路方程法将2b方程法的方程组合表示电流集/电压集之间的关系，减少了联立方程的数目。<br> <b>归纳、明确支路电流法分析电路的步骤。<br>第一步：设出各支路电流，标明参考方向。任取n-1个节点，依KCL列独立节点电流方程(n为电路节点数)。<br>第二步：选取独立回路(平面电路一般选网孔)，并选定巡行方向，依KVL列写出所选独立回路电压方程。<br>第三步：如若电路中含有受控源，并且受控源的控制量就是某一支路电流，那么方程组中方程个数可以不增加，由列写出的基本方程稍加整理即可求解。如果受控源的控制量是另外的变量，那么需对含受控源电路先按前面讲述的步骤一、二去列写基本方程(列写的过程中把受控源先作为独立源一样看待)，然后再加一个控制量用未知电流表示的辅助方程。<br>第四步：求解一、 二、 三步列写的联立方程组，就得到各支路电流。<br>第五步：如果需要，再根据元件约束关系等计算电路中任何处的电压、功率</b></p>
+<h3 id="网孔分析法"><a href="#网孔分析法" class="headerlink" title="网孔分析法"></a>网孔分析法</h3><p>根据网孔电流以及回路关系构造网孔电流方程，第i个网孔的电流方程形式是$ (I_i \times \sum R_i) - \sum (I_j \times R_j)=U_i$,其中$I_i$是该网孔电流，$\sum R_i$是该网孔上所有电阻的和，$\sum (I_j \times R_j)$是与该网孔相交的其他网孔的网孔电流乘上相交部分的电阻的总和，$U_i$是该网孔上电压源输出的总和(带正负符号)。</p>
+<h3 id="节点分析法"><a href="#节点分析法" class="headerlink" title="节点分析法"></a>节点分析法</h3><p>通过与节点相连的电导以及节点的流出电流获得，实质上是节点的流入电流等于节点的流出电流。<br>形式是<script type="math/tex">\sum_{j=1}^{总节点个数}U_{(j)}*G_{(i,j)}=I_i(i=1,2,3...)</script>，其中<script type="math/tex">U_{(j)}</script>是第j个节点的电位，<script type="math/tex">G_{(i,j)}</script>是第i个节点和第个节点直接连的导线的电导。<script type="math/tex">I_i</script>是第i个节点的流出电流。<br>很容易可以看出，这组成了一个线性方程组的形式，其中的系数矩阵由各个边上的电导组成。注意，当电导<script type="math/tex">G_{(i,j)}</script>i=j时该值为该点链接的总电导(正)，当i!=j时，电导值为负值。</p>
+<h3 id="电路分解方法"><a href="#电路分解方法" class="headerlink" title="电路分解方法"></a>电路分解方法</h3><p>通过将电路划分为两个端口网络<script type="math/tex">N_1和N_2</script>，将电路简化求解其VAR，然后联立两者的VAR方程求的其端口电压电流.</p>
+<h3 id="电路的等效变换"><a href="#电路的等效变换" class="headerlink" title="电路的等效变换"></a>电路的等效变换</h3><p>两个两端电路，端口具有相同的电压、电流关系,则称它们是等效的电路。<br>将具有相同VCR的电路替换原电路称为电路的等效变换，未变化的外电路A中的电压、电流和功率关系。（即对外等效，对内不等效）<br>单口网络等效电路</p>
+<p>实际电压源、实际电流源两种模型可以进行等效变换，所谓的等效是指端口的电压、电流在转换过程中保持不变。<br><img src="/img/postpictures/asdggrawetfd.png" srcset="/img/loading.gif" alt="转换规则是这样的"></p>
+<p class="note note-danger">实际上是 电压源串联电阻 和 电流源并联电阻 这两个电路进行的转换，电阻值在变换中没有变化。新的电压源和电流源的输出值与原电流源和电压源的值和电阻构成欧姆定理<br>受控电流源的变换是受控电压源，反之亦然</p>
+
+<p>实际上我们想要的是将复杂电路多个激励源转化为统一电压源用串联方式化简，或者同一电流源用并联方式化简，从而起到简化电路的作用。</p>
+<h3 id="T-Υ-形网络和∏-Δ-形网络的等效变换"><a href="#T-Υ-形网络和∏-Δ-形网络的等效变换" class="headerlink" title="T(Υ)形网络和∏(Δ)形网络的等效变换"></a>T(Υ)形网络和∏(Δ)形网络的等效变换</h3><p><img src="/img/postpictures/dsavrtghrtwhgergfvds.png" srcset="/img/loading.gif" alt="先看一下每种网络的形状"><br>转化的具体推导很麻烦. . .这里就仅仅写下结论</p>
+<script type="math/tex; mode=display">R_Y=\frac{\Delta 相邻电阻乘积}{\sum R_{\Delta}} (\Delta \to Y)\\\\
+ G_{\Delta}=\frac{Y 相邻电导乘积}{\sum G_Y} (Y \to \Delta)</script><p>三变Y电阻，Y变三电导。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/">大学课程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/">大学基础课程</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/">电路分析</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/30/%E5%A4%A9%E6%A2%AF%E8%B5%9B%E9%80%89%E6%8B%94-%E7%BA%BF%E6%AE%B5%E6%A0%91%E8%BE%85%E5%8A%A9%E5%BB%BA%E5%9B%BE/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">天梯赛选拔-线段树辅助建图</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/21/DJ%20%E7%9A%84%E8%B4%9F%E6%9D%83%E5%9B%BE%E4%BC%98%E5%8C%96/">
+                        <span class="hidden-mobile">Johnson 算法-Dijkstra的负权图优化</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

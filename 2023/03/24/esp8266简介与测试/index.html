@@ -1,0 +1,815 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="esp8266初学">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>esp8266初试 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/dsfdsgdfhjukuiloiuyyttrgrefe.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="esp8266初试">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2023-03-24 14:36" pubdate>
+        2023年3月24日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">esp8266初试</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2023年3月24日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <hr>
+<p>ESP8266 是一个完整且自成体系的 WiFi 网络模块，能够独立运行， 也可以作为 slave 搭载于其他 Host 运行。<br>可以用于物联网、可穿戴电子产品和移动设备等领域。可以使用ESP8266来连接家里的路由器，将物理设备连接到WiFi无线网络上，进行互联网或局域网通信，实现联网功能。<br>esp8266有8根引脚，功能如下所示：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>作用</th>
+<th>名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GND</td>
+<td>接地</td>
+<td>TXD</td>
+<td>串口0数据发送端</td>
+</tr>
+<tr>
+<td>GPIO2</td>
+<td>通用IO，内部已上拉</td>
+<td>EN</td>
+<td>芯片使能，高电平使能低电平失能</td>
+</tr>
+<tr>
+<td>GPIOO</td>
+<td>工作模式选择：<br>1)悬空:Flash Boot，工作模式 <br> 2)下拉:UARTDownLoad，下载模式</td>
+<td>RST</td>
+<td>1)外部复位管脚低电平复位 <br> 2)可以悬空或者接外部MCU</td>
+</tr>
+<tr>
+<td>RXD</td>
+<td>串口0数据接收端</td>
+<td>VCC</td>
+<td>3.3V供电</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="使用USB转TTL串口测试esp8266"><a href="#使用USB转TTL串口测试esp8266" class="headerlink" title="使用USB转TTL串口测试esp8266"></a>使用USB转TTL串口测试esp8266</h2><h3 id="连线"><a href="#连线" class="headerlink" title="连线"></a>连线</h3><p>我用的模块是esp8266-01s模块，需要连接的引脚有：RX,TX,GND,VCC,EN<br>电路图如下所示：<br><img src="/img/postpictures/asdfdsgfdhgkjtykteyuhtesygher.png" srcset="/img/loading.gif" alt="电路连线"><br>注意一下esp模块的和usb转ttl模块的tx和rx是反着接的。<br>下方是我的连线状况，没有面包板所以比较乱，虽然没啥大问题但是感觉有点小危险。<br><img src="/img/postpictures/sdfsgfdshgfjyghjuykytkjtyjd.jpg" srcset="/img/loading.gif" alt="我的连线状况"><br><img src="/img/postpictures/dsfgdsghfdhgjhfkfukeyhgtreyhr.jpg" srcset="/img/loading.gif" alt="有点摇摇欲坠"></p>
+<h3 id="AT指令测试"><a href="#AT指令测试" class="headerlink" title="AT指令测试"></a>AT指令测试</h3><p>将其连线好后连接到电脑上，电脑上打开<a href="/file/download/sscom32.zip">串口助手</a>，选择COM7并选择波特率115200。<br>发送“AT”，若返回“OK”，则代表连接无误，如下图所示：<br><img src="/img/postpictures/sdagrehgiuhhefwuinxciuqwbeuigd.png" srcset="/img/loading.gif" alt="连接无误"></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>AT命令</th>
+<th>作用</th>
+<th>细分命令</th>
+<th>细分作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AT+RST</strong></td>
+<td><strong>重启模块</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AT+GMR</strong></td>
+<td><strong>查看版本信息</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AT+UART</strong></td>
+<td><strong>UART配置</strong></td>
+<td>AT+UART 115200,1,0,0</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AT+CWMODE</strong></td>
+<td><strong>设置WiFi模式</strong></td>
+<td><strong>设置指令</strong>：AT+CWMODE=1</td>
+<td>1:Station模式 <br>2：SoftAP模式 <br>3：SoftAP+Station模式</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>查询指令</strong>：AT+CWMODE?</td>
+<td>查询当前是什么模式</td>
+</tr>
+<tr>
+<td><strong>AT+CWJAP</strong></td>
+<td><strong>连接AP（路由）</strong></td>
+<td><strong>查询指令</strong>：AT+CWJAP？</td>
+<td>查询当前连接的wifi信息</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>设置指令（连接WiFi）</strong>：AT+CWJAP：[ssid],[psd][,bssid]</td>
+<td>[ssid]: 目标AP的SSID  <br>[psd]:密码  最长64字节ASCII  <br>[bssid]: 目标 AP 的 MAC 地址，一般用于有多个 SSID 相同的 AP 的情况 <br>报错代码:1: 连接超时<br>2: 密码错误<br>3: 找不到目标AP<br>4: 连接失败<br>参数设置需要开启 Station 模式，若 SSID 或者password 中含有特殊符号例如“，”或者“ “ ”或者“\”时需要进行转义，其它字符转义无效。</td>
+</tr>
+<tr>
+<td><strong>AT+CWQA</strong></td>
+<td><strong>断开与AP的连接</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AT+CIFSR</strong></td>
+<td><strong>查询本地IP地址</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AT+CIPSTART</strong></td>
+<td><strong>建立TCP连接，UDP传输或SSL连接</strong></td>
+<td>AT+CIPSTART=[ type ] ,[remote IP] ,[remoteport ][,TCP keep alive]</td>
+<td>[type]: 字符串参数，连接类型，”TCP”，”UDP”或”SSL”<br>[remote IP]: 字符串参数，远端IP地址<br>[remote port]: 远端端口号<br>[TCP keep alive]: TCP keep-alive 侦测时间，默认关闭此功能<br>0:关闭 TCP keep-alive 功能<br>1~ 7200: 侦测时间，单位为 1s</td>
+</tr>
+<tr>
+<td><strong>AT+CIPCLOSE</strong></td>
+<td><strong>断开连接</strong></td>
+<td>AT+CIPCLOSE=[id]</td>
+<td>[id]为需要关闭的连接 id 当 id 为 5 时关闭所有连接</td>
+</tr>
+<tr>
+<td><strong>AT+CIPMUX</strong></td>
+<td><strong>设置多连接模式</strong></td>
+<td>AT+CIPMUX=[id]</td>
+<td>[id] 为0时为单连接，为1时为多链接</td>
+</tr>
+<tr>
+<td><strong>AT+CIPSERVER</strong></td>
+<td><strong>建立TCP服务器</strong></td>
+<td>AT+CIPSERVER=[mode][,port]</td>
+<td>[mode]:<br>0:关闭服务器 <br>1: 建立服务器  <br>[port]: 端口号，默认为 333。<br> 多连接情况下 (AT+CIPMUX=1)，才能开启 TCP 服务器。创建 TCP 服务器后，自动建立 TCP 服务器监听<br>当有 TCP 客户端接入，会自动占用一个连接 ID.</td>
+</tr>
+<tr>
+<td><strong>AT+CIPMODE</strong></td>
+<td><strong>设置传输模式</strong></td>
+<td>AT+CIPMODE?</td>
+<td>查询指令</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>AT+CIPMODE=[mode]</td>
+<td>设置指令<br> 0: 普通传输模式 <br>1: 透传模式，仅支持 TCP 单连接和 UDP 固定通信对端的情况<br>透传模式传输时，如果连接断开，ESP8266 会不停尝试重连，此时单独输入 +++ (不要输入换行符)退出透传，则停止重连;普通传输模式则不会重连，提示连接断开。</td>
+</tr>
+<tr>
+<td><strong>AT+CIPSEND</strong></td>
+<td><strong>发送数据</strong></td>
+<td></td>
+<td>执行指令(在透传模式下，开始发送指令)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="服务器连接测试"><a href="#服务器连接测试" class="headerlink" title="服务器连接测试"></a>服务器连接测试</h3><p>确认模块连接良好（输入&gt;&gt;AP 输出&gt;&gt;ok）后，先连接至路由器<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-built_in">AT</span>+CWMODE_DEF=<span class="hljs-number">1</span>  <span class="hljs-comment"># 设置Wi-Fi为 Station 模式并保存至 Flash，以后每次供电后自动连接</span><br><span class="hljs-built_in">AT</span>+CWJAP=<span class="hljs-string">&quot;HI_WiFi_cy1999&quot;</span>,<span class="hljs-string">&quot;zzuacmlab&quot;</span>  <span class="hljs-comment"># 实验室的wifi名称和密码</span><br></code></pre></td></tr></table></figure><br>连接成功后，使用AT+CIPSTART与服务器建立TCP连接：<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada"><span class="hljs-keyword">AT</span>+CIPSTART=<span class="hljs-string">&quot;TCP&quot;</span>,<span class="hljs-string">&quot;你的服务器地址&quot;</span>,你的服务器端口<br></code></pre></td></tr></table></figure><br>若是没有服务器的话也可以用内网ip测试（也可以看<a href="/2023/03/22/服务器通信设置/">这篇文章</a>免费进行搭建<br>与服务器成功建立连接后结果如下图所示：<br><img src="/img/postpictures/dsfdsgrtjhtyukuyktrhersthgertgerrgre.png" srcset="/img/loading.gif" alt="与服务器成功建立连接"><br>之后开启透传模式，响应ok后开启透传：<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada"><span class="hljs-keyword">AT</span>+CIPMODE=<span class="hljs-number">1</span><br><span class="hljs-keyword">AT</span>+CIPSEND<br></code></pre></td></tr></table></figure><br>成功后应显示如下：<br><img src="/img/postpictures/sdgfdhkiulreutrhtbrehergergfew.png" srcset="/img/loading.gif" alt="现在可以开始透传了"><br>之后就可以与服务器进行交互，也可以通过服务器与其他客户端进行交流。如图所示，命令框是本地客户端，发出的消息经过服务器转发至esp8266，然后显示在串口调试器上可以通过服务器与其他客户端进行交流<br><img src="/img/postpictures/sdgerhtyrjyuttrhgtrsgvertgretgregfer.png" srcset="/img/loading.gif" alt="通过服务器与其他客户端进行交流"></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E6%A8%A1%E5%9D%97/">模块</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E6%A8%A1%E5%9D%97/esp8266/">esp8266</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%89%A9%E8%81%94%E7%BD%91/">物联网</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%B7%A5%E7%A8%8B/">工程</a>
+                    
+                      <a class="hover-with-bg" href="/tags/esp8266/">esp8266</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/03/22/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E4%BF%A1%E8%AE%BE%E7%BD%AE/">
+                        <span class="hidden-mobile">服务器tcp通信</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

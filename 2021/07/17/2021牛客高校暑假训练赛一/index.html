@@ -1,0 +1,661 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="牛客暑期多校训练营一总结&amp;补题">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>2021 暑期牛客高校训练赛一 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/sgbttydjtdfgjhgk.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="2021 暑期牛客高校训练赛一">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-17 19:46" pubdate>
+        2021年7月17日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      93
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">2021 暑期牛客高校训练赛一</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年8月19日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <pre><code>第一场多校，感觉打的海星，不过赛后出题人说这场比赛是区域赛难度减的，所以实际上做的还是布行QAQ
+</code></pre><h3 id="比赛过程"><a href="#比赛过程" class="headerlink" title="比赛过程"></a>比赛过程</h3><p>比赛开始前提醒我的队友要去比赛，我们队原本是三个人的，但是由于林荫同学要去复读，所以现在只有两个人了。<br>比赛刚好赶上中午. . . 开赛半小时外卖来了就只能边吃饭边打. . .<br>不过队友签到十分快，所以实际上也没怎么耽误。<br>我便吃饭边看F，感觉这种数位方面的东西可能会有规律于是试了试打表，然后发现100以上的n全都是n-24的答案，便交了下，但是挂了. . .然后就发现自己又犯傻逼错误，用前缀求区间$[l,r]$的和是$a[r]-a[l-1]$但我却写的是$a[r]-a[l]$。改了错误后就A了。队友此时推了B但是他没推出来，所以我让他先看其他题我来推。其实也不算难推但是对精度处理好像有丶要求，不能做过多的浮点运算否则会有比较大的精度误差（我又因为这种sb错误wa了），最后改了下公式换成了long double过了。队友此时觉得A和H都可做，不过他交了发H结果T了，然后我去看了下H，队友去看J。H是一道很妙的题，队友交的是纯暴力，由于n和a的范围都是50W，所以我觉得剪枝暴力没准可以过，由于每两个数的差必成为公共模因，所以我们把每两个数之间的差枚举出来就能得到正确答案，由于n和a的范围相同，所以在大数据的情况下相邻两数的差必然十分小并且大多相同，因此我用最大的数减去最小的数，第二大的数减去第二小的数. .. 这样能保证每次得到的差大概率是不同的，并且由于跨度大可以直接减少一般复杂度并且十分平均（差的范围分布比较平均，假如数据随机（实际上大数据必然会导致这个现象，大数据的数分布是必然随机的）），然后以此为优化交上去A了。<br>看了眼提交，队友还在鏖战J，于是转向A，A的博弈用sg推了一遍后开始打表，先打了个100以内的表发现必败点十分稀疏，由此改变了算法打5k以内的表（不过好像还是哪里写挂了跑了一个半小时才出来），表打出来后就剩下10min了，我马不停蹄打了个程序交了上去，万幸，一遍过了。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这场比赛感觉实际上正解都是些没学过的高级思路，但是由于一些性质导致我可以用奇怪的方式水过去（骗分奇迹）。五道题其中一道签到是队友打的不计，剩下四道一道是计算题（签到），一道我用暴力+优化的方式过了（不过我觉得我的优化由于数据范围的性质可以优化很多，不过不会证明），一道打表找规律（正解是数学证明鸽巢原理），一道还是打表（正解也是用函数的性质+sg推）。还是和鲸头鹳说的一样，老乱搞选手了（技能点的十分奇怪）</p>
+<h3 id="题目详情"><a href="#题目详情" class="headerlink" title="题目详情"></a>题目详情</h3><p>(补题啊，记得啊！！)</p>
+<h4 id="A"><a href="#A" class="headerlink" title="A"></a>A</h4><p>Alice and Bob like playing games. There are two piles of stones with numbers n and m. Alice and Bob take turns to operate, each operation can take away k(k&gt;0) stones from one pile and take away s×k(s≥0) stones from another pile. Alice plays first. The person who cannot perform the operation loses the game. </p>
+<p>Please determine who will win the game if both Alice and Bob play the game optimally.<br><strong>输入描述:</strong><br>The first line contains an integer T<script type="math/tex">(1≤T≤10^4)</script> denotes the total number of test cases.<br>Each test case contains two integers n,m<script type="math/tex">(1 \le n,m \leq 5 \times 10^3)</script>in a line, indicating the number of two piles of stones.<br><strong>输出描述:</strong><br>For each test case, print “Alice” if Alice will win the game, otherwise print “Bob”.</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs dns">#include&lt;bits/stdc++.h&gt;<br>using namespace std<span class="hljs-comment">;</span><br>int <span class="hljs-keyword">A</span>[<span class="hljs-number">1400</span>]=&#123;<span class="hljs-number">0,2,5,9</span>,<span class="hljs-number">11,14,17,19</span>,<span class="hljs-number">24,26,28,29</span>,<span class="hljs-number">31,37,42,44</span>,<span class="hljs-number">45,47,49,50</span>,<span class="hljs-number">55,57,64,67</span>,<span class="hljs-number">72,74,77,81</span>,<span class="hljs-number">82,83,85,89</span>,<span class="hljs-number">90,94,95,97</span>,<span class="hljs-number">103,105,106,108</span>,<span class="hljs-number">112,115,120,122</span>,<span class="hljs-number">125,131,132,133</span>,<span class="hljs-number">135,138,139,141</span>,<span class="hljs-number">142,143,148,149</span>,<span class="hljs-number">151,152,154,158</span>,<span class="hljs-number">163,168,170,171</span>,<span class="hljs-number">172,176,179,184</span>,<span class="hljs-number">185,188,189,192</span>,<span class="hljs-number">194,201,205,207</span>,<span class="hljs-number">208,210,212,213</span>,<span class="hljs-number">214,217,220,221</span>,<span class="hljs-number">223,226,231,234</span>,<span class="hljs-number">238,243,244,245</span>,<span class="hljs-number">248,250,252,255</span>,<span class="hljs-number">258,261</span>,<span class="hljs-number">263,270</span>,<span class="hljs-number">273,276</span>,<span class="hljs-number">283,285</span>,<span class="hljs-number">288,291</span>,<span class="hljs-number">293,295</span>,<span class="hljs-number">296,300</span>,<span class="hljs-number">303,311</span>,<span class="hljs-number">312,319</span>,<span class="hljs-number">324,329</span>,<span class="hljs-number">331,334</span>,<span class="hljs-number">336,337</span>,<span class="hljs-number">338,342</span>,<span class="hljs-number">343,345</span>,<span class="hljs-number">348,349</span>,<span class="hljs-number">352,354</span>,<span class="hljs-number">355,356</span>,<span class="hljs-number">357,361</span>,<span class="hljs-number">364,366</span>,<span class="hljs-number">369,374</span>,<span class="hljs-number">377,381</span>,<span class="hljs-number">382,384</span>,<span class="hljs-number">388,393</span>,<span class="hljs-number">395,397</span>,<span class="hljs-number">399,400</span>,<span class="hljs-number">402,404</span>,<span class="hljs-number">405,407</span>,<span class="hljs-number">410,413</span>,<span class="hljs-number">417,419</span>,<span class="hljs-number">420,421</span>,<span class="hljs-number">423,425</span>,<span class="hljs-number">427,429</span>,<span class="hljs-number">430,431</span>,<span class="hljs-number">434,437</span>,<span class="hljs-number">439,440</span>,<span class="hljs-number">442,443</span>,<span class="hljs-number">448,451</span>,<span class="hljs-number">452,453</span>,<span class="hljs-number">458,459</span>,<span class="hljs-number">460,463</span>,<span class="hljs-number">466,469</span>,<span class="hljs-number">472,473</span>,<span class="hljs-number">476,477</span>,<span class="hljs-number">481,491</span>,<span class="hljs-number">492,498</span>,<span class="hljs-number">499,503</span>,<span class="hljs-number">504,507</span>,<span class="hljs-number">508,513</span>,<span class="hljs-number">514,515</span>,<span class="hljs-number">516,523</span>,<span class="hljs-number">534,535</span>,<span class="hljs-number">539,540</span>,<span class="hljs-number">543,547</span>,<span class="hljs-number">548,551</span>,<span class="hljs-number">555,562</span>,<span class="hljs-number">563,564</span>,<span class="hljs-number">567,572</span>,<span class="hljs-number">576,579</span>,<span class="hljs-number">582,583</span>,<span class="hljs-number">585,592</span>,<span class="hljs-number">593,594</span>,<span class="hljs-number">595,598</span>,<span class="hljs-number">599,605</span>,<span class="hljs-number">606,607</span>,<span class="hljs-number">609,612</span>,<span class="hljs-number">616,617</span>,<span class="hljs-number">619,622</span>,<span class="hljs-number">626,628</span>,<span class="hljs-number">630,634</span>,<span class="hljs-number">637,641</span>,<span class="hljs-number">643,644</span>,<span class="hljs-number">655,656</span>,<span class="hljs-number">657,663</span>,<span class="hljs-number">668,669</span>,<span class="hljs-number">675,676</span>,<span class="hljs-number">678,679</span>,<span class="hljs-number">680,682</span>,<span class="hljs-number">685,687</span>,<span class="hljs-number">689,695</span>,<span class="hljs-number">699,700</span>,<span class="hljs-number">704,706</span>,<span class="hljs-number">708,710</span>,<span class="hljs-number">713,714</span>,<span class="hljs-number">718,721</span>,<span class="hljs-number">725,728</span>,<span class="hljs-number">730,732</span>,<span class="hljs-number">734,739</span>,<span class="hljs-number">742,743</span>,<span class="hljs-number">746,747</span>,<span class="hljs-number">750,751</span>,<span class="hljs-number">754,756</span>,<span class="hljs-number">757,759</span>,<span class="hljs-number">763,765</span>,<span class="hljs-number">770,774</span>,<span class="hljs-number">782,784</span>,<span class="hljs-number">790,791</span>,<span class="hljs-number">793,794</span>,<span class="hljs-number">796,797</span>,<span class="hljs-number">802,803</span>,<span class="hljs-number">807,808</span>,<span class="hljs-number">813,814</span>,<span class="hljs-number">815,816</span>,<span class="hljs-number">820,824</span>,<span class="hljs-number">830,833</span>,<span class="hljs-number">835,838</span>,<span class="hljs-number">839,841</span>,<span class="hljs-number">844,847</span>,<span class="hljs-number">848,851</span>,<span class="hljs-number">852,853</span>,<span class="hljs-number">859,861</span>,<span class="hljs-number">862,863</span>,<span class="hljs-number">864,868</span>,<span class="hljs-number">873,874</span>,<span class="hljs-number">875,881</span>,<span class="hljs-number">882,885</span>,<span class="hljs-number">888,890</span>,<span class="hljs-number">895,898</span>,<span class="hljs-number">901,902</span>,<span class="hljs-number">906,908</span>,<span class="hljs-number">909,914</span>,<span class="hljs-number">915,922</span>,<span class="hljs-number">923,926</span>,<span class="hljs-number">927,931</span>,<span class="hljs-number">933,939</span>,<span class="hljs-number">940,942</span>,<span class="hljs-number">943,950</span>,<span class="hljs-number">952,954</span>,<span class="hljs-number">959,960</span>,<span class="hljs-number">962,963</span>,<span class="hljs-number">966,967</span>,<span class="hljs-number">971,972</span>,<span class="hljs-number">973,975</span>,<span class="hljs-number">978,980</span>,<span class="hljs-number">981,984</span>,<span class="hljs-number">988,993</span>,<span class="hljs-number">994,998</span>,<span class="hljs-number">999,1002</span>,<span class="hljs-number">1004,1005</span>,<span class="hljs-number">1006,1009</span>,<span class="hljs-number">1012,1015</span>,<span class="hljs-number">1016,1019</span>,<span class="hljs-number">1022,1025</span>,<span class="hljs-number">1027,1031</span>,<span class="hljs-number">1034,1035</span>,<span class="hljs-number">1042,1043</span>,<span class="hljs-number">1045,1048</span>,<span class="hljs-number">1050,1051</span>,<span class="hljs-number">1057,1058</span>,<span class="hljs-number">1060,1064</span>,<span class="hljs-number">1067,1068</span>,<span class="hljs-number">1069,1074</span>,<span class="hljs-number">1075,1078</span>,<span class="hljs-number">1084,1087</span>,<span class="hljs-number">1088,1089</span>,<span class="hljs-number">1092,1094</span>,<span class="hljs-number">1096,1100</span>,<span class="hljs-number">1104,1109</span>,<span class="hljs-number">1112,1113</span>,<span class="hljs-number">1115,1116</span>,<span class="hljs-number">1124,1125</span>,<span class="hljs-number">1127,1129</span>,<span class="hljs-number">1133,1134</span>,<span class="hljs-number">1136,1137</span>,<span class="hljs-number">1139,1140</span>,<span class="hljs-number">1142,1143</span>,<span class="hljs-number">1144,1147</span>,<span class="hljs-number">1148,1149</span>,<span class="hljs-number">1152,1153</span>,<span class="hljs-number">1155,1158</span>,<span class="hljs-number">1159,1161</span>,<span class="hljs-number">1163,1169</span>,<span class="hljs-number">1171,1173</span>,<span class="hljs-number">1174,1177</span>,<span class="hljs-number">1178,1182</span>,<span class="hljs-number">1183,1185</span>,<span class="hljs-number">1188,1196</span>,<span class="hljs-number">1197,1199</span>,<span class="hljs-number">1200,1204</span>,<span class="hljs-number">1210,1216</span>,<span class="hljs-number">1217,1221</span>,<span class="hljs-number">1223,1224</span>,<span class="hljs-number">1229,1233</span>,<span class="hljs-number">1235,1236</span>,<span class="hljs-number">1237,1238</span>,<span class="hljs-number">1239,1247</span>,<span class="hljs-number">1250,1251</span>,<span class="hljs-number">1253,1256</span>,<span class="hljs-number">1257,1258</span>,<span class="hljs-number">1260,1263</span>,<span class="hljs-number">1264,1267</span>,<span class="hljs-number">1271,1272</span>,<span class="hljs-number">1276,1278</span>,<span class="hljs-number">1281,1283</span>,<span class="hljs-number">1287,1289</span>,<span class="hljs-number">1290,1294</span>,<span class="hljs-number">1299,1300</span>,<span class="hljs-number">1301,1304</span>,<span class="hljs-number">1305,1309</span>,<span class="hljs-number">1310,1313</span>,<span class="hljs-number">1316,1319</span>,<span class="hljs-number">1320,1324</span>,<span class="hljs-number">1325,1327</span>,<span class="hljs-number">1333,1339</span>,<span class="hljs-number">1340,1342</span>,<span class="hljs-number">1343,1344</span>,<span class="hljs-number">1350,1351</span>,<span class="hljs-number">1352,1354</span>,<span class="hljs-number">1356,1357</span>,<span class="hljs-number">1360,1365</span>,<span class="hljs-number">1368,1369</span>,<span class="hljs-number">1370,1374</span>,<span class="hljs-number">1375,1380</span>,<span class="hljs-number">1383,1386</span>,<span class="hljs-number">1392,1396</span>,<span class="hljs-number">1399,1402</span>,<span class="hljs-number">1407,1410</span>,<span class="hljs-number">1412,1416</span>,<span class="hljs-number">1418,1422</span>,<span class="hljs-number">1424,1427</span>,<span class="hljs-number">1430,1434</span>,<span class="hljs-number">1436,1437</span>,<span class="hljs-number">1440,1441</span>,<span class="hljs-number">1442,1445</span>,<span class="hljs-number">1448,1453</span>,<span class="hljs-number">1460,1463</span>,<span class="hljs-number">1467,1472</span>,<span class="hljs-number">1474,1475</span>,<span class="hljs-number">1479,1480</span>,<span class="hljs-number">1483,1486</span>,<span class="hljs-number">1487,1489</span>,<span class="hljs-number">1490,1494</span>,<span class="hljs-number">1495,1497</span>,<span class="hljs-number">1501,1504</span>,<span class="hljs-number">1505,1507</span>,<span class="hljs-number">1508,1512</span>,<span class="hljs-number">1513,1518</span>,<span class="hljs-number">1520,1523</span>,<span class="hljs-number">1524,1531</span>,<span class="hljs-number">1545,1546</span>,<span class="hljs-number">1549,1550</span>,<span class="hljs-number">1551,1553</span>,<span class="hljs-number">1554,1555</span>,<span class="hljs-number">1557,1559</span>,<span class="hljs-number">1565,1566</span>,<span class="hljs-number">1568,1571</span>,<span class="hljs-number">1573,1574</span>,<span class="hljs-number">1579,1583</span>,<span class="hljs-number">1584,1586</span>,<span class="hljs-number">1587,1588</span>,<span class="hljs-number">1589,1594</span>,<span class="hljs-number">1596,1597</span>,<span class="hljs-number">1601,1603</span>,<span class="hljs-number">1604,1608</span>,<span class="hljs-number">1609,1610</span>,<span class="hljs-number">1614,1616</span>,<span class="hljs-number">1621,1624</span>,<span class="hljs-number">1628,1630</span>,<span class="hljs-number">1632,1635</span>,<span class="hljs-number">1638,1642</span>,<span class="hljs-number">1645,1646</span>,<span class="hljs-number">1647,1648</span>,<span class="hljs-number">1650,1655</span>,<span class="hljs-number">1657,1659</span>,<span class="hljs-number">1663,1667</span>,<span class="hljs-number">1668,1669</span>,<span class="hljs-number">1670,1672</span>,<span class="hljs-number">1673,1676</span>,<span class="hljs-number">1681,1686</span>,<span class="hljs-number">1689,1690</span>,<span class="hljs-number">1691,1697</span>,<span class="hljs-number">1698,1699</span>,<span class="hljs-number">1700,1701</span>,<span class="hljs-number">1704,1706</span>,<span class="hljs-number">1712,1715</span>,<span class="hljs-number">1716,1719</span>,<span class="hljs-number">1723,1724</span>,<span class="hljs-number">1726,1728</span>,<span class="hljs-number">1732,1734</span>,<span class="hljs-number">1735,1738</span>,<span class="hljs-number">1740,1741</span>,<span class="hljs-number">1743,1744</span>,<span class="hljs-number">1745,1748</span>,<span class="hljs-number">1749,1751</span>,<span class="hljs-number">1753,1760</span>,<span class="hljs-number">1761,1764</span>,<span class="hljs-number">1771,1776</span>,<span class="hljs-number">1779,1780</span>,<span class="hljs-number">1781,1784</span>,<span class="hljs-number">1789,1790</span>,<span class="hljs-number">1792,1794</span>,<span class="hljs-number">1797,1798</span>,<span class="hljs-number">1801,1804</span>,<span class="hljs-number">1805,1807</span>,<span class="hljs-number">1808,1810</span>,<span class="hljs-number">1814,1816</span>,<span class="hljs-number">1817,1818</span>,<span class="hljs-number">1827,1828</span>,<span class="hljs-number">1830,1834</span>,<span class="hljs-number">1835,1840</span>,<span class="hljs-number">1841,1844</span>,<span class="hljs-number">1849,1852</span>,<span class="hljs-number">1856,1857</span>,<span class="hljs-number">1858,1861</span>,<span class="hljs-number">1862,1865</span>,<span class="hljs-number">1868,1871</span>,<span class="hljs-number">1873,1875</span>,<span class="hljs-number">1876,1881</span>,<span class="hljs-number">1886,1890</span>,<span class="hljs-number">1891,1893</span>,<span class="hljs-number">1894,1896</span>,<span class="hljs-number">1897,1899</span>,<span class="hljs-number">1900,1903</span>,<span class="hljs-number">1908,1909</span>,<span class="hljs-number">1911,1913</span>,<span class="hljs-number">1916,1917</span>,<span class="hljs-number">1921,1925</span>,<span class="hljs-number">1926,1927</span>,<span class="hljs-number">1931,1932</span>,<span class="hljs-number">1933,1934</span>,<span class="hljs-number">1937,1938</span>,<span class="hljs-number">1940,1944</span>,<span class="hljs-number">1951,1952</span>,<span class="hljs-number">1955,1956</span>,<span class="hljs-number">1958,1959</span>,<span class="hljs-number">1961,1963</span>,<span class="hljs-number">1968,1969</span>,<span class="hljs-number">1974,1977</span>,<span class="hljs-number">1980,1983</span>,<span class="hljs-number">1985,1988</span>,<span class="hljs-number">1989,1991</span>,<span class="hljs-number">1996,1999</span>,<span class="hljs-number">2006,2009</span>,<span class="hljs-number">2013,2015</span>,<span class="hljs-number">2016,2020</span>,<span class="hljs-number">2021,2023</span>,<span class="hljs-number">2025,2028</span>,<span class="hljs-number">2035,2038</span>,<span class="hljs-number">2039,2044</span>,<span class="hljs-number">2045,2047</span>,<span class="hljs-number">2048,2053</span>,<span class="hljs-number">2055,2058</span>,<span class="hljs-number">2061,2062</span>,<span class="hljs-number">2064,2066</span>,<span class="hljs-number">2069,2072</span>,<span class="hljs-number">2074,2079</span>,<span class="hljs-number">2082,2083</span>,<span class="hljs-number">2084,2087</span>,<span class="hljs-number">2090,2091</span>,<span class="hljs-number">2092,2102</span>,<span class="hljs-number">2109,2110</span>,<span class="hljs-number">2111,2113</span>,<span class="hljs-number">2114,2118</span>,<span class="hljs-number">2119,2121</span>,<span class="hljs-number">2122,2124</span>,<span class="hljs-number">2125,2126</span>,<span class="hljs-number">2128,2131</span>,<span class="hljs-number">2139,2144</span>,<span class="hljs-number">2147,2150</span>,<span class="hljs-number">2151,2154</span>,<span class="hljs-number">2155,2157</span>,<span class="hljs-number">2158,2160</span>,<span class="hljs-number">2165,2167</span>,<span class="hljs-number">2170,2172</span>,<span class="hljs-number">2173,2178</span>,<span class="hljs-number">2179,2186</span>,<span class="hljs-number">2187,2189</span>,<span class="hljs-number">2197,2200</span>,<span class="hljs-number">2207,2208</span>,<span class="hljs-number">2211,2212</span>,<span class="hljs-number">2214,2219</span>,<span class="hljs-number">2221,2226</span>,<span class="hljs-number">2227,2228</span>,<span class="hljs-number">2232,2233</span>,<span class="hljs-number">2236,2241</span>,<span class="hljs-number">2242,2244</span>,<span class="hljs-number">2248,2249</span>,<span class="hljs-number">2251,2252</span>,<span class="hljs-number">2253,2258</span>,<span class="hljs-number">2259,2260</span>,<span class="hljs-number">2263,2265</span>,<span class="hljs-number">2267,2270</span>,<span class="hljs-number">2273,2274</span>,<span class="hljs-number">2275,2279</span>,<span class="hljs-number">2280,2285</span>,<span class="hljs-number">2290,2292</span>,<span class="hljs-number">2295,2300</span>,<span class="hljs-number">2301,2304</span>,<span class="hljs-number">2305,2306</span>,<span class="hljs-number">2308,2312</span>,<span class="hljs-number">2314,2316</span>,<span class="hljs-number">2320,2321</span>,<span class="hljs-number">2324,2326</span>,<span class="hljs-number">2328,2331</span>,<span class="hljs-number">2334,2340</span>,<span class="hljs-number">2343,2344</span>,<span class="hljs-number">2349,2352</span>,<span class="hljs-number">2353,2354</span>,<span class="hljs-number">2360,2361</span>,<span class="hljs-number">2364,2371</span>,<span class="hljs-number">2372,2373</span>,<span class="hljs-number">2374,2378</span>,<span class="hljs-number">2379,2380</span>,<span class="hljs-number">2383,2384</span>,<span class="hljs-number">2387,2392</span>,<span class="hljs-number">2397,2408</span>,<span class="hljs-number">2409,2413</span>,<span class="hljs-number">2417,2419</span>,<span class="hljs-number">2423,2425</span>,<span class="hljs-number">2429,2431</span>,<span class="hljs-number">2433,2434</span>,<span class="hljs-number">2441,2442</span>,<span class="hljs-number">2443,2446</span>,<span class="hljs-number">2448,2451</span>,<span class="hljs-number">2452,2457</span>,<span class="hljs-number">2461,2465</span>,<span class="hljs-number">2467,2472</span>,<span class="hljs-number">2475,2477</span>,<span class="hljs-number">2478,2479</span>,<span class="hljs-number">2481,2482</span>,<span class="hljs-number">2484,2487</span>,<span class="hljs-number">2488,2489</span>,<span class="hljs-number">2497,2498</span>,<span class="hljs-number">2499,2501</span>,<span class="hljs-number">2504,2507</span>,<span class="hljs-number">2508,2518</span>,<span class="hljs-number">2519,2520</span>,<span class="hljs-number">2521,2527</span>,<span class="hljs-number">2529,2532</span>,<span class="hljs-number">2533,2535</span>,<span class="hljs-number">2537,2540</span>,<span class="hljs-number">2541,2542</span>,<span class="hljs-number">2543,2544</span>,<span class="hljs-number">2553,2554</span>,<span class="hljs-number">2555,2559</span>,<span class="hljs-number">2560,2561</span>,<span class="hljs-number">2563,2566</span>,<span class="hljs-number">2569,2574</span>,<span class="hljs-number">2578,2579</span>,<span class="hljs-number">2580,2581</span>,<span class="hljs-number">2582,2584</span>,<span class="hljs-number">2585,2586</span>,<span class="hljs-number">2587,2590</span>,<span class="hljs-number">2594,2595</span>,<span class="hljs-number">2599,2602</span>,<span class="hljs-number">2606,2609</span>,<span class="hljs-number">2615,2618</span>,<span class="hljs-number">2619,2620</span>,<span class="hljs-number">2621,2625</span>,<span class="hljs-number">2626,2629</span>,<span class="hljs-number">2630,2636</span>,<span class="hljs-number">2637,2638</span>,<span class="hljs-number">2644,2649</span>,<span class="hljs-number">2650,2651</span>,<span class="hljs-number">2652,2654</span>,<span class="hljs-number">2656,2659</span>,<span class="hljs-number">2663,2664</span>,<span class="hljs-number">2667,2677</span>,<span class="hljs-number">2678,2679</span>,<span class="hljs-number">2680,2693</span>,<span class="hljs-number">2694,2696</span>,<span class="hljs-number">2698,2699</span>,<span class="hljs-number">2706,2711</span>,<span class="hljs-number">2712,2714</span>,<span class="hljs-number">2715,2717</span>,<span class="hljs-number">2718,2722</span>,<span class="hljs-number">2723,2725</span>,<span class="hljs-number">2726,2728</span>,<span class="hljs-number">2731,2732</span>,<span class="hljs-number">2735,2736</span>,<span class="hljs-number">2737,2740</span>,<span class="hljs-number">2741,2742</span>,<span class="hljs-number">2745,2753</span>,<span class="hljs-number">2756,2757</span>,<span class="hljs-number">2763,2765</span>,<span class="hljs-number">2767,2770</span>,<span class="hljs-number">2771,2775</span>,<span class="hljs-number">2777,2782</span>,<span class="hljs-number">2784,2787</span>,<span class="hljs-number">2791,2794</span>,<span class="hljs-number">2795,2797</span>,<span class="hljs-number">2800,2801</span>,<span class="hljs-number">2802,2808</span>,<span class="hljs-number">2812,2813</span>,<span class="hljs-number">2818,2820</span>,<span class="hljs-number">2823,2825</span>,<span class="hljs-number">2828,2829</span>,<span class="hljs-number">2838,2839</span>,<span class="hljs-number">2842,2845</span>,<span class="hljs-number">2848,2849</span>,<span class="hljs-number">2852,2853</span>,<span class="hljs-number">2855,2858</span>,<span class="hljs-number">2859,2860</span>,<span class="hljs-number">2861,2866</span>,<span class="hljs-number">2867,2871</span>,<span class="hljs-number">2872,2875</span>,<span class="hljs-number">2876,2878</span>,<span class="hljs-number">2886,2889</span>,<span class="hljs-number">2893,2895</span>,<span class="hljs-number">2897,2898</span>,<span class="hljs-number">2901,2904</span>,<span class="hljs-number">2907,2909</span>,<span class="hljs-number">2912,2914</span>,<span class="hljs-number">2923,2924</span>,<span class="hljs-number">2929,2930</span>,<span class="hljs-number">2933,2934</span>,<span class="hljs-number">2936,2940</span>,<span class="hljs-number">2941,2945</span>,<span class="hljs-number">2948,2950</span>,<span class="hljs-number">2952,2959</span>,<span class="hljs-number">2962,2963</span>,<span class="hljs-number">2964,2966</span>,<span class="hljs-number">2967,2968</span>,<span class="hljs-number">2976,2977</span>,<span class="hljs-number">2978,2983</span>,<span class="hljs-number">2988,2989</span>,<span class="hljs-number">2990,2991</span>,<span class="hljs-number">2995,2996</span>,<span class="hljs-number">2999,3000</span>,<span class="hljs-number">3003,3009</span>,<span class="hljs-number">3010,3011</span>,<span class="hljs-number">3014,3017</span>,<span class="hljs-number">3019,3023</span>,<span class="hljs-number">3028,3029</span>,<span class="hljs-number">3030,3034</span>,<span class="hljs-number">3035,3041</span>,<span class="hljs-number">3043,3045</span>,<span class="hljs-number">3050,3051</span>,<span class="hljs-number">3053,3055</span>,<span class="hljs-number">3059,3060</span>,<span class="hljs-number">3063,3066</span>,<span class="hljs-number">3069,3072</span>,<span class="hljs-number">3074,3076</span>,<span class="hljs-number">3080,3081</span>,<span class="hljs-number">3086,3087</span>,<span class="hljs-number">3091,3092</span>,<span class="hljs-number">3093,3094</span>,<span class="hljs-number">3096,3105</span>,<span class="hljs-number">3108,3112</span>,<span class="hljs-number">3115,3123</span>,<span class="hljs-number">3127,3132</span>,<span class="hljs-number">3133,3136</span>,<span class="hljs-number">3137,3140</span>,<span class="hljs-number">3143,3147</span>,<span class="hljs-number">3150,3152</span>,<span class="hljs-number">3153,3158</span>,<span class="hljs-number">3162,3165</span>,<span class="hljs-number">3167,3168</span>,<span class="hljs-number">3171,3174</span>,<span class="hljs-number">3175,3181</span>,<span class="hljs-number">3184,3187</span>,<span class="hljs-number">3189,3192</span>,<span class="hljs-number">3195,3199</span>,<span class="hljs-number">3204,3209</span>,<span class="hljs-number">3211,3212</span>,<span class="hljs-number">3215,3216</span>,<span class="hljs-number">3220,3221</span>,<span class="hljs-number">3223,3224</span>,<span class="hljs-number">3227,3228</span>,<span class="hljs-number">3231,3234</span>,<span class="hljs-number">3237,3239</span>,<span class="hljs-number">3243,3249</span>,<span class="hljs-number">3256,3257</span>,<span class="hljs-number">3260,3264</span>,<span class="hljs-number">3265,3268</span>,<span class="hljs-number">3271,3272</span>,<span class="hljs-number">3275,3277</span>,<span class="hljs-number">3278,3280</span>,<span class="hljs-number">3283,3285</span>,<span class="hljs-number">3291,3293</span>,<span class="hljs-number">3296,3301</span>,<span class="hljs-number">3306,3308</span>,<span class="hljs-number">3309,3310</span>,<span class="hljs-number">3316,3320</span>,<span class="hljs-number">3322,3329</span>,<span class="hljs-number">3331,3337</span>,<span class="hljs-number">3347,3348</span>,<span class="hljs-number">3349,3354</span>,<span class="hljs-number">3357,3361</span>,<span class="hljs-number">3364,3366</span>,<span class="hljs-number">3370,3371</span>,<span class="hljs-number">3383,3387</span>,<span class="hljs-number">3389,3390</span>,<span class="hljs-number">3398,3399</span>,<span class="hljs-number">3400,3402</span>,<span class="hljs-number">3404,3407</span>,<span class="hljs-number">3411,3415</span>,<span class="hljs-number">3417,3421</span>,<span class="hljs-number">3427,3428</span>,<span class="hljs-number">3429,3430</span>,<span class="hljs-number">3432,3435</span>,<span class="hljs-number">3436,3438</span>,<span class="hljs-number">3440,3443</span>,<span class="hljs-number">3446,3447</span>,<span class="hljs-number">3448,3452</span>,<span class="hljs-number">3453,3457</span>,<span class="hljs-number">3458,3462</span>,<span class="hljs-number">3469,3473</span>,<span class="hljs-number">3474,3477</span>,<span class="hljs-number">3482,3483</span>,<span class="hljs-number">3485,3486</span>,<span class="hljs-number">3490,3491</span>,<span class="hljs-number">3492,3494</span>,<span class="hljs-number">3497,3505</span>,<span class="hljs-number">3514,3515</span>,<span class="hljs-number">3517,3521</span>,<span class="hljs-number">3524,3527</span>,<span class="hljs-number">3528,3531</span>,<span class="hljs-number">3532,3540</span>,<span class="hljs-number">3542,3551</span>,<span class="hljs-number">3555,3557</span>,<span class="hljs-number">3562,3567</span>,<span class="hljs-number">3568,3574</span>,<span class="hljs-number">3576,3577</span>,<span class="hljs-number">3580,3582</span>,<span class="hljs-number">3583,3588</span>,<span class="hljs-number">3591,3594</span>,<span class="hljs-number">3595,3596</span>,<span class="hljs-number">3603,3607</span>,<span class="hljs-number">3609,3612</span>,<span class="hljs-number">3613,3616</span>,<span class="hljs-number">3617,3623</span>,<span class="hljs-number">3625,3631</span>,<span class="hljs-number">3633,3634</span>,<span class="hljs-number">3637,3642</span>,<span class="hljs-number">3645,3654</span>,<span class="hljs-number">3655,3661</span>,<span class="hljs-number">3662,3663</span>,<span class="hljs-number">3669,3675</span>,<span class="hljs-number">3680,3686</span>,<span class="hljs-number">3692,3717</span>,<span class="hljs-number">3726,3742</span>,<span class="hljs-number">3750,3753</span>&#125;<span class="hljs-comment">;</span><br>int B[<span class="hljs-number">1400</span>]=&#123;<span class="hljs-number">0,3,7,12</span>,<span class="hljs-number">15,20,22,33</span>,<span class="hljs-number">32,35,58,40</span>,<span class="hljs-number">38,53,52,75</span>,<span class="hljs-number">60,65,70,62</span>,<span class="hljs-number">68,79,87,86</span>,<span class="hljs-number">92,99,101,174</span>,<span class="hljs-number">118,110,113,123</span>,<span class="hljs-number">116,129,127,126</span>,<span class="hljs-number">136,199,146,145</span>,<span class="hljs-number">166,246,161,160</span>,<span class="hljs-number">164,309,182</span>,<span class="hljs-number">177,198,180,156</span>,<span class="hljs-number">239,190,186,203</span>,<span class="hljs-number">195,340,197</span>,<span class="hljs-number">232,218,229,215</span>,<span class="hljs-number">286,228,224</span>,<span class="hljs-number">350,298</span>,<span class="hljs-number">253,236,268</span>,<span class="hljs-number">259,241</span>,<span class="hljs-number">256,266</span>,<span class="hljs-number">281,274</span>,<span class="hljs-number">264,271</span>,<span class="hljs-number">322,317</span>,<span class="hljs-number">278,289</span>,<span class="hljs-number">327,280</span>,<span class="hljs-number">315,301</span>,<span class="hljs-number">332,307</span>,<span class="hljs-number">372,391</span>,<span class="hljs-number">325,313</span>,<span class="hljs-number">306,321</span>,<span class="hljs-number">305,339</span>,<span class="hljs-number">565,346</span>,<span class="hljs-number">359,375</span>,<span class="hljs-number">521,358</span>,<span class="hljs-number">370,362</span>,<span class="hljs-number">379,456</span>,<span class="hljs-number">367,390</span>,<span class="hljs-number">386,432</span>,<span class="hljs-number">415,464</span>,<span class="hljs-number">411,408</span>,<span class="hljs-number">501,435</span>,<span class="hljs-number">702,454</span>,<span class="hljs-number">545,489</span>,<span class="hljs-number">449,496</span>,<span class="hljs-number">446,445</span>,<span class="hljs-number">558,467</span>,<span class="hljs-number">461,590</span>,<span class="hljs-number">577,532</span>,<span class="hljs-number">479,478</span>,<span class="hljs-number">494,527</span>,<span class="hljs-number">520,509</span>,<span class="hljs-number">505,639</span>,<span class="hljs-number">553,470</span>,<span class="hljs-number">485,518</span>,<span class="hljs-number">474,511</span>,<span class="hljs-number">487,483</span>,<span class="hljs-number">588,601</span>,<span class="hljs-number">531,530</span>,<span class="hljs-number">568,537</span>,<span class="hljs-number">586,557</span>,<span class="hljs-number">541,529</span>,<span class="hljs-number">525,580</span>,<span class="hljs-number">560,719</span>,<span class="hljs-number">624,570</span>,<span class="hljs-number">549,574</span>,<span class="hljs-number">603,600</span>,<span class="hljs-number">683,556</span>,<span class="hljs-number">614,871</span>,<span class="hljs-number">651,620</span>,<span class="hljs-number">772,671</span>,<span class="hljs-number">596,661</span>,<span class="hljs-number">666,610</span>,<span class="hljs-number">761,632</span>,<span class="hljs-number">760,691</span>,<span class="hljs-number">660,726</span>,<span class="hljs-number">635,673</span>,<span class="hljs-number">646,653</span>,<span class="hljs-number">649,788</span>,<span class="hljs-number">648,776</span>,<span class="hljs-number">716,664</span>,<span class="hljs-number">658,740</span>,<span class="hljs-number">893,855</span>,<span class="hljs-number">752,735</span>,<span class="hljs-number">723,825</span>,<span class="hljs-number">800,697</span>,<span class="hljs-number">711,1202</span>,<span class="hljs-number">771,693</span>,<span class="hljs-number">737,744</span>,<span class="hljs-number">766,780</span>,<span class="hljs-number">986,768</span>,<span class="hljs-number">748,877</span>,<span class="hljs-number">811,805</span>,<span class="hljs-number">722,1599</span>,<span class="hljs-number">828,866</span>,<span class="hljs-number">845,810</span>,<span class="hljs-number">849,842</span>,<span class="hljs-number">831,822</span>,<span class="hljs-number">787,818</span>,<span class="hljs-number">799,785</span>,<span class="hljs-number">836,778</span>,<span class="hljs-number">879,886</span>,<span class="hljs-number">899,827</span>,<span class="hljs-number">1046,918</span>,<span class="hljs-number">876,870</span>,<span class="hljs-number">989,929</span>,<span class="hljs-number">985,857</span>,<span class="hljs-number">912,904</span>,<span class="hljs-number">896,1107</span>,<span class="hljs-number">869,964</span>,<span class="hljs-number">920,883</span>,<span class="hljs-number">946,937</span>,<span class="hljs-number">948,910</span>,<span class="hljs-number">957,892</span>,<span class="hljs-number">996,935</span>,<span class="hljs-number">969,976</span>,<span class="hljs-number">1358,1010</span>,<span class="hljs-number">917,924</span>,<span class="hljs-number">1167,1062</span>,<span class="hljs-number">1036,1007</span>,<span class="hljs-number">1065,1000</span>,<span class="hljs-number">982,944</span>,<span class="hljs-number">1020,1013</span>,<span class="hljs-number">995,1854</span>,<span class="hljs-number">991,1038</span>,<span class="hljs-number">1150,1017</span>,<span class="hljs-number">1032,1085</span>,<span class="hljs-number">1082,1061</span>,<span class="hljs-number">1090,956</span>,<span class="hljs-number">1029,1023</span>,<span class="hljs-number">1777,1072</span>,<span class="hljs-number">1081,1079</span>,<span class="hljs-number">1118,1117</span>,<span class="hljs-number">1110,1040</span>,<span class="hljs-number">1131,1070</span>,<span class="hljs-number">1098,1053</span>,<span class="hljs-number">1122,1201</span>,<span class="hljs-number">1165,1322</span>,<span class="hljs-number">1241,1225</span>,<span class="hljs-number">1120,1190</span>,<span class="hljs-number">1106,1076</span>,<span class="hljs-number">1145,1206</span>,<span class="hljs-number">1180,1130</span>,<span class="hljs-number">1055,1156</span>,<span class="hljs-number">1384,1212</span>,<span class="hljs-number">1102,1194</span>,<span class="hljs-number">1175,1164</span>,<span class="hljs-number">1192,1186</span>,<span class="hljs-number">1285,1227</span>,<span class="hljs-number">2018,1211</span>,<span class="hljs-number">1208,1261</span>,<span class="hljs-number">1231,1245</span>,<span class="hljs-number">1214,1394</span>,<span class="hljs-number">1269,1363</span>,<span class="hljs-number">1243,1274</span>,<span class="hljs-number">1307,1405</span>,<span class="hljs-number">1268,1381</span>,<span class="hljs-number">1219,1265</span>,<span class="hljs-number">1314,1254</span>,<span class="hljs-number">1311,1297</span>,<span class="hljs-number">1420,1295</span>,<span class="hljs-number">1390,1279</span>,<span class="hljs-number">1337,1302</span>,<span class="hljs-number">1248,3859</span>,<span class="hljs-number">1284,1547</span>,<span class="hljs-number">1348,1317</span>,<span class="hljs-number">1451,1378</span>,<span class="hljs-number">1329,1812</span>,<span class="hljs-number">1372,1336</span>,<span class="hljs-number">1461,1400</span>,<span class="hljs-number">1346,1366</span>,<span class="hljs-number">1361,1465</span>,<span class="hljs-number">1432,1419</span>,<span class="hljs-number">1477,1376</span>,<span class="hljs-number">1292,1633</span>,<span class="hljs-number">1389,1371</span>,<span class="hljs-number">1527,1334</span>,<span class="hljs-number">1387,1458</span>,<span class="hljs-number">2369,1331</span>,<span class="hljs-number">1695,1414</span>,<span class="hljs-number">1408,1446</span>,<span class="hljs-number">1543,1521</span>,<span class="hljs-number">1413,1514</span>,<span class="hljs-number">1492,1428</span>,<span class="hljs-number">1687,1499</span>,<span class="hljs-number">1457,1397</span>,<span class="hljs-number">1468,1455</span>,<span class="hljs-number">1443,1425</span>,<span class="hljs-number">1464,1481</span>,<span class="hljs-number">1606,1539</span>,<span class="hljs-number">1758,1484</span>,<span class="hljs-number">1510,1449</span>,<span class="hljs-number">1626,1516</span>,<span class="hljs-number">1575,1509</span>,<span class="hljs-number">1532,1502</span>,<span class="hljs-number">1537,1438</span>,<span class="hljs-number">1563,1470</span>,<span class="hljs-number">1403,2604</span>,<span class="hljs-number">1674,1581</span>,<span class="hljs-number">1541,1536</span>,<span class="hljs-number">1534,1569</span>,<span class="hljs-number">1529,1525</span>,<span class="hljs-number">1592,1561</span>,<span class="hljs-number">1612,1619</span>,<span class="hljs-number">1491,2077</span>,<span class="hljs-number">1577,2623</span>,<span class="hljs-number">1560,1665</span>,<span class="hljs-number">1611,1906</span>,<span class="hljs-number">1590,1653</span>,<span class="hljs-number">1636,1679</span>,<span class="hljs-number">2455,1736</span>,<span class="hljs-number">1625,1640</span>,<span class="hljs-number">1929,1717</span>,<span class="hljs-number">1617,1730</span>,<span class="hljs-number">1678,1651</span>,<span class="hljs-number">1643,1622</span>,<span class="hljs-number">1580,1605</span>,<span class="hljs-number">1820,1746</span>,<span class="hljs-number">1721,2215</span>,<span class="hljs-number">1799,1661</span>,<span class="hljs-number">1708,1769</span>,<span class="hljs-number">1713,1795</span>,<span class="hljs-number">2004,1707</span>,<span class="hljs-number">1694,1692</span>,<span class="hljs-number">1682,1664</span>,<span class="hljs-number">1882,1702</span>,<span class="hljs-number">1684,1866</span>,<span class="hljs-number">1845,1756</span>,<span class="hljs-number">1710,1825</span>,<span class="hljs-number">1765,1832</span>,<span class="hljs-number">1774,2810</span>,<span class="hljs-number">1767,1811</span>,<span class="hljs-number">1754,2388</span>,<span class="hljs-number">1787,1729</span>,<span class="hljs-number">2140,1822</span>,<span class="hljs-number">1785,1850</span>,<span class="hljs-number">1802,1782</span>,<span class="hljs-number">2840,2288</span>,<span class="hljs-number">1842,1831</span>,<span class="hljs-number">1888,1762</span>,<span class="hljs-number">1838,1879</span>,<span class="hljs-number">1884,1878</span>,<span class="hljs-number">1859,2836</span>,<span class="hljs-number">2036,1824</span>,<span class="hljs-number">1919,1904</span>,<span class="hljs-number">1863,1901</span>,<span class="hljs-number">1978,1966</span>,<span class="hljs-number">1914,1877</span>,<span class="hljs-number">2042,1847</span>,<span class="hljs-number">1772,1935</span>,<span class="hljs-number">2040,2981</span>,<span class="hljs-number">1837,1975</span>,<span class="hljs-number">1953,1923</span>,<span class="hljs-number">2051,1994</span>,<span class="hljs-number">1869,2209</span>,<span class="hljs-number">1949,2007</span>,<span class="hljs-number">1947,2011</span>,<span class="hljs-number">2230,1942</span>,<span class="hljs-number">2205,1922</span>,<span class="hljs-number">2031,1941</span>,<span class="hljs-number">2134,2657</span>,<span class="hljs-number">2026,2107</span>,<span class="hljs-number">2030,1992</span>,<span class="hljs-number">1964,1997</span>,<span class="hljs-number">2098,1986</span>,<span class="hljs-number">1970,2003</span>,<span class="hljs-number">1981,2191</span>,<span class="hljs-number">2088,2096</span>,<span class="hljs-number">1972,3303</span>,<span class="hljs-number">2059,2076</span>,<span class="hljs-number">2390,2056</span>,<span class="hljs-number">2421,2094</span>,<span class="hljs-number">2070,2129</span>,<span class="hljs-number">2033,2029</span>,<span class="hljs-number">2116,3159</span>,<span class="hljs-number">2067,2050</span>,<span class="hljs-number">2105,2001</span>,<span class="hljs-number">2256,2161</span>,<span class="hljs-number">2103,2338</span>,<span class="hljs-number">2180,2148</span>,<span class="hljs-number">2137,2100</span>,<span class="hljs-number">2080,2168</span>,<span class="hljs-number">3385,2085</span>,<span class="hljs-number">2195,2152</span>,<span class="hljs-number">2142,2329</span>,<span class="hljs-number">2281,2203</span>,<span class="hljs-number">2198,2176</span>,<span class="hljs-number">2184,2669</span>,<span class="hljs-number">2194,2145</span>,<span class="hljs-number">3560,2302</span>,<span class="hljs-number">2229,2224</span>,<span class="hljs-number">2954,2298</span>,<span class="hljs-number">2276,2255</span>,<span class="hljs-number">2239,2310</span>,<span class="hljs-number">2182,2217</span>,<span class="hljs-number">2193,2640</span>,<span class="hljs-number">2366,2356</span>,<span class="hljs-number">2174,2293</span>,<span class="hljs-number">2202,2347</span>,<span class="hljs-number">2271,3335</span>,<span class="hljs-number">2437,2237</span>,<span class="hljs-number">2222,4572</span>,<span class="hljs-number">2297,2268</span>,<span class="hljs-number">2261,2234</span>,<span class="hljs-number">2132,2287</span>,<span class="hljs-number">2246,2607</span>,<span class="hljs-number">2439,2341</span>,<span class="hljs-number">2368,2322</span>,<span class="hljs-number">2335,2283</span>,<span class="hljs-number">2376,3235</span>,<span class="hljs-number">2495,2427</span>,<span class="hljs-number">2490,2163</span>,<span class="hljs-number">2362,2350</span>,<span class="hljs-number">2318,3156</span>,<span class="hljs-number">2453,2254</span>,<span class="hljs-number">2345,2426</span>,<span class="hljs-number">2317,2406</span>,<span class="hljs-number">2538,2381</span>,<span class="hljs-number">2557,2411</span>,<span class="hljs-number">2385,2449</span>,<span class="hljs-number">2402,2358</span>,<span class="hljs-number">2393,2404</span>,<span class="hljs-number">2910,2375</span>,<span class="hljs-number">3252,2516</span>,<span class="hljs-number">2332,2435</span>,<span class="hljs-number">2420,2473</span>,<span class="hljs-number">2365,3712</span>,<span class="hljs-number">2400,2398</span>,<span class="hljs-number">2957,2469</span>,<span class="hljs-number">2415,2634</span>,<span class="hljs-number">2459,2751</span>,<span class="hljs-number">2523,2493</span>,<span class="hljs-number">2485,2879</span>,<span class="hljs-number">2720,2551</span>,<span class="hljs-number">2444,3273</span>,<span class="hljs-number">2613,2513</span>,<span class="hljs-number">3991,2505</span>,<span class="hljs-number">2395,2830</span>,<span class="hljs-number">2502,2576</span>,<span class="hljs-number">2773,2525</span>,<span class="hljs-number">2462,2743</span>,<span class="hljs-number">2572,2709</span>,<span class="hljs-number">2511,2600</span>,<span class="hljs-number">2515,2567</span>,<span class="hljs-number">4079,2509</span>,<span class="hljs-number">2564,2530</span>,<span class="hljs-number">2592,2575</span>,<span class="hljs-number">2708,2550</span>,<span class="hljs-number">2549,2492</span>,<span class="hljs-number">4030,2700</span>,<span class="hljs-number">2665,2642</span>,<span class="hljs-number">2597,2570</span>,<span class="hljs-number">2548,2661</span>,<span class="hljs-number">2789,2689</span>,<span class="hljs-number">2675,2647</span>,<span class="hljs-number">2632,2616</span>,<span class="hljs-number">2931,2761</span>,<span class="hljs-number">2953,2691</span>,<span class="hljs-number">2611,2673</span>,<span class="hljs-number">2986,2645</span>,<span class="hljs-number">2738,2687</span>,<span class="hljs-number">2546,2707</span>,<span class="hljs-number">2780,2704</span>,<span class="hljs-number">3078,2682</span>,<span class="hljs-number">2556,2729</span>,<span class="hljs-number">2684,2938</span>,<span class="hljs-number">2702,2779</span>,<span class="hljs-number">2671,3048</span>,<span class="hljs-number">4593,2832</span>,<span class="hljs-number">2627,3121</span>,<span class="hljs-number">2785,2749</span>,<span class="hljs-number">2668,4805</span>,<span class="hljs-number">2747,2733</span>,<span class="hljs-number">3037,2759</span>,<span class="hljs-number">2806,2754</span>,<span class="hljs-number">2902,2816</span>,<span class="hljs-number">2809,2850</span>,<span class="hljs-number">3254,3207</span>,<span class="hljs-number">2856,2798</span>,<span class="hljs-number">2956,2768</span>,<span class="hljs-number">2746,2891</span>,<span class="hljs-number">3138,2864</span>,<span class="hljs-number">2758,2883</span>,<span class="hljs-number">2804,4706</span>,<span class="hljs-number">2788,2925</span>,<span class="hljs-number">2921,2899</span>,<span class="hljs-number">2834,2826</span>,<span class="hljs-number">2778,3334</span>,<span class="hljs-number">2882,3811</span>,<span class="hljs-number">2881,3039</span>,<span class="hljs-number">2869,2970</span>,<span class="hljs-number">2862,4055</span>,<span class="hljs-number">2814,2919</span>,<span class="hljs-number">2792,2943</span>,<span class="hljs-number">2873,3020</span>,<span class="hljs-number">2843,2927</span>,<span class="hljs-number">2917,3478</span>,<span class="hljs-number">2846,2985</span>,<span class="hljs-number">3244,2915</span>,<span class="hljs-number">3067,3036</span>,<span class="hljs-number">3908,2905</span>,<span class="hljs-number">3024,2946</span>,<span class="hljs-number">3261,3229</span>,<span class="hljs-number">3015,2997</span>,<span class="hljs-number">3064,2972</span>,<span class="hljs-number">2960,3061</span>,<span class="hljs-number">3007,2974</span>,<span class="hljs-number">3119,3001</span>,<span class="hljs-number">3148,3089</span>,<span class="hljs-number">3026,3110</span>,<span class="hljs-number">3099,2979</span>,<span class="hljs-number">3433,2993</span>,<span class="hljs-number">3046,3006</span>,<span class="hljs-number">3338,3032</span>,<span class="hljs-number">3004,3589</span>,<span class="hljs-number">3097,3031</span>,<span class="hljs-number">3172,3333</span>,<span class="hljs-number">3057,3193</span>,<span class="hljs-number">3084,3460</span>,<span class="hljs-number">3163,3125</span>,<span class="hljs-number">3130,3118</span>,<span class="hljs-number">3425,3128</span>,<span class="hljs-number">3218,3082</span>,<span class="hljs-number">3117,3250</span>,<span class="hljs-number">3012,3113</span>,<span class="hljs-number">3202,3570</span>,<span class="hljs-number">3396,3145</span>,<span class="hljs-number">3763,3519</span>,<span class="hljs-number">3197,3101</span>,<span class="hljs-number">3423,3217</span>,<span class="hljs-number">4038,3585</span>,<span class="hljs-number">3289,3247</span>,<span class="hljs-number">3177,3731</span>,<span class="hljs-number">3213,3106</span>,<span class="hljs-number">3201,3169</span>,<span class="hljs-number">3314,3182</span>,<span class="hljs-number">3810,3359</span>,<span class="hljs-number">3190,3179</span>,<span class="hljs-number">3103,3512</span>,<span class="hljs-number">3258,4507</span>,<span class="hljs-number">3393,3116</span>,<span class="hljs-number">3341,3225</span>,<span class="hljs-number">3327,3317</span>,<span class="hljs-number">3302,3269</span>,<span class="hljs-number">4240,3281</span>,<span class="hljs-number">3232,3351</span>,<span class="hljs-number">3552,3206</span>,<span class="hljs-number">3413,3246</span>,<span class="hljs-number">3299,3864</span>,<span class="hljs-number">3598,3287</span>,<span class="hljs-number">3500,3345</span>,<span class="hljs-number">3286,3498</span>,<span class="hljs-number">3297,3294</span>,<span class="hljs-number">4154,3495</span>,<span class="hljs-number">3325,3384</span>,<span class="hljs-number">3941,3358</span>,<span class="hljs-number">3355,3441</span>,<span class="hljs-number">3381,3374</span>,<span class="hljs-number">3350,3471</span>,<span class="hljs-number">3368,3412</span>,<span class="hljs-number">3379,3534</span>,<span class="hljs-number">3323,3838</span>,<span class="hljs-number">3693,3544</span>,<span class="hljs-number">3488,3405</span>,<span class="hljs-number">3924,3395</span>,<span class="hljs-number">3391,3592</span>,<span class="hljs-number">3538,3241</span>,<span class="hljs-number">3510,3502</span>,<span class="hljs-number">3422,3699</span>,<span class="hljs-number">3536,3467</span>,<span class="hljs-number">3459,3454</span>,<span class="hljs-number">3377,3684</span>,<span class="hljs-number">3475,3343</span>,<span class="hljs-number">3312,3722</span>,<span class="hljs-number">3409,3372</span>,<span class="hljs-number">3466,3558</span>,<span class="hljs-number">3518,3464</span>,<span class="hljs-number">4125,3628</span>,<span class="hljs-number">3605,3601</span>,<span class="hljs-number">3525,3739</span>,<span class="hljs-number">3418,3578</span>,<span class="hljs-number">3508,3667</span>,<span class="hljs-number">3480,3463</span>,<span class="hljs-number">3621,4089</span>,<span class="hljs-number">3671,3547</span>,<span class="hljs-number">3449,3367</span>,<span class="hljs-number">3584,3569</span>,<span class="hljs-number">4619,3506</span>,<span class="hljs-number">3772,3748</span>,<span class="hljs-number">3720,3658</span>,<span class="hljs-number">3529,4018</span>,<span class="hljs-number">3614,3565</span>,<span class="hljs-number">3844,3638</span>,<span class="hljs-number">3640,3977</span>,<span class="hljs-number">3619,4162</span>,<span class="hljs-number">3665,3643</span>,<span class="hljs-number">3549,4815</span>,<span class="hljs-number">3600,4479</span>,<span class="hljs-number">3635,3814</span>,<span class="hljs-number">3852,3727</span>,<span class="hljs-number">3759,3689</span>,<span class="hljs-number">3651,3832</span>,<span class="hljs-number">3676,3647</span>,<span class="hljs-number">3898,3917</span>,<span class="hljs-number">3719,3673</span>,<span class="hljs-number">4052,3698</span>,<span class="hljs-number">3825,3974</span>,<span class="hljs-number">3709,3705</span>,<span class="hljs-number">4012,3681</span>,<span class="hljs-number">3890,4608</span>,<span class="hljs-number">3656,3862</span>,<span class="hljs-number">3714,3957</span>,<span class="hljs-number">3762,3733</span>,<span class="hljs-number">3704,3769</span>,<span class="hljs-number">3848,3787</span>,<span class="hljs-number">3743,3854</span>,<span class="hljs-number">3771,3756</span>,<span class="hljs-number">4075,3724</span>,<span class="hljs-number">3999,3793</span>,<span class="hljs-number">4745,3888</span>,<span class="hljs-number">3932,3886</span>,<span class="hljs-number">4550,3824</span>,<span class="hljs-number">3777,3955</span>,<span class="hljs-number">3882,3781</span>,<span class="hljs-number">3776,3809</span>,<span class="hljs-number">3737,4390</span>,<span class="hljs-number">4186,3907</span>,<span class="hljs-number">3767,4044</span>,<span class="hljs-number">3900,3880</span>,<span class="hljs-number">4011,3835</span>,<span class="hljs-number">4782,3801</span>,<span class="hljs-number">3995,4336</span>,<span class="hljs-number">3935,3822</span>,<span class="hljs-number">3916,3971</span>,<span class="hljs-number">4197,4109</span>,<span class="hljs-number">3927,3872</span>,<span class="hljs-number">4192,4135</span>,<span class="hljs-number">3923,3841</span>,<span class="hljs-number">3798,4152</span>,<span class="hljs-number">3948,3944</span>,<span class="hljs-number">4027,4138</span>,<span class="hljs-number">4199,4160</span>,<span class="hljs-number">3921,4082</span>,<span class="hljs-number">3896,3795</span>,<span class="hljs-number">4151,3982</span>,<span class="hljs-number">3966,3998</span>,<span class="hljs-number">4779,4231</span>,<span class="hljs-number">4121,4081</span>,<span class="hljs-number">4074,3965</span>,<span class="hljs-number">4363,4060</span>,<span class="hljs-number">4302,4237</span>,<span class="hljs-number">4017,3952</span>,<span class="hljs-number">4443,4010</span>,<span class="hljs-number">4037,4103</span>,<span class="hljs-number">4176,4141</span>,<span class="hljs-number">3914,4107</span>,<span class="hljs-number">4070,4111</span>,<span class="hljs-number">4051,4128</span>,<span class="hljs-number">4249,4016</span>,<span class="hljs-number">4097,3961</span>,<span class="hljs-number">4700,4049</span>,<span class="hljs-number">4330,3877</span>,<span class="hljs-number">4278,4150</span>,<span class="hljs-number">4057,3821</span>,<span class="hljs-number">4263,4033</span>,<span class="hljs-number">4140,4100</span>,<span class="hljs-number">4447,4234</span>,<span class="hljs-number">4219,4120</span>,<span class="hljs-number">4223,4324</span>,<span class="hljs-number">4449,4503</span>,<span class="hljs-number">4222,4119</span>,<span class="hljs-number">4173,4429</span>,<span class="hljs-number">4184,4195</span>,<span class="hljs-number">4146,4262</span>,<span class="hljs-number">4210,4209</span>,<span class="hljs-number">4026,4253</span>,<span class="hljs-number">4169,4243</span>,<span class="hljs-number">4272,4182</span>,<span class="hljs-number">4563,4361</span>,<span class="hljs-number">4543,4683</span>,<span class="hljs-number">4271,4300</span>,<span class="hljs-number">4395,4068</span>,<span class="hljs-number">4291,4296</span>,<span class="hljs-number">4247,4348</span>,<span class="hljs-number">4307,4338</span>,<span class="hljs-number">4261,4172</span>,<span class="hljs-number">4314,4277</span>,<span class="hljs-number">4343,4319</span>,<span class="hljs-number">4992,4506</span>,<span class="hljs-number">4495,4446</span>,<span class="hljs-number">4425,4373</span>,<span class="hljs-number">4375,4305</span>,<span class="hljs-number">4528,4454</span>,<span class="hljs-number">4471,4345</span>,<span class="hljs-number">4610,4581</span>,<span class="hljs-number">4290,4547</span>,<span class="hljs-number">4549,4310</span>,<span class="hljs-number">4356,4539</span>,<span class="hljs-number">4270,4165</span>,<span class="hljs-number">4526,4341</span>,<span class="hljs-number">4493,4473</span>,<span class="hljs-number">4546,4678</span>,<span class="hljs-number">4453,4452</span>,<span class="hljs-number">4442,4384</span>,<span class="hljs-number">4466,4288</span>,<span class="hljs-number">4511,4416</span>,<span class="hljs-number">4298,4317</span>,<span class="hljs-number">4663,4635</span>,<span class="hljs-number">4523,4744</span>,<span class="hljs-number">4519,4383</span>,<span class="hljs-number">4522,4525</span>,<span class="hljs-number">4650,4552</span>,<span class="hljs-number">4438,4399</span>,<span class="hljs-number">4914,4622</span>,<span class="hljs-number">4532,4468</span>,<span class="hljs-number">4372,4559</span>,<span class="hljs-number">4434,4489</span>,<span class="hljs-number">4579,4810</span>,<span class="hljs-number">4725,4631</span>,<span class="hljs-number">4897,4691</span>,<span class="hljs-number">4605,4478</span>,<span class="hljs-number">4398,4690</span>,<span class="hljs-number">4601,4487</span>,<span class="hljs-number">4712,4571</span>,<span class="hljs-number">4675,4670</span>,<span class="hljs-number">4599,4567</span>,<span class="hljs-number">4437,4803</span>,<span class="hljs-number">4595,4945</span>,<span class="hljs-number">4578,4892</span>,<span class="hljs-number">4856,4708</span>,<span class="hljs-number">4660,4628</span>,<span class="hljs-number">4733,4621</span>,<span class="hljs-number">4882,4717</span>,<span class="hljs-number">4674,4809</span>,<span class="hljs-number">4681,4847</span>,<span class="hljs-number">4836,4742</span>,<span class="hljs-number">4751,4657</span>,<span class="hljs-number">4763,4876</span>,<span class="hljs-number">4761,4969</span>,<span class="hljs-number">4722,4789</span>,<span class="hljs-number">4181,4773</span>,<span class="hljs-number">4850,4832</span>,<span class="hljs-number">4705,4941</span>,<span class="hljs-number">4644,4786</span>,<span class="hljs-number">4921,4740</span>,<span class="hljs-number">4768,4979</span>,<span class="hljs-number">4778,4967</span>,<span class="hljs-number">4928,4818</span>,<span class="hljs-number">4772,4586</span>,<span class="hljs-number">4839,4428</span>,<span class="hljs-number">4801,4889</span>,<span class="hljs-number">4652,4939</span>,<span class="hljs-number">4871,4821</span>,<span class="hljs-number">4765,4935</span>,<span class="hljs-number">4926,4807</span>,<span class="hljs-number">4845,4977</span>,<span class="hljs-number">4814,4959</span>,<span class="hljs-number">4907,4972</span>,<span class="hljs-number">4878,4771</span>,<span class="hljs-number">4865,4888</span>,<span class="hljs-number">4956,4775</span>,<span class="hljs-number">4948,4903</span>,<span class="hljs-number">4932,5000</span>,<span class="hljs-number">4732,4953</span>&#125;<span class="hljs-comment">;</span><br>int T<span class="hljs-comment">;</span><br>int main()<br>&#123;<br>	//freopen(&quot;a.out&quot;,&quot;w&quot;,stdout)<span class="hljs-comment">;</span><br>	scanf(&quot;%d&quot;,&amp;T)<span class="hljs-comment">;</span><br>	for(int i=<span class="hljs-number">1</span>,n,m,flag<span class="hljs-comment">;i&lt;=T;i++)</span><br>	&#123;<br>		scanf(&quot;%d%d&quot;,&amp;n,&amp;m)<span class="hljs-comment">;</span><br>		if(n&gt;m)swap(n,m)<span class="hljs-comment">;</span><br>		flag=<span class="hljs-number">0</span><span class="hljs-comment">;</span><br>		for(int j=<span class="hljs-number">1</span><span class="hljs-comment">;j&lt;=1359;j++)</span><br>		&#123;<br>			if(<span class="hljs-keyword">A</span>[j]&gt;n)break<span class="hljs-comment">;</span><br>			if(<span class="hljs-keyword">A</span>[j]==n&amp;&amp;B[j]==m)flag=<span class="hljs-number">1</span><span class="hljs-comment">;</span><br>		&#125;<br>		if(flag==<span class="hljs-number">1</span>)printf(&quot;Bob\n&quot;)<span class="hljs-comment">;</span><br>		else printf(&quot;Alice\n&quot;)<span class="hljs-comment">;</span><br>	&#125;<br>    return <span class="hljs-number">0</span><span class="hljs-comment">;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="B"><a href="#B" class="headerlink" title="B"></a>B</h4><p>A standard sphere ball is falling in the air, and the center of the sphere is exactly on the centerline of an empty isosceles trapezoidal. The trapezoid is hanging horizontally under the sphere.<br>Please determine whether the ball will get stuck in the trapezoid or drop past the trapezoid.<br><img src="/img/postpictures/D45F07914599F01E1B34C63EC3702F0F.png" srcset="/img/loading.gif" alt=""><br><strong>输入描述:</strong><br>The input contains four integers r, a, b, h<script type="math/tex">(1 \le r,a,b,h \le 1000, a > b)</script>, indicating the radius of the ball, the top base, the bottom base, and the height of the isosceles trapezoid.<br>It is guaranteed that <script type="math/tex">2r \ne b, 2r < a, 2r < h</script><br><strong>输出描述:</strong><br>Output ‘Drop’ if the sphere ball will drop past the empty trapezoid, otherwise output ‘Stuck’.<br>If the answer is ‘Stuck’, please also calculate the stuck position(the height between the center of the sphere and the midpoint of the bottom base). Your answer is considered correct if its absolute or relative error does not exceed <script type="math/tex">10^{-6}</script></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">int</span> n,maxx=<span class="hljs-number">-1</span>,minn=<span class="hljs-number">500010</span>;<br><span class="hljs-keyword">double</span> r,a,b,h;<br><span class="hljs-keyword">double</span> ans=<span class="hljs-number">0.0</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;r&gt;&gt;a&gt;&gt;b&gt;&gt;h;<br>    <span class="hljs-keyword">if</span>(r*<span class="hljs-number">2</span>&lt;=b&amp;&amp;r*<span class="hljs-number">2</span>&lt;=a)<br>    &#123;<br>        <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;Drop&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    a/=<span class="hljs-number">2</span>;<br>    b/=<span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">double</span> x=(<span class="hljs-keyword">double</span>)(h*b)/((<span class="hljs-keyword">double</span>)a-b);<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">double</span> kl=<span class="hljs-built_in">sqrt</span>(b*b+x*x);<br>    ans= r*kl/(<span class="hljs-keyword">double</span>)b-x;<br>    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">&quot;Stuck&quot;</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%0.12lf\n&quot;</span>,ans);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="D"><a href="#D" class="headerlink" title="D"></a>D</h4><p>You have taken the graduation picture of graduates. The picture could be regarded as a matrix A of <script type="math/tex">n \times n</script>, each element in A is 0 or 1, representing a blank background or a student, respectively.<br>However, teachers are too busy to take photos with students and only took a group photo themselves. The photo could be regarded as a matrix B of <script type="math/tex">1 \times m</script> where each element is 2 representing a teacher.</p>
+<p>As a master of photoshop, your job is to put photo B into photo A with the following constraints:<br>you are not allowed to split, rotate or scale the picture, but only translation.<br>each element in matrix B should overlap with an element in A completely, and each teacher should overlap with a blank background, not shelter from a student. </p>
+<p>Please calculate the possible ways that you can put photo B into photo A.</p>
+<p><strong>输入描述:</strong><br>The first line contains two integers n,m<script type="math/tex">(1 \le n,m \le 2000)</script> indicating the size of photos A and B.<br>In the next $n$ lines,each line contains {n}n characters of ‘0’ or ‘1’,representing the matrix A.<br>The last line contains {m}m characters of ‘2’, representing matrix B.<br><strong>输出描述:</strong><br>Output one integer in a line, indicating the answer.</p>
+<p>签到题，没啥可说的<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;string&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-built_in">string</span> s[<span class="hljs-number">2010</span>],b;<br><span class="hljs-keyword">int</span> n,m;<br><span class="hljs-keyword">int</span> ans=<span class="hljs-number">0</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;n,&amp;m);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++) <span class="hljs-built_in">cin</span>&gt;&gt;s[i];<br>    <span class="hljs-built_in">cin</span>&gt;&gt;b;<br>    <span class="hljs-keyword">int</span> lastplace;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>        lastplace=n+<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;n;j++)&#123;<br>            <span class="hljs-keyword">if</span>(s[i][j]==<span class="hljs-string">&#x27;0&#x27;</span>&amp;&amp;(s[i][j<span class="hljs-number">-1</span>]==<span class="hljs-string">&#x27;1&#x27;</span>||j==<span class="hljs-number">0</span>))&#123;<br>                lastplace=j<span class="hljs-number">-1</span>;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(s[i][j]==<span class="hljs-string">&#x27;0&#x27;</span>)&#123;<br>                <span class="hljs-keyword">if</span>(j-lastplace&gt;=m) ans++;<br>            &#125;<br>            <span class="hljs-keyword">else</span> lastplace=n+<span class="hljs-number">1</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-built_in">cout</span>&lt;&lt;ans;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure></p>
+<h4 id="F"><a href="#F" class="headerlink" title="F"></a>F</h4><p>A positive integer is 3-friendly if and only if we can find a continuous substring in its decimal representation, and the decimal integer represented by the substring is a multiple of 3.</p>
+<p>For instance:<br>1.<script type="math/tex">{104}</script> is 3-friendly because “0” is a substring of “104” and <script type="math/tex">0 \mod 3 = 0</script>.<br>2.<script type="math/tex">{124}</script> is 3-friendly because “12” is a substring of “124” and <script type="math/tex">12 \mod 3 = 0</script>. “24” is also a valid substring.<br>3.<script type="math/tex">{17}</script> is not 3-friendly because <script type="math/tex">1 \mod 3 \ne 0, ~7 \mod 3 \ne 0, ~17 \mod 3 \ne 0</script><br>Note that the substring with leading zeros is also considered legal.</p>
+<p>Given two integers <script type="math/tex">{L}</script> and <script type="math/tex">{R}</script>, you are asked to tell the number of positive integers <script type="math/tex">{x}</script> such that <script type="math/tex">L \le x \le R</script> and <script type="math/tex">{x}</script> is 3-friendly.<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs dns">#include&lt;bits/stdc++.h&gt;<br>using namespace std<span class="hljs-comment">;</span><br>int n,a[<span class="hljs-number">500010</span>]=&#123;<span class="hljs-number">0,0,0,1</span>,<span class="hljs-number">1,1,2,2</span>,<span class="hljs-number">2,3,4,4</span>,<span class="hljs-number">5,6,6,7</span>,<span class="hljs-number">8,8,9,10</span>,<span class="hljs-number">11,12,12,13</span>,<span class="hljs-number">14,14,15,16</span>,<span class="hljs-number">16,17,18,19</span>,<span class="hljs-number">20,21,22,23</span>,<span class="hljs-number">24,25,26,27</span>,<span class="hljs-number">28,28,29,30</span>,<span class="hljs-number">30,31,32,32</span>,<span class="hljs-number">33,34,35,36</span>,<span class="hljs-number">36,37,38,38</span>,<span class="hljs-number">39,40,40,41</span>,<span class="hljs-number">42,43,44,45</span>,<span class="hljs-number">46,47,48,49</span>,<span class="hljs-number">50,51,52,52</span>,<span class="hljs-number">53,54,54,55</span>,<span class="hljs-number">56,56,57,58</span>,<span class="hljs-number">59,60,60,61</span>,<span class="hljs-number">62,62,63,64</span>,<span class="hljs-number">64,65,66,67</span>,<span class="hljs-number">68,69,70,71</span>,<span class="hljs-number">72,73,74,75</span>,<span class="hljs-number">76</span>&#125;,b[<span class="hljs-number">500010</span>],maxx=-<span class="hljs-number">1</span>,minn=<span class="hljs-number">500010</span><span class="hljs-comment">;</span><br>int main()<br>&#123;<br>    long long T,ll,rr<span class="hljs-comment">;</span><br>    cin&gt;&gt;T<span class="hljs-comment">;</span><br>    while(T--)<br>    &#123;<br>        scanf(&quot;%lld%lld&quot;,&amp;ll,&amp;rr)<span class="hljs-comment">;</span><br>        if(ll&lt;=<span class="hljs-number">100</span>)ll=a[ll-<span class="hljs-number">1</span>]<span class="hljs-comment">;</span><br>        else ll-=<span class="hljs-number">25</span><span class="hljs-comment">;</span><br>        if(rr&lt;=<span class="hljs-number">100</span>)rr=a[rr]<span class="hljs-comment">;</span><br>        else rr-=<span class="hljs-number">24</span><span class="hljs-comment">;</span><br>        printf(&quot;%lld\n&quot;,rr-ll)<span class="hljs-comment">;</span><br>    &#125;<br>    return <span class="hljs-number">0</span><span class="hljs-comment">;</span><br>&#125;<br></code></pre></td></tr></table></figure></p>
+<h4 id="H"><a href="#H" class="headerlink" title="H"></a>H</h4><p>For a given set <script type="math/tex">S = \{a_0, a_1, a_2, ..., a_{n-1}\}</script>, we called a hash function <script type="math/tex">f_S(x)</script> perfect hash function of S, if it satisfies <script type="math/tex">\forall 0 \leq i < j < n, f_S(a_i) \neq f_S(a_j)</script><br>Given a set S with non-negative integers, please find the minimum positive integer seed that function <script type="math/tex">h_{seed}(x) = x \mod seed</script> is a perfect hash function of S.</p>
+<p>Note: Six more test cases are added after contest.<br><strong>输入描述:</strong><br>The first line of input contains one integer $n$, describing the size of set S.<br>The second line contains <script type="math/tex">n(1 \leq n \le 500000)</script> integers <script type="math/tex">a_0,...,a_{n-1}</script>, describing the elements in S.<br>It is guaranteed that <script type="math/tex">\forall 0 \leq i < j < n, a_i \ne a_j, 0 \le a_i \le 500000</script><br><strong>输出描述:</strong><br>Output one integer in a line, indicating the answer.</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">int</span> a[<span class="hljs-number">500010</span>],b[<span class="hljs-number">500010</span>],c[<span class="hljs-number">500010</span>]=&#123;&#125;;<br><span class="hljs-keyword">int</span> cont[<span class="hljs-number">500010</span>];<br><span class="hljs-keyword">int</span> n;<br><span class="hljs-keyword">int</span> maxi,mini;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">cin</span>&gt;&gt;n;<br>    mini=n;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;++i)<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;a[i]);<br>    sort(a,a+n);<br>	<span class="hljs-keyword">int</span> kl=n/<span class="hljs-number">2</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=n,jk;i&gt;=kl+<span class="hljs-number">1</span>;i--)<br>	&#123;<br>		jk=<span class="hljs-built_in">max</span>(<span class="hljs-number">0</span>,n-i<span class="hljs-number">-100</span>);<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=n-i;j&gt;=jk;j--)<br>			c[a[i]-a[j]]=<span class="hljs-number">1</span>;<br>	&#125;<br>    maxi=a[n<span class="hljs-number">-1</span>]-a[<span class="hljs-number">0</span>]+<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">bool</span> bl=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=mini;j&lt;maxi;++j)<br>	&#123;<br>		<span class="hljs-keyword">if</span>(c[j]==<span class="hljs-number">1</span>)<span class="hljs-keyword">continue</span>;<br>        <span class="hljs-built_in">memset</span>(cont,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span>(cont));<br>        bl=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;++i)<br>		&#123;<br>            cont[a[i]%j]++;<br>            <span class="hljs-keyword">if</span>(cont[a[i]%j]&gt;<span class="hljs-number">1</span>)&#123;<br>                bl=<span class="hljs-number">1</span>;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(bl==<span class="hljs-number">0</span>)&#123;<br>            <span class="hljs-built_in">cout</span>&lt;&lt;j;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-built_in">cout</span>&lt;&lt;maxi;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/2021/">2021</a>
+                    
+                      <a class="hover-with-bg" href="/categories/2021/%E6%AF%94%E8%B5%9B/">比赛</a>
+                    
+                      <a class="hover-with-bg" href="/categories/2021/%E6%AF%94%E8%B5%9B/%E6%9A%91%E6%9C%9F%E7%89%9B%E5%AE%A2%E9%AB%98%E6%A0%A1%E8%AE%AD%E7%BB%83%E8%B5%9B/">暑期牛客高校训练赛</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%89%9B%E5%AE%A2/">牛客</a>
+                    
+                      <a class="hover-with-bg" href="/tags/icpc/">icpc</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

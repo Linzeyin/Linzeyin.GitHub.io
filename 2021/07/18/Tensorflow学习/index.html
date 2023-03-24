@@ -1,0 +1,699 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="Tensorflow是一个核心开源库，可以帮助开发者快速开发和训练机器学习模型。">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>Tensorflow学习&amp;深度学习实操(1) - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/83376290_p0.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Tensorflow学习&深度学习实操(1)">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-18 23:25" pubdate>
+        2021年7月18日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      42
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Tensorflow学习&amp;深度学习实操(1)</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2022年4月22日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><p>其实高三的时候学习神经网络的时候就了解到有这么个东西了，当时是在知乎上看到了一位学长的文章入了神经网络的坑，跟着呢个学长的文章学习了许多，并且自己试着用c++实现了下简单的DNN和CNN，<br><img src="/img/postpictures/asdfdsgvfdcv cxzvre.png" srcset="/img/loading.gif" alt="这是当时码的，虽然十分简单但是拥有完整的正向反向传播梯度下降等"><br>然后由于码量较大，只是做了两三个训练就废弃了。后来发现了有现成的库可以直接使用，不过当时找到的资料都是python+Tensorflow的组合，由于自己当时对PY不是太熟就没怎么学。最近一段时间学了些python的知识，并且数学建模需要神经网络来拟合，于是开一档记录Tensorflow的使用学习。</p>
+<h3 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h3><h4 id="matplotlib库"><a href="#matplotlib库" class="headerlink" title="matplotlib库"></a>matplotlib库</h4><p>Matplotlib 是 Python 的绘图库。 它可与 NumPy 一起使用，提供了一种有效的 MatLab 开源替代方案。 它也可以和图形工具包一起使用，如 PyQt 和 wxPython。</p>
+<h4 id="网络基础知识"><a href="#网络基础知识" class="headerlink" title="网络基础知识"></a>网络基础知识</h4><p>虽然我们可以直接调用APi，但是对于网络原理还是需要必要的了解的。以及对一些名词要有理解<br>我个人是看这位华师的学长的<a target="_blank" rel="noopener" href="https://www.zhihu.com/column/ComputerVision">文章</a>，（就是高三的时候学的那些东西）</p>
+<h4 id="xlwings库"><a href="#xlwings库" class="headerlink" title="xlwings库"></a>xlwings库</h4><p>一个处理excal的库，比较方便<br>实例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> xlwings <span class="hljs-keyword">as</span> xw <span class="hljs-comment"># 载入</span><br><br>output=<span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;a.out&#x27;</span>,<span class="hljs-string">&#x27;w&#x27;</span>,<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;utf-8&#x27;</span>) <span class="hljs-comment">#记录保存地址</span><br>wb = xw.Book(<span class="hljs-string">&#x27;1.xlsx&#x27;</span>)<span class="hljs-comment"># 打开excal文档</span><br>sht = wb.sheets[<span class="hljs-number">0</span>] <span class="hljs-comment"># 选择所需操作的sheet</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">12</span>) : <span class="hljs-comment"># 取1到12列</span><br>    Row=<span class="hljs-built_in">chr</span>(i+<span class="hljs-built_in">ord</span>(<span class="hljs-string">&#x27;a&#x27;</span>)-<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>) :<span class="hljs-comment"># 取1到3行</span><br>        Range=<span class="hljs-built_in">str</span>(j)<br>        b = sht[Row+Range].value <span class="hljs-comment"># sht[X]中X格式为‘字母+数字’，如‘B7’</span><br>        print(b,file=output)<br></code></pre></td></tr></table></figure><br>更多操作可以看知乎<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/237583143">文章</a></p>
+<h3 id="Keras"><a href="#Keras" class="headerlink" title="Keras"></a>Keras</h3><p>引用一段Keras官网的话：</p>
+<blockquote>
+<p>Keras 是一个用 Python 编写的高级神经网络 API，它能够以 TensorFlow, CNTK, 或者 Theano 作为后端运行。Keras 的开发重点是支持快速的实验。能够以最小的时延把你的想法转换为实验结果，是做好研究的关键。</p>
+</blockquote>
+<p>Keras 的核心数据结构是 model，一种组织网络层的方式。最简单的模型是 Sequential 顺序模型，它是由多个网络层线性堆叠的模型形式。</p>
+<p>载入Sequential模型<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs fortran">from keras.models <span class="hljs-keyword">import</span> <span class="hljs-keyword">Sequential</span><br>model = <span class="hljs-keyword">Sequential</span>()<br></code></pre></td></tr></table></figure></p>
+<hr>
+<p>添加网络层时可以直接使用add函数来叠加<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">from</span> keras.layers import Dense<br>model.<span class="hljs-builtin-name">add</span>(Dense(<span class="hljs-attribute">units</span>=64, <span class="hljs-attribute">activation</span>=<span class="hljs-string">&#x27;relu&#x27;</span>, <span class="hljs-attribute">input_dim</span>=100))<br>model.<span class="hljs-builtin-name">add</span>(Dense(<span class="hljs-attribute">units</span>=10, <span class="hljs-attribute">activation</span>=<span class="hljs-string">&#x27;softmax&#x27;</span>))<br></code></pre></td></tr></table></figure></p>
+<hr>
+<p>使用compile 来配置学习过程<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">model<span class="hljs-selector-class">.compile</span>(loss=<span class="hljs-string">&#x27;categorical_crossentropy&#x27;</span>,optimizer=<span class="hljs-string">&#x27;sgd&#x27;</span>,metrics=<span class="hljs-selector-attr">[<span class="hljs-string">&#x27;accuracy&#x27;</span>]</span>)<br></code></pre></td></tr></table></figure><br>参数:</p>
+<p><strong>optimizer:</strong> 优化器</p>
+<pre><code>optimizer的参数：
+lr：大或等于0的浮点数，学习率
+momentum：大或等于0的浮点数，动量参数
+decay：大或等于0的浮点数，每次更新后的学习率衰减值
+nesterov：布尔值，确定是否使用Nesterov动量
+</code></pre><p><strong>loss:</strong>损失函数,可以用自带的,也可以自定义.如果模型有多个输出,可以传入一个losslist,模型降会把这些损失加在一起<br><strong>metrics:</strong> 评价函数,与损失函数类似,只不过评价函数的结果不会用于训练过程中,可以传递已有的评价函数名称,或者传递一个自定义的函数来使用</p>
+<pre><code>自带的评价函数有:binary_accuracy(y_true,y_pred), categorical_accuracy(y_true,y_pred),sparse_categorical_accuracy(y_true,y_pred), top_k_categorical_accuracy(y_true,y_pred,k=5).
+自定义评价函数应该在编译的时候compile传递进去,该函数需要以(y_true,y_pred)作为输入参数,并返回一个张量作为输出结果.
+</code></pre><p><strong>loss_weights:</strong>可选项,是一个list或字典,指定不同的损失的权重</p>
+<p><strong>sample_weight_mode:</strong> 如果你需要执行按时间步采样权重（2D 权重），请将其设置为 temporal。 默认为 None，为采样权重（1D）。 如果模型有多个输出，则可以通过传递 mode 的字典或列表，以在每个输出上使用不同的 sample_weight_mode。<br><strong>weighted_metrics:</strong> 在训练和测试期间，由 sample_weight 或 class_weight 评估和加权的度量标准列表。<br><strong>target_tensors:</strong> 默认情况下，Keras 将为模型的目标创建一个占位符，在训练过程中将使用目标数据。 相反，如果你想使用自己的目标张量（反过来说，Keras 在训练期间不会载入这些目标张量的外部 Numpy 数据）， 您可以通过 target_tensors 参数指定它们。 它可以是单个张量（单输出模型），张量列表，或一个映射输出名称到目标张量的字典。<br><strong>kwargs:</strong> 当使用 Theano/CNTK 后端时，这些参数被传入 K.function。 当使用 TensorFlow 后端时，这些参数被传递到 tf.Session.run。</p>
+<p>一些compile的参数<a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_16388393/article/details/93207842">学习</a></p>
+<hr>
+<p>开始训练！<br>使用fit</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># x_train 和 y_train 是 Numpy 数组</span><br>model.fitfit(x_train, y_train, <span class="hljs-attribute">batch_size</span>=None, <span class="hljs-attribute">epochs</span>=1, <span class="hljs-attribute">verbose</span>=1, <span class="hljs-attribute">callbacks</span>=None, <span class="hljs-attribute">validation_split</span>=0.0, <span class="hljs-attribute">validation_data</span>=None, <span class="hljs-attribute">shuffle</span>=<span class="hljs-literal">True</span>, <span class="hljs-attribute">class_weight</span>=None, <span class="hljs-attribute">sample_weight</span>=None, <span class="hljs-attribute">initial_epoch</span>=0, <span class="hljs-attribute">steps_per_epoch</span>=None, <span class="hljs-attribute">validation_steps</span>=None)<br></code></pre></td></tr></table></figure>
+<p><strong>x_train:</strong> 训练数据的 Numpy 数组（如果模型只有一个输入）， 或者是 Numpy 数组的列表（如果模型有多个输入）。 如果模型中的输入层被命名，你也可以传递一个字典，将输入层名称映射到 Numpy 数组。 如果从本地框架张量馈送（例如 TensorFlow 数据张量）数据，x 可以是 None（默认）。<br><strong>y_train:</strong> 目标（标签）数据的 Numpy 数组（如果模型只有一个输出）， 或者是 Numpy 数组的列表（如果模型有多个输出）。 如果模型中的输出层被命名，你也可以传递一个字典，将输出层名称映射到 Numpy 数组。 如果从本地框架张量馈送（例如 TensorFlow 数据张量）数据，y 可以是 None（默认）。<br><strong>batch_size:</strong> 整数或 None。每次梯度更新的样本数。如果未指定，默认为 32。<br><strong>epochs:</strong> 整数。训练模型迭代轮次。一个轮次是在整个 x 和 y 上的一轮迭代。 请注意，与 initial_epoch 一起，epochs 被理解为 「最终轮次」。模型并不是训练了 epochs 轮，而是到第 epochs 轮停止训练。<br><strong>verbose:</strong> 0, 1 或 2。日志显示模式。 0 = 安静模式, 1 = 进度条, 2 = 每轮一行。<br><strong>callbacks:</strong>一系列可以在训练时使用的回调函数。<br><strong>validation_split:</strong> 0 和 1 之间的浮点数。用作验证集的训练数据的比例。 模型将分出一部分不会被训练的验证数据，并将在每一轮结束时评估这些验证数据的误差和任何其他模型指标。 验证数据是混洗之前 x 和y 数据的最后一部分样本中。<br><strong>validation_data:</strong> 元组 (x_val，y_val) 或元组 (x_val，y_val，val_sample_weights)， 用来评估损失，以及在每轮结束时的任何模型度量指标。 模型将不会在这个数据上进行训练。这个参数会覆盖 validation_split。<br><strong>shuffle:</strong>布尔值（是否在每轮迭代之前混洗数据）或者 字符串 (batch)。 batch 是处理 HDF5 数据限制的特殊选项，它对一个 batch 内部的数据进行混洗。 当 steps_per_epoch 非 None 时，这个参数无效。<br><strong>class_weight:</strong> 可选的字典，用来映射类索引（整数）到权重（浮点）值，用于加权损失函数（仅在训练期间）。 这可能有助于告诉模型 「更多关注」来自代表性不足的类的样本。<br><strong>sample_weight:</strong> 训练样本的可选 Numpy 权重数组，用于对损失函数进行加权（仅在训练期间）。 可以传递与输入样本长度相同的平坦（1D）Numpy 数组（权重和样本之间的 1:1 映射）， 或者在时序数据的情况下，可以传递尺寸为 (samples, sequence_length) 的 2D 数组，以对每个样本的每个时间步施加不同的权重。 在这种情况下，应该确保在 compile() 中指定 sample_weight_mode=”temporal”。<br><strong>initial_epoch:</strong> 整数。开始训练的轮次（有助于恢复之前的训练）。<br><strong>steps_per_epoch:</strong> 整数或 None。 在声明一个轮次完成并开始下一个轮次之前的总步数（样品批次）。 使用 TensorFlow 数据张量等输入张量进行训练时，默认值 None 等于数据集中样本的数量除以 batch 的大小，如果无法确定，则为 1。<br><strong>validation_steps:</strong> 只有在指定了 steps_per_epoch 时才有用。停止前要验证的总步数（批次样本）。</p>
+<p>fit的返回是一个 History 对象。其 History.history 属性是连续 epoch 训练损失和评估值，以及验证集损失和评估值的记录（如果适用）<br>相关keras源码<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">History</span>(<span class="hljs-params">Callback</span>):</span><br>    <span class="hljs-string">&quot;&quot;&quot;Callback that records events into a `History` object.</span><br><span class="hljs-string">    This callback is automatically applied to</span><br><span class="hljs-string">    every Keras model. The `History` object</span><br><span class="hljs-string">    gets returned by the `fit` method of models.</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_train_begin</span>(<span class="hljs-params">self, logs=<span class="hljs-literal">None</span></span>):</span><br>        self.epoch = []<br>        self.history = &#123;&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_epoch_end</span>(<span class="hljs-params">self, epoch, logs=<span class="hljs-literal">None</span></span>):</span><br>        logs = logs <span class="hljs-keyword">or</span> &#123;&#125;<br>        self.epoch.append(epoch)<br>        <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> logs.items():<br>            self.history.setdefault(k, []).append(v)<br></code></pre></td></tr></table></figure><br>可以看出History类对象包含两个属性，分别为epoch和history</p>
+<hr>
+<p>evaluate在测试模式下返回模型的误差值和评估标准值。计算是分批进行的。<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">evaluate(<span class="hljs-attribute">x</span>=None, <span class="hljs-attribute">y</span>=None, <span class="hljs-attribute">batch_size</span>=None, <span class="hljs-attribute">verbose</span>=1, <span class="hljs-attribute">sample_weight</span>=None, <span class="hljs-attribute">steps</span>=None)<br></code></pre></td></tr></table></figure><br><strong>x:</strong> 测试数据的 Numpy 数组（如果模型只有一个输入）， 或者是 Numpy 数组的列表（如果模型有多个输入）。 如果模型中的输入层被命名，你也可以传递一个字典，将输入层名称映射到 Numpy 数组。<br><strong>y:</strong> 目标（标签）数据的 Numpy 数组，或 Numpy 数组的列表（如果模型具有多个输出）。 如果模型中的输出层被命名，你也可以传递一个字典，将输出层名称映射到 Numpy 数组。<br>batch_size: 整数或 None。每次评估的样本数。如果未指定，默认为 32。<br><strong>verbose:</strong> 0 或 1。日志显示模式。 0 = 安静模式，1 = 进度条。<br><strong>sample_weight:</strong> 测试样本的可选 Numpy 权重数组，用于对损失函数进行加权。 可以传递与输入样本长度相同的扁平（1D）Numpy 数组（权重和样本之间的 1:1 映射）， 或者在时序数据的情况下，传递尺寸为 (samples, sequence_length) 的 2D 数组，以对每个样本的每个时间步施加不同的权重。 在这种情况下，应该确保在 compile() 中指定 sample_weight_mode=”temporal”。<br><strong>steps:</strong> 整数或 None。 声明评估结束之前的总步数（批次样本）。默认值 None。</p>
+<p>返回值是一个标量测试误差（如果模型只有一个输出且没有评估标准） 或标量列表（如果模型具有多个输出 和/或 评估指标）。 属性 model.metrics_names 将提供标量输出的显示标签</p>
+<hr>
+<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><p>做江苏数学建模省赛时想用神经网络对数据集进行预测而码，结果不尽人意. ..再次记录，等修改<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs dns">import tensorflow as tf<br>from tensorflow import keras<br>from keras.models import Sequential<br>from keras.layers import Dense, Activation<br>from keras.callbacks import ModelCheckpoint<br>import numpy as np<br><br>keras.optimizers.SGD(lr=<span class="hljs-number">0</span>.<span class="hljs-number">01</span>, momentum=<span class="hljs-number">0</span>.<span class="hljs-number">0</span>, decay=<span class="hljs-number">0</span>.<span class="hljs-number">0</span>, nesterov=False)<br>#梯度下降优化器<br><br>output=open(&#x27;a.out&#x27;,&#x27;w&#x27;,<span class="hljs-number">1</span>,&#x27;utf-<span class="hljs-number">8</span>&#x27;) #记录保存地址<br><br>ns=np.array([<span class="hljs-number">90</span>.<span class="hljs-number">42</span>, <span class="hljs-number">5</span>.<span class="hljs-number">616</span>, <span class="hljs-number">26</span>.<span class="hljs-number">41</span>, <span class="hljs-number">4</span>.<span class="hljs-number">216</span>, <span class="hljs-number">6</span>.<span class="hljs-number">837</span>, <span class="hljs-number">28</span>.<span class="hljs-number">18</span>, <span class="hljs-number">72</span>.<span class="hljs-number">84</span>, <span class="hljs-number">31</span>.<span class="hljs-number">58</span>, <span class="hljs-number">5</span>.<span class="hljs-number">353</span>, <span class="hljs-number">25</span>.<span class="hljs-number">83</span>])<br>xs=np.array([[ <span class="hljs-number">70849.02</span>, <span class="hljs-number">64717.58</span>, <span class="hljs-number">2016.886</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3000</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">140583.486</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2431.162</span>, <span class="hljs-number">14798.85</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">17230.012</span>], [ <span class="hljs-number">53042.87</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">32898.43</span>, <span class="hljs-number">3017.841</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4000</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">92959.141</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2016.886</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">20492.89</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">22509.776</span>], [ <span class="hljs-number">59332.56</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">49087.32</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2309.934</span>, <span class="hljs-number">3020</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">113749.814</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">24685.94</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2318.845</span>, <span class="hljs-number">35198.66</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3000</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">65203.445</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3015.853</span>, <span class="hljs-number">18908.83</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2000</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">23924.683</span>], [ <span class="hljs-number">63356.26</span>, <span class="hljs-number">58102.85</span>, <span class="hljs-number">1789.986</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5000</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">128249.096</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">29048.39</span>, <span class="hljs-number">4903.955</span>, <span class="hljs-number">33952.345</span>], [ <span class="hljs-number">77905.24</span>, <span class="hljs-number">71053.95</span>, <span class="hljs-number">2218.854</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4000</span>.<span class="hljs-number">0</span>, <span class="hljs-number">155178.044</span>], [ <span class="hljs-number">53252.23</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1890</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2482.972</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">57625.202</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7470</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">64363.52</span>, <span class="hljs-number">4125.733</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">75959.253</span>], [ <span class="hljs-number">73968.84</span>, <span class="hljs-number">67546.03</span>, <span class="hljs-number">2104.845</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">143619.715</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3110</span>.<span class="hljs-number">85</span>, <span class="hljs-number">0</span>, <span class="hljs-number">52531.42</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">55642.27</span>], [ <span class="hljs-number">68946.43</span>, <span class="hljs-number">63056.18</span>, <span class="hljs-number">1963.863</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4000</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">300</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">138266.473</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">49153.19</span>, <span class="hljs-number">8314.933</span>, <span class="hljs-number">57468.123</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">43314.34</span>, <span class="hljs-number">3523.842</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3000</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">49838.182</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">21715.9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2027.372</span>, <span class="hljs-number">31177.86</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">54921.132</span>], [ <span class="hljs-number">10000.0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3017.751</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">49073.83</span>, <span class="hljs-number">0</span>, <span class="hljs-number">62091.581</span>], [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3024.342</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">49381.45</span>, <span class="hljs-number">0</span>, <span class="hljs-number">52405.792</span>]])<br>ys=np.array([ <span class="hljs-number">24</span>.<span class="hljs-number">17</span>, <span class="hljs-number">5</span>.<span class="hljs-number">462</span>, <span class="hljs-number">30</span>.<span class="hljs-number">913</span>, <span class="hljs-number">66</span>.<span class="hljs-number">511</span>, <span class="hljs-number">26</span>.<span class="hljs-number">944</span>, <span class="hljs-number">21</span>.<span class="hljs-number">234</span>, <span class="hljs-number">5</span>.<span class="hljs-number">42</span>, <span class="hljs-number">22</span>.<span class="hljs-number">604</span>, <span class="hljs-number">6</span>.<span class="hljs-number">719</span>, <span class="hljs-number">24</span>.<span class="hljs-number">099</span>, <span class="hljs-number">77</span>.<span class="hljs-number">765</span>, <span class="hljs-number">55</span>.<span class="hljs-number">158</span>, <span class="hljs-number">24</span>.<span class="hljs-number">035</span>, <span class="hljs-number">7</span>.<span class="hljs-number">374</span>, <span class="hljs-number">24</span>.<span class="hljs-number">136</span>, <span class="hljs-number">6</span>.<span class="hljs-number">722</span>, <span class="hljs-number">8</span>.<span class="hljs-number">286</span>, <span class="hljs-number">22</span>.<span class="hljs-number">795</span>, <span class="hljs-number">9</span>.<span class="hljs-number">12,5.869</span>])<br><br><br>model=keras.Sequential()<br>model.add(Dense(<span class="hljs-number">20</span>, input_dim=<span class="hljs-number">10</span>, kernel_initializer=&#x27;random_uniform&#x27;, activation=&#x27;relu&#x27;))<br>model.add(Dense(<span class="hljs-number">8</span>, kernel_initializer=&#x27;random_uniform&#x27;, activation=&#x27;relu&#x27;))<br>model.add(Dense(<span class="hljs-number">1</span>, kernel_initializer=&#x27;uniform&#x27;, activation=&#x27;sigmoid&#x27;))<br># Compile model<br><br>model.compile(loss=&#x27;binary_crossentropy&#x27;, optimizer = tf.keras.optimizers.SGD(lr = <span class="hljs-number">0</span>.<span class="hljs-number">1</span>), metrics=[&#x27;accuracy&#x27;])<br><br>#model.fit(xs,ys,epochs=<span class="hljs-number">5000</span>,callbacks=[checkpoint])<br><br>xxs=[]<br>for i in range(<span class="hljs-number">0</span>,<span class="hljs-number">19</span>):<br>    xxs.append([])<br>    for j in range(<span class="hljs-number">0</span>,<span class="hljs-number">10</span>):<br>        xxs[i].append(ns[j]*xs[i][j]/xs[i][<span class="hljs-number">10</span>])<br>    finx=np.array(xxs[i])<br>    model.fit(finx,ys, validation_split=<span class="hljs-number">0</span>.<span class="hljs-number">33</span>, epochs=<span class="hljs-number">10</span>, batch_size=<span class="hljs-number">1</span>, callbacks=checkpoint, verbose=<span class="hljs-number">0</span>)<br><br><br>model.summary() #打印神经网络结构，统计参数数目<br>#print(model.predict([<span class="hljs-number">10</span>.<span class="hljs-number">0</span>]),file=output)<br>#print(model.predict([<span class="hljs-number">20</span>.<span class="hljs-number">0</span>]),file=output)<br>output.close()<br><br><br></code></pre></td></tr></table></figure></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/python/">python</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+                    
+                      <a class="hover-with-bg" href="/tags/tensorflow/">tensorflow</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/07/24/KLT%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81%E8%BF%BD%E8%B8%AA-python%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">KLT实现目标动态追踪</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/07/01/%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F%E2%80%94%E2%80%94%E8%87%AA%E7%9C%81%E5%B8%96%E5%AD%90/">
+                        <span class="hidden-mobile">查缺补漏——自省帖子</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

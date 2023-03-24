@@ -1,0 +1,651 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="牛客暑期多校训练营二总结&amp;补题">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>2021牛客高校暑假训练赛二 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/asgfdhytjuykgfhbnfgnh.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="2021牛客高校暑假训练赛二">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-19 19:46" pubdate>
+        2021年7月19日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      41
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">2021牛客高校暑假训练赛二</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年8月19日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>昨天在忙江苏省赛. . .一不小心做到了很晚，第二天醒来就是一点多了. . .（悲</p>
+<h3 id="比赛过程"><a href="#比赛过程" class="headerlink" title="比赛过程"></a>比赛过程</h3><p>由于起来的很晚. . .醒来后外卖都没定就立马进入比赛，悲伤的是唯一的队友也忘了（据说他们有800行的大作业，奇了怪了为啥会有老师要求代码行数的？）。只能先迅速签到，先看了C题（我看的时候过的人就已经过k了QAQ），题目大意好像是在网点图里面走点，同时还有限制条件。输入数据是nm反馈一个答案类型，输入简单并且还是个签到题，结合数据大但猜测一波是判断n*m的奇偶性，结果竟然真的过了。再看另一道签到题，是一道小模拟，没啥技术含量，全在读题，也快速过了。之后去看K题，钻研了许久钻研出了一个自以为对的结论，码完后Wa了. . .最后发现自己题意搞错了。没办法，重新读题再搞 . . 中间还T了好多发。看正解说是拓扑排序. . .还是需要学习。题写到一半被室友叫去吃饭了. . .搞的虎头蛇尾</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>由于自己的原因这场比赛有效时间很短，需要正视自己的态度，现在是练习就要减少骗分抖机灵尽量学习新东西，以及需要加强补题（updating 2021.7.22:郑州暴雨，虽然我们不是受灾最严重的地方，但是宿舍楼停水停电，极大降低补题效率. . .上次的题还没补完就有新比赛，节奏好快啊）</p>
+<h3 id="题目详情"><a href="#题目详情" class="headerlink" title="题目详情"></a>题目详情</h3><p>补题不补签到(c,d,I)了，费时间又没啥用</p>
+<h4 id="F"><a href="#F" class="headerlink" title="F"></a>F</h4><p>题意，给你 $A,B,C,D$ 四个点的坐标及系数<script type="math/tex">k_1,k_2</script>.点p满足<script type="math/tex">|PB| \leq k_1|PA|,|PD| \leq k_2|PC|</script>,问你合法的p的所占空间的大小<br>需要手推一波公式，设 <script type="math/tex">P(x,y,z),A(x_1,y_1,z_1),B(x_2,y_2,z_2)</script>,呢么不等式为<script type="math/tex">(x_2-x)^2+(y_2-y)^2+(z_2-z)^2 \leq k^2[(x_1-x)^2+(y_1-y)^2+(z_1-z)^2]</script></p>
+<script type="math/tex; mode=display">(1-k^2)(x^2+y^2+z^2)-(2x_2-2k^2 x_1)x-(2z_2-2k^2 z_1)z-(2y_2-2k^2 y_1)y -k^2(x_1^2 + y_1^2 + z_1^2) +(x_2^2 + y_2^2 + z_2^2)\leq 0</script><p>这明显是球的表达式，然后通过化简就可以得出球的球心及半径，由于P是由两个球确定的范围，呢么P的空间就是两个球的体积并。<br>关于球的体积并，需要拓展一些计算几何的知识，我已经更新到了<a href="/2021/04/04/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E5%AD%A6%E4%B9%A0/#%E7%90%83%E7%BC%BA">这里</a>.</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs x86asm">#include&lt;<span class="hljs-meta">bits</span>/stdc++.h&gt;<br>using namespace <span class="hljs-keyword">std</span><span class="hljs-comment">;</span><br>const double pi = acos(-<span class="hljs-number">1</span>)<span class="hljs-comment">;//学到的一种pi的定义</span><br><span class="hljs-keyword">int</span> T<span class="hljs-comment">;</span><br>double x[<span class="hljs-number">20</span>],y[<span class="hljs-number">20</span>],z[<span class="hljs-number">20</span>],<span class="hljs-built_in">k1</span>,<span class="hljs-built_in">k2</span>,k_1,k_2<span class="hljs-comment">;</span><br>double Circle1_x,Circle1_y,Circle1_z,Circle1_r<span class="hljs-comment">;</span><br>double Circle2_x,Circle2_y,Circle2_z,Circle2_r<span class="hljs-comment">;</span><br>inline double solve(double x1,double y1,double z1,double <span class="hljs-built_in">r1</span>,double x2,double y2,double z2,double <span class="hljs-built_in">r2</span>)<br>&#123;//求球的体积并<br>    double num=<span class="hljs-number">0</span><span class="hljs-comment">;</span><br>    double dis=sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2)+(z1-z2)*(z1-z2))<span class="hljs-comment">;</span><br>    if(dis&gt;=<span class="hljs-built_in">r1</span>+<span class="hljs-built_in">r2</span>)return <span class="hljs-number">0.0</span><span class="hljs-comment">;</span><br>    if(dis+<span class="hljs-built_in">r1</span>&lt;=<span class="hljs-built_in">r2</span>)&#123;num=(<span class="hljs-number">4.00</span>/<span class="hljs-number">3.00</span>)*pi*<span class="hljs-built_in">r1</span>*<span class="hljs-built_in">r1</span>*<span class="hljs-built_in">r1</span><span class="hljs-comment">;return num;&#125;</span><br>    if(dis+<span class="hljs-built_in">r2</span>&lt;=<span class="hljs-built_in">r1</span>)&#123;num=(<span class="hljs-number">4.00</span>/<span class="hljs-number">3.00</span>)*pi*<span class="hljs-built_in">r2</span>*<span class="hljs-built_in">r2</span>*<span class="hljs-built_in">r2</span><span class="hljs-comment">;return num;&#125;</span><br>    double kl=(<span class="hljs-built_in">r1</span>*<span class="hljs-built_in">r1</span>+dis*dis-<span class="hljs-built_in">r2</span>*<span class="hljs-built_in">r2</span>)/(<span class="hljs-number">2.00</span>*dis*<span class="hljs-built_in">r1</span>)<span class="hljs-comment">;</span><br>    double h=<span class="hljs-built_in">r1</span>*(<span class="hljs-number">1</span>-kl)<span class="hljs-comment">;</span><br>    num+=(pi/<span class="hljs-number">3.00</span>)*(<span class="hljs-number">3.00</span>*<span class="hljs-built_in">r1</span>-h)*h*h<span class="hljs-comment">;</span><br>    kl=(<span class="hljs-built_in">r2</span>*<span class="hljs-built_in">r2</span>+dis*dis-<span class="hljs-built_in">r1</span>*<span class="hljs-built_in">r1</span>)/(<span class="hljs-number">2.00</span>*dis*<span class="hljs-built_in">r2</span>)<span class="hljs-comment">;</span><br>    h=<span class="hljs-built_in">r2</span>*(<span class="hljs-number">1.00</span>-kl)<span class="hljs-comment">;</span><br>    num+=(pi/<span class="hljs-number">3.00</span>)*(<span class="hljs-number">3.00</span>*<span class="hljs-built_in">r2</span>-h)*h*h<span class="hljs-comment">;</span><br>    return num<span class="hljs-comment">;</span><br>&#125;<br><span class="hljs-keyword">int</span> main()<br>&#123;<br>	//freopen(<span class="hljs-string">&quot;a.in&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>,stdin)<span class="hljs-comment">;</span><br>	//freopen(<span class="hljs-string">&quot;a.out&quot;</span>,<span class="hljs-string">&quot;w&quot;</span>,stdout)<span class="hljs-comment">;</span><br>	cin&gt;&gt;T<span class="hljs-comment">;</span><br>	while(T--)<br>	&#123;<br>		for(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span><span class="hljs-comment">;i&lt;4;i++)scanf(&quot;%lf%lf%lf&quot;,&amp;x[i],&amp;y[i],&amp;z[i]);</span><br>		scanf(<span class="hljs-string">&quot;%lf%lf&quot;</span>,&amp;<span class="hljs-built_in">k1</span>,&amp;<span class="hljs-built_in">k2</span>)<span class="hljs-comment">;</span><br>		//cout&lt;&lt;<span class="hljs-built_in">k1</span>&lt;&lt;<span class="hljs-string">&#x27; &#x27;</span>&lt;&lt;<span class="hljs-built_in">k2</span>&lt;&lt;endl<span class="hljs-comment">;</span><br>		K_1=<span class="hljs-built_in">k1</span>*<span class="hljs-built_in">k1</span>-<span class="hljs-number">1</span><span class="hljs-comment">;</span><br><br>		Circle1_x=(<span class="hljs-built_in">k1</span>*<span class="hljs-built_in">k1</span>*x[<span class="hljs-number">1</span>]-x[<span class="hljs-number">0</span>])/K_1<span class="hljs-comment">;</span><br>		Circle1_y=(<span class="hljs-built_in">k1</span>*<span class="hljs-built_in">k1</span>*y[<span class="hljs-number">1</span>]-y[<span class="hljs-number">0</span>])/K_1<span class="hljs-comment">;</span><br>		Circle1_z=(<span class="hljs-built_in">k1</span>*<span class="hljs-built_in">k1</span>*z[<span class="hljs-number">1</span>]-z[<span class="hljs-number">0</span>])/K_1<span class="hljs-comment">;</span><br>		t=<span class="hljs-built_in">k1</span>*<span class="hljs-built_in">k1</span>*((x[<span class="hljs-number">1</span>]*x[<span class="hljs-number">1</span>])+(y[<span class="hljs-number">1</span>]*y[<span class="hljs-number">1</span>])+(z[<span class="hljs-number">1</span>]*z[<span class="hljs-number">1</span>]))-x[<span class="hljs-number">0</span>]*x[<span class="hljs-number">0</span>]-y[<span class="hljs-number">0</span>]*y[<span class="hljs-number">0</span>]-z[<span class="hljs-number">0</span>]*z[<span class="hljs-number">0</span>]<span class="hljs-comment">;</span><br>		double t/=K_1<span class="hljs-comment">;</span><br>		Circle1_r=sqrt(Circle1_x*Circle1_x+Circle1_y*Circle1_y+Circle1_z*Circle1_z-t)<span class="hljs-comment">;</span><br>		////////////////////////////////////////////////<br>		K_2=<span class="hljs-built_in">k2</span>*<span class="hljs-built_in">k2</span>-<span class="hljs-number">1</span><span class="hljs-comment">;</span><br>		Circle2_x=(<span class="hljs-built_in">k2</span>*<span class="hljs-built_in">k2</span>*x[<span class="hljs-number">3</span>]-x[<span class="hljs-number">2</span>])/K_2<span class="hljs-comment">;</span><br>		Circle2_y=(<span class="hljs-built_in">k2</span>*<span class="hljs-built_in">k2</span>*y[<span class="hljs-number">3</span>]-y[<span class="hljs-number">2</span>])/K_2<span class="hljs-comment">;</span><br>		Circle2_z=(<span class="hljs-built_in">k2</span>*<span class="hljs-built_in">k2</span>*z[<span class="hljs-number">3</span>]-z[<span class="hljs-number">2</span>])/K_2<span class="hljs-comment">;</span><br>		t=<span class="hljs-built_in">k2</span>*<span class="hljs-built_in">k2</span>*((x[<span class="hljs-number">3</span>]*x[<span class="hljs-number">3</span>])+(y[<span class="hljs-number">3</span>]*y[<span class="hljs-number">3</span>])+(z[<span class="hljs-number">3</span>]*z[<span class="hljs-number">3</span>]))-x[<span class="hljs-number">2</span>]*x[<span class="hljs-number">2</span>]-y[<span class="hljs-number">2</span>]*y[<span class="hljs-number">2</span>]-z[<span class="hljs-number">2</span>]*z[<span class="hljs-number">2</span>]<span class="hljs-comment">;</span><br>		t/=K_2<span class="hljs-comment">;</span><br>		Circle2_r=sqrt(Circle2_x*Circle2_x+Circle2_y*Circle2_y+Circle2_z*Circle2_z-t)<span class="hljs-comment">;</span><br>		//cout&lt;&lt;Circle1_x&lt;&lt;<span class="hljs-string">&#x27; &#x27;</span>&lt;&lt;Circle1_y&lt;&lt;<span class="hljs-string">&#x27; &#x27;</span>&lt;&lt;Circle1_z&lt;&lt;<span class="hljs-string">&#x27; &#x27;</span>&lt;&lt;Circle1_r&lt;&lt;endl<span class="hljs-comment">;</span><br>		//cout&lt;&lt;Circle2_x&lt;&lt;<span class="hljs-string">&#x27; &#x27;</span>&lt;&lt;Circle2_y&lt;&lt;<span class="hljs-string">&#x27; &#x27;</span>&lt;&lt;Circle2_z&lt;&lt;<span class="hljs-string">&#x27; &#x27;</span>&lt;&lt;Circle2_r&lt;&lt;endl<span class="hljs-comment">;</span><br>		printf(<span class="hljs-string">&quot;%.6f\n&quot;</span>,solve(Circle1_x,Circle1_y,Circle1_z,Circle1_r,Circle2_x,Circle2_y,Circle2_z,Circle2_r))<span class="hljs-comment">;	</span><br>	&#125;<br>	return <span class="hljs-number">0</span><span class="hljs-comment">;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="I"><a href="#I" class="headerlink" title="I"></a>I</h4><p>给两个20*20的点阵图，同一个操作在两个图中互为镜像，问你如何操作使两个图中的人达到目的地，同时要求操作长度最小及字典序最小。<br>以两个图中的坐标为参照进行广搜。（其实我最开始想的是两个图各进行一次路径查询然后融合，但是明显不对。搞不出来）。注意剪枝，就没了。<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ss</span></span><br><span class="hljs-class">&#123;</span><br>	<span class="hljs-keyword">int</span> x1,y1;<br>	<span class="hljs-keyword">int</span> x2,y2;<br>	<span class="hljs-keyword">int</span> num;<br>	<span class="hljs-built_in">string</span> s1; <br>	ss(<span class="hljs-keyword">int</span> a1=<span class="hljs-number">0</span>,<span class="hljs-keyword">int</span> a2=<span class="hljs-number">0</span>,<span class="hljs-keyword">int</span> a3=<span class="hljs-number">0</span>,<span class="hljs-keyword">int</span> a4=<span class="hljs-number">0</span>,<span class="hljs-keyword">int</span> a5=<span class="hljs-number">0</span>,<span class="hljs-built_in">string</span> a7=<span class="hljs-string">&quot;\0&quot;</span>)&#123;x1=a1;y1=a2;x2=a3;y2=a4;num=a5;s1=a7;&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">out</span><span class="hljs-params">()</span></span>&#123;<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d %d %d %d %d &quot;</span>,x1,y1,x2,y2,num);<span class="hljs-built_in">cout</span>&lt;&lt;s1&lt;&lt;<span class="hljs-built_in">endl</span>;&#125;<br>&#125;ans;<br><span class="hljs-built_in">queue</span>&lt;ss&gt; Q;<br><span class="hljs-keyword">char</span> ch1[<span class="hljs-number">25</span>][<span class="hljs-number">25</span>],ch2[<span class="hljs-number">25</span>][<span class="hljs-number">25</span>],ch3[<span class="hljs-number">5</span>]=&#123;<span class="hljs-string">&#x27;D&#x27;</span>,<span class="hljs-string">&#x27;L&#x27;</span>,<span class="hljs-string">&#x27;R&#x27;</span>,<span class="hljs-string">&#x27;U&#x27;</span>&#125;;<br><span class="hljs-keyword">int</span> a[<span class="hljs-number">22</span>][<span class="hljs-number">22</span>][<span class="hljs-number">22</span>][<span class="hljs-number">22</span>];<br><span class="hljs-keyword">int</span> fx1[<span class="hljs-number">5</span>]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>&#125;,fy1[<span class="hljs-number">5</span>]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>&#125;;<br><span class="hljs-keyword">int</span> fx2[<span class="hljs-number">5</span>]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">-1</span>&#125;,fy2[<span class="hljs-number">5</span>]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>&#125;;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">check1</span><span class="hljs-params">(<span class="hljs-keyword">int</span> xx,<span class="hljs-keyword">int</span> yy)</span></span>&#123;<span class="hljs-keyword">return</span> (xx&gt;<span class="hljs-number">0</span>&amp;&amp;xx&lt;=<span class="hljs-number">20</span>&amp;&amp;yy&gt;<span class="hljs-number">0</span>&amp;&amp;yy&lt;=<span class="hljs-number">20</span>&amp;&amp;ch1[xx][yy]!=<span class="hljs-string">&#x27;#&#x27;</span>)?<span class="hljs-number">1</span>:<span class="hljs-number">0</span>;&#125;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">check2</span><span class="hljs-params">(<span class="hljs-keyword">int</span> xx,<span class="hljs-keyword">int</span> yy)</span></span>&#123;<span class="hljs-keyword">return</span> (xx&gt;<span class="hljs-number">0</span>&amp;&amp;xx&lt;=<span class="hljs-number">20</span>&amp;&amp;yy&gt;<span class="hljs-number">0</span>&amp;&amp;yy&lt;=<span class="hljs-number">20</span>&amp;&amp;ch2[xx][yy]!=<span class="hljs-string">&#x27;#&#x27;</span>)?<span class="hljs-number">1</span>:<span class="hljs-number">0</span>;&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-comment">//freopen(&quot;a.in&quot;,&quot;r&quot;,stdin);</span><br>	<span class="hljs-comment">//freopen(&quot;a.out&quot;,&quot;w&quot;,stdout);</span><br>	<span class="hljs-built_in">memset</span>(a,<span class="hljs-number">10</span>,<span class="hljs-keyword">sizeof</span>(a));<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">20</span>;i++)<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s %s&quot;</span>,ch1[i]+<span class="hljs-number">1</span>,ch2[i]+<span class="hljs-number">1</span>);<br>	<span class="hljs-comment">//for(int i=1;i&lt;=20;i++)printf(&quot;%s\n&quot;,ch1[i]);</span><br>	Q.push(ss(<span class="hljs-number">20</span>,<span class="hljs-number">20</span>,<span class="hljs-number">20</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>));a[<span class="hljs-number">20</span>][<span class="hljs-number">20</span>][<span class="hljs-number">20</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">while</span>(!Q.empty())<br>	&#123;<br>		ss a1=Q.front();<br>		<span class="hljs-keyword">if</span>(a1.x1==<span class="hljs-number">1</span>&amp;&amp;a1.y1==<span class="hljs-number">20</span>&amp;&amp;a1.x2==<span class="hljs-number">1</span>&amp;&amp;a1.y2==<span class="hljs-number">1</span>)<br>		&#123;<br>			<span class="hljs-comment">//a1.out();</span><br>			<span class="hljs-built_in">cout</span>&lt;&lt;a1.num&lt;&lt;<span class="hljs-string">&#x27;\n&#x27;</span>&lt;&lt;a1.s1&lt;&lt;<span class="hljs-built_in">endl</span>;<br>			ans=a1;<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>		Q.pop();<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>,xx1,yy1,xx2,yy2;i&lt;=<span class="hljs-number">3</span>;i++)<br>		&#123;<br>			xx1=a1.x1+fx1[i];xx2=a1.x2+fx2[i];<br>			yy1=a1.y1+fy1[i];yy2=a1.y2+fy2[i];<br>			<span class="hljs-keyword">if</span>(!check1(xx1,yy1)&amp;&amp;!check2(xx2,yy2))<span class="hljs-keyword">continue</span>;<br>			<span class="hljs-keyword">if</span>(!check1(xx1,yy1))&#123;xx1=a1.x1;yy1=a1.y1;&#125;<br>			<span class="hljs-keyword">if</span>(!check2(xx2,yy2))&#123;xx2=a1.x2;yy2=a1.y2;&#125;<br>			<span class="hljs-keyword">if</span>(a[xx1][yy1][xx2][yy2]!=a[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>][<span class="hljs-number">0</span>][<span class="hljs-number">0</span>])<span class="hljs-keyword">continue</span>;<br>			<br>			<span class="hljs-keyword">if</span>(a[xx1][yy1][xx2][yy2]&lt;a1.num)<span class="hljs-keyword">continue</span>;<br>			a[xx1][yy1][xx2][yy2]=a1.num;<br>			Q.push(ss(xx1,yy1,xx2,yy2,a1.num+<span class="hljs-number">1</span>,(a1.s1+ch3[i])));<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">int</span> xx1=<span class="hljs-number">20</span>,xx2=<span class="hljs-number">20</span>,yy1=<span class="hljs-number">20</span>,yy2=<span class="hljs-number">1</span>;<br>	ch1[xx1][yy1]=<span class="hljs-string">&#x27;A&#x27;</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>,xxx1,yyy1;i&lt;ans.s1.<span class="hljs-built_in">size</span>();i++)<br>	&#123;<br>		xxx1=xx1;yyy1=yy1;<br>		<span class="hljs-keyword">if</span>(ans.s1[i]==<span class="hljs-string">&#x27;L&#x27;</span>)yy1--;<br>		<span class="hljs-keyword">if</span>(ans.s1[i]==<span class="hljs-string">&#x27;R&#x27;</span>)yy1++;<br>		<span class="hljs-keyword">if</span>(ans.s1[i]==<span class="hljs-string">&#x27;U&#x27;</span>)xx1--;<br>		<span class="hljs-keyword">if</span>(ans.s1[i]==<span class="hljs-string">&#x27;D&#x27;</span>)xx1++;<br>		<span class="hljs-keyword">if</span>(!check1(xx1,yy1))&#123;xx1=xxx1;yy1=yyy1;&#125;<br>		ch1[xx1][yy1]=<span class="hljs-string">&#x27;A&#x27;</span>;<br>	&#125;<br>	ch2[xx2][yy2]=<span class="hljs-string">&#x27;A&#x27;</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>,xxx2,yyy2;i&lt;ans.s1.<span class="hljs-built_in">size</span>();i++)<br>	&#123;<br>		xxx2=xx2;yyy2=yy2;<br>		<span class="hljs-keyword">if</span>(ans.s1[i]==<span class="hljs-string">&#x27;L&#x27;</span>)yy2++;<br>		<span class="hljs-keyword">if</span>(ans.s1[i]==<span class="hljs-string">&#x27;R&#x27;</span>)yy2--;<br>		<span class="hljs-keyword">if</span>(ans.s1[i]==<span class="hljs-string">&#x27;U&#x27;</span>)xx2--;<br>		<span class="hljs-keyword">if</span>(ans.s1[i]==<span class="hljs-string">&#x27;D&#x27;</span>)xx2++;<br>		<span class="hljs-keyword">if</span>(!check2(xx2,yy2))&#123;xx2=xxx2;yy2=yyy2;&#125;<br>		ch2[xx2][yy2]=<span class="hljs-string">&#x27;A&#x27;</span>;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">20</span>;i++)<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s %s \n&quot;</span>,ch1[i]+<span class="hljs-number">1</span>,ch2[i]+<span class="hljs-number">1</span>);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure></p>
+<h4 id="K"><a href="#K" class="headerlink" title="K"></a>K</h4><p>往一个单调栈里填入一个数组，保证单调递增。现给你栈在各个时刻的情况（站内元素个数），让你输出数组可能的一种情况。<br>根据栈的关系建立拓扑序，然后把1~n个数填到拓扑序内。<br>比较麻烦的点在于拓扑序的建立处理，我在这儿卡了一会。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Read</span><span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;r)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> c;<br>	<span class="hljs-keyword">for</span>(c=<span class="hljs-number">0</span>;c&lt;<span class="hljs-string">&#x27;0&#x27;</span> || c&gt;<span class="hljs-string">&#x27;9&#x27;</span>;c=getchar());<br>	<span class="hljs-keyword">for</span>(r=<span class="hljs-number">0</span>;c&gt;=<span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; c&lt;=<span class="hljs-string">&#x27;9&#x27;</span>;c=getchar())r=r*<span class="hljs-number">10</span>+(c^<span class="hljs-string">&#x27;0&#x27;</span>);<br>&#125;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ss</span></span><br><span class="hljs-class">&#123;</span><br>	<span class="hljs-keyword">int</span> id,num;<br>&#125;b[<span class="hljs-number">1100000</span>];<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">s1</span></span><br><span class="hljs-class">&#123;</span><br>	<span class="hljs-keyword">int</span> x,y,next;<br>&#125;e[<span class="hljs-number">2100000</span>];<br><span class="hljs-keyword">int</span> n,k;<br><span class="hljs-keyword">int</span> Stack[<span class="hljs-number">1100000</span>],Link[<span class="hljs-number">1100000</span>],jkl=<span class="hljs-number">0</span>;<br><span class="hljs-keyword">int</span> Q[<span class="hljs-number">1100000</span>],l=<span class="hljs-number">0</span>,r=<span class="hljs-number">0</span>,vis[<span class="hljs-number">1100000</span>],dis[<span class="hljs-number">1100000</span>],N;<br><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">mycmp</span><span class="hljs-params">(ss a1,ss a2)</span></span>&#123;<span class="hljs-keyword">return</span> a1.id&lt;a2.id;&#125;<br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span> xx,<span class="hljs-keyword">int</span> yy)</span></span><br><span class="hljs-function"></span>&#123;<br>	vis[yy]++;<br>	e[++jkl].next=Link[xx];<br>	e[jkl].x=xx;<br>	e[jkl].y=yy;<br>	Link[xx]=jkl;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-comment">//freopen(&quot;a.out&quot;,&quot;w&quot;,stdout);</span><br>	Read(n),Read(k);<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=k;i++)Read(b[i].id),Read(b[i].num);<br>	sort(b+<span class="hljs-number">1</span>,b+k+<span class="hljs-number">1</span>,mycmp);<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=k;i++)<br>	&#123;<br>		<span class="hljs-keyword">if</span>(b[i].id&lt;b[i].num)&#123;<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-number">-1</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br>		<span class="hljs-keyword">if</span>(b[i].id==b[i+<span class="hljs-number">1</span>].id&amp;&amp;b[i].num!=b[i+<span class="hljs-number">1</span>].num&amp;&amp;i!=k)&#123;<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-number">-1</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br>		<span class="hljs-keyword">if</span>(b[i+<span class="hljs-number">1</span>].id-b[i].id&lt;b[i+<span class="hljs-number">1</span>].num-b[i].num&amp;&amp;i!=k)&#123;<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-number">-1</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>,j=<span class="hljs-number">1</span>,flag=<span class="hljs-number">0</span>;i&lt;=n;i++)<br>	&#123;<br>		<span class="hljs-keyword">if</span>(i==b[j].id) <br>		&#123;<br>			<span class="hljs-comment">//cout&lt;&lt;Stack[0]&lt;&lt;&#x27; &#x27;&lt;&lt;b[j].num&lt;&lt;endl;</span><br>			flag=<span class="hljs-number">0</span>;<br>			<span class="hljs-keyword">while</span>(Stack[<span class="hljs-number">0</span>]+<span class="hljs-number">1</span>&gt;b[j].num)insert(Stack[Stack[<span class="hljs-number">0</span>]],i),Stack[<span class="hljs-number">0</span>]--;<br>			j++;<br>		&#125;<br>		insert(i,Stack[Stack[<span class="hljs-number">0</span>]]);<br>		Stack[++Stack[<span class="hljs-number">0</span>]]=i;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<span class="hljs-keyword">if</span>(vis[i]==<span class="hljs-number">0</span>)Q[++r]=i;<br>	N=n;<br>	<span class="hljs-keyword">int</span> jkll=<span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">while</span>(l&lt;r)<br>	&#123;<br>		l++;<br>		dis[Q[l]]=N--;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=Link[Q[l]];i;i=e[i].next)<br>		&#123;<br>			vis[e[i].y]--;<br>			<span class="hljs-keyword">if</span>(!vis[e[i].y])Q[++r]=e[i].y;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d &quot;</span>,dis[i]);<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-built_in">endl</span>;<br>	<span class="hljs-comment">/*for(int i=1;i&lt;=n;i++)</span><br><span class="hljs-comment">	&#123;</span><br><span class="hljs-comment">		cout&lt;&lt;i&lt;&lt;&#x27;:&#x27;;</span><br><span class="hljs-comment">		for(int j=Link[i];j;j=e[j].next)</span><br><span class="hljs-comment">		&#123;</span><br><span class="hljs-comment">			cout&lt;&lt;e[j].y&lt;&lt;&#x27; &#x27;;</span><br><span class="hljs-comment">		&#125;cout&lt;&lt;endl;</span><br><span class="hljs-comment">	&#125;*/</span><br><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/2021/">2021</a>
+                    
+                      <a class="hover-with-bg" href="/categories/2021/%E6%AF%94%E8%B5%9B/">比赛</a>
+                    
+                      <a class="hover-with-bg" href="/categories/2021/%E6%AF%94%E8%B5%9B/%E6%9A%91%E6%9C%9F%E7%89%9B%E5%AE%A2%E9%AB%98%E6%A0%A1%E8%AE%AD%E7%BB%83%E8%B5%9B/">暑期牛客高校训练赛</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%89%9B%E5%AE%A2/">牛客</a>
+                    
+                      <a class="hover-with-bg" href="/tags/icpc/">icpc</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

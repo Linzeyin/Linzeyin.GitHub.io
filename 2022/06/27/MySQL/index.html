@@ -1,0 +1,693 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="我的第一个项目">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>标签画像项目开发记录 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/iusdhgiusdhgisdhanfiwenoi.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="标签画像项目开发记录">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-06-27 19:54" pubdate>
+        2022年6月27日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      21
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">标签画像项目开发记录</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2022年8月14日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>现在是7/17/2022，实际上是这个项目已经接近完成了，目前就剩下导师们的评审了。<br>我的项目主体是由c++的后端部分以及python的前端部分，c++的部分打包成来exe供python进行使用，之间的交互以及数据的暂存均通过文件方式。<br>c++的后端部分主要是写具体的业务逻辑，由于中途需求改动了一次，导致部分业务逻辑并没有用上，不过在本文中回阐明所有的逻辑<br>python的前端部分经历了三次主要改动，第一次是初学tkinter时搭建的简易框架，由于需要美化在csdn上找到了前人写的exbutton相关的以及ttk相关的内容，这是第二次对整体页面框架的修改。由于exbutton部分前人断更了，但是离需求需要的美化还有着不小的距离，因此在搜索进一步美化的时候找到并学习了ttkbootstrap，第三次修改主要的是页面上的具体内容。<br>单人，从mysql开始学习然后到项目结束大概是三周的时间，中间由于休息，考试，培训的时间除外（也除外mysql的学习时间的话），单论从设计到项目实施，实际的打代码时间（包括后续的一次需求变动），大概实际所用时间是是十一二天左右（3天设计，两天半后端，半天到一天后端测试，四五天前端）<br>c++部分大约是近1.4k行的代码,python的话大概是有2.3k左右行的代码，大概是课程作业量级的项目？<br>学习了很多的东西，比如项目需求的分析，项目框架以及具体的设计，mysql的初步学习使用，以及python的一大堆相关的库，等等。</p>
+<p>大概就是这样，接下来就是项目的具体情况</p>
+<h2 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h2><h3 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h3><p>基于用户数据进行数据分析，需求分析，功能设计，数据库设计，代码开发，实现用户标签和画像系统。</p>
+<h3 id="项目要求"><a href="#项目要求" class="headerlink" title="项目要求"></a>项目要求</h3><p>考虑角色分工以及项目工作量，建议以团队协作模式开展，建议3~6人协作完成，充分体验项目分工和项目协作。<del>确实，感觉想要实现多种功能的话还是人多一点好，起码来一个人帮忙写前端就能多一半开发时间取做额外修饰</del><br>按照需求分析、设计、编码和联调、运行等过程展开项目。<br>实现用户标签和画像功能，要求满足以下功能：<br>1) 标签<br>    a) 支持分多层设计，不少于 2 层；<br>    b) 支持自定义标签阈值，调整阈值后，能重新生成标签；<br>    c) 标签总数，不少于 10 个。</p>
+<p>2) 画像支持 2 类：<br>    a) 单客户画像，不少于 10 个字段，不少于 3 个标签；<br>    b) 客户群体画像，不少于 3 个图表（或数据指标）。</p>
+<h3 id="技术要求"><a href="#技术要求" class="headerlink" title="技术要求"></a>技术要求</h3><p>1) 使用 Java 语言进行程序设计和开发；<del>坏了，我用的是c++和py</del><br>2) 使用 MySQL 数据库；<br>3) 前端实现技术，依据自身的掌握能力选择。如果能够实现前端页面展示，适当加分。</p>
+<p>项目介绍大致就是这样，提供有30W条数据进行查询。</p>
+<h2 id="程序设计框架图"><a href="#程序设计框架图" class="headerlink" title="程序设计框架图"></a>程序设计框架图</h2><p><img src="/img/postpictures/vhuisdvhuifbisdncoijeidoiehhufo.jpg" srcset="/img/loading.gif" alt="项目主体架构"><br><img src="/img/postpictures/fddfgfgjuykiulfykufhntr.png" srcset="/img/loading.gif" alt="业务逻辑层"><br><img src="/img/postpictures/sdvsbgtryjukijhgfdefrgthy.png" srcset="/img/loading.gif" alt="数据交换层"><br><img src="/img/postpictures/xngfgdfhsrthnjghmk.png" srcset="/img/loading.gif" alt="细碎模块部分"></p>
+<p>这几个模块设计也是第二版的，由于中途需求改动，改动了一些模块的实现方式，可能会有一些细节没有更新到，导致最终程序可能和本项目规划图可能有一些细微差别。</p>
+<h2 id="c-后端部分"><a href="#c-后端部分" class="headerlink" title="c++后端部分"></a>c++后端部分</h2><p><img src="/img/postpictures/dfsgtrshyrdjhsryghtrsyhgr.png" srcset="/img/loading.gif" alt="c++模块的主要文件结构"></p>
+<p>c++模块实际上没什么好说的，就是 把设计框架呢堆东西使用程序语言实现即可，小项目，逻辑简单，也没什么卡住的地方。唯一卡的地方可能就是前期设计时思考的不全面的问题导致中期开发时得额外加东西，比如信息流部分实际上是在写代码时才逐渐完善的，这样子搞在团队协作时可能会造成一定的冲突，因此还是主要在前期规划时要规划好。<br>大概是每完成一个小模块就测试一下，然后最后也没什么大bug，这是个好习惯。</p>
+<h2 id="python前端部分"><a href="#python前端部分" class="headerlink" title="python前端部分"></a>python前端部分</h2><p>py的部分比较繁杂，最开始确定使用EXbutton实际上是嫖了csdn上<a target="_blank" rel="noopener" href="https://blog.csdn.net/RCHT1_Hideonbush/article/details/119520839">这位</a>的框架，觉得蛮不错的就开始学tkinter，（最终实现的效果实际上就能看出这个框架的影子）。<br>python阶段的开发实际上是比较艰难的时刻，因为在学新的东西，并且py本来就不怎么适合写界面（本来是想学QT的但是被pass了<del>寄</del>）。因此写的比较混乱并且也没怎么好好规划（字体，ico，其他图片都放在一个文件夹里）。<br>所用到的库有：</p>
+<pre><code>PIL
+random
+pathlib
+os
+tkinter
+ttkbootstrap
+mysql
+matplotlib
+wordcloud
+jieba
+imageio
+</code></pre><p>可能还会有些边边角角的没有统计上，具体的可以在我的源码里看。</p>
+<h3 id="项目结果"><a href="#项目结果" class="headerlink" title="项目结果"></a>项目结果</h3><p>我将c++后端的部分编译成了可执行文件供python调用<br>直接点击main.py即可打开主界面<br><img src="/img/postpictures/adsfdsgdhjyjytdjyg.png" srcset="/img/loading.gif" alt="主界面"><br>主界面就链接了整个数据库，可以直接查询数据库中的信息<br><img src="/img/postpictures/sdgrfjukiuylhfdgh.png" srcset="/img/loading.gif" alt="主界面查询"><br>当然，也支持多种方式查询，比如范围查询，时间日期类型数据查询等。<br><img src="/img/postpictures/dsafghtmjuyfrehgragw.png" srcset="/img/loading.gif" alt="多种方式查询"><br>标签选择界面，一共是三个大标签类，每个标签类下有数个小标签类，每一个小标签类都有多个选项，可多选，使用标签选取数据的原则是：各个 小标签类里选择的并集 的交集部分<br><img src="/img/postpictures/safrshgtrjyghkyfufkerg.png" srcset="/img/loading.gif" alt="比如这些数据就是来源地为（内蒙古或台湾或山东）同时用户等级为（VIP用户或普通用户或粉丝），用户年龄在（青年用户或中年用户）这一阶段的人。"><br>以上标签中的标签具体值是可以修改的，比如说少年标签设定的是0~18岁，我现在想要修改他的值为0~22岁。需要进入标签修改页面<br><img src="/img/postpictures/sdgfdhyjuylokdytusrtywer.png" srcset="/img/loading.gif" alt="标签值修改页面"><br><img src="/img/postpictures/sdgfdhgtjykuyfrg.png" srcset="/img/loading.gif" alt="具体值输入框"><br><img src="/img/postpictures/dfagtrhjytjerwtgefefew.png" srcset="/img/loading.gif" alt="修改成功提示"><br>在右边小框内显示的用户编号双击后可以来道用户画像构建页面并自动建立用户画像<br>用词云图的方式呈现。<br><img src="/img/postpictures/safsdhtujyifywertewtfercvtuyrt.png" srcset="/img/loading.gif" alt="词云图，我其实想尽力构建一个人像的形式，但是做的效果可能还是不太星（"><br>群体画像的话主要是选取了一些标签用图表的方式表现了出来<br>其中一些图表如下<br><img src="/img/postpictures/adfdhygkufdwetrwwrqer.png" srcset="/img/loading.gif" alt="用户种类"><br><img src="/img/postpictures/asfjytiwetreyhtrhwyjnnbvw.png" srcset="/img/loading.gif" alt="用户来源"><br>点击具体标签会在旁边一栏显示该标签所属人群<br>（他这数据好平均啊）</p>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><h3 id="改进点"><a href="#改进点" class="headerlink" title="改进点"></a>改进点</h3><p>首先是词云图，应该是可以使用算法来使得构建更加智能<br>或者是完善构建方式，添加补全未知信息预测的功能<br>（对于不全的信息目前只是提示无法构建词云图，理想状态下应该是用一些分类模型来能根据原本的数据来预测的。）<br>还有就是图表的效果，由于tkinter并没有现成的图表样式，因此是自己用矩阵三角等形状元素构建的图表库，目前是只实现了样式，并没有相应的交互，理想状态应该是鼠标晃到上去可以显示相应的信息，一些逻辑处理以及显示信息的位置还做起来比较麻烦，因此目前还没有实现。</p>
+<p>还有的是效率问题，目前每次调用数据均需要从数据库中读入，总信息量300w条，假如选取的标签所涉及的数据过多会产生较严重的延时问题。修改代码的时候也是找了一些解决方法但是用处不大。当然，也有可能是我刚学mysql，不是很熟悉其中的优化。<br>问了一下，实际工程中一般都会将数据直接预读入到内存里，数据量加大时一半加内存就行了，我应该是用不了这种方法了。</p>
+<h3 id="学习到的东西"><a href="#学习到的东西" class="headerlink" title="学习到的东西"></a>学习到的东西</h3><p>项目开发经验，自学能力<br>完整的项目周期：做需求分析-构建xml图、类图、思维导图-程序代码实现-测试-交付<br>瀑布式开发流程-敏捷式开发流程<br>开发的具体知识：mysql python GUI工具 c++面向对象开发 一些语法糖<br>大概就是这样</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%B7%A5%E7%A8%8B/">工程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/MySQL/">MySQL</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%A0%87%E7%AD%BE%E7%94%BB%E5%83%8F/">标签画像</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%A1%B9%E7%9B%AE%E5%B7%A5%E7%A8%8B/">项目工程</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/02/26/2023%E5%A4%A7%E4%B8%89%E4%B8%8B%20Plan/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2023大三下 Plan</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/06/27/2022%E6%9A%91%E6%9C%9F%20Plan/">
+                        <span class="hidden-mobile">2022暑期 Plan</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>

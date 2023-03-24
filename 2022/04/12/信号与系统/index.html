@@ -1,0 +1,701 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  
+
+  <link rel="stylesheet" href="https://api.beixibaobao.com/css/bilibili-player/bofangqi.css">
+ 
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="讲述了信号的基本概念、基本理论和基本分析方法，利用这些经典理论分析、解释和计算信号、系统及其相互之间约束关系的问题">
+  
+  <meta name="author" content="emmm. . .Lzy?">
+  <meta name="keywords" content="">
+  
+  <title>信号与系统 - Lin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont_train/iconfont.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+<!--彩带1.点击自动替换彩带-->
+  
+    <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon.js"></script>
+  
+
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Lin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                文章
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://linzeyin.github.io/2021/03/05/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E5%8E%86%E7%A8%8B(%E8%AE%B0%E5%BD%95%E5%90%91)/">
+                    <i class="iconfont icon-note"></i>
+                    博客日志
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/album/">
+                <i class="iconfont icon-images"></i>
+                相册
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="https://travellings.link">
+                <i class="iconfont icon-train"></i>
+                开往
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/update/">
+                <i class="iconfont icon-exp-fill"></i>
+                施工
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/sdajhfbvdshjbkmzXsfsdkfnbjksnc.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="信号与系统">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-04-12 14:54" pubdate>
+        2022年4月12日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">信号与系统</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2022年5月14日 下午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <pre><code>难啊
+</code></pre><h3 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h3><p>信号可以表示为时间的一个函数或序列，该函数图像就被称为信号的波形<br>一些信号的特性可能不能用函数来描述，但是可以有具体波形<br>信号分为以下的种类：</p>
+<h4 id="连续信号和离散信号"><a href="#连续信号和离散信号" class="headerlink" title="连续信号和离散信号"></a>连续信号和离散信号</h4><p><strong>连续时间信号是在连续时间范围内有定义的信号，这里的连续指的是定义域的连续（所以连续信号可以含有不连续点），值域可以是连续的也可以是非连续的。</strong><br><strong>离散信号是仅在一些离散的瞬间才有定义的信号（离散信号无连续定义域）。</strong><br>这本书新学的一个重点的时间信号是：<script type="math/tex">\epsilon (k)= \begin{cases} 0,k<0 \\\\ 1,k\geq 0\end{cases}</script> ,他的名字为单位阶跃函数，其值域只有0，1两个数值。<br>目前定义有三种，主要区分点在于自变量为0时函数值不相同（<strong>一种是0点没有定义，一种是0点为1/2，一种就是我书写的这种，0点为1，我使用的教材为吴大正的信号与系统第五版，这是这本书上的定义。</strong>）<br>单位阶跃函数的导数为冲击函数：<script type="math/tex">\delta (t)= \begin{cases} \int^{\infty}_{-\infty}\delta (t)dt=1 \\\\ \delta (t)=0,t\neq 0 \end{cases}</script><br>冲击函数只在0点有非0值并趋近于正无穷。（可以想象一个限定面积为1的矩形信号以y轴为对称轴，不断将其拉高使得其高度趋近于正无穷宽度趋近于0）</p>
+<h4 id="周期信号和非周期信号"><a href="#周期信号和非周期信号" class="headerlink" title="周期信号和非周期信号"></a>周期信号和非周期信号</h4><p><strong>周期信号是定义在<script type="math/tex">(-\infty ,\infty)</script>区间，每隔一定时间T或整数N（离散信号），按相同规律重复变化的信号。</strong><br><strong>不具有周期性的信号被称为非周期信号（T或者N趋近于无穷）</strong></p>
+<h4 id="能量信号与功率信号"><a href="#能量信号与功率信号" class="headerlink" title="能量信号与功率信号"></a>能量信号与功率信号</h4><p>若信号f(t)的能量有界，则称其为能量有限信号，简称为能量信号。弱信号f(t)的功率有界，则称其为功率有限信号，简称为功率信号。仅在有限时间区间不为零的信号为能量信号，因为这些信号的平均功率为0，因此只能从能量的角度去考察，直流信号，周期信号阶跃信号这些都是功率信号，他们的能量为无限，只能从功率的角度去考察。<strong>一个信号不可能既是能量信号又是功率信号</strong><br>对于连续信号是积分，离散信号是求和。<br><img src="/img/postpictures/sdagtrhrtjhtygjngfdbdsgfewf.png" srcset="/img/loading.gif" alt="大概是这样"></p>
+<h4 id="关于冲激函数的重要性质"><a href="#关于冲激函数的重要性质" class="headerlink" title="关于冲激函数的重要性质"></a>关于冲激函数的重要性质</h4><p>冲激信号的广义函数定义：<script type="math/tex">\int^{\infty}_{-\infty}\delta(t)\varphi(t)dt=\varphi(0)</script><br>由此可得:  <script type="math/tex">\int^{\infty}_{-\infty}\delta(t-t_0)\varphi(t)dt=\varphi(t_0)</script><br>由这两个式子可以推出冲激函数的取样性： <script type="math/tex">\int^{t_2}_{t_1} f(t)\delta(t-t_0)dt= \begin{cases} f(t_0),t_0\in [t_1,t_2] \\\\ 0,t_0 \notin [t_1,t_2]\end{cases}</script><br>单位冲击函数为偶函数，<br>单位冲激信号的尺度变化:<script type="math/tex">在a\neq 0 时,\delta(at)=\frac{1}{|a|}\delta(t),\delta(at-t_0)=\frac{1}{|a|}\delta(t-\frac{t_0}{a}),\int^{\infty}_{-\infty}\delta(at-t_0)f(t)dt=\frac{1}{|a|}f(\frac{t_0}{a})</script><br>单位冲激信号与普通函数相乘:<script type="math/tex">f(t)\delta(t)=f(0)\delta(t),f(t)\delta(t-t_0)=f(0)\delta(t-t_0)</script><br>单位冲激信号的导数称作为冲击偶信号，冲击偶信号为奇函数。<br>冲击偶信号与普通信号相乘：<script type="math/tex">f(t)\delta'(t)=f(0)\delta'(t)-f'(0)\delta(t),f(t)\delta'(t-t_0)=f(0)\delta'(t-t_0)-f'(0)\delta(t-t_0)</script><br>冲击偶信号的尺度变换特性：<script type="math/tex">在a\neq 0 时,\delta'(at)=\frac{1}{a|a|}\delta'(t)</script></p>
+<h3 id="关于系统"><a href="#关于系统" class="headerlink" title="关于系统"></a>关于系统</h3><p>信号的产生、传输和处理需要一定的物理装置，这样的物理装置常称为系统。一般而言，系统(System)是指若干相互关联的事物组合而成具有特定功能的整体。系统的基本作用是对信号进行传输和处理.<br>系统分类有很多，在此一一说明：</p>
+<h4 id="连续系统，离散系统，混合系统"><a href="#连续系统，离散系统，混合系统" class="headerlink" title="连续系统，离散系统，混合系统"></a>连续系统，离散系统，混合系统</h4><p>连续(时间)系统：系统的激励和响应均为连续信号。<br>离散(时间)系统：系统的激励和响应均为离散信号。<br>混合系统(Hybrid Systems):系统的激励和响应一个是连续信号，一个为离散信号。如A/D，D/A变换器。</p>
+<h4 id="动态系统与即时系统"><a href="#动态系统与即时系统" class="headerlink" title="动态系统与即时系统"></a>动态系统与即时系统</h4><p>动态系统也称为记忆系统，若系统在任一时刻的响应不仅与该时刻的激励有关，而且与它过去的历史状况有关，则称为动态系统 (Dynamic system)或记忆系统。否则称即时系统(Memoryless system)。    </p>
+<h4 id="单输入单输出系统与多输入多输出系统"><a href="#单输入单输出系统与多输入多输出系统" class="headerlink" title="单输入单输出系统与多输入多输出系统"></a>单输入单输出系统与多输入多输出系统</h4><p>单输入单输出(SISO/single input single output)系统：系统的输入、输出信号都只有一个。<br>多输入多输出(MIMO/multi-input multi-output)系统：系统的输入、输出信号有多个。<br>注意：多个输入输出指的并不是多维输入输出的情况。</p>
+<h4 id="线性系统与非线性系统"><a href="#线性系统与非线性系统" class="headerlink" title="线性系统与非线性系统"></a>线性系统与非线性系统</h4><p>线性系统：指满足线性性质（齐次性和可加性）的系统。<br>齐次性：f(·) →y(·) 可推出 af(·) →ay(·)<br>可加性：f1(·) →y1(·)，f2(·) →y2(·) 可推出 f1(·) +f2(·) →y1(·)+y2(·)<br>*所以线性性质可以这么写：af1(·) +bf2(·) →ay1(·)+by2(·)<br>动态系统是线性系统的条件：动态系统不仅与激励有关，也与系统的初始状态有关，初始状态也可以叫做“内部激励”。满足动态系统输出可分为零输入响应的输出以及零状态响应的和（可分解性），以及零输入响应与零状态响应均为线性时为线性系统。<br>反之则是非线性系统</p>
+<h4 id="因果系统与非因果系统"><a href="#因果系统与非因果系统" class="headerlink" title="因果系统与非因果系统"></a>因果系统与非因果系统</h4><p>因果系统：指零状态响应不会出现在激励之前的系统。<br>比较迷的玩意，一半都是因果的。一般是没什么东西是在激励之前就出响应的。</p>
+<h4 id="时不变系统与时变系统"><a href="#时不变系统与时变系统" class="headerlink" title="时不变系统与时变系统"></a>时不变系统与时变系统</h4><p>时不变系统：指满足时不变性质(<script type="math/tex">f(t)\to y_{zs}(t)\Rightarrow f(t-t_0)\to y_{zs}(t-t_0)</script>)的系统。时变系统反之。</p>
+<p>这门课程主要学习LTI系统，即线性时不变系统。</p>
+<h3 id="LTI系统分析"><a href="#LTI系统分析" class="headerlink" title="LTI系统分析"></a>LTI系统分析</h3><p>LTI连续系统的时域分析，主要是建立并求解线性微分方程，这种方法也可以称为时域分析法。比较直观，物理概念清楚，是学习各种变换域分析法的基础。 </p>
+<h4 id="用微分方程来分析LTI系统"><a href="#用微分方程来分析LTI系统" class="headerlink" title="用微分方程来分析LTI系统"></a>用微分方程来分析LTI系统</h4><p>我们可以把一个线性系统转化为微分方程的形式，方式如下：<br><img src="/img/postpictures/sudighudfintjijdcoixzjiocxjiwkjhfgh.png" srcset="/img/loading.gif" alt="根据系统框图描述建立微分方程"><br>关于解微分方程的具体方法就很老生常谈了。<br><img src="/img/postpictures/dsgfdgdfklhviosdjhfiosdmkforehjiohoj.png" srcset="/img/loading.gif" alt="通过一般解和特解的方式求得"></p>
+<p><strong>初始状态</strong>：<script type="math/tex">y(0-),y'(0-)...,y^{(n-1)}(0-)</script>反映历史信息，与激励⽆关，⼀般为已知。<br><strong>初始条件</strong>：<script type="math/tex">y(0+),y'(0+)...,y^{(n-1)}(0+)</script> 由初始状态和外加激励共同决定。<br>因为<strong>激励</strong>的加⼊，从<script type="math/tex">y^{(j)}(0-) 过渡⾄ y^{(j)}(0+)</script>时可能会产⽣跳变，即初始条件=初始状态+跳变量。<br>可以用冲击平衡法从初始状态来求初始条件：根据⽅程两边所含有的冲激函数及其各阶导数相同来判断是否跳变。</p>
+<p>也可以分别求零输入响应以及零状态响应的方法来求得<br><img src="/img/postpictures/dsgfdhytjfgdhbfdhrtjhytjkygfhbfdg.png" srcset="/img/loading.gif" alt="通过分别求零输入响应以及零状态响应的方法来求得"></p>
+<h4 id="冲激响应与阶跃响应"><a href="#冲激响应与阶跃响应" class="headerlink" title="冲激响应与阶跃响应"></a>冲激响应与阶跃响应</h4><p>激励<script type="math/tex">e(t)=\delta(t)</script>时， 系统的零状态响应称为单位冲激响应，简称冲激响应，常⽤“<script type="math/tex">h(t)</script>”表<br>示。冲激响应<script type="math/tex">h(t)</script>反映系统特性，是后续分析涉及到的重要概念之⼀。 <script type="math/tex">e(t)=\delta(t)</script> 时⽅程右端为 及其各阶导数的线性组合，<script type="math/tex">t>0</script>时⽅程右端恒为零，故冲激响应的形式与⻬次解的形式相同。<br><img src="/img/postpictures/sadgfdfhgfdiuobvhsdiouvhncoi.png" srcset="/img/loading.gif" alt=""><br>阶跃响应顾名思义就和冲击响应差不多，就是激励项变为了阶跃函数。求法和冲激响应的差不多，并且由于冲击函数通过积分可以得到阶跃函数以及LTI为线性时不变的，所以阶跃响应也可以通过冲激响应积分得到。</p>
+<h4 id="卷积计算"><a href="#卷积计算" class="headerlink" title="卷积计算"></a>卷积计算</h4><p>定义两个函数 <script type="math/tex">f_1(t),f_2(t)</script> 的卷积为 <script type="math/tex">f_1(t)*f_2(t)=\int^{\infty}_{-\infty}f_1(\tau)f_2(t-\tau)d\tau</script>,其中 <script type="math/tex">\tau</script> 为虚设的积分变量，积分结果仍为t的时间信号。<br>运算时通过被卷积信号的类型确定积分上下限，从而简化积分运算。<br>也可以图解法求解：</p>
+<blockquote>
+<p>步骤⼀： <script type="math/tex">f_1(t)</script>与 <script type="math/tex">f_2(t)</script>变量置换，t变为 <script type="math/tex">\tau</script>，并将 <script type="math/tex">f_2(\tau)</script>以纵坐标为轴反折后的 <script type="math/tex">f_2(-\tau)</script>与 <script type="math/tex">f_1(\tau)</script>画在同⼀个坐标图中（横坐标为 <script type="math/tex">\tau</script>轴）。<br>步骤⼆：给定⼀个<script type="math/tex">t</script>值，将 <script type="math/tex">f_2(-\tau)</script>的波形沿 <script type="math/tex">\tau</script>轴平移，平移量为<script type="math/tex">|t|</script>，平移后的信号为 <script type="math/tex">f_2(t-\tau)</script> , <script type="math/tex">t>0</script> 时 <script type="math/tex">f_2(-\tau)</script>向右平移， <script type="math/tex">t\le 0</script>时<script type="math/tex">f_2(-\tau)</script>向左平移。<br>步骤三：将 <script type="math/tex">f_1(\tau)</script>与 <script type="math/tex">f_2(t-\tau)</script>相乘的到卷积积分的被积函数 <script type="math/tex">f_1(\tau)f_2(t-\tau)</script>。<br>步骤四：若 <script type="math/tex">f_1(\tau)</script>波形与 <script type="math/tex">f_2(t-\tau)</script>波形有重叠，则两信号的卷积积分为 <script type="math/tex">f_1(\tau)f_2(t-\tau)</script>在重叠区间的积分，若两信号的波形⽆重叠部分，则 <script type="math/tex">f_1(\tau)f_2(t-\tau)=0</script>，卷积也为零。<br>步骤五：令变量 <script type="math/tex">t</script>在 <script type="math/tex">( -\infty,\infty )</script>内变化，重复步骤2,3,4，最终得到卷积信号<script type="math/tex">f_1(t)*f_2(t)</script>。</p>
+</blockquote>
+<p>卷积积分的运算性质：<img src="/img/postpictures/sdgdfhngfmjhgjmhglkiyhgliug.png" srcset="/img/loading.gif" alt=""><br>顺便再说一下用matlab里的conv函数来做两函数卷积图像的代码：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">t</span>=-<span class="hljs-number">3</span>:<span class="hljs-number">0</span>.<span class="hljs-number">001</span>:<span class="hljs-number">3</span>;<br><span class="hljs-attribute">t1</span> = -<span class="hljs-number">3</span> :<span class="hljs-number">0</span>.<span class="hljs-number">0005</span>:<span class="hljs-number">3</span>;<br><span class="hljs-attribute">y1</span> = stepfun(t,<span class="hljs-number">0</span>);<br><span class="hljs-attribute">y2</span> = stepfun(t,-<span class="hljs-number">1</span>) - stepfun(t,<span class="hljs-number">1</span>);<br><span class="hljs-attribute">y3</span> = t<span class="hljs-number">1</span>.* stepfun(t<span class="hljs-number">1</span>,<span class="hljs-number">0</span>);<br><span class="hljs-attribute">y</span> = conv(y<span class="hljs-number">1</span>,y<span class="hljs-number">1</span>);<br><span class="hljs-attribute">l1</span> = length(y<span class="hljs-number">1</span>);   <br><span class="hljs-attribute">l2</span> = length(y<span class="hljs-number">2</span>);  <br><span class="hljs-attribute">l</span> = length(y);<br><span class="hljs-attribute">fprintf</span>(&#x27;%d&#x27;,l);<br><span class="hljs-attribute">subplot</span>(<span class="hljs-number">4</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>);<br><span class="hljs-attribute">plot</span>(t, y<span class="hljs-number">1</span>);<br><span class="hljs-attribute">subplot</span>(<span class="hljs-number">4</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);<br><span class="hljs-attribute">plot</span>(t, y<span class="hljs-number">1</span>);<br><span class="hljs-attribute">subplot</span>(<span class="hljs-number">4</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>);<br><span class="hljs-attribute">plot</span>(t<span class="hljs-number">1</span>, y);<br><span class="hljs-attribute">subplot</span>(<span class="hljs-number">4</span>,<span class="hljs-number">1</span>,<span class="hljs-number">4</span>);<br><span class="hljs-attribute">plot</span>(t<span class="hljs-number">1</span>, y<span class="hljs-number">3</span>);<br></code></pre></td></tr></table></figure><br>这样子写法会产生一个问题就是，在函数边缘区域的卷积结果会由于定义域的问题产生不对的结果，如图所示：<br><img src="/img/postpictures/asdfsdchuihaxsyigycisbaucinidschiuhiu.png" srcset="/img/loading.gif" alt="最下方为实际卷积函数，第三个是conv的结果"><br>可以看出，图像只在定义域一半的区间是符合实际的，这点注意。</p>
+<h3 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h3><p>傅里叶变换是一种将信号从时域变为频域的方法，频域里函数有一些优于时域函数的性质，用频域来解析函数可以揭示了信号内在的频率特性以及信号时间特性与其频率特性之间的密切关系，从而导出了信号的频谱带宽以及滤波、调制等重要概念</p>
+<h4 id="正交函数集"><a href="#正交函数集" class="headerlink" title="正交函数集"></a>正交函数集</h4><p>学习傅里叶变换，首先要学习正交函数集的概念。<br><strong><em>函数正交的定义是</em></strong>：定义在<script type="math/tex">(t_1，t_2)</script>区间的 <script type="math/tex">\phi 1(t)</script> 和 <script type="math/tex">\phi 2(t)</script> 满足 <script type="math/tex">\int_{t_1}^{t_2} \phi 1(t) * \phi 2(t) = 0</script>,则称这两个函数在<script type="math/tex">(t_1，t_2)</script>区间内正交。<br><strong><em>正交函数集</em></strong>：若n个函数 <script type="math/tex">\phi_1(t) \phi_2(t) ... \phi_n(t)</script>构成的函数集中，两两在<script type="math/tex">(t_1，t_2)</script>区间之间相互均为正交函数，则称此函数集在<script type="math/tex">(t_1，t_2)</script>区间为正交函数集。<br><strong><em>完备正交函数集</em></strong>：若在一个正交函数集之外<strong>不存在</strong>一个函数 <script type="math/tex">\delta(t)</script> 使得 <script type="math/tex">\int_{t_1}^{t_2} \phi_i(t) * \delta(t) = 0</script>,呢么这个函数集就是完备正交函数集。</p>
+<p>用线性代数的基理论来类比很容易理解这些概念，正交的函数就是两个不同的基，正交函数集就是很多不同的基组成的集合，完备正交函数基就是在当前空间里所有的基组成的集合。在线性代数里基组成了多维的向量，而在傅里叶变换中，我们需要用一个完备正交函数集来组成原函数（将原函数分解为不同集的组合）。<br>正弦函数集 <script type="math/tex">sin(n \Omega t),n=1.2.3...</script>就是一个完备正交函数集。也就是说我们可以用不同频率的正弦函数通过线性加减得到任意（连续可微）函数。<br>插一嘴，有时候可以看到使用cos函数也喊正弦，这么说是可以的，因为在频域中只要是频率相同这两个都能看作同一个变量，只不过是相位的差别。<br>（延申思考一下，一个相位）<br>这也是我们将函数从时域转到频域的方法————正弦函数集两个函数之间的不同只有频率上的不同，不同频率的正弦函数就可以代表原函数在这个频率上的分量。</p>
+<h4 id="傅里叶级数"><a href="#傅里叶级数" class="headerlink" title="傅里叶级数"></a>傅里叶级数</h4><p>简单的描述起来就是：傅里叶级数是函数经过傅里叶变换之后正弦函数集的幅值大小。<br>设原函数为<script type="math/tex">f(t)</script>，傅里叶级数<script type="math/tex">F_n</script>，呢么可以得到：<script type="math/tex">f(t)=\Sigma_{n=-\infty}^{\infty}F_n e^{jn\Omega t}</script>，其中<script type="math/tex">e^{jn\Omega t}</script>就是代表的频率,这是信号频谱的指数表示方法.<br>同时也有三角表示方法，即<script type="math/tex">f(t)=\frac{a_0}{2}+\Sigma_{n=1}^{\infty}a_n cos(n\Omega t) +\Sigma_{n=1}^{\infty}b_n sin(n\Omega t)</script>.或者也可以写成：<script type="math/tex">f(t)=\frac{A_0}{2}+\Sigma_{n=1}^{\infty}A_n cos(n\Omega t +\phi_n)</script>.</p>
+<blockquote>
+<p>关于相位的问题，其实对于相同频率的正弦波信号，最终的相位是唯一的。因为频率相同相位不同的正弦波的叠加无论叠加多少都不会改变它的频率，最终频率的相位可以由<script type="math/tex">a_n,b_n</script>计算得到：<script type="math/tex">\phi_n=-arctan(\frac{b_n}{a_n})</script>.</p>
+</blockquote>
+<p><strong>周期函数展开为傅里叶级数：</strong><br><img src="/img/postpictures/safdsvvvxzcuischuibaigsyxgasuyxn.png" srcset="/img/loading.gif" alt=""></p>
+<div class="note note-success">
+            <p>图片里面直接有傅里叶变换计算的过程，就直接把对傅里叶变换的理解说一下。从图片来看计算傅里叶级数的过程需要乘上<script type="math/tex">e^{-jn\Omega t}</script>然后再积分，这个也可以用基理论来解释，想象一个高维向量,<script type="math/tex">(x,y,z...)</script>,假如我们想得知这个向量在x这个基上的幅度，呢我们可以将这个向量直接乘上<script type="math/tex">(1,0,0,0...)</script>得到的数值就是x基的幅值。虽然不能直接比较，但是道理可以相通，傅里叶变换中的<script type="math/tex">e^{-jn\Omega t}</script>起到的就是<script type="math/tex">(1,0,0,0...)</script>这个向量的作用：筛选出对应频率函数所对应的幅值并且把其他的基的影响变为0（用到了正交函数的性质）。个人理解的大致就是这样。</p>
+          </div>   
+<h4 id="周期信号的频谱"><a href="#周期信号的频谱" class="headerlink" title="周期信号的频谱"></a>周期信号的频谱</h4><p>频谱包括幅度谱以及相位谱，由上面可以知道，一个固定的原函数对于每一个频域的频率来说，其幅度和相位都是一定的。<br>幅度谱可以分为单边幅度谱以及双边幅度谱，单边幅值谱的每个频率所对应的幅值是该频率分量的模(即<script type="math/tex">A_n</script>)，双边幅度谱的每个频率的幅值是单边的一半（0除外），数值为<script type="math/tex">|F_n|</script>，但是双边的在<script type="math/tex">[-\infty,0]</script>也有函数图像，也就是说双边幅度谱的函数是一个关于y轴对称的函数。<br>单边相位谱每一个频率对应的数值为其相位，双边相位谱其中正半轴的图像与单边相位谱的一样，但是负半轴的图像与正半轴的图像刚好相反数，相当于以原点对称。<br><img src="/img/postpictures/dssdhuihxusaibuixniausjicjsiovufsho.png" srcset="/img/loading.gif" alt="大概是这样"><br><strong>频率越大，频谱图的相邻间隔越小。</strong><br>设f(t)傅里叶变换为F(w)，若时域为实偶信号——频域为实偶函数，若时域为实奇信号——频域为纯虚奇函数。相位谱的话，实偶信号相位谱未必恒为零。其对应的频域函数虽为实函数，但是若F（w）恒为正，那相位就是0. 若有正有负，那为负的时候，相位为±π</p>
+<h4 id="非周期信号的傅里叶变换"><a href="#非周期信号的傅里叶变换" class="headerlink" title="非周期信号的傅里叶变换"></a>非周期信号的傅里叶变换</h4><p>非周期信号的周期可以看作是无限大，其频谱的相邻谱线间隔<script type="math/tex">\Omega</script>趋近于无穷小，此时信号的频谱就是连续频谱，同时各频率分量的幅度也趋近于无穷小（仍保持一定比例关系）。因此引入频谱密度的概念：<script type="math/tex">F(j\omega)=lim_{T \to \infty}\frac{F_n}{1/T}=lim_{T \to \infty}F_n T</script></p>
+<div class="note note-success">
+            <p><strong>关于傅里叶变换的过冲现象</strong><br>实际上，我们使用傅里叶变换之后获得的函数在某些地方是“无限”也无法逼近的区域，拿合成方波的来举例，所用的频率越多，合成的波越接近方波，但是在棱角处却有着一定的突起，虽然在一直变小但是一直存在，这个就是过冲现象。像方波这种有突变的波形我们用连续的正弦波是无法完全拟合的，过冲现象随着频域的扩充只会减少但是不会消失，拉格朗日当年也是举了这个例子来反驳傅里叶的成果。<br>不过，拉格朗日是从数学的角度来看待的，但是傅里叶是个物理学家，他提出傅里叶变换就是为了使得在解析分析热过程时更加方便。从使用的角度来看经过傅里叶变换后的波形在能量上与原波形没什么差别（有也是目前测量精度无法计算的程度）。在实际工程使用时可以直接运用，</p>
+          </div>   
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/">大学课程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%A7%E5%AD%A6%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/">大学基础课程</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/">信号与系统</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/06/27/2022%E6%9A%91%E6%9C%9F%20Plan/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2022暑期 Plan</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/04/01/Tensorflow%E5%AD%A6%E4%B9%A0%202/">
+                        <span class="hidden-mobile">Tensorflow学习&深度学习实操(2)</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "J4xBsWcJgxKh3H9CftQAYn80-gzGzoHsz",
+          app_key: "5yzQO665EGlMYIao6dGQ64Ub",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+    
+    <!--点击特效-->
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+  {% include '_third-party/comments/index.swig' %}
+  <script type="text/javascript" src="/js/clicksocialvalue.js"></script>
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+  
+  
+</body>
+</html>
