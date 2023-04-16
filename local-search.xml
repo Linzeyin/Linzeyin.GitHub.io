@@ -63,9 +63,9 @@
       
       <tag>工程</tag>
       
-      <tag>互联网</tag>
-      
       <tag>服务器</tag>
+      
+      <tag>互联网</tag>
       
     </tags>
     
@@ -131,9 +131,9 @@
       
       <tag>工程</tag>
       
-      <tag>互联网</tag>
-      
       <tag>服务器</tag>
+      
+      <tag>互联网</tag>
       
     </tags>
     
@@ -146,7 +146,7 @@
     <link href="/2023/02/26/2023%E5%A4%A7%E4%B8%89%E4%B8%8B%20Plan/"/>
     <url>/2023/02/26/2023%E5%A4%A7%E4%B8%89%E4%B8%8B%20Plan/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这里是<a href="/2022/06/27/2022暑期%20Plan/">2022暑假Plan</a>的后续。<br>大三上的计划被疫情打乱了，原本很多预定的事情都被迫转变方向。<br>原本计划的竞赛没了,准备的工作也渺茫，保研大抵也是寄了，主体中心转换到考研上。<br>这里是<a href="/2023/02/26/2023考研总计划/">考研的大致规划</a>。细节部分会提现到周计划上。<br>文化课相关的计划制定主体在考研科目上了，专业教的科目默认不写了。<br>这学期主要就是硬件的相关竞赛和考研的科目复习，额外自己想干点其他的。</p><table class="table table-bordered table-striped table-condensed">        <tr>            <th width=25%>每周计划更新表</th>            <th width=25%>文化课相关学习</th>            <th width=25%>竞赛相关学习</th>            <th width=37.5%>课外硬件&互联网&课堂知识</th>        </tr>        <tr>            <th rowspan=2>2.27 ~ 3.5            计划 && 完成情况</th>            <th>每日单词，数学开始看。</th>            <th>询问电赛相关知识，决定并指定学习计划。</th>            <th>补完stm32的知识，顺便修修博客。</th>        </tr>        <tr>            <td colspan=4 align=center>每天都在背单词，走了一段时间的弯路，目前定下的方式是每天随机复习30%+过一些基础的已经会的单词（am，is，are这种），数学看了两三章，还是蛮少的因为主要学习的时间都给英语了，接下来可能会在小块时间多看看数学。<br>电赛好像目前没啥人管. . .所以暂且搁置，stm32合并到双创里，根据双创的进度来学习。博客也没来的及修，可能也得到后期开始写双创用户端的时候学一下了。<br>现在是已经决定要开始考研了，一切都要按照计划的来发展。</td>        </tr>        <tr>            <th rowspan=2>3.6 ~ 3.12            计划 && 完成情况</th>            <th>继续背每日单词，6级前做几篇阅读，数学继续看，这个月得过完基础</th>            <th>电赛暂且搁置，目前感觉没啥精力整电赛。</th>            <th>推一波双创的进度，确定好具体内容，完成报告</th>        </tr>        <tr>            <td colspan=4 align=center>每日单词都在背，感觉状态逐渐有了，可能是要六级的原因，最后两天没咋看数学，目前是看完了四讲，感觉得加把进度，要不然这个月不一定能过完高数的，还想再看看线代的。双创的话这两周写写报告，之后就得去学一点相关的技术了。得先熟悉一下linux，先用机房的电脑练练手。</td>        </tr>        <tr>            <th rowspan=2>3.13 ~ 3.19            计划 && 完成情况</th>            <th>继续背每日单词，习惯不能断，数学继需要加快进度，这周需要看7~8讲，这个月得过完基础</th>            <th>电赛还是搁置</th>            <th>学点双创的东西，再学点随机信号处理的东西</th>        </tr>        <tr>            <td colspan=4 align=center>忙，由于通信原理的实验以及双创和机房的事务花了好多时间，导致英语时间和数学时间被挤压的很严重，英语数天没有时间学新的，数学进展缓慢，中值定理内快也是比较考虑思维的所以耗了不少时间，感觉这个月可能过完数学整体可能会有点不太现实，和通信原理实验考研学长聊了聊，感觉时间必须加快，要减少划水时间了，等下周通信原理实验结束需要固定时间来背单词。<br>买了esp8266和串口工具，能正常通信了，需要记录下学习并且用单片机实现通信。<br>先得赶紧把作业赶完，然后抓紧赶数学。大概下一周的任务就是这样。</td>        </tr>        <tr>            <th rowspan=2>3.20 ~ 3.26            计划 && 完成情况</th>            <th>>背每日单词每天晚上到机房四楼背诵，数学快快快，起码得把数学一的高数部分这月看完。</th>            <th>抽空写写esp8266的学习博客</th>            <th>机器学习，通信原理，计算机网络，这些东西的实验报告，以及要和同学沟通一下随机信号处理的要求，需要赶紧完成。</th>        </tr>        <tr>            <td colspan=4 align=center>确实是有在每天背单词，感觉可喜可贺的是已经形成习惯了，之后要开始做考研的英语试题了，不过暂时还没想好怎么分配时间<br>高数可能不太能在这个月完成了，和学长学姐聊了聊，想看的认真点，重新制定了计划，准备在四月底前完成高数和线代，并且需要细致总结，5，6月开始大量刷题看概率论以及学习专业课。7，8之后就重心不在数学上了，就是维持手感。<br>这周主要花了很多时间在服务器和esp8266的学习记录上，写成了博客。等摄像模块到了就得去做单片机的内容了<br>随机信号处理的c++的FFT写法卡着了，还是对信号处理的了解不深刻，需要多向会学的同学请教。            </td>        </tr>        <tr>            <th rowspan=2>3.27 ~ 4.2            计划 && 完成情况</th>            <th>>背每日单词，高数张宇的得看到13讲。</th>            <th>写一下视频传输的代码，以及单片机通信的代码。</th>            <th>通信原理，计算机网络实验报告，学一下随机信号处理的原理</th>        </tr>        <tr>            <td colspan=4 align=center>. . .</td>        </tr>        <tr>            <th >三月总结</th><td colspan=4 align=center><a href="/2022/10/31/2022年暑假总结/" target="_blank">这里是三月总结文章</a></td>        </tr></table><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这里是<a href="/2022/06/27/2022暑期%20Plan/">2022暑假Plan</a>的后续。<br>大三上的计划被疫情打乱了，原本很多预定的事情都被迫转变方向。<br>原本计划的竞赛没了,准备的工作也渺茫，保研大抵也是寄了，主体中心转换到考研上。<br>这里是<a href="/2023/02/26/2023考研总计划/">考研的大致规划</a>。细节部分会提现到周计划上。<br>文化课相关的计划制定主体在考研科目上了，专业教的科目默认不写了。<br>这学期主要就是硬件的相关竞赛和考研的科目复习，额外自己想干点其他的。</p><table class="table table-bordered table-striped table-condensed">        <tr>            <th width=25%>每周计划更新表</th>            <th width=25%>文化课相关学习</th>            <th width=25%>竞赛相关学习</th>            <th width=37.5%>课外硬件&互联网&课堂知识</th>        </tr>        <tr>            <th rowspan=2>2.27 ~ 3.5            计划 && 完成情况</th>            <th>每日单词，数学开始看。</th>            <th>询问电赛相关知识，决定并指定学习计划。</th>            <th>补完stm32的知识，顺便修修博客。</th>        </tr>        <tr>            <td colspan=4 align=center>每天都在背单词，走了一段时间的弯路，目前定下的方式是每天随机复习30%+过一些基础的已经会的单词（am，is，are这种），数学看了两三章，还是蛮少的因为主要学习的时间都给英语了，接下来可能会在小块时间多看看数学。<br>电赛好像目前没啥人管. . .所以暂且搁置，stm32合并到双创里，根据双创的进度来学习。博客也没来的及修，可能也得到后期开始写双创用户端的时候学一下了。<br>现在是已经决定要开始考研了，一切都要按照计划的来发展。</td>        </tr>        <tr>            <th rowspan=2>3.6 ~ 3.12            计划 && 完成情况</th>            <th>继续背每日单词，6级前做几篇阅读，数学继续看，这个月得过完基础</th>            <th>电赛暂且搁置，目前感觉没啥精力整电赛。</th>            <th>推一波双创的进度，确定好具体内容，完成报告</th>        </tr>        <tr>            <td colspan=4 align=center>每日单词都在背，感觉状态逐渐有了，可能是要六级的原因，最后两天没咋看数学，目前是看完了四讲，感觉得加把进度，要不然这个月不一定能过完高数的，还想再看看线代的。双创的话这两周写写报告，之后就得去学一点相关的技术了。得先熟悉一下linux，先用机房的电脑练练手。</td>        </tr>        <tr>            <th rowspan=2>3.13 ~ 3.19            计划 && 完成情况</th>            <th>继续背每日单词，习惯不能断，数学继需要加快进度，这周需要看7~8讲，这个月得过完基础</th>            <th>电赛还是搁置</th>            <th>学点双创的东西，再学点随机信号处理的东西</th>        </tr>        <tr>            <td colspan=4 align=center>忙，由于通信原理的实验以及双创和机房的事务花了好多时间，导致英语时间和数学时间被挤压的很严重，英语数天没有时间学新的，数学进展缓慢，中值定理内快也是比较考虑思维的所以耗了不少时间，感觉这个月可能过完数学整体可能会有点不太现实，和通信原理实验考研学长聊了聊，感觉时间必须加快，要减少划水时间了，等下周通信原理实验结束需要固定时间来背单词。<br>买了esp8266和串口工具，能正常通信了，需要记录下学习并且用单片机实现通信。<br>先得赶紧把作业赶完，然后抓紧赶数学。大概下一周的任务就是这样。</td>        </tr>        <tr>            <th rowspan=2>3.20 ~ 3.26            计划 && 完成情况</th>            <th>>背每日单词每天晚上到机房四楼背诵，数学快快快，起码得把数学一的高数部分这月看完。</th>            <th>抽空写写esp8266的学习博客</th>            <th>机器学习，通信原理，计算机网络，这些东西的实验报告，以及要和同学沟通一下随机信号处理的要求，需要赶紧完成。</th>        </tr>        <tr>            <td colspan=4 align=center>确实是有在每天背单词，感觉可喜可贺的是已经形成习惯了，之后要开始做考研的英语试题了，不过暂时还没想好怎么分配时间<br>高数可能不太能在这个月完成了，和学长学姐聊了聊，想看的认真点，重新制定了计划，准备在四月底前完成高数和线代，并且需要细致总结，5，6月开始大量刷题看概率论以及学习专业课。7，8之后就重心不在数学上了，就是维持手感。<br>这周主要花了很多时间在服务器和esp8266的学习记录上，写成了博客。等摄像模块到了就得去做单片机的内容了<br>随机信号处理的c++的FFT写法卡着了，还是对信号处理的了解不深刻，需要多向会学的同学请教。            </td>        </tr>        <tr>            <th rowspan=2>3.27 ~ 4.2            计划 && 完成情况</th>            <th>>背每日单词，高数张宇的得看到13讲。</th>            <th>写一下视频传输的代码，以及单片机通信的代码。</th>            <th>通信原理，计算机网络实验报告，学一下随机信号处理的原理</th>        </tr>        <tr>            <td colspan=4 align=center>这周大概都是主要在搞双创的网络相关的东西，没怎么能认真学考研相关的东西，英语仍然在每天背，但是感觉状态很难保证，可能需要重新调整一下考研的学习计划，然后是吧重心换一下。双创相关的不能耗费更多心神了，以及要尽量减少交际。</td>        </tr>        <tr>            <th >三月总结</th><td colspan=4 align=center><a href="/2023/04/03/2023年3月份总结/" target="_blank">这里是三月总结文章</a></td>        </tr>        <tr>            <th rowspan=2>4.3 ~ 4.16            计划 && 完成情况</th>            <th></th>            <th></th>            <th></th>        </tr>        <tr>            <td colspan=4 align=center>这两周几乎没怎么往前推数学的进度，主要是猛推了一波双创，硬件，服务器的事务，三分钟热度的特性被我体现的淋漓尽致。<br>发现自己的进度已经开始和其他人拉开差距了，因为改变了计划，计划于下周实施。还有两周，5月前高数必须得推完，英语也得背上，硬件这些可以先放缓。（课能翘就翘吧）</td>        </tr>        <tr>            <th rowspan=2>4.17 ~ 4.23            计划 && 完成情况</th>            <th>每日背单词，粗过完张宇的高数这本书</th>            <th>建立stm32通过esp8266与服务器的通信机制</th>            <th>补完之前剩下的作业</th>        </tr>        <tr>            <td colspan=4 align=center>. . .</td>        </tr>        <tr>            <th rowspan=2>4.24 ~ 4.30            计划 && 完成情况</th>            <th>></th>            <th></th>            <th></th>        </tr>        <tr>            <td colspan=4 align=center>. . .</td>        </tr>        <tr>            <th >四月总结</th><td colspan=4 align=center><a href="" target="_blank">这里是四月总结文章</a></td>        </tr></table><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
     
     
     <categories>
@@ -518,9 +518,9 @@
       
       <tag>数据结构</tag>
       
-      <tag>树状数组</tag>
-      
       <tag>区间问题</tag>
+      
+      <tag>树状数组</tag>
       
     </tags>
     
@@ -1074,9 +1074,9 @@
       
       <tag>DP</tag>
       
-      <tag>区间问题</tag>
-      
       <tag>区间DP</tag>
+      
+      <tag>区间问题</tag>
       
     </tags>
     
@@ -1596,9 +1596,9 @@
     
     <tags>
       
-      <tag>Github</tag>
-      
       <tag>互联网</tag>
+      
+      <tag>Github</tag>
       
     </tags>
     
@@ -1692,6 +1692,31 @@
   
   
   <entry>
+    <title>记于博客初创</title>
+    <link href="/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/"/>
+    <url>/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">其实想这样搭个博客已经很久了，原本预定的是高考完就搭的，<br>但是由于当时的懒癌，以及状态的未能调整，导致咕到现在。<br></code></pre></td></tr></table></figure><p>其实远没有想象中的呢么难(指搭blog)。但是还是一直咕到了现在，这个寒假也是，感觉学了好多东西，但好多都是浅浅一瞥，未能深入进行。大部分的时间还都是浪费了，这样不好。<br>然后我看到<a href="https://xorex.space/">xorex</a>的blog，看到了他的寒假计划，忽然觉得自己的寒假太空虚了，以及确实需要一个东西来记录并鞭策一下自己。</p><p>想想，寒假都干了些什么呢？   </p><blockquote><ul><li>学了一点高数下（只有一点   </li><li>学了py的基础语法，通过外源库写了几个小工具</li><li>学了些OpenGL相关的东西，然后由于配置的是工程环境便学了些工程相关的东西（学的太少了感觉很快就会忘</li><li>学了博弈论，这原本是和两位学长组队时就定的目标，但是当时一知半解，于是寒假进行了比较深入的认知</li><li>dp的进阶，dp这块在高中确实没怎么学过，遇到dp的题一般都是靠直觉，寒假里花了几天看了单调队列优化以及斜率优化等，然后也看了些状压以及数位dp，可能还需要一定量的刷题才能更加牢固</li><li>由于辅导员发了电商模拟赛便花了两天找素材并准备学习做app，然后发现别人都是从去年10月就准备的便放弃了(不过学习了如何把py部署至移动端，可能还算有点收获？)</li><li>和寒假新认识的朋友一起画画，大概是聪2月20号左右开始的吧，每天有大概1h，目前是在练习抓型（用csi来切物体的形体</li></ul><hr><p>啊，大概发现问题了<br>自己学的东西明明<strong>很少</strong>，很多时间都用来划水了(<em>nier二三周目？VA-11 Hall-A？<del>哦对，你写了个记录cyberpunk里不认识的单词的py小工具然后完成后就不再玩了？？</del></em>)，但是由于面比较广(广？)，就造成了一种学的很多的错觉。</p></blockquote><p><strong>实际上你划水划了一寒假啊</strong></p><p><img src="https://s3.ax1x.com/2021/02/27/6SX50s.jpg" alt=""></p><blockquote><p>曾和老裴说过，非常怀念高四的生活，因为呢一段时间有帮助自己的老师们，有一同学习的同学们，有着可以为之而奋斗的目标。</p><p>你在大学里做到了高四的多少呢？</p></blockquote><p>啊，忽然想起来，这是记于博客初创，不是自省帖子。<br>呢么记于blog的开始，希望能在大学期间能有高四的努力(<del>加速卷</del>)。</p><p>毕竟<br><img src="https://s3.ax1x.com/2021/02/27/6SX7t0.png" alt=""></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随笔</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>谈一谈博弈</title>
     <link href="/2021/02/26/%E8%B0%88%E4%B8%80%E8%B0%88%E5%8D%9A%E5%BC%88/"/>
     <url>/2021/02/26/%E8%B0%88%E4%B8%80%E8%B0%88%E5%8D%9A%E5%BC%88/</url>
@@ -1723,36 +1748,11 @@
   
   
   <entry>
-    <title>记于博客初创</title>
-    <link href="/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/"/>
-    <url>/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/</url>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">其实想这样搭个博客已经很久了，原本预定的是高考完就搭的，<br>但是由于当时的懒癌，以及状态的未能调整，导致咕到现在。<br></code></pre></td></tr></table></figure><p>其实远没有想象中的呢么难(指搭blog)。但是还是一直咕到了现在，这个寒假也是，感觉学了好多东西，但好多都是浅浅一瞥，未能深入进行。大部分的时间还都是浪费了，这样不好。<br>然后我看到<a href="https://xorex.space/">xorex</a>的blog，看到了他的寒假计划，忽然觉得自己的寒假太空虚了，以及确实需要一个东西来记录并鞭策一下自己。</p><p>想想，寒假都干了些什么呢？   </p><blockquote><ul><li>学了一点高数下（只有一点   </li><li>学了py的基础语法，通过外源库写了几个小工具</li><li>学了些OpenGL相关的东西，然后由于配置的是工程环境便学了些工程相关的东西（学的太少了感觉很快就会忘</li><li>学了博弈论，这原本是和两位学长组队时就定的目标，但是当时一知半解，于是寒假进行了比较深入的认知</li><li>dp的进阶，dp这块在高中确实没怎么学过，遇到dp的题一般都是靠直觉，寒假里花了几天看了单调队列优化以及斜率优化等，然后也看了些状压以及数位dp，可能还需要一定量的刷题才能更加牢固</li><li>由于辅导员发了电商模拟赛便花了两天找素材并准备学习做app，然后发现别人都是从去年10月就准备的便放弃了(不过学习了如何把py部署至移动端，可能还算有点收获？)</li><li>和寒假新认识的朋友一起画画，大概是聪2月20号左右开始的吧，每天有大概1h，目前是在练习抓型（用csi来切物体的形体</li></ul><hr><p>啊，大概发现问题了<br>自己学的东西明明<strong>很少</strong>，很多时间都用来划水了(<em>nier二三周目？VA-11 Hall-A？<del>哦对，你写了个记录cyberpunk里不认识的单词的py小工具然后完成后就不再玩了？？</del></em>)，但是由于面比较广(广？)，就造成了一种学的很多的错觉。</p></blockquote><p><strong>实际上你划水划了一寒假啊</strong></p><p><img src="https://s3.ax1x.com/2021/02/27/6SX50s.jpg" alt=""></p><blockquote><p>曾和老裴说过，非常怀念高四的生活，因为呢一段时间有帮助自己的老师们，有一同学习的同学们，有着可以为之而奋斗的目标。</p><p>你在大学里做到了高四的多少呢？</p></blockquote><p>啊，忽然想起来，这是记于博客初创，不是自省帖子。<br>呢么记于blog的开始，希望能在大学期间能有高四的努力(<del>加速卷</del>)。</p><p>毕竟<br><img src="https://s3.ax1x.com/2021/02/27/6SX7t0.png" alt=""></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-    
-    
-    <categories>
-      
-      <category>随笔</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>随笔</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>test</title>
     <link href="/2021/01/29/test/"/>
     <url>/2021/01/29/test/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-NCiGMxHf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-NCiGMxHf"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "ノクターンとクラゲ",              author: "まじ娘",              url: "/music/まじ娘 - ノクターンとクラゲ.mp3",              pic: "/img/}$TO9$~}PDH@C[RL4X2GLA4.png",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>        <div id="aplayer-dmuCjeuC" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-dmuCjeuC"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "爱",              author: "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbHpPaENqNWFzY1BnbWtxbmU5anhJUmpQNEE3P2U9cFE3QXNw.mp3",              url: "/img/}$TO9$~}PDH@C[RL4X2GLA4.png",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><h1 id="This-is-the-test"><a href="#This-is-the-test" class="headerlink" title="This is the test"></a>This is the test</h1><h1 id="my-first-blog"><a href="#my-first-blog" class="headerlink" title="my first blog"></a>my first blog</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">代码框部分<br></code></pre></td></tr></table></figure><p><a href="https://www.cnblogs.com/xrblog/p/11585885.html">超链接</a>部分(指向的是帮助我搭好的blog)</p><p><img src="https://s2.ax1x.com/2019/01/21/kPlYAP.jpg" alt="添加的图片，也是感慨" title="千万别！"></p><iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=286901759&bvid=BV1yf4y1Q7db&cid=230911902&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p><a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://linzeyin.github.io/2021/01/29/test/&amp;showcount=1&amp;desc=这是一个测试文件&amp;summary=这是测试文件的分享&amp;title=测试文件的标题&amp;pics=https://s2.ax1x.com/2019/01/21/kPlYAP.jpg&amp;style=203&amp;width=98&amp;height=22">分享测试</a></p><blockquote><p>测试完了，去水去了。<br><del>老懒癌了</del></p></blockquote><p><脚本 src = “ https://utteranc.es/client.js ” repo = “ [在此处输入回车] ” issue-term = “ pathname ”主题= “ github-light ” crossorigin = “匿名”异步> </>    </p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-vihQbNOy" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-vihQbNOy"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "ノクターンとクラゲ",              author: "まじ娘",              url: "/music/まじ娘 - ノクターンとクラゲ.mp3",              pic: "/img/}$TO9$~}PDH@C[RL4X2GLA4.png",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>        <div id="aplayer-gMMcvyvo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-gMMcvyvo"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "爱",              author: "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbHpPaENqNWFzY1BnbWtxbmU5anhJUmpQNEE3P2U9cFE3QXNw.mp3",              url: "/img/}$TO9$~}PDH@C[RL4X2GLA4.png",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><h1 id="This-is-the-test"><a href="#This-is-the-test" class="headerlink" title="This is the test"></a>This is the test</h1><h1 id="my-first-blog"><a href="#my-first-blog" class="headerlink" title="my first blog"></a>my first blog</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">代码框部分<br></code></pre></td></tr></table></figure><p><a href="https://www.cnblogs.com/xrblog/p/11585885.html">超链接</a>部分(指向的是帮助我搭好的blog)</p><p><img src="https://s2.ax1x.com/2019/01/21/kPlYAP.jpg" alt="添加的图片，也是感慨" title="千万别！"></p><iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=286901759&bvid=BV1yf4y1Q7db&cid=230911902&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p><a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://linzeyin.github.io/2021/01/29/test/&amp;showcount=1&amp;desc=这是一个测试文件&amp;summary=这是测试文件的分享&amp;title=测试文件的标题&amp;pics=https://s2.ax1x.com/2019/01/21/kPlYAP.jpg&amp;style=203&amp;width=98&amp;height=22">分享测试</a></p><blockquote><p>测试完了，去水去了。<br><del>老懒癌了</del></p></blockquote><p><脚本 src = “ https://utteranc.es/client.js ” repo = “ [在此处输入回车] ” issue-term = “ pathname ”主题= “ github-light ” crossorigin = “匿名”异步> </>    </p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
     
     
     <categories>
