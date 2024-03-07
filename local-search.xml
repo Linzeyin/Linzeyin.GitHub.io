@@ -59,11 +59,11 @@
     
     <tags>
       
-      <tag>项目工程</tag>
-      
       <tag>工程</tag>
       
       <tag>服务器</tag>
+      
+      <tag>项目工程</tag>
       
       <tag>互联网</tag>
       
@@ -127,40 +127,13 @@
     
     <tags>
       
-      <tag>项目工程</tag>
-      
       <tag>工程</tag>
       
       <tag>服务器</tag>
       
+      <tag>项目工程</tag>
+      
       <tag>互联网</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>2023大三下 Plan</title>
-    <link href="/2023/02/26/2023%E5%A4%A7%E4%B8%89%E4%B8%8B%20Plan/"/>
-    <url>/2023/02/26/2023%E5%A4%A7%E4%B8%89%E4%B8%8B%20Plan/</url>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这里是<a href="/2022/06/27/2022暑期%20Plan/">2022暑假Plan</a>的后续。<br>大三上的计划被疫情打乱了，原本很多预定的事情都被迫转变方向。<br>原本计划的竞赛没了,准备的工作也渺茫，保研大抵也是寄了，主体中心转换到考研上。<br>这里是<a href="/2023/02/26/2023考研总计划/">考研的大致规划</a>。细节部分会提现到周计划上。<br>文化课相关的计划制定主体在考研科目上了，专业教的科目默认不写了。<br>这学期主要就是硬件的相关竞赛和考研的科目复习，额外自己想干点其他的。</p><table class="table table-bordered table-striped table-condensed">        <tr>            <th width=25%>每周计划更新表</th>            <th width=25%>文化课相关学习</th>            <th width=25%>竞赛相关学习</th>            <th width=37.5%>课外硬件&互联网&课堂知识</th>        </tr>        <tr>            <th rowspan=2>2.27 ~ 3.5            计划 && 完成情况</th>            <th>每日单词，数学开始看。</th>            <th>询问电赛相关知识，决定并指定学习计划。</th>            <th>补完stm32的知识，顺便修修博客。</th>        </tr>        <tr>            <td colspan=4 align=center>每天都在背单词，走了一段时间的弯路，目前定下的方式是每天随机复习30%+过一些基础的已经会的单词（am，is，are这种），数学看了两三章，还是蛮少的因为主要学习的时间都给英语了，接下来可能会在小块时间多看看数学。<br>电赛好像目前没啥人管. . .所以暂且搁置，stm32合并到双创里，根据双创的进度来学习。博客也没来的及修，可能也得到后期开始写双创用户端的时候学一下了。<br>现在是已经决定要开始考研了，一切都要按照计划的来发展。</td>        </tr>        <tr>            <th rowspan=2>3.6 ~ 3.12            计划 && 完成情况</th>            <th>继续背每日单词，6级前做几篇阅读，数学继续看，这个月得过完基础</th>            <th>电赛暂且搁置，目前感觉没啥精力整电赛。</th>            <th>推一波双创的进度，确定好具体内容，完成报告</th>        </tr>        <tr>            <td colspan=4 align=center>每日单词都在背，感觉状态逐渐有了，可能是要六级的原因，最后两天没咋看数学，目前是看完了四讲，感觉得加把进度，要不然这个月不一定能过完高数的，还想再看看线代的。双创的话这两周写写报告，之后就得去学一点相关的技术了。得先熟悉一下linux，先用机房的电脑练练手。</td>        </tr>        <tr>            <th rowspan=2>3.13 ~ 3.19            计划 && 完成情况</th>            <th>继续背每日单词，习惯不能断，数学继需要加快进度，这周需要看7~8讲，这个月得过完基础</th>            <th>电赛还是搁置</th>            <th>学点双创的东西，再学点随机信号处理的东西</th>        </tr>        <tr>            <td colspan=4 align=center>忙，由于通信原理的实验以及双创和机房的事务花了好多时间，导致英语时间和数学时间被挤压的很严重，英语数天没有时间学新的，数学进展缓慢，中值定理内快也是比较考虑思维的所以耗了不少时间，感觉这个月可能过完数学整体可能会有点不太现实，和通信原理实验考研学长聊了聊，感觉时间必须加快，要减少划水时间了，等下周通信原理实验结束需要固定时间来背单词。<br>买了esp8266和串口工具，能正常通信了，需要记录下学习并且用单片机实现通信。<br>先得赶紧把作业赶完，然后抓紧赶数学。大概下一周的任务就是这样。</td>        </tr>        <tr>            <th rowspan=2>3.20 ~ 3.26            计划 && 完成情况</th>            <th>>背每日单词每天晚上到机房四楼背诵，数学快快快，起码得把数学一的高数部分这月看完。</th>            <th>抽空写写esp8266的学习博客</th>            <th>机器学习，通信原理，计算机网络，这些东西的实验报告，以及要和同学沟通一下随机信号处理的要求，需要赶紧完成。</th>        </tr>        <tr>            <td colspan=4 align=center>确实是有在每天背单词，感觉可喜可贺的是已经形成习惯了，之后要开始做考研的英语试题了，不过暂时还没想好怎么分配时间<br>高数可能不太能在这个月完成了，和学长学姐聊了聊，想看的认真点，重新制定了计划，准备在四月底前完成高数和线代，并且需要细致总结，5，6月开始大量刷题看概率论以及学习专业课。7，8之后就重心不在数学上了，就是维持手感。<br>这周主要花了很多时间在服务器和esp8266的学习记录上，写成了博客。等摄像模块到了就得去做单片机的内容了<br>随机信号处理的c++的FFT写法卡着了，还是对信号处理的了解不深刻，需要多向会学的同学请教。            </td>        </tr>        <tr>            <th rowspan=2>3.27 ~ 4.2            计划 && 完成情况</th>            <th>>背每日单词，高数张宇的得看到13讲。</th>            <th>写一下视频传输的代码，以及单片机通信的代码。</th>            <th>通信原理，计算机网络实验报告，学一下随机信号处理的原理</th>        </tr>        <tr>            <td colspan=4 align=center>这周大概都是主要在搞双创的网络相关的东西，没怎么能认真学考研相关的东西，英语仍然在每天背，但是感觉状态很难保证，可能需要重新调整一下考研的学习计划，然后是吧重心换一下。双创相关的不能耗费更多心神了，以及要尽量减少交际。</td>        </tr>        <tr>            <th >三月总结</th><td colspan=4 align=center><a href="/2023/04/03/2023年3月份总结/" target="_blank">这里是三月总结文章</a></td>        </tr>        <tr>            <th rowspan=2>4.3 ~ 4.16            计划 && 完成情况</th>            <th>每日背单词，数学继续学</th>            <th>写完整的服务器程序，建立通信机制</th>            <th>补作业. . .</th>        </tr>        <tr>            <td colspan=4 align=center>这两周几乎没怎么往前推数学的进度，主要是猛推了一波双创，硬件，服务器的事务，三分钟热度的特性被我体现的淋漓尽致。<br>发现自己的进度已经开始和其他人拉开差距了，因为改变了计划，计划于下周实施。还有两周，5月前高数必须得推完，英语也得背上，硬件这些可以先放缓。（课能翘就翘吧）</td>        </tr>        <tr>            <th rowspan=2>4.17 ~ 4.23            计划 && 完成情况</th>            <th>每日背单词，粗过完张宇的高数这本书</th>            <th>建立stm32通过esp8266与服务器的通信机制</th>            <th>补完之前剩下的作业</th>        </tr>        <tr>            <td colspan=4 align=center>每日背单词确实是有在背，数学后期进度可能有点快，可能复习的不是很牢靠，整好了esp8266的通信，但是感觉目前的01s可能还是不太行，感觉有必要趁着能报销整一块NodeMcu（bushi，然后可以通过服务器与stm32通信了，接下来只要整好摄像头与stm32的通信就好了</td>        </tr>        <tr>            <th rowspan=2>4.24 ~ 5.7            计划 && 完成情况</th>            <th>英语背，张宇进度继续推</th>            <th>建立ov7670与stm32的通信</th>            <th>五一假期学一下大模型相关</th>        </tr>        <tr>            <td colspan=4 align=center>每日背单词++<br>想着在5月之前赶完数学进度但是没整完，后期主要搞双创的呢个摄像头，五一之前大致接好了线路但是由于寄存器没有设置对导致输出图像会有奇怪的色散，尝试使用esp8266传输的时候发现一直会丢包，目前还不知道原因。<br>感谢Xorex帮我申请了一台3090服务器，第一次在服务器上配置环境，运行大模型，进行微调，可惜任务有点多没能做太多的工作，后续也会把收获记录下来。</td>        </tr>        <tr>            <th >四月总结</th><td colspan=4 align=center><a href="" target="_blank">这里没有四月总结文章. . .</a></td>        </tr>        <tr>            <th rowspan=2>5.8 ~ 5.14            计划 && 完成情况</th>            <th>背单词，抓紧赶数学</th>            <th>解决通信丢包问题</th>            <th></th>        </tr>        <tr>            <td colspan=4 align=center>单词有再背，但是数学时间很少，主要都是在整双创的东西，<br>感觉是发现原因了，因为esp8266和stm32使用的是串口通信，传输图像速度很慢，也有可能是手机热点的问题，带宽低导致数据在tcp缓存区丢包，假如改协议或者重新改就会更麻烦，有点轻视项目难度了</td>        </tr>        <tr>            <th rowspan=2>5.15 ~ 5.21            计划 && 完成情况</th>            <th>背单词，数学看完线代，然后开始搞概率论</th>            <th>完成双创</th>            <th>其余先搁置</th>        </tr>        <tr>            <td colspan=4 align=center>这周从周一开始发烧到39°，周五才稍好一点，又得赶实验报告，实际上几乎没咋学习，每天的单词很难及时学完，现在越积越多了。一直咳嗽，水杯也被锁实验室里了，味觉也没了，新冠好难受。下周得努力赶上学习进度了。主要是得把数学赶紧在这一月内结束。</td>        </tr>        <tr>            <th rowspan=2>5.22 ~ 5.28            计划 && 完成情况</th>            <th>背单词，完成数学进度</th>            <th>双创做完</th>            <th></th>        </tr>        <tr>            <td colspan=4 align=center>英语在背，偶尔几天可能背的少了，但是还是能补上的。数学很快速的看了视频，真不能成事啊，原本是最鄙夷看视频的，结果现在为了推进度重要的基础阶段都在看。<br>双创最后火急火燎的组装上了，过应该是没大问题，但是感觉自己没学到东西，做出来的也只是个半成品，好寄啊感觉。</td>        </tr>         <tr>            <th >五月总结</th><td colspan=4 align=center><a href="/2023/06/03/2023年5月份总结/" target="_blank">这里是五月总结文章</a></td>        </tr>        <tr>            <th rowspan=2>5.29 ~ 6.4            计划 && 完成情况</th>            <th>背单词，看看数学</th>            <th>完成随机信号处理以及其余几门科目的作业</th>            <th></th>        </tr>        <tr>            <td colspan=4 align=center>这学期双创花时间第一多，剩下的就是这个随机信号处理了，花了这么多精力最后没给我看，麻了。<br>英语有在背但是好久都没完成任务量了，导致挤压的越来越多，数学抽空看了看，还是先以考试为主吧，虽然保研是芜了，但是大学总不能挂科。</td>        </tr>        <tr>            <th rowspan=2>6.5 ~ 6.18            计划 && 完成情况</th>            <th>考试周：考试&&复习&&完成实验报告&&作业</th>        </tr>        <tr>            <td colspan=4 align=center>这一段主要都是考试，复习<br>有点难蚌，感觉复习和收获不成正比，浪费太多学习的时间Z<br>后期需要对学习重新规划一下了。</td>        </tr>        <tr>            <th rowspan=2>6.19 ~ 6.25            计划 && 完成情况</th>            <th>背单词，赶一下数学进度</th>            <th>完成小学期任务</th>            <th></th>        </tr>        <tr>            <td colspan=4 align=center>英语欠了好多，不过还好总算是补完了，现在感觉英语习惯是有了，但是还是占用太多时间了。<br>数学准备开强化，但是在之前还要整体再过一遍，回家之前需要先过完吧，现在先跟着每日一题先看着算着。</td>        </tr>        <tr>            <th rowspan=2>6.26 ~ 7.2            计划 && 完成情况</th>            <th>背单词，回家前过完数学</th>            <th>这周把fpga赶出来</th>            <th></th>        </tr>        <tr>            <td colspan=4 align=center>单词这几天背的少，感觉之前的状态没了，需要专门划定时间。数学粗略过了一遍，实际上也不算一遍吧，因为细节没完，买的660和专业课到了，前期浪费的时间太多了，暑假要开始认真刷题了。<br>FPGA是真的占用时间，不过还好，这门课一出，到下半年几乎就没有课了，需要规划时间，补上前面拉下的东西。</td>        </tr>         <tr>            <th >六月总结</th><td colspan=4 align=center><a href="/2023/07/03/2023年6月份总结/" target="_blank">这里是六月总结文章</a></td>        </tr></table><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-    
-    
-    <categories>
-      
-      <category>阶段性计划</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>大学</tag>
-      
-      <tag>计划</tag>
       
     </tags>
     
@@ -187,40 +160,13 @@
       
       <tag>大学</tag>
       
+      <tag>项目工程</tag>
+      
       <tag>MySQL</tag>
       
       <tag>数据库</tag>
       
       <tag>标签画像</tag>
-      
-      <tag>项目工程</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>2022暑期 Plan</title>
-    <link href="/2022/06/27/2022%E6%9A%91%E6%9C%9F%20Plan/"/>
-    <url>/2022/06/27/2022%E6%9A%91%E6%9C%9F%20Plan/</url>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这里是<a href="/2022/03/03/大二下%20Plan/">大二下Plan</a>的后续。</p><hr><h2 id="自习室"><a href="#自习室" class="headerlink" title="自习室"></a>自习室</h2><pre><code>过于详细的计划无法条条，反倒会降低主观积极性，本学期的计划指定表格会作较大变动，以及常规要求不详细至天，以周为单位。</code></pre><p>每周：</p><pre><code>周日总结本周成果周日制定下周目标禁止 随随便便将周总结更新至博客每4周检查阶段性成果(月检)更新至博客</code></pre><table class="table table-bordered table-striped table-condensed">        <tr>            <th width=25%>每周计划更新表</th>            <th width=37.5%>实习相关学习</th>            <th width=37.5%>竞赛相关学习</th>        </tr>        <tr>            <th rowspan=2>6.27 ~ 7.3            计划 && 完成情况</th>            <th>主要完成mysql的学习</th>            <th>看一下数学建模的东西，acm复健</th>        </tr>        <tr>            <td colspan=4 align=center>有人监督着学习确实很快，大概是用了两天时间熟悉了mysql的基础语句并且能在c++中进行操作了。跟着学习了框架的设计，学习了基础的业务模块设计的一些规范。主要的学习都是在进行设计，以及找到了可能的前端实现方法（tkinter）、这些是实习中的事情，但是其他的方面收效甚微，，周末借着送hxf衣服的缘故和刘神陈老师他们聚了下，刘神他们这几天给王老师上完课就回焦作，*去恰老刘的米。怎么说，越是看到强悍的人越能体会到自己的无力吧。确实是需要一直努力下去的。</td>        </tr>        <tr>            <th rowspan=2>7.4 ~ 7.10            计划 && 完成情况</th>            <th>进行主要后端部分的实现<br>学习tkinter</th>            <th>学点数学建模吧，要考试了</th>        </tr>        <tr>            <td colspan=4 align=center>大概是用了三天时间完成了具体的后端实现，说是三天，不过大概实际写的时间只有一天半左右，中途由于公司给实习生以及新员工的培训课程，以及也有组内的（听不太懂的）分享会，花了一两天学习了tkinter，进行了主要后端的测试部分，前端部分的骨架也初步搭建完成。<br>---------------分割线------------<br>周六加班的时候拿着项目报告和找题目的老师进行了交流，发现对需求的理解有一定问题，这个老师也给出了一些他的要求，总之就是需要大改。同时数学建模的选拔赛也越来越近了，定在了下周三。周日还打了一场训练赛，发现退化的有些厉害，需要做的事情忽然就一下子变多了，希望能少熬点夜，抽空在郑州做个检查吧</td>        </tr>        <tr>            <th rowspan=2>7.11 ~ 7.17            计划 && 完成情况</th>            <th>重新进行前端的设计<br>对后端进行符合要求的修改<br>这周需要结项</th>            <th>进行数学建模的学习<br>ACM复健</th>        </tr>        <tr>            <td colspan=4 align=center>实际上由于后端设计时的“冗余”还是蛮多的，所以后端改的部分并不多，后端的主体部分并没有太大改动，迎合了新的需求对数据输入的形式做了再设计（感谢之前的信息流设计），后端的主题逻辑没有变动呢就主要是前端部分需要重新规划，重新规划前端的部分以及ttk美化的学习设计花了大概两天左右，后两天主要是前端的具体实践以及进行前后端的交互部分，在工作日是完成了大概90%的内容，只剩下了群体画像里的一个图表并未进行绘制，不过也在周六完成了。周三进行了数学建模，感觉考的跟*&……（一样，教的奇怪，考的方式奇怪。不过自己也只是速成（虽然大部分人可能都是这样），也没有花费太多的时间（大概一整天+一个晚上？）。学习了一点acm的内容，但是不多。<br>下周开始，acm训练开始打多校了，实习工作也开始要进入内网进行真正的开发工作了，数学建模也要进行训练。希望能好好睡一觉吧</td>        </tr>        <tr>            <th rowspan=2>7.18 ~ 7.24            计划 && 完成情况</th>            <th>工作方面新任务还没发下来，待定</th>            <th>acm打多校，进行补题（数目至少达到所有题目的一半）<br>数学建模完成第一次训练</th>        </tr>        <tr>            <td colspan=4 align=center>leader发给我了他们测试用的交易系统的库，让我根据文档熟悉使用，同时也给了一本期货交易相关的书让我学习，因此这周工作上的主要任务在于学习期货相关知识，业务流程，熟悉API，对API进行测试，由于*某些原因*导致可用的查询方法只有6个（卡我蛮久的，刚开始瞎下下不进去单子），最后咨询了旁边工位的小姐姐得到了答复。<br>数学建模火急火燎的，刚下班就和他们一起讨论，在工位上整到凌晨。我们的思维冲突点还蛮多的，因此比较难达成共识，大家的主要兴趣点可能也不在这上面，最后总算是拼拼凑凑出来一篇论文（虽然蛮拉的），但好歹是完成了。            </td>        </tr>        <tr>            <th rowspan=2>7.25 ~ 7.31            计划 && 完成情况</th>            <th>完成需求设计，学习UML类图画法<br>结项标签画像项目</th>            <th>数学建模学习，牛客多校练习</th>        </tr>        <tr>            <td colspan=4 align=center>完成了标签画像项目结项，初步学习了类图架构图，完善了期货交易相关知识，做完了需求分析，开始做程序的具体结构设计<br>时间安排的比较满，有点难受，还向leader请了半天假用来打比赛，但是实际上也打的不好，数学建模越来越敷衍了，工作之余也还想完成板绘任务，好忙啊</td>        </tr>        <tr>            <th >七月总结</th><td colspan=4 align=center><a href="" target="_blank"><del>这里是七月总结文章</del> </a>这里没有七月总结</td>        </tr>        <tr>            <th rowspan=2>8.1 ~ 8.7            计划 && 完成情况</th>            <th>完善所有项目架构，开始打代码</th>            <th>牛客练习</th>        </tr>        <tr>            <td colspan=4 align=center>原本计划的是完成项目设计后开始打代码的. . .但是由于自己下班后画画被同事看到后被推去做部门板绘的缘故，进展比较慢，大概是周一周二的时候开始设计完了项目框架，然后周三下午，周四上午，周五全天都耗在这上边了，代码的话只打了简单的输入层的一些东西（这时候处理的是日志模块，也有可能是因为后几天间隔着工作导致第一版设计的日志模块没有用上：后注）<br>牛客打的状态感觉越来越差了，不知道是不是适应打工了。不该这样子的<br></td>        </tr>        <tr>            <th rowspan=2>8.8 ~ 8.14            计划 && 完成情况</th>            <th>完善项目剩余代码</th>            <th>牛客比赛练习</th>        </tr>        <tr>            <td colspan=4 align=center>打代码，摸鱼，出bug，修bug<br>没有时间整牛客了. . .</td>        </tr>        <tr>            <th rowspan=2>8.15 ~ 8.21            计划 && 完成情况</th>            <th>重新做第二版设计，重构代码</th>            <th>数学建模，牛客比赛练习</th>        </tr>        <tr>            <td colspan=4 align=center>大概花了一天时间做了第二版的设计，然后是学习leader推的设计模式以及学习使用，下组合单的时候意识到了设计失误，重新学习了业务文档，对组合但的情况又做了重设计，花了三天时间用来添加新设计到工程中，中途也有其他同事来对接交流程序测试中途产生或找出的问题，感觉在这一周学习到的东西是较多的，比较重要的设计模式，体会多轮开发，以及重读业务文档，和同事交接这些，也有可能是这一阶段和leader对接比较多所以学的东西比较多。<br>牛客和数学建模彻底寄了，没时间也不想管了，假如暑假在家可能还会由愧疚感驱动自己整一点学业上的事情，但是工作中有人监督花费你绝大部分时间后就很难在其他无人监督的时间进行额外提升了（说实话，工作中要是没人监督可能后期的工作也会一样寄QAQ）</td>        </tr>        <tr>            <th rowspan=2>8.22 ~ 8.28            计划 && 完成情况</th>            <th>完成所有设计，进行下单项目的结项，完成实习工作</th>            <th></th>        </tr>        <tr>            <td colspan=4 align=center>实习的最后一周，前两天完成了最后的功能，第三天原本在写结项报告. . .然后被马蜂蛰了，（耽误了leader半个下午的时间真是抱歉。不过好歹在周四结项前把报告以及ppt完成了。结项总结上leader说我目前接触的还是很基础的工程流程，我所作的类图等还是有欠缺的部分，需要后续继续学习才能写进简历里，我也总结了一些项目的改进点，由于基础设计做的还不是很规范就没有完成该项目的博客，预计学习完后再重新规范一下设计再完善。</td>        </tr>        <tr>            <th >暑假总结</th><td colspan=4 align=center><a href="/2022/10/31/2022年暑假总结/" target="_blank">这里是暑假总结文章</a></td>        </tr></table><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-    
-    
-    <categories>
-      
-      <category>阶段性计划</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>大学</tag>
-      
-      <tag>计划</tag>
       
     </tags>
     
@@ -274,13 +220,13 @@
     
     <tags>
       
-      <tag>python</tag>
-      
-      <tag>数学建模</tag>
-      
       <tag>深度学习</tag>
       
+      <tag>python</tag>
+      
       <tag>tensorflow</tag>
+      
+      <tag>数学建模</tag>
       
     </tags>
     
@@ -368,33 +314,6 @@
       <tag>工程</tag>
       
       <tag>计算机网络</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>大二下 Plan</title>
-    <link href="/2022/03/03/%E5%A4%A7%E4%BA%8C%E4%B8%8B%20Plan/"/>
-    <url>/2022/03/03/%E5%A4%A7%E4%BA%8C%E4%B8%8B%20Plan/</url>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这里是<a href="/2021/10/03/大二上%20Plan/">大二上Plan</a>的后续。<br>大二上的状态很糟糕，由于疫情开学返校推迟了近一个半月的时间，中途因为金工实习耽搁两周，还由于大二本身的专业课的繁重，以及转专业还需要补转过来的课程，ACM组队的队友要退役了于是连打两场ICPC，结果也不怎么尽人意。<br>很失败，真的，绩点拉下来好多，竞赛方面也没有太多的进步，工程学习方面也很拉跨。<br>原本可能性的保研大概已经寄了，就算有什么奇迹之后的科目全科4.0发生也可能性不大了。选择只剩下考研和工作了。<br>竞赛也拉下很多，不过好歹在寒假里补上一些。我可能也会在大三就退役了，希望能好好打。<br>博客也一堆坑都没填，准确的说是就没怎么写过.. .<br>其实还是我自己的问题，自己没有怎么抓紧时间。过于放松以至于浪费了好多时间，连记录都没怎么补。<br>这是大二上的总结，把它放在新学期的开头可能有点沉重，但是需要有一些东西来鞭策自己。</p><p><strong>请坚持！</strong><br><strong>请坚持！</strong><br><strong>请坚持！</strong></p><hr><h2 id="自习室"><a href="#自习室" class="headerlink" title="自习室"></a>自习室</h2><pre><code>过于详细的计划无法条条，反倒会降低主观积极性，本学期的计划指定表格会作较大变动，以及常规要求不详细至天，以周为单位。</code></pre><p>每周：</p><pre><code>周日总结本周成果周日制定下周目标禁止 随随便便将周总结更新至博客每4周检查阶段性成果(月检)更新至博客</code></pre><p>对了，我好像已经知道林泽音是谁了。</p><table class="table table-bordered table-striped table-condensed">        <tr>            <th width=25%>每周计划更新表</th>            <th width=37.5%>大学规定课程</th>            <th width=37.5%>ACM&工程&闲暇</th>        </tr>        <tr>            <th rowspan=2>2.28 ~ 3.6            计划 && 完成情况</th>            <th>完成作业<br>将本学期的数目大致浏览有初始印象</th>            <th>写一个作业自动记录的项目<br>完善博客<br>将移动硬盘检测完成并隔离坏道</th>        </tr>        <tr>            <td colspan=4 align=center>这学期的专业课好难啊，作业写的蛮吃力的并且并没有完成，寄。技术项目也相应推迟了，不过把实验区域的相册完善了大半，应该马上就可以上线。移动硬盘的修复可能一时半会也是寄了。目前是按照大一下的方式在走，上课第一排，常驻机房等。寝室氛围现在都在组队玩手游，不适宜在寝室多呆。加入了原来高数老师的数模队伍，希望老师能提供一定的数模知识援助。虽然有一定的基础，但是往后还是也要给数模练习留出时间。ACM方面这一段有些放下了，后期也得加强复习。</td>        </tr>        <tr>            <th rowspan=2>3.7 ~ 3.13            计划 && 完成情况</th>            <th>完成作业<br>将大物实验的报告完成</th>            <th>学习Stm32<br>复习之前的算法<br>学习数模算法<br>完善博客</th>        </tr>        <tr>            <td colspan=4 align=center>完成了接下来两周的电磁场以及信号与系统的作业&&完成了大物实验报告。完成了博客的绘画相册（<a href="https://linzeyin.github.io/album/">点这里！</a>）,但是数模竞赛进展缓慢，目前还未开始系统性学习。计算机相关知识方面开始看八股但自我感觉收效甚微，了解了一些关于机组原理的知识，算法竞赛方面也耽搁的有点多。从下周要开始认真学习计算机知识，争取能在4月进行简历投递。文化课方面先跟着老师，预计4月中旬开始成体系复习，当然从现在开始也会同时记录要点于博客上。装的EDA的软件不怎么会用，等到上实验课的时候需要请教下老师，stm32相关的可能得延后了，目前需要搞的东西有点多，需要舍去一些负担。</td>        </tr>        <tr>            <th rowspan=2>3.14 ~ 3.20            计划 && 完成情况</th>            <th>完成文化课的博客记录<br>复习高数</th>            <th>复习原有的板子，随着邱老师看看题<br>学习八股知识（c++语言相关&&计网）</th>        </tr>        <tr>            <td colspan=4 align=center>学习了很多计算机网络相关的知识，大概下一周能系统性的学完，之后要学习的是数据库相关以及c++和操作系统。但是与之相对的是几乎毫无进展的文化课以及考研准备。acm复习上也只是练了几道题。这周的后三天花时间画画也花了不少时间。这周三听了考研讲座以及学长的保研分享，听完后情绪波动有点大，可能是因为此间接导致我拿起了几个月没碰过的画笔。按理说我早就知道了大二上的无法挽回，应该按照原来的计划去走，不应该浪费时间在非学习方面。画画对目前的我来说是逃避现实的方式。画画确实可以发泄内心的情感，但是其带来的后果（较为花时间，对目前的实习，考研，卷绩点较为无用）可能得进行权衡。</td>        </tr>        <tr>            <th rowspan=2>3.21 ~ 3.27            计划 && 完成情况</th>            <th>将文化课赶至老师进度<br>复习高数<br>开始学英语</th>            <th>完成计算机网络的学习<br>准备剩余八股学习<br>ACM系统复习</th>        </tr>        <tr>            <td colspan=4 align=center>由于实验室比赛的缘故，没有完成文化课的相关任务。<br>不对吧，这只是我个人推卸的理由吧，我的时间总是在这些理由中不断丢失，就算差了很多但是稍微赶赶进度还是足够的，最后还是几乎没怎么学。计算机网络也耽搁了，希望能在4月前完成，acm系统复习倒是做了不错，开始把cf提至日程，并且把模板系统的整理了一遍，用邱宇的模板更新了一些杂糅的内容，感觉实际上有进步的就是acm了。<br>这周又画了一幅画，past and now。虽然占用了整整一天时间，但是这是我这学期的最后一次绘画了。希望自己能够做到。<br>下周把网络学习完，文化课要补上。下下周进了四月份就没法再耽搁了，希望你能注意。</td>        </tr>        <tr>            <th rowspan=2>3.28 ~ 4.3            计划 && 完成情况</th>            <th>将文化课赶至老师进度<br>坚持背英语</th>            <th>完成计算机网络的学习<br>刷cf</th>        </tr>        <tr>            <td colspan=4 align=center>由于信号与系统期中测试的原因，主要重点放在了学习文化课上，把信号与系统的前两章过了一遍，补了些微分方程的知识，以及把电磁场的博客给补了一些，发现自己的数学功底还是差的有点多，可能之后会往这方面发展<br>            ACM方面并没有什么打的进展，天梯赛练习的题目集过了几道水题就没有再打过了。可能还是由于主力并不在竞赛学习上。<br>关于计算机相关知识方面的学习落下来一段，LX找我说让我清明节后就把简历发他，但是确实查的很多，所以下一段的重点是在学习八股的方向。            </td>        </tr>        <tr>            <th >三月总结</th><td colspan=4 align=center><a href="/2022/03/31/2022年3月份总结/" target="_blank">这里是三月总结文章</a></td>        </tr>        <tr>            <th rowspan=2>4.4 ~ 4.10            计划 && 完成情况</th>            <th>补至文化课进度<br>复习EDA</th>            <th>学习八股，刷天梯赛训练，刷cf</th>        </tr>        <tr>            <td colspan=4 align=center>尝试着搞了搞EDA，但是没什么有效的进度。开始写信号与系统的博客以及电磁场的博客，发现差了很多. . .需要很多时间来补。把深度学习相关的东西大致看了看，实现了下fashion minist，也写博文记录了一下。关于八股内容来并没有怎么学. . .这一段时间有点紧，课程压力开始上来了，以及每天都在等深信服的进度，过的很心累。 <br>下一阶段主要任务是八股以及文化课程了。数学建模可能马上也要比赛，也需要花心思了。</td>        </tr>        <tr>            <th rowspan=2>4.11 ~ 4.17            计划 && 完成情况</th>            <th>补习文化课进度</th>            <th>学习八股,完善博客</th>        </tr>        <tr>            <td colspan=4 align=center>实验课上来了，好多实验课. . .需要搞的东西也好多，花了好多时间在这顶上。文化课并没有什么十足的进步. . 。简历也被挂了，不知道是真的是互联网寒冬，还是只是因为我太菜了，不过这一段学习的八股知识也不算太多，也不算浪费了太多时间。实习对于我的大二来说可能确实是早了，之后再投可能就得到大三寒假了。博客倒是完善了一些。之后的话会以文化课为主，过了考试就全力搞acm了，起码要保证下银牌吧。 </td>        </tr>        <tr>            <th >四月总结</th><td colspan=4 align=center><a href="/2022/04/30/2022年4月份总结/" target="_blank">这里是四月总结文章</a></td>        </tr>        <tr>            <th >大二下总结</th><td colspan=4 align=center>大抵是由于学期末确实比较繁重，后续的一些总结并没有来的及记录。<br>现在是6.3号，在回家的高铁上，看了下计划断层，没有记录的时间大概是一个月左右，从5.1开始郑大开始严厉封控开始，以及教育厅要求所有高校6.5日之前离校导致的期末提前，许多课程也都提前，时间很紧，虽然把锅全甩给学校肯定是不对的，但是没有好好记录确实有一部分原因是课程压力。自己的原因肯定是主要的，意识到了一味的沉浸于所谓的“躺”“摆”只会让自己忽略真正的错误原因，因此之后也会减少类似的消极想法。这个学期大多时间都在实验室，最后一段时间就没怎么来过宿舍，在实验室学习的效率感觉也有些下降，若是大三还准备这样的话需要重新规划下实验室的时间。买的一些小原件已经到了，用焊枪玩着焊了一些东西。确实没有画画<br>目前学校给的政策是让回家线上考试，因此这之后还会继续制定学习相关的计划。之后一段的主要计划主要在于学习电子专业课，以及八股相关的知识，OI相关的也要开始复健了，英语也不能落下。更新博客也得放上日程，更新的博客主要也是这些学科方面的，还想更一些关于做板子以及bot相关的，总之是要学的也很多<br>大概就是这样，马上到站了，具体的计划待回去详细制定</td>        </tr>        <tr>            <th rowspan=2>  在到线上考试结束的这段时间文化课的相关            计划 && 完成情况</th>            <th>信号与系统&&电磁场预计三天学习完所有知识点，剩下三天练习题目。了解知识点后用一天来完善博客</th>            <th>毛概和马哲分别用1天时间完成作业，注意是15号之前提交。微机原理再看一遍书，看看之前的代码。</th>        </tr>        <tr>            <td colspan=4 align=center>完成情况<br>线上考试考完了，经过这段时间的线上学习发现家里确实不适合学习，效率相比于在机房确实是低的，主要的学习效率高峰都集中在deadline前。实习的话是过了，大概两个月主体就是实习相关的东西。组了新的队伍，假期期间牛客的多校也要正常打。关于数学建模...目前看来优先级会降到比较低一点<br> 暑假的计划呢就是以实习为主了，具体的会重新开一档计划列表。<br>我的大二下过完了，要大三了。</td>        </tr></table><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-    
-    
-    <categories>
-      
-      <category>阶段性计划</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>大学</tag>
-      
-      <tag>计划</tag>
       
     </tags>
     
@@ -521,33 +440,6 @@
       <tag>区间问题</tag>
       
       <tag>树状数组</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>大二上 Plan</title>
-    <link href="/2021/10/03/%E5%A4%A7%E4%BA%8C%E4%B8%8A%20Plan/"/>
-    <url>/2021/10/03/%E5%A4%A7%E4%BA%8C%E4%B8%8A%20Plan/</url>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这里是<a href="/2021/03/14/大一下%20Plan/">大一下Plan</a>的后续。<br>阶段性计划的成果不错.提升至习惯。<br>或许后面会开一个计划页整合。</p><hr><h2 id="自习室"><a href="#自习室" class="headerlink" title="自习室"></a>自习室</h2><pre><code>曾想专门开拓一片地方写行动方案，刚好放在这里吧。</code></pre><p>每日(除周六)：</p><pre><code>6:00AM起床 11:30睡觉 保证中午1h午睡，周五晚上可适当增加睡眠周期一般情况不要把电脑带回寝室，10:00至10:30回寝之后补充消耗并进行洗漱吃饭时间压缩至30min以内复习/预习文化课内容练习acm锻炼写博客</code></pre><p>周六:</p><pre><code>补觉完成计划后可自由安排以本周计划优先</code></pre><p>每周：</p><pre><code>周日总结本周成果周日制定下周目标禁止 随随便便将周总结更新至博客每4周检查阶段性成果(月检)更新至博客</code></pre><p>希望林泽音能成为林泽音</p><table class="table table-bordered table-striped table-condensed">        <tr>            <th width=17%>每周计划更新表</th>            <th width=20%>数电模电</th>            <th width=20%>复变大物</th>            <th width=20%>杂项专业课</th>            <th width=20%>ACM&工程</th>        </tr>        <tr>            <th rowspan=2>10.11 ~ 10.17            计划 && 完成情况</th>            <th>补到老师所讲的进度</th>            <th>补到老师所讲的进度</th>            <th>完成作业，购买资料</th>            <th>基础思维题目练习，补博客补题</th>        </tr>        <tr>            <td colspan=4 align=center>都没补完. . .假期期间差的较多并且周六日在帮人整数学建模，虽然不是主力程序手但是也花了一天半来训练网络，以及学习随机森林。作业勉勉强强补上了一些。招新赛打的烂透了，卡在经典题两小时换了三种做法才过，以前总觉得是自己单打较弱但是配合队友会好些，现在发现都是因为以前的队友很棒才没有发现我这项缺点，我作题很一根筋，但是矛盾的是我的思路还很杂很乱，导致遇到题目理解不充分就会开打，对题意，对思路往往只有一个大致的轮廓，真到实际打的时候猜会意识到问题。之前提醒自己的冷静还是有用的，起码这次打到一半卡题的时候没有摆烂。接下来一周应该会继续补课程，以及准备竞赛。</td>        </tr>        <tr>            <th rowspan=2>10.18 ~ 10.24             计划 && 完成情况</th>            <th>补到老师所讲的进度</th>            <th>补到老师所讲的进度</th>            <th>学科导论论文，工程制图作业</th>            <th>恢复cf，和队友拉两场比赛</th>        </tr>        <tr>            <td colspan=4 align=center></td>        </tr>        <tr>            <th rowspan=2>10.25 ~ 10. 31            计划 && 完成情况</th>            <th></th>            <th></th>            <th></th>            <th></th>        </tr>        <tr>            <td colspan=4 align=center> ...</td>        </tr></table><p>基础太不好了</p><h3 id="update-2-4-2022"><a href="#update-2-4-2022" class="headerlink" title="update:2/4/2022"></a>update:2/4/2022</h3><p>好久都没更新了，看来真的是我不太行。<br>现在的结果是自己咎由自取？还是真的有借口中的“外力因素”？<br>我骗不了自己，<br>希望可以成为林泽音。</p><p>一篇<a href="https://linzeyin.github.io/2022/01/28/%E6%97%A0%E9%A2%98/">自省</a>用来结尾，希望下学期能做的更棒.</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-    
-    
-    <categories>
-      
-      <category>阶段性计划</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>大学</tag>
-      
-      <tag>计划</tag>
       
     </tags>
     
@@ -768,13 +660,13 @@
     
     <tags>
       
-      <tag>KLT</tag>
-      
       <tag>python</tag>
       
-      <tag>opencv</tag>
-      
       <tag>数学建模</tag>
+      
+      <tag>KLT</tag>
+      
+      <tag>opencv</tag>
       
     </tags>
     
@@ -799,34 +691,13 @@
     
     <tags>
       
-      <tag>python</tag>
-      
-      <tag>数学建模</tag>
-      
       <tag>深度学习</tag>
+      
+      <tag>python</tag>
       
       <tag>tensorflow</tag>
       
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>查缺补漏——自省帖子</title>
-    <link href="/2021/07/01/%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F%E2%80%94%E2%80%94%E8%87%AA%E7%9C%81%E5%B8%96%E5%AD%90/"/>
-    <url>/2021/07/01/%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F%E2%80%94%E2%80%94%E8%87%AA%E7%9C%81%E5%B8%96%E5%AD%90/</url>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="此页只开放给真正的林泽音" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="cffbe3d838dcb4b08561914924cab6fc303c8e5325e7e1bb770ce858a299a843">e25daf7966051531abfa76b67c57c998782c91656a729bd8a4719f92273b136121793718f3df835a43897ca872da4075250b9c0ebb5fc42090a455ee4a8826baadb39e3e57bdabb0d7f8339e1849e9bb45cf01501b292af54292392be3b6eb1d20368bc89f3d83ec6aae5d6bea0e287e247fd833936911479184baf8236370077b34b5b94bd7f41aa1ddfb8aa1c52bfc005c6904dc1fdd7ffe571578527c3b112a1c7a3155523c01336b8681d2701d789f58b63c67725832920e1b34930a0047d78d2e56f73ea25427d291b6867aeb9d5585f558aaf53b91180f420ee98628f18adeb6412ee91333a94584a29ca9a97a91d530f4dd7efaa36cc3df3171d5f7548d32032282845b132cb1bcab34deb8ffd337157097c3f33ab8a623877fda578f8e9ab508ab0acc071513014a85a863ea92396355b8ab5e60ac1bccfc7380f5663ab72cf76e43c3a6ecbf9950435ba00d5a1d4bec74a782819a282d981ad3e3694d882d98458b46924acc227a6bee57c8e9cb08e2a9eceb788ef63ca02586c8222ecb97bb79de8b80e9b96248918459fd2a3cf050d2f64181915500fc55fdd181c32fd2180d1163b21dd0f437fd0b5f4f58faca3d6ca00f1cabbf317ec397208c0a8ba4577368482375abbca82fdb494f22731d3a51a87e5db3276dc6d2f03a5fe03e08df3d07e4853a9b5e42cdb624837fb023123db4a91fe8fb696c54c6f7d96e8955f139399a2218859525b8d00cec3b5418f22d889e2217625529e92af44b7774f3462584c23d43d2353442c315f4f8bb60d9d3b9fd98df7f0570d34fe3cda6e8d1aef75d92c0fa377b750f1ca00118a115ae0317371e5ae6c1c6fddaa965b588d795cc57444b0e9f56defa82ea110aaca1e27d919ec268086df154da4fc37d5f2c293611f17c471092671243994ecc71289c59c7da4c4d451a795efbcad6027681f2833a6c027973d0419bbb829e965e763b2d9a0058d91e690f10e24e75cc12c1f760c46bcfd5441ab9af968f077a4ce790b60d1faf463cec38f561da356db87108b197d43072611183863ade4b2645d439d9c31679344af3b0aa52e313ae6cfbdc7f2509baa626aec38997673676a2db0f3f7b2e47bbaae55510af6a2d905031e7d6e1ce823c408c2c56f018ff085d21494cc702ccd84070066c48d8edac8235d9cfef735bc4addf7df07334a9989de6e633ef19ee039a190afee66762c971874a99fca93d4c795e958aeee3fbe5ba3ad892347d9072f49e90ca82561f1d535c13bae4065f61e69c4bacdc7a397b35746512000ecaaa1e3ef612cc4815fbb4d251b2ca140c0bc0cc9ca9f41e99d06ed4f764d8835dabaeff8c20331c2bce8219b47b9c1f61c0deb7ff269f846fd481263cefbabd8713e264b6bd369c329207434fd61112bda5f22309c3db460fa1d86396b6d5dd36c2b32e6f908f1317ae5a411eec4ee6fac011f1c9469b64c35cba6769258099b8d53aeeda8a6ff8c877645f0db423746b5caf90b506d51760f83fe3cef5e78a096c0210101ea4c47de998813262485b38ca37c25d8508389b40376c3f377c336460102e683a40d84dea46fef3a24bcf3d633026d0484806c7abf85eef55fe37e39f8690facc8a8261b4508a1db7079b1fd655763e7bca729805c8bb1c8bb3e528c0704a70e8e2a92a3d5f7c6b227318d5988d192cfaae59e01f6abf8e6b433ad0277cc753a6c5527572865388870d2859c0f6a9026e96ced1dc4d71a0b180e59d2244337ce34a7ba61104427a22d44725a40ef695e1131b6cb2f8242c5259b401fd62174538353c88332789c36aa2e23167b6da6a4a1ec729018d6715df606aa6ee84c2d42031583a8844fd6d01f648df109178a147945744206660d5a5c0e9ef5b194998b796c45c936b97fab379898e45be5639b057b834d6136fc3445a735145b2db11776bfb81a3084dfd25f240e5d4a5ada69ae09876e41d03cbf91a3342107ee78c828e1daee587ffe57cdba36a6d14cebc420e589ba320b3ed5a2a656996ddc77b7566f77b5c0bc9514fb2f22887d88224f17a98f75c0d03469fa801ceaebe9446e2ba3d9a1579bbe0bb04ab7363830ba076401dba5db10e54e982927bdc61cf2a2aca64d369ee420e1d906c25037940c3af8c3f74bbe82b1997ea3d126cb4eb104f1a7cd04140036a059412e16932da94ba7e9b548fcd131af8cafa27e807717e4ca95b544ea5ca87b865f4975a0b3d1a69a36190616b660af51421c53a7efece4544963a0f3cb2a0183f47a68280dbdc9ea087135b68491d906bdae8d7df0a44956262c0fa6ef7d3d43d3561ec4f95ca7e91e890739c0d541d53e037b0bbfb4634ae61e219cd97038ae06c14eb48c6baae7e5c83c209a5d939c1362f0c48666641f78d9cbd6544d8cb89489b9c1f4fb4d8593f6d73207046e9c1269984e3d10023e665f2534f5dd30ba54c4f78c2de70e2d6db7767b9e0457979f75c1ca1db7889870e05b3b0bad5834bc9fcd959189365b0147b60751f1d3f7a211e9f045c80a71c83eb84ffdf4acfef8f8edd0f190e41674d28b669ab8c2b9748f3bc237af3cc4c63e29c628b8a55e3a93d5d35128e905fb24f1a6195736b1e73229064e75db854c0b12c73363ff3a6d32fa130fd47869020eb425b53c94e6367b026f0ac33f5af43354acd42e2669af3650c2c0f9dc2e0783c45108cd09f2fcd0c3ae6d005cffc6d94ffe9f53c9316ba1edd2b5a6a7d4472000045cc22c9aeffa4aeef6c94f0791f398a85d4def24907eafe95cbbd5dd2049e14b36e3e164364c6c176dd86827e06d89e06ba7bfef82582931eff51bef9661ae6adbd1b2f2466bfb4d807183171e8fd4cbc3b9ef118519e9d9b8f336b7dfdf208fa8e1f77a2f199485185e2f59fed19ab0ba97f129ccbb800d9f75e985a3e89b6352442e165e29872e2247cf11b46b94e23ba500ad1cf52fc79273b05e27ee80331883828da0e76690b1941b3a527c5f7921d846b9506127ead7cbeea673a32f35925819565f33727c7e0a678f0155503c1f8c9a3dba237188e5cb3a7617076872b4eb4c3de28ade5172f80e51522879dacd3b6838c84f57fe2e6d3ec5177448a50aa7f4893c7e08b38e05fa34cdf28e03c14b7617b0d68d94c19b7d77b1cceaf4f563f047dfab2e455360ebe91045947b936bfddb16ecd9db4ddab8479202b1bd2695e0a751d4f16200185e9b397ae9938fdb3b14473309c88f237498780b9d08c64035dab22c552740bdb5d00b6a66df03956816e70a0c83b33249a8cf63f41d640d1d1aaf46e84392b4e78aec8cdb9a365c2ae57937cb0f2fa6945aa1f07bd300c313148c2bdc7950b1cfcb7637f3b488ebda19e73eb921c40f6831e350d369463c0ca51888c9a40ee6c389f0df60d65113d61db25b25ca63f4b5fbaab9bd58791ed994b8ba8cff48cb2de250941e460f688d39b624cbb6535dbc353284736a1da8022b17a8ead000eb2aac49e7ab80a7e3697bbaaa228a4514318b6c7ca08427f75dd94b6d3639728eb5d866d8a54886ed1de434e311251a053a07de7f20dc1bd84cf5b8b59de78e46d03c41105d40248147e60b4c53e151beec998784fa9ba743bc57dfccc881a0f543a083f20ccccc475bbd5ef63a5fc4196f59899c0e27b3de8c64388d7bacc9609e4bc5d2b5f82ad54f1b932362906ea9e88a4ba623f0af975173af7d3ea7b6a2b81dfe246c14082e310ddc53458406bd4e31ace909792a62b29dab73a1053d7f27a9701e0fd492a3fc5321386f64f0219a862a78526816c799c1208625aa22d3cfd280db7bf71f245993a7653a6453141107558df908b4cce91d880bc98c04a3bf3abc58cbc68a70e4efda4a4dcd0453fa43f10bf62e735a1ef54d932a0cf4d2078aa8f0b93b3621959a3552df0042bd2a59b14d88d78025403fe37726b84278caba907ef73e44ea577d94ea44a70143d647936341cea91d74b81c2876b6a24ecb263e9359cd9e666a1b77f09b8b9f51ed700ee005e1d09ffb524c889982ad0967567f46ac32baa7b9cb23e8885d62786e2baffcd8f0e946152618e4bee84f2ac041a53f2f6093f546a1359f8efd702bd74fd67413bbba5a5b0ce0981ad7e7d28400c2f1fd83dc56ac849821a08417c4d95f4043c3889817c228e0ae5368b56f343b7db5d085dccee043ad191495ce2c8806795d8833fc1b427afd6bb22bb2c02c5eb8a560ae53a3d148fff0080f3feb4144cb5a6a24cf6691c0a6ccc1e7d08bc6b11bcd39cd8d962f3fb0d82ffd42b39cd1baedc2c9526bddb5e337e0a2f17842bb767828dfdf608c005b9256be040fdbaf299c62c761080353cc53bd56a6e663c68786572e3f3bf921a7b88cfa9c8e5c10876468f7b43cf1d6fcc00476eaacc583437a0dc47a4a32c9fc01177d8166b94026708</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">为了成为谁？</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>随笔</tag>
-      
-      <tag>加密</tag>
+      <tag>数学建模</tag>
       
     </tags>
     
@@ -1070,9 +941,9 @@
       
       <tag>acm</tag>
       
-      <tag>DP</tag>
-      
       <tag>技巧</tag>
+      
+      <tag>DP</tag>
       
       <tag>区间DP</tag>
       
@@ -1206,9 +1077,9 @@
       
       <tag>acm</tag>
       
-      <tag>DP</tag>
-      
       <tag>技巧</tag>
+      
+      <tag>DP</tag>
       
     </tags>
     
@@ -1419,33 +1290,6 @@
   
   
   <entry>
-    <title>大一下 Plan</title>
-    <link href="/2021/03/14/%E5%A4%A7%E4%B8%80%E4%B8%8B%20Plan/"/>
-    <url>/2021/03/14/%E5%A4%A7%E4%B8%80%E4%B8%8B%20Plan/</url>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>刚刚被教练叫去谈话。主要还是对我之后的行动做了一些规划。<br>重点还是文化课，我也意识到了，自己对于某些课程的理解还是有些问题，学习方法上是有一定的失误的需要一些从未用过的学习方法，应该更加外向些，多向前辈学习。<br>还有总结，我觉得在有博客后应该总结不会太拉下，acm的话每个知识点都需要写博文，文化课的话每一周建议更新一次。<br>我还没有努力到无法努力，海绵里的水还不需要挤就可以流出来，需要更好的把握时间运用。<br>答应过珂珂说要一起绘画，每周3幅。大概每周会腾出1~2h<br>还有曾经说过的每天锻炼，大概每晚会腾出时间绕校园跑圈。</p><pre><code>update：忽然意识到，这种状态可能需要一直持续到大三上了。希望能坚持下来。</code></pre><hr><h2 id="自习室"><a href="#自习室" class="headerlink" title="自习室"></a>自习室</h2><pre><code>曾想专门开拓一片地方写行动方案，刚好放在这里吧。</code></pre><p>每日(除周六)：</p><pre><code>6:00AM起床 11:30睡觉 保证中午1h午睡，周五晚上可适当增加睡眠周期一般情况不要把电脑带回寝室，10:00至10:30回寝之后补充消耗并进行洗漱吃饭时间压缩至30min以内复习/预习文化课内容练习acm锻炼写博客</code></pre><p>周六:</p><pre><code>补觉完成计划后可自由安排以本周计划优先</code></pre><p>每周：</p><pre><code>周日总结本周成果周日制定下周目标禁止 随随便便将周总结更新至博客每4周检查阶段性成果(月检)更新至博客</code></pre><p>希望能成为林泽音</p><table class="table table-bordered table-striped table-condensed">        <tr>            <th width=17%>每周计划更新表</th>            <th width=20%>高数</th>            <th width=20%>概率论</th>            <th width=20%>专业课</th>            <th width=20%>算法竞赛</th>        </tr>        <tr>            <th rowspan=2>3.15 ~ 3.21             计划 && 完成情况</th>            <th>高数8，9章</th>            <th>概率论1，2章</th>            <th> . . . </th>            <th>图论，网络流相关</th>        </tr>        <tr>            <td colspan=4 align=center> 高数完成至9.5还差一些章节。线代学习部分已完成并开始写博客记录，网络流知识点还有上下界网络流未能研习。            主要原因可能是由于计划制定有瑕疵，以及自身惰性。还有生病去医院以及为转专业跑腿等客观原因。</td>        </tr>        <tr>            <th rowspan=2>3.22 ~ 3.28            计划 && 完成情况</th>            <th>高数第9章学习通透</th>            <th>概率论3，4章</th>            <th>大物第一章&&跟上目前电路分析老师的节奏</th>            <th>网络流补完(上下界&&刷题)</th>        </tr>        <tr>            <td colspan=4 align=center>高数第九章完成，但未能做完题目，概率论囫囵吞枣感觉可以说是没有完成，大物和电路分析倒是跟上了，但是网络流却几乎没动。这一周打击挺多的，和学长交流了一下，发现是自己学习方式进入了误区，以及自己确实是十分愚钝，学习计划需要大改，需要更好的平衡ACM与文化课以及正常生活之间的关系</th>        </tr>        <tr>            <td colspan=5 align=center> <a href="https://linzeyin.github.io/2021/03/31/2021%E5%B9%B43%E6%9C%88%E4%BB%BD%E6%80%BB%E7%BB%93/" target="_blank">这里是三月总结文章</a></th>        </tr>        <tr>            <th rowspan=2>3.29 ~ 4.4            计划 && 完成情况</th>            <th>高数从题目出发，多练习题目并且复习</th>            <th>学解概率论整完</th>            <th>电路分析完成作业，大物跟着老师不落后</th>            <th>补完考试的题目，周日和队友比赛</th>        </tr>        <tr>            <td colspan=4 align=center>大物和高数差不多都毫无进展，可能是因为这星期的主基调是概率论，所以就没怎么放在心上。概率论的学习倒是进入了新的认知，把书上能啃的地方都啃了个遍，前四章就是几乎百分之八十的内容了，只是面向考试的话确实效率会很高。考试的题目补了两三道，并且还补充了线段树优化建图以及STL部分相关的使用。电路分析老师发了很多课件，但并未来的及全看。这一周删除了知乎以及B站，并且将其网页端的自动推送功能用广告屏蔽插件屏蔽了，只能用来查询问题。感觉确实是有些作用，但是这一周心态不太对，浪费了一些时间，所以实际上这周任务完成的很差劲</th>        </tr>          <tr>            <th rowspan=2>4.05 ~ 4.11            计划 && 完成情况</th>            <th>高数第十一章之前搞完</th>            <th>概率论练习题目/做卷纸</th>            <th>电路分析暂缓，大物跟着高数做题</th>            <th>依照目前学习路径继续刷题</th>        </tr>        <tr>            <td colspan=4 align=center>概率论考试部分学习完，做了一些题，高数自研至三重积分以及一些级数内容，细节部分还需补完，大物没完成，电路分析则是几乎没动过，竞赛方面完成计算几何的整合，并且补习了多方面的内容，还算不错。现在看来，练习题目导致的枯燥就算没有可以划水的环境也会有很大影响，导致对题目练习较少。机房可能也不太是自习的氛围，总感觉学习文化课的感觉怪怪的</th>        </tr>        <tr>            <th rowspan=2>4.11 ~ 4.17            计划 && 完成情况</th>            <th>高数学习完</th>            <th>概率论继续跟着练习，保证不忘记</th>            <th>电路分析 速成，大物跟者做题</th>            <th>按计划进行DP的训练及细碎知识点的补充</th>        </tr>        <tr>            <td colspan=4 align=center>电路分析进入到数学章节，最后还是回归到高数。学习电路分析需要在机房，但是仅是高数的学习需要在更加具有学习氛围的地方练习。应该选择教室学习。概率论几乎没怎么继续，可能是因为大概已经粗略学完了。DP的训练进行了数天，以及补充了一些知识点。大物还是停摆状态. . .周六早上去北校区拉训练赛，下午班级团建班长小窗私聊要去。周日上午蓝桥杯下午天梯模拟，晚上完成U校园。接下来一段时间应该会着重刷题以及完成电子类型的课业任务。</th>        </tr>          <tr>            <th rowspan=2>4.18 ~ 4.24            计划 && 完成情况</th>            <th>刷课后题，高数上和下的。</th>            <th>概率论间隔着刷，不要生疏</th>            <th>电路分析放缓，大物加紧</th>            <th>继续进行区域赛补题以及思维的训练。</th>        </tr>        <tr>            <td colspan=4 align=center>并没有怎么进行高数学习，大概也意识到了，目前课程应对应该更加偏向文化课，进行了概率论的进一步完善，但是电路分析和大物也和高数差不多。进行的acm相关活动较多。不过这周把大多数网课任务刷完，也算计划之外的收获。下一步计划肯定是更偏向于文化课，以及将细碎事件归到文化课上，十分抱歉，珂珂。我可能在很长一段时间都没法与你一起画了，十分抱歉。</th>        </tr>        <tr>            <th rowspan=2>4.25 ~ 5.02            计划 && 完成情况</th>            <th>细致时间刷高数</th>            <th>刷概率论题</th>            <th>刷大物题</th>            <th>刷动态规划题</th>        </tr>        <tr>            <td colspan=4 align=center>并没有完成刷高数，刷了一些概率论题目并且补充完善了概率论的总结，大物也记了一些知识点但是并未进行规范总结。竞赛题目打了许多，不过针对性练题较少。由于五一浪费了一天时间所以周末的正常规划并未做好。接下来要进行高数的总结以及练习，以及完善概率论的剩余内容，电路分析要在五一假期内进击至目前进度。竞赛也是要继续跟着练习。</th>        </tr>        <tr>            <td colspan=5 align=center> <a href="https://linzeyin.github.io/2021/04/30/2021%E5%B9%B44%E6%9C%88%E4%BB%BD%E6%80%BB%E7%BB%93/" target="_blank">这里是四月总结文章</a></th>        </tr>        <tr>            <th rowspan=2>5.03 ~ 5.09            计划 && 完成情况</th>            <th>高数进行总结训练</th>            <th>概率论将统计部份学习，保证最后20pts</th>            <th>电路分析追赶进度，大物跟着高数走</th>            <th>竞赛，动态规划，思维。</th>        </tr>        <tr>            <td colspan=4 align=center>我就是个垃圾</th>        </tr>        <tr>            <th rowspan=2>5.10 ~ 5.30            计划 && 完成情况</th>            <th></th>            <th></th>            <th></th>            <th></th>        </tr>        <tr>            <td colspan=4 align=center>这一段事情比较多，花费了一些时间，也有一段时间没有更新了。主要是去银川以及比赛前后的集训，回来后文化课的回复以及对未来的考虑。这一段银川银尾，算法方面学习了不少新东西，也发觉到了自己在个人实力上的不足，制定了学习内容并持续学习。文化课方面由于考试周的来临以及竞赛的耽搁，差的还比较多，高数目前大致过了一遍，需要大量补题。概率论方面还有知识点没有完善，同时也差做题。电路分析跟着老师的进度，还算可以。大物需要补的很多，包括知识点和理论。目前想的是先用一周进行高数概率论的刷题，再用一周系统补完大物。尽量不要申请缓考。嵩山实验班去的可能性很低，无论是自己的意愿还是实际情况。Xorex的话让我对网安有些抵触，并且现在的专业也算挺喜欢的。还有确实是对军校的培养环境吃不消，LowG11给我说过他们那里的人的眼界确实会被限制，我也有些害怕这一点。自己的成绩也不算靠前，可能也确实没法进。主要还是得努力把绩点整上去。</th>        </tr>        <tr>            <th rowspan=2>5.31 ~ 6.13            计划 && 完成情况</th>            <th>高数练习题目，进行复习</th>            <th>概率论电路分析增加学习程度</th>            <th>学习大物(重点！)</th>            <th>完善需要在6月完成的所有课余作业。</th>        </tr>        <tr>            <td colspan=4 align=center>中间咕了一周，目前还有一周剩余时间，目前各科状态：概率论几乎整完，高数需要练题，大物学习一半，电路分析差一些没系统整理以及需要练习题目，英语还没搞。接下来会加紧对高数和大物的练习，以及每天的英语训练（背单词&&完成文章练习），以及别忘了还有选修课的期末考试。减少回寝的时间，每天早上必须出门。<br>现在，开始</th>        </tr>        <tr>            <th rowspan=1>6.14 ~ 6.29            计划 && 完成情况</th>            <td rowspan=1 colspan=4 align=center>时间过的有点久，中间在复习期末以及进行期末的过程。期末刚结束，目前是没什么需要补充的。因此先写下这一段的计划。这几天把需要完善的事件完成，暑假是从7月5号正式开始，暑假里初步计划学习复变函数，ACM，以及英语。</th>        </tr>        <tr>            <th rowspan=2>7.5 ~ 7.31            计划 && 完成情况</th>            <th> </th>            <th> </th>            <th> </th>            <th> </th>        </tr>        <tr>            <td colspan=4 align=center>. . .</th>        </tr>        <tr>            <th rowspan=2>7.12 ~ 7.18            计划 && 完成情况</th>            <th> </th>            <th> </th>            <th> </th>            <th> </th>        </tr>        <tr>            <td colspan=4 align=center>. . .</th>        </tr></table><h4 id="update-3-21-2021"><a href="#update-3-21-2021" class="headerlink" title="update 3/21/2021"></a>update 3/21/2021</h4><p>将睡眠规定时间提前至11:30，修改了晚上回寝室的行动。</p><h4 id="update-5-27-2021"><a href="#update-5-27-2021" class="headerlink" title="update 5/27/2021"></a>update 5/27/2021</h4><p>长时间不总结，警醒一次。</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-    
-    
-    <categories>
-      
-      <category>阶段性计划</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>大学</tag>
-      
-      <tag>计划</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>数论题目 数学</title>
     <link href="/2021/03/14/%E6%95%B0%E8%AE%BA_%E6%95%B0%E5%AD%A6/"/>
     <url>/2021/03/14/%E6%95%B0%E8%AE%BA_%E6%95%B0%E5%AD%A6/</url>
@@ -1479,11 +1323,11 @@
   
   
   <entry>
-    <title>数论题目 GCD</title>
-    <link href="/2021/03/12/%E6%95%B0%E8%AE%BA_GCD/"/>
-    <url>/2021/03/12/%E6%95%B0%E8%AE%BA_GCD/</url>
+    <title>数论题目 Longge的问题</title>
+    <link href="/2021/03/12/%E6%95%B0%E8%AE%BA_Longge%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <url>/2021/03/12/%E6%95%B0%E8%AE%BA_Longge%E7%9A%84%E9%97%AE%E9%A2%98/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><blockquote><p>给定整数N，求1&lt;=x,y&lt;=N且Gcd(x,y)为素数的数对(x,y)有多少对.</p></blockquote><h3 id="输入格式-Input-Format"><a href="#输入格式-Input-Format" class="headerlink" title="输入格式 Input Format"></a>输入格式 Input Format</h3><p>一个整数$N。N&lt;=10^7$</p><h3 id="输出格式-Output-Format"><a href="#输出格式-Output-Format" class="headerlink" title="输出格式 Output Format"></a>输出格式 Output Format</h3><p>输出一个整数，表示满足条件的数对数量.</p><h3 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h3><blockquote><p>4</p></blockquote><h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><blockquote><p>4</p></blockquote><hr><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>其实，根本用不到gcd，<br>由于gcd(x,y)为素数,设这个素数为p,所以 $ gcd( \frac{x}{p},\frac{y}{p})=1 $;也就是说每一个小于n的质数p，对于每两个互质的数，都会有一组解（x&lt;=n&amp;&amp;y&lt;=n）<br>先求出1~n的欧拉函数，之后再求出其前缀和 $ \phi [i] $ 为前n个数的欧拉函数和，表示在1~n中有多少互质数.<br>再把每一次的乘二再相加，就是要求的sum了</p><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;utility&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> cnt=<span class="hljs-number">0</span>,prime[<span class="hljs-number">10000010</span>];  <br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> phi[<span class="hljs-number">10000010</span>];<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> n;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get</span><span class="hljs-params">()</span>  </span><br><span class="hljs-function"></span>&#123; <br>phi[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;i++)  <br>    &#123; <br>        <span class="hljs-keyword">if</span>(!phi[i])<br>&#123;<br>prime[++cnt]=i;  <br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=i;j&lt;=n;j+=i)  <br>&#123;<br><span class="hljs-keyword">if</span>(phi[j]==<span class="hljs-number">0</span>)<br>phi[j]=j;<br>phi[j]=phi[j]/i*(i<span class="hljs-number">-1</span>);<br>&#125;<br>        &#125;  <br>    &#125;  <br>&#125;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> sum=<span class="hljs-number">0</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-built_in">cin</span>&gt;&gt;n;<br><span class="hljs-comment">//int k=clock();</span><br><span class="hljs-comment">//for(int i=1;i&lt;=n;i++)</span><br><span class="hljs-comment">//phi[i]=i;</span><br><span class="hljs-built_in">get</span>();<br><span class="hljs-comment">//get2();</span><br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++) phi[i]+=phi[i<span class="hljs-number">-1</span>];<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=cnt;i++)<br>sum+=phi[n/prime[i]]*<span class="hljs-number">2</span><span class="hljs-number">-1</span>;<br><span class="hljs-comment">//cout&lt;&lt;clock()-k&lt;&lt;endl;</span><br><span class="hljs-built_in">cout</span>&lt;&lt;sum&lt;&lt;<span class="hljs-built_in">endl</span>;<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><blockquote><p>给定整数N，求$ \sum_{ i = 1 } ^ n gcd(i,n)$。</p></blockquote><h3 id="输入格式-Input-Format"><a href="#输入格式-Input-Format" class="headerlink" title="输入格式 Input Format"></a>输入格式 Input Format</h3><p>一个整数$N。N&lt;=2 ^ {32} $</p><h3 id="输出格式-Output-Format"><a href="#输出格式-Output-Format" class="headerlink" title="输出格式 Output Format"></a>输出格式 Output Format</h3><p>输出一个整数，表示满足条件的数对数量.</p><h3 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h3><blockquote><p>6</p></blockquote><h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><blockquote><p>15</p></blockquote><hr><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>由题意可知，输入一个n，输出1~n所有数与n的最大公约数的个数和。<br>乍一看很难，实际上并不是，设k=gcd(i,n)，则 $ \frac {i}{k} $ 与 $ \frac {n}{k} $互质，<br>我们可以通过枚举k来得到所有与n的最大公约数为k的数<br>——也就是除以k之后与 $ \frac {n}{k} $ 互质，也就是说$ \frac {n}{k}$的欧拉函数值即为与n最大公约数为k的数的数目。</p><p>之后用sum来累加$ k * \phi ( \frac {n}{k} ) $就是答案。</p><p>PS：如果首先预处理的话，则会爆空间，所以说只能找到一个k再找$ \frac{n}{k} $的欧拉函数值（蜜汁不超时）。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;utility&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> n;<br><span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">phi</span><span class="hljs-params">(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-keyword">int</span> m=<span class="hljs-built_in">sqrt</span>((<span class="hljs-keyword">double</span>)x);<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> k=x;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> i=<span class="hljs-number">2</span>;i&lt;=m;i++)<br>&#123;<br>        <span class="hljs-keyword">if</span>(x%i==<span class="hljs-number">0</span>)<br>&#123;<br>            k=k/i*(i<span class="hljs-number">-1</span>);<br>            <span class="hljs-keyword">while</span>(x%i==<span class="hljs-number">0</span>)x/=i;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(x&gt;<span class="hljs-number">1</span>)k=k/x*(x<span class="hljs-number">-1</span>);<br>    <span class="hljs-keyword">return</span> k;<br>&#125;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> sum=<span class="hljs-number">0</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-built_in">cin</span>&gt;&gt;n;<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i*i&lt;=n;i++)<br>&#123;<br><span class="hljs-keyword">if</span>(n%i==<span class="hljs-number">0</span>)<br>&#123;<br>sum+=i*phi(n/i);<br><span class="hljs-keyword">if</span>(i*i&lt;n)<br>sum+=(n/i)*phi(i);<br><span class="hljs-comment">//cout&lt;&lt;i&lt;&lt;&#x27; &#x27;&lt;&lt;n/i&lt;&lt;&#x27;:&#x27;&lt;&lt;phi[i]&lt;&lt;&#x27; &#x27;&lt;&lt;phi[n/i]&lt;&lt;&quot;    &quot;&lt;&lt;sum&lt;&lt;endl;</span><br>&#125;<br>&#125;<br><span class="hljs-built_in">cout</span>&lt;&lt;sum&lt;&lt;<span class="hljs-built_in">endl</span>;<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
     
     
     <categories>
@@ -1512,11 +1356,11 @@
   
   
   <entry>
-    <title>数论题目 Longge的问题</title>
-    <link href="/2021/03/12/%E6%95%B0%E8%AE%BA_Longge%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <url>/2021/03/12/%E6%95%B0%E8%AE%BA_Longge%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <title>数论题目 GCD</title>
+    <link href="/2021/03/12/%E6%95%B0%E8%AE%BA_GCD/"/>
+    <url>/2021/03/12/%E6%95%B0%E8%AE%BA_GCD/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><blockquote><p>给定整数N，求$ \sum_{ i = 1 } ^ n gcd(i,n)$。</p></blockquote><h3 id="输入格式-Input-Format"><a href="#输入格式-Input-Format" class="headerlink" title="输入格式 Input Format"></a>输入格式 Input Format</h3><p>一个整数$N。N&lt;=2 ^ {32} $</p><h3 id="输出格式-Output-Format"><a href="#输出格式-Output-Format" class="headerlink" title="输出格式 Output Format"></a>输出格式 Output Format</h3><p>输出一个整数，表示满足条件的数对数量.</p><h3 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h3><blockquote><p>6</p></blockquote><h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><blockquote><p>15</p></blockquote><hr><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>由题意可知，输入一个n，输出1~n所有数与n的最大公约数的个数和。<br>乍一看很难，实际上并不是，设k=gcd(i,n)，则 $ \frac {i}{k} $ 与 $ \frac {n}{k} $互质，<br>我们可以通过枚举k来得到所有与n的最大公约数为k的数<br>——也就是除以k之后与 $ \frac {n}{k} $ 互质，也就是说$ \frac {n}{k}$的欧拉函数值即为与n最大公约数为k的数的数目。</p><p>之后用sum来累加$ k * \phi ( \frac {n}{k} ) $就是答案。</p><p>PS：如果首先预处理的话，则会爆空间，所以说只能找到一个k再找$ \frac{n}{k} $的欧拉函数值（蜜汁不超时）。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;utility&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> n;<br><span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">phi</span><span class="hljs-params">(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-keyword">int</span> m=<span class="hljs-built_in">sqrt</span>((<span class="hljs-keyword">double</span>)x);<br>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> k=x;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> i=<span class="hljs-number">2</span>;i&lt;=m;i++)<br>&#123;<br>        <span class="hljs-keyword">if</span>(x%i==<span class="hljs-number">0</span>)<br>&#123;<br>            k=k/i*(i<span class="hljs-number">-1</span>);<br>            <span class="hljs-keyword">while</span>(x%i==<span class="hljs-number">0</span>)x/=i;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(x&gt;<span class="hljs-number">1</span>)k=k/x*(x<span class="hljs-number">-1</span>);<br>    <span class="hljs-keyword">return</span> k;<br>&#125;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> sum=<span class="hljs-number">0</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-built_in">cin</span>&gt;&gt;n;<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i*i&lt;=n;i++)<br>&#123;<br><span class="hljs-keyword">if</span>(n%i==<span class="hljs-number">0</span>)<br>&#123;<br>sum+=i*phi(n/i);<br><span class="hljs-keyword">if</span>(i*i&lt;n)<br>sum+=(n/i)*phi(i);<br><span class="hljs-comment">//cout&lt;&lt;i&lt;&lt;&#x27; &#x27;&lt;&lt;n/i&lt;&lt;&#x27;:&#x27;&lt;&lt;phi[i]&lt;&lt;&#x27; &#x27;&lt;&lt;phi[n/i]&lt;&lt;&quot;    &quot;&lt;&lt;sum&lt;&lt;endl;</span><br>&#125;<br>&#125;<br><span class="hljs-built_in">cout</span>&lt;&lt;sum&lt;&lt;<span class="hljs-built_in">endl</span>;<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><blockquote><p>给定整数N，求1&lt;=x,y&lt;=N且Gcd(x,y)为素数的数对(x,y)有多少对.</p></blockquote><h3 id="输入格式-Input-Format"><a href="#输入格式-Input-Format" class="headerlink" title="输入格式 Input Format"></a>输入格式 Input Format</h3><p>一个整数$N。N&lt;=10^7$</p><h3 id="输出格式-Output-Format"><a href="#输出格式-Output-Format" class="headerlink" title="输出格式 Output Format"></a>输出格式 Output Format</h3><p>输出一个整数，表示满足条件的数对数量.</p><h3 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h3><blockquote><p>4</p></blockquote><h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><blockquote><p>4</p></blockquote><hr><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>其实，根本用不到gcd，<br>由于gcd(x,y)为素数,设这个素数为p,所以 $ gcd( \frac{x}{p},\frac{y}{p})=1 $;也就是说每一个小于n的质数p，对于每两个互质的数，都会有一组解（x&lt;=n&amp;&amp;y&lt;=n）<br>先求出1~n的欧拉函数，之后再求出其前缀和 $ \phi [i] $ 为前n个数的欧拉函数和，表示在1~n中有多少互质数.<br>再把每一次的乘二再相加，就是要求的sum了</p><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;utility&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> cnt=<span class="hljs-number">0</span>,prime[<span class="hljs-number">10000010</span>];  <br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> phi[<span class="hljs-number">10000010</span>];<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> n;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get</span><span class="hljs-params">()</span>  </span><br><span class="hljs-function"></span>&#123; <br>phi[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;i++)  <br>    &#123; <br>        <span class="hljs-keyword">if</span>(!phi[i])<br>&#123;<br>prime[++cnt]=i;  <br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=i;j&lt;=n;j+=i)  <br>&#123;<br><span class="hljs-keyword">if</span>(phi[j]==<span class="hljs-number">0</span>)<br>phi[j]=j;<br>phi[j]=phi[j]/i*(i<span class="hljs-number">-1</span>);<br>&#125;<br>        &#125;  <br>    &#125;  <br>&#125;<br><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> sum=<span class="hljs-number">0</span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-built_in">cin</span>&gt;&gt;n;<br><span class="hljs-comment">//int k=clock();</span><br><span class="hljs-comment">//for(int i=1;i&lt;=n;i++)</span><br><span class="hljs-comment">//phi[i]=i;</span><br><span class="hljs-built_in">get</span>();<br><span class="hljs-comment">//get2();</span><br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++) phi[i]+=phi[i<span class="hljs-number">-1</span>];<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=cnt;i++)<br>sum+=phi[n/prime[i]]*<span class="hljs-number">2</span><span class="hljs-number">-1</span>;<br><span class="hljs-comment">//cout&lt;&lt;clock()-k&lt;&lt;endl;</span><br><span class="hljs-built_in">cout</span>&lt;&lt;sum&lt;&lt;<span class="hljs-built_in">endl</span>;<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
     
     
     <categories>
@@ -1607,33 +1451,6 @@
   
   
   <entry>
-    <title>堕落</title>
-    <link href="/2021/03/03/%E5%A0%95%E8%90%BD/"/>
-    <url>/2021/03/03/%E5%A0%95%E8%90%BD/</url>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="此页只开放给真正的林泽音" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="7c2e2639cfdab949688baebe0f99ba375a4e737a670ee0e6474948439f82fc75">e25daf7966051531abfa76b67c57c998782c91656a729bd8a4719f92273b136121793718f3df835a43897ca872da4075250b9c0ebb5fc42090a455ee4a8826baadb39e3e57bdabb0d7f8339e1849e9bb45cf01501b292af54292392be3b6eb1d20368bc89f3d83ec6aae5d6bea0e287e247fd833936911479184baf8236370077b34b5b94bd7f41aa1ddfb8aa1c52bfc005c6904dc1fdd7ffe571578527c3b112a1c7a3155523c01336b8681d2701d789f58b63c67725832920e1b34930a0047d78d2e56f73ea25427d291b6867aeb9d7d76986268066775217a36924418d0a775aec29129b1ab0bd47df8ace3e88b504f87108b2d250c1dd905b3a2411cd5990aa35ce21a463604cfd87d0561e89a33f1f9c1e09714f73d3606778323afbdd1245ff2846e88bba9bcd29f7f22e83a2c1fc7174999c2a365208f74ec6c85e67993bb0d9117d901d78ca82a585357f89f8feba47572e11c5af95b38bf3f9655cbcd75a50d1049a2946e77c40494d0b4e1d49aed9e29314e5e5c01b1cc8b30c97b62a77f4d469a3c646234644d4a529533ab62619ef2ecff9f4ec5af0362f0b9bbfc4e43529765acf95eaf63be1c02d10bee8143a4dc2f00963fe108da4bb45e747324bf68ed8b8a561e5586d9af58b699de139115a49ede4e758f9ad6579943e4b61e91c25b378e1f17c720222e0e035070f75378ffc77f523cb78d68b0557df99bdfb71d1f710090873d382feb9944533c873d72d3f1b99fbc7999b1f93f475b28ec016625cd30bac87061cbaf90247aa569cf24fa321aa361e971e4cf4f500fe307f8c1238497ed98374aef478385187d264c0eb2957414e04dd19e5f78abcbbd38d50d11d595404081b28dbfc95dd3a229aff72cb13097c9c60d41aee91599a0a3193048e5068365d19319b358202dbe4bf4dbeb82a0142365608cb3619655afed8c34b8dfad7b20f9bfda4ca680dfdda12c0cbd17a40e60f95ffd059492687390bef1269592df7b5928967bd049a2bb7f8489280e4304179fc6fc81236320cd7d2bfba32aa7c40d7251fd137a0b969eb9fa24caf4c326b44896f3886b0f90ed106499d9b8e986d772912dea1d08ed8b63aa92a41e1c43a0af0ca844d67b0f0ac38013545889858e44eefce139845fed9b6b62d910fad06a060b9d0908a9959db7af1b822db0892bc991e62e38968a8b23f1d3b54d45edada1dfc63f61a8c003978685871a177251e3716123d6fb2146e5da548be97978e196c5ea224c2b6b0e7bbf9bcc9b99adf03e9d69c4e4478ecb46218c51806ac2bc9586dccd58a51faeaffd1aab2230257f2312b24c0ee9bafcc0439ca737f5647f092f8fe7de1215c4b7c9680e8c2e67cc3e50bb419d0244dc262e24a5e54265fd87ff7826ea7915afaa7397f6864d2c8eabe083c4c4484d7fec2f0fda25affa2d858ce2657175b11abec9456c47005a8f6a283bdba6607e60e27f5d03f7733e976c12435c82652a15560de4ccdbfd4fb3529c03928b45ce8ec3171d2eb941c6cf4d047a82a38e3757a78fb973edeb8563f028b06760a3236c0485ca111e342677081ffaafa597f77c9ffc3504cf3d0b0d7aed74620b094b214f1ec6556ea3245252e69490c2c0196c15802c0b419fdae6c9334f6a4d20001e01ec7d69744e7f5cf56ac906848213321715629ea97f9bce4d2fa8beecbd643e29f3513d8fb8012adb9045d0c2fa07c299a758ac7959adf7930c1145be8c7cc1e0ef14a65091da87f96591bd72abeac9a8bafec9b88abe3a6368c158e88ddf626f82024b43d41daee687bb05ae9422761d0ea6a5089a450243498c4cfed0ea7e5ab3ae2c5d55f143479a90dafcdaa23b52be42429f4511f1046f362082598f18f43861cdfb69cdafbf68a767f2334d62bc807569aca7247456bf31650c02e400499c0fa6d923b408eb50db33dd23ca808c35e51efecd514dea52388e6342b54a9935d97c66b64ca5ffc178ae8243b949de587c21013dd716993f27c2c8a7d46174e5238460250b4674b30671c1f798f4d44dfc492bbfd9d60886c6f21d91f1d9fbc8c3d7a75085283d579ff41f3c86319067dc2a047bc78115438db77d0f629b3a602b4828d195514a818660c7e17149220fda448d846a43d80d4e9e751e91b222b01cf7581002a277d3b671c83818ca71c49895502650800e679b74b840b9495fc232ea27abee13eb9e9229358cc039cb27f2f77a69f719e33a7171d80446bbf70afdb2dac65bc8a52c882eed14bdf9a52d1255a4ce0e4d2703db7b2253562f9c04e6a9649b2dfd70f1dea2f19376f3e7aa8110048b241c13ee550e0a1a7f08293b24c552985e15de4ca835dfccfaf7a52ff92121a61ddfa66abfc879fe63531947245e304cfca32a5e50cf0aca4da5a0cf4e331003fe5a71d51ed9859ae9770056a9743a7585ea76f49ab88cec752b8e9f96bfacef5bce3425145411bb4222d2bf198c19e338c66b46e421417dc227d726ce2134c0b25652c3e0cffe47656a4a6e645e54d7c72fabb97738c00d2b6972f4af828eadd71e304e10d7044d5406e24a879dca9585e2263add72159a34ece1961e18adcd76e03813a3e6e3e6d2778351a3c4890e7e5af4058461e035b37202d69971c4e021a3be502f94d00354a855b93dbfbfb77dd1ccf020c77d72194e3b606f75f3423f7872037a1d490fc59e3d7cfb69969b34500adf8e55fdf4dbc90005b8340451ab58567df08700d9221c643a71c7b6a9c5e8eb9ea0b7add44250d8d49ef5ef4a519a8515cfff0532424ba9bae45518cb9b9ef248eccd3feb141d7acc505bedee82ad6cf67fd0c363d1380fbf9348f07fe0766a61aae1da872d6c0a80013e868cc2639ea7cdeb36806b3d0ff7dc4edc5da1ba05b457ab268488c169d186eeadcd0872f9275128e3b7c6763b5939703dd8b492d4d1df544b2311fb86da49828c570d5cc74850cf32bcdbc7b514cd3c95642c53214d23bd4f8b77a67c29cdf77bc94626918729f0fe99f999ee2dc6d2b7491452d1a52832f6c22fab3b0afabf1b30c1591684fda66b4133ced6e01866fbcbba91fd507e8822e251312d5bdbc4bfa713e9faffdb439d2da5c4a2dcb2f2f57ddef3c99576c30c8a03c9ae7ec2d1daf3356f67e85c72ba486ce106009ac926f6c3eb3777c35ea8b81a7e6ec81db21d83958cef6326632f5a8846e155f5583c352628bd5b5dc961e7491530b92fedc572d178e60acc70d09127a05cd3683f3ade615e6afc596f17e9b3278082d305048256d63201e7a7a08009db7f2be781e477c0de658a3659020e64ab93e981844d59401c1405c2d4b3af65193fb8d79ae8a74e5378936b0f4847398f582962b8301ea7454fc65f3ca9630932fd0e69e549d72e6396f9b9fd04033f56ba22627cc17f7ea25c536d8bc6576becbd2bc5b23f49f7c80dd09b66dc6c8152e928bc779577170b487fcadeabb4070a4e87edcc5e3f9dd8df0d0b5cee70bc124c5d6320102faeb9252092b31449ea5cd1c977f413c0a529c89f5c1068201f6903dde7be7c48192da82efb18c23b9e8163a07c7750c1a29067961ad8f0ee933118c8de8e87d4903523ccd63807618db664cd8ca2d98096509e5003fc7dd4991f8ccb1e58039a5f6cbdc7a3ab14cfcfa61215afa7a6655dcfed7686a59c0f6f9e6b192f5a8dd3c4879df838374490eb5771a3d7649fb7b8c34e4b43dad2d826cc866ee81e754a447639ddfc4dcec9761b3161608a47310479988af8b4cef26070f083ad146b566ded7bf412a66d99b4e77f1427d723d94585475d07f3aee6b85d569f6cd7a68f13ab9c92a875bb7153bf60d239c33e67ea5b4e1b8e0d8dd74935912767ed614fef5392188fc828a0667d4b19226be063e00a3af03a7227c5670655a5aaa631e26941a564dfd33f382d5b19ef7161ed9a6b446f8af11ab26998952511e3524669df50c50de576987549325434acbb7a38dadb6566c423fcb95b51f5d12cf70191b3f8e36da4e99a450e22d25ef31b4e117f1dd3f76c822b9d777ceb396793f574be4e67a4c6873777358162ee58bd0d10be05d84f051f132f042dbe2b01063e06b05a0b4d5e8a695e9cc06d608f62f769039fbc9bbfd2b1f7072d0ae22905b352eb4a84bf74c18614f7911839d563d57dab8b3cc6fbf8acdabf2a49bfae6a0370bbf8fdf1011c75d9e5a8f6e017f171bab9a7f4951bfdbe39df002982c24fa64c8e322934e584aace96f221d09b5c53a2edc73bf5c424420e9fa2790a5e26f15613cd6d3fdae0d0af8d1f9835e67bc6e22385c513d62763ecde5fe5171419ef41f4a626c563108a8ca0f7e37a6cfd430d233f2ace072941200d6dffb9fbadd9c6bceefb45e44d74f4ac40aa7858e6d8f415266e64de018e18bbd391d81dcc424b797ab6ab951150217665155e9b8fe6f1bc835c0daf6649572c99604836aa51018483a8d074b5e2bb07d1676012e36f1228b8df6c6aa3d2712e0b683230de4d29d8fa5435c2e23344505d52dabbf0e98f327781c2989345a0e2e83b3553806ec172b0e9353ddcb12c55130680614d0ea424b3b6676bca87ce00207aff13098847dab887a71eec778ba5a512c66e01dd05237a39c176b78a3c6ac116a015ec29e8c07fa06f9b20436f274eb50c9c2f3665b31c3eb24929290903c1e2434ceb0008082faf52d312f327a0548ab1f38915c298edf37d20d7092e9b7784dae56c902320d66fab0091b64f28f19020d0040c96a69f918e8d3d2e99afc5a85e0cc67dc63a01d3ff4d5073720fcd3b36851a29f9618d904ffc869718407f7fb1a669ce7851dba5be8f732ec293f18db1e848e4e26995559af00a324aa9ed1e546f532b8b016b22cf42533df31efd0bf0e1d9c6b09d95cfc528073f0bad4a57990da96d0d9e44644d3efb163bbf50482af19feea9606d3b0e23b686f51092b6cd3006a52b2d3511f5510162126af495ec8273bb88d40f7e1ca20e1f32a69a72a8486ca60412a6c5b7ec6973af3fc3e0d4b198f951872c080c45564e9c19f40103e277ba1833263f75009e57969005951cbb78a6cb2a091fc3ffbbe0d7bf4a39a1eb90fd410fff01f9b82d5d8a990a7ed73e55561c47163833f6189b6a708c7219ba07c52726f86192b326acaa62fd06c17544da916fa242d149d70aadc50424e6e145e5cbb5b036f2fd619b2794d6a403de8d0db596d003800727903af42d71807d62668988b4c90eff91452cba99ad7b2362d334ae78373aab87999eb814a8481062f588e57fd7299c97e0eae11cb27a676e6eb60efe0f3fed76ed6d2077c9ed952f3dd30f762f844375633013e6fab665248dc0a368b7c0b6939ba9f023b646d63702b4a670fcbe81b7a74bea17b034b75071585182b99febf35bdfe033d70ebcf16f44e35510a5a978f4b5d8c0ed60dfda56f4c621170b9bacaa23cacd14af8a756e3e0b013a4346ab5d5190cf084e7d61d9a630943f85e2c1e9064b197eb0c096192a39ab055d340b87d3f8b38e37a1252fc1578de54d50a42dc6c8b96b09fda9967c6a35c58ef4b495cf161eda2e8e23de51f3008c63165e961423baa1a1548834897c94501f50075c053d1c8974acc5d187fe39eaf9339581d8cd7aa416c24f926c74bae3a2d4f2c38b9975b3891f3d57f41c1ca5df7236ffdd78fd153852a9baa7f06a51222d4d505a1ae38d0e8a6bc665bf4d4804f3a6ffff0dd432ce3db8f42f7ed72d6361d9b819c9c11eccbb9ecb1c8b4842353684f54106</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">我的希望</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <categories>
-      
-      <category>随笔</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>随笔</tag>
-      
-      <tag>加密</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>一些细碎的知识点补充</title>
     <link href="/2021/03/01/%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/"/>
     <url>/2021/03/01/%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/</url>
@@ -1692,31 +1509,6 @@
   
   
   <entry>
-    <title>记于博客初创</title>
-    <link href="/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/"/>
-    <url>/2021/02/26/%E8%AE%B0%E4%BA%8E%E5%8D%9A%E5%AE%A2%E5%88%9D%E5%88%9B/</url>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">其实想这样搭个博客已经很久了，原本预定的是高考完就搭的，<br>但是由于当时的懒癌，以及状态的未能调整，导致咕到现在。<br></code></pre></td></tr></table></figure><p>其实远没有想象中的呢么难(指搭blog)。但是还是一直咕到了现在，这个寒假也是，感觉学了好多东西，但好多都是浅浅一瞥，未能深入进行。大部分的时间还都是浪费了，这样不好。<br>然后我看到<a href="https://xorex.space/">xorex</a>的blog，看到了他的寒假计划，忽然觉得自己的寒假太空虚了，以及确实需要一个东西来记录并鞭策一下自己。</p><p>想想，寒假都干了些什么呢？   </p><blockquote><ul><li>学了一点高数下（只有一点   </li><li>学了py的基础语法，通过外源库写了几个小工具</li><li>学了些OpenGL相关的东西，然后由于配置的是工程环境便学了些工程相关的东西（学的太少了感觉很快就会忘</li><li>学了博弈论，这原本是和两位学长组队时就定的目标，但是当时一知半解，于是寒假进行了比较深入的认知</li><li>dp的进阶，dp这块在高中确实没怎么学过，遇到dp的题一般都是靠直觉，寒假里花了几天看了单调队列优化以及斜率优化等，然后也看了些状压以及数位dp，可能还需要一定量的刷题才能更加牢固</li><li>由于辅导员发了电商模拟赛便花了两天找素材并准备学习做app，然后发现别人都是从去年10月就准备的便放弃了(不过学习了如何把py部署至移动端，可能还算有点收获？)</li><li>和寒假新认识的朋友一起画画，大概是聪2月20号左右开始的吧，每天有大概1h，目前是在练习抓型（用csi来切物体的形体</li></ul><hr><p>啊，大概发现问题了<br>自己学的东西明明<strong>很少</strong>，很多时间都用来划水了(<em>nier二三周目？VA-11 Hall-A？<del>哦对，你写了个记录cyberpunk里不认识的单词的py小工具然后完成后就不再玩了？？</del></em>)，但是由于面比较广(广？)，就造成了一种学的很多的错觉。</p></blockquote><p><strong>实际上你划水划了一寒假啊</strong></p><p><img src="https://s3.ax1x.com/2021/02/27/6SX50s.jpg" alt=""></p><blockquote><p>曾和老裴说过，非常怀念高四的生活，因为呢一段时间有帮助自己的老师们，有一同学习的同学们，有着可以为之而奋斗的目标。</p><p>你在大学里做到了高四的多少呢？</p></blockquote><p>啊，忽然想起来，这是记于博客初创，不是自省帖子。<br>呢么记于blog的开始，希望能在大学期间能有高四的努力(<del>加速卷</del>)。</p><p>毕竟<br><img src="https://s3.ax1x.com/2021/02/27/6SX7t0.png" alt=""></p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-    
-    
-    <categories>
-      
-      <category>随笔</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>随笔</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>谈一谈博弈</title>
     <link href="/2021/02/26/%E8%B0%88%E4%B8%80%E8%B0%88%E5%8D%9A%E5%BC%88/"/>
     <url>/2021/02/26/%E8%B0%88%E4%B8%80%E8%B0%88%E5%8D%9A%E5%BC%88/</url>
@@ -1752,7 +1544,7 @@
     <link href="/2021/01/29/test/"/>
     <url>/2021/01/29/test/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-QFVqwdoM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-QFVqwdoM"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "ノクターンとクラゲ",              author: "まじ娘",              url: "/music/まじ娘 - ノクターンとクラゲ.mp3",              pic: "/img/}$TO9$~}PDH@C[RL4X2GLA4.png",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>        <div id="aplayer-cNemBuId" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-cNemBuId"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "爱",              author: "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbHpPaENqNWFzY1BnbWtxbmU5anhJUmpQNEE3P2U9cFE3QXNw.mp3",              url: "/img/}$TO9$~}PDH@C[RL4X2GLA4.png",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><h1 id="This-is-the-test"><a href="#This-is-the-test" class="headerlink" title="This is the test"></a>This is the test</h1><h1 id="my-first-blog"><a href="#my-first-blog" class="headerlink" title="my first blog"></a>my first blog</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">代码框部分<br></code></pre></td></tr></table></figure><p><a href="https://www.cnblogs.com/xrblog/p/11585885.html">超链接</a>部分(指向的是帮助我搭好的blog)</p><p><img src="https://s2.ax1x.com/2019/01/21/kPlYAP.jpg" alt="添加的图片，也是感慨" title="千万别！"></p><iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=286901759&bvid=BV1yf4y1Q7db&cid=230911902&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p><a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://linzeyin.github.io/2021/01/29/test/&amp;showcount=1&amp;desc=这是一个测试文件&amp;summary=这是测试文件的分享&amp;title=测试文件的标题&amp;pics=https://s2.ax1x.com/2019/01/21/kPlYAP.jpg&amp;style=203&amp;width=98&amp;height=22">分享测试</a></p><blockquote><p>测试完了，去水去了。<br><del>老懒癌了</del></p></blockquote><p><脚本 src = “ https://utteranc.es/client.js ” repo = “ [在此处输入回车] ” issue-term = “ pathname ”主题= “ github-light ” crossorigin = “匿名”异步> </>    </p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-SfDCIcbq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-SfDCIcbq"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "ノクターンとクラゲ",              author: "まじ娘",              url: "/music/まじ娘 - ノクターンとクラゲ.mp3",              pic: "/img/}$TO9$~}PDH@C[RL4X2GLA4.png",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>        <div id="aplayer-ZvXnlRdi" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-ZvXnlRdi"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "爱",              author: "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbHpPaENqNWFzY1BnbWtxbmU5anhJUmpQNEE3P2U9cFE3QXNw.mp3",              url: "/img/}$TO9$~}PDH@C[RL4X2GLA4.png",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><h1 id="This-is-the-test"><a href="#This-is-the-test" class="headerlink" title="This is the test"></a>This is the test</h1><h1 id="my-first-blog"><a href="#my-first-blog" class="headerlink" title="my first blog"></a>my first blog</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">代码框部分<br></code></pre></td></tr></table></figure><p><a href="https://www.cnblogs.com/xrblog/p/11585885.html">超链接</a>部分(指向的是帮助我搭好的blog)</p><p><img src="https://s2.ax1x.com/2019/01/21/kPlYAP.jpg" alt="添加的图片，也是感慨" title="千万别！"></p><iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=286901759&bvid=BV1yf4y1Q7db&cid=230911902&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p><a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://linzeyin.github.io/2021/01/29/test/&amp;showcount=1&amp;desc=这是一个测试文件&amp;summary=这是测试文件的分享&amp;title=测试文件的标题&amp;pics=https://s2.ax1x.com/2019/01/21/kPlYAP.jpg&amp;style=203&amp;width=98&amp;height=22">分享测试</a></p><blockquote><p>测试完了，去水去了。<br><del>老懒癌了</del></p></blockquote><p><脚本 src = “ https://utteranc.es/client.js ” repo = “ [在此处输入回车] ” issue-term = “ pathname ”主题= “ github-light ” crossorigin = “匿名”异步> </>    </p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
     
     
     <categories>
@@ -1767,62 +1559,6 @@
       <tag>acm</tag>
       
       <tag>testfile</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>圣诞节小故事</title>
-    <link href="/2020/12/21/%E5%9C%A3%E8%AF%9E%E8%8A%82%E5%B0%8F%E6%95%85%E4%BA%8B/"/>
-    <url>/2020/12/21/%E5%9C%A3%E8%AF%9E%E8%8A%82%E5%B0%8F%E6%95%85%E4%BA%8B/</url>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>天冷极了，下着雪，又快黑了。这是一年的最后一天—大年夜，在这又冷又黑的晚上，一个乖巧的小女孩儿，赤着脚在街上走着，她的鞋是妈妈穿的，一只丢了，还有一只被一个小男孩抢走了说要给未来的孩子当摇篮。</p><p>小女孩一根火柴也没有卖出去，她又冷又饿，她不敢两手空空回家，她的父亲一定会动手打她的，别人窗子里透出的光那么温暖，闻着烧鹅的香味，小女孩伸出来几乎要冻僵的手 划了一根火柴—— 她太想暖和暖和了。</p><p>火柴的火焰转瞬即逝，正当小女孩要划第二根火柴时，一个白胡子的红衣老头出现在了她的面前，他的模样和善，两腮上的红色像是喝醉了酒一样，小女孩想起了那个妈妈讲过的传说。</p><p>“您，您就是来送礼物的圣诞老人吗？”</p><p>那老人闻言 笑了笑，慈爱地看着小女孩：“是啊，也许我就是圣诞老人，流落街头的可怜儿，你连个住的地方都没有，怎么许愿自己想要的礼物呢？ 你看到这栋高楼嘛？我要给门卫的孩子送去一本作业的答案，要去给中间楼层的孩子送去他想要的高级钢笔，给顶楼的孩子送去一家店铺，但是预备好给你的礼物。”</p><p>“就因为我没有钱去买圣诞树，买礼物卡片，所以我没有许愿的能力。”小女孩苦涩地说道  “我还得更努力地赚钱，对吗？”</p><p>“你是个孩子，你本来应该在明亮的教室好好学习，在温暖的家里和其他人一样度过美好的圣诞节，你的父亲因为被朋友们欺骗破产而酗酒 你的母亲为了生计奔波过劳死在了商铺却无人问津，连你这个孩子都要出来卖火柴为生，一个人的失败让一个家庭万劫不复，多么荒诞的事。”</p><p>“我该怎么做呢。”</p><p>“孩子，在那之前，我只能说要多想。”</p><p>女孩沉默着，她再次认真看了眼老人。</p><p>“你不是那位圣诞老人，对吗。”</p><p>“我？我当然不是，我只是一个红色的幽灵，你愿意接受幽灵的礼物吗？我将我的思想送给你，枪炮会生锈，而思想会一直流传着，只要存在着不公，我就永远在世间游荡着。”</p><pre><code>起来 饥寒交迫的奴隶起来 全世界受苦的人满腔的热血已经沸腾 要为真理而斗争旧世界打个落花流水 奴隶们起来 起来不要说我们一无所有 我们要做天下的主人这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现从来就没有什麽救世主 也不靠神仙皇帝要创造人类的幸福 全靠我们自己我们要夺回劳动果实 让思想冲破牢笼快把那炉火烧得通红 趁热打铁才能成功这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现最可恨那些毒蛇猛兽吃尽了我们的血肉一旦把他们消灭干净鲜红的太阳照遍全球这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现英特纳雄耐尔就一定要实现</code></pre><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-    
-    
-    <categories>
-      
-      <category>在人间</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>随笔</tag>
-      
-      <tag>在人间</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>宝石之国_金刚碎</title>
-    <link href="/2020/11/28/%E5%AE%9D%E7%9F%B3%E4%B9%8B%E5%9B%BD_%E9%87%91%E5%88%9A%E7%A2%8E/"/>
-    <url>/2020/11/28/%E5%AE%9D%E7%9F%B3%E4%B9%8B%E5%9B%BD_%E9%87%91%E5%88%9A%E7%A2%8E/</url>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="17a2bb85399f11ad4c625716d5aa07fd8dfb75b762c9dec8dc23d40d581ef82c">a5511f9b85f13791462f1a3826e52cd0858219e630fcf100e62e0116b95e5a16589c0c3e2dcc42c22b9327b28a4e1553c646a680408c11a57590a395f66fe8bebf35c3b1a1c6ec5fdc5737c165bd4f47359264c6abca9383f2898edb3febacac9bc719e26cef7045ba5276abbcdff05e8338a081d785a8af02865b168de5667419096d736ebf9c48568b1f42d4a9fa5bbd77750f515ec250ec944060d64dd62868df4c647a2e47f9039a823f0789d32246f7e3da707de2fbafc108f3f4904a4704f25e9477dfd5e81c926c8a056ff8a6f1a16ede4207feefdad2e0cc8e633daf772d404a15f29fce21ee2e8a6dae79b72371ca2819b22fde4a912a81fd950975952a7f88ae629f9e0f077822b5e8b1adcc4bd7899c5f9d3d3fc880fbba73afc60ea69615881f595237aeef3239dbdf22a6a28dc314a691eff5a633b7ebb5153c118099dd47ec80604241f4bce9174d4ab45cfe3d9a7492848b735be924f53aedb9bfd91e8eb1c20e67b3431596079fb6e323e3a8832a89e025a81bfba34e36d0e59587c25ef63a7e311d8bd6373849b577de3d4d3188ae2fe1ef865e6704ff9dec0793e0ad5ef39d2472278a8ceb4407f4a0f4c32f4f7c6f8b1f11ed3b17779b0606c57d4f94cd2258d6f48f1bba34978cf0a035cb3701fb818e70765bd2f0043a5566d892a05f4860fc777d72a9ed3404de7ec0c18ef6d3d3d0542c5a70d534fb1bb16c26f0e0fc23b88fd4076c1fe88fe955716e06f66967b87aa056fe93b2390ba572e91d0d5dde1254dabd699e73a60755596b8321f8b5d55147f2229c9351e8573677fad6b7d546b63542b71679e67bb5e0bb30323865b62f9c8ac45e47cffd189f9ff08919144790e91c8a96ac3ef88cf6e794c60b31bd06eb7c1b4cb5d898a75fbc8ed8b7de60fa78b6639c8b520e6856700cac0d3c5cbd7fc9cdad3ae9974bc9140f587f62c3b3edbee3a26067de083044d7a9defd570c64ef35e28fe35726b717cbb7d1535be264596d2dcb1bba96372a37ded6852c940727071f3135658d4f4049d8da6a3e3b39860e5f7ae99e5e050bd2073975df7a1c53ef0cb8efe37afad80e9d21544070f4ec07c9d550bc6b517920d2803b13175615ef75185f7daab01d22683a1afdd749aee9e1e7d3e2cd7572343d9a25429bd6813a6ea7b4f96f8e2b04c932d9c74e3d965d0bea4b45f5495e53a8ad63317f1c90e96a0fd7743e36c27a93e9e3369a2586ff6ab4f0ad98ae4c11002957dec5de9b3ee0acf9844badd523fe8297f61e21be882ebd71367c98fd9f2711a2b920e2497a4a201e1c6916f8667462d62db060dc5a602932abbaa032862f8ec8337aa7ff219535ade08c3699cfe7aed711fc9ea1d468d3bb0bcc36c34b490bc44b6dd07c0fdcd17fa2fbbc7b28e771774e6b6b56fbf6de50f9a033bbda99d2ba625845cd59eefb56d6f23b77582fe7e95e684df51e347a1ef5f9e5b12d84341b16b0f1fb39bdbdec19e09928899cec78cc2f6725578da163e8b873841068981f6f38872068228e85c1dd4cdb93b7c8118150b3373c9b0888adfd21a35fa3a4d0033acebb51df0c2a3f1d50f9f75a7f18aedc5c8d163fe7ae1d53194fcb60f94a887f3281c20a55ee13b1493d775670a951f30e151313a808aef5ead7e30e180182c390458207217146d630901df0d3e503f9dfaf115181ef8df64151a75f537f726252c3f2a5bb85acebfee9924b6192c5b566b4fc65935575495bafaa63460bf3ce4daf0eb2672bf0cbb311bf48cfe36bb0e8fcc1317ddf543e721cac4006a40add48511ddcf65f1a5a14397df0333d5afea043ef75572a6b908e64650d5a7abedb81ba3d51e85d3aca35f7d0ef5a6f50f2c06c8f358940f7fa985ea212a0ea91a873ae2e704d589d95c84f122c408d10bf8525c9b5d1e657536239c6b3708b3bcd977184c5389be03b5623a329f0d421c661f0f81445d2b4b3cabb09f1109982bb08a55a8fcbe8ae0ee5d5550ef8a1345348bfa7f69807172d5d4925fa43eae61207413dccdd645ed48d7bfc6f7bb50b6a9e66129aab6b478d4b298e6d5ab314201fffea0f108316dfae870f0ceab14c1f7adf3702fbf75888b179e651bd6275c3ffaadd49badbd07185ded9a2c21c36d8739c3ddce28355896e5cfabc5aee1d6f3155f8ff331837e36da98a8a2367830f14eeeba929b662285a1b47b5bcb73a1a8a190fc273f8137bb6f484f4b94e2c8dbb8b4c0b02fd9ccf18c478f35b0e83306d911627af633c4eecf93332df591dafa1b158c651a664996cfc49fd18f01964e2ec35fb87a99ea30a2808430e58dc3286038d9040e55595733ef140df8a9fc86026530a03222e9e31bc4ec59f53c019c2d4cdb5a0dbd96e6df30d85d83193d9b7d06eda59fe728184567c23e8fbfd5f04207fcccd892dea660eab832586bcc0638491c5387f0617620ceaef3b246de76533d1bbedaa6a53d7e03dd6c106bcbeffcd23baf1be727e6b4a7ca22048789f1bba771da5de1566519d7adea97c5a7d39ca4507f6cb92e187a1ec5c31a42504c8293b0c883268010ffa527420a51fe014c633ad8b7328ecf4d191028097202c1f4906ddd4866f52d720afb698ebf3000165cc95bef2c7790735b4f7ea15963a9296f067df56ded6e965c24032d93d126893a0dd06a2ce49d79f506735ef1939ebd47b10ce01146cfc1911faa115788ffe105d72d32f6ce837432f74a0ca93c472e5c186d3fea4576c5434908dda39c9f0447a8a7349f963a5bb27ae6da687e901ec5a462f</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您看过宝石之国吗？(Yes/No)</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <categories>
-      
-      <category>随笔</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>随笔</tag>
-      
-      <tag>加密</tag>
-      
-      <tag>漫画</tag>
       
     </tags>
     
@@ -1889,72 +1625,6 @@
       <tag>acm</tag>
       
       <tag>技巧</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>NOIP2018 再见 OI</title>
-    <link href="/2018/11/11/noip2018%E5%86%8D%E8%A7%81OI/"/>
-    <url>/2018/11/11/noip2018%E5%86%8D%E8%A7%81OI/</url>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>周五到了郑州，试机时什么都打不出来，便敲了个kmp的板子，原本说的高三聚餐，也只有七个人来，stork没回来于是就在在一楼玩了会儿。</p><p>day1t1考场上手推了一下发现了查分的相关性质，扫了一遍应该对了吧。</p><p>t2写的时候思绪很乱，加了很多不知所谓的优化以及忘了exgcd咋写推了一小时的exgcd虽然推出来了但结果发现毫无卵用，最后枚举集合中的元素筛了一遍，出来之后都说是个背包，想了想也是，不过筛法复杂度和背包是一样的，应该也过了吧。</p><p>写t3时就剩下1小时于是开始打暴力，忘了树直径如何求，于是就只打了菊花图+链+m=1的二叉树。大概有50分吧。</p><p>下午高三们说了要去网吧，还是飞翔网咖，虽然进去了但不过一会儿又出来了，和张德伟一起去看了电影（laji毒液），回来时下雨了，其他人还在网吧没回来，就在century和ceo的房间苟了一会儿。</p><p>和mybing一起吃了晚餐，吃完后边散步边聊了一会儿，还是17年和王凯文一起走过的路，东扯西扯的吹牛b。</p><p>回去后分了水果，水了会儿也不想打模版。</p><p>day2t1写了近三个小时，第一个小时没看出来是树，第二个小时在想环套树，第三个小时在优化以及查错，结果就没时间搞其他题了</p><p>回到学校，看到century在农药，想起来了去年的雅礼。</p><p>才发现，就这么结束了。</p><p>就这样结束了。</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-    
-    
-    <categories>
-      
-      <category>游记</category>
-      
-      <category>比赛</category>
-      
-      <category>NOIP2018</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>游记</tag>
-      
-      <tag>随笔</tag>
-      
-      <tag>高中</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>这大抵是一篇自省吧</title>
-    <link href="/2018/03/23/%E8%BF%99%E5%A4%A7%E6%8A%B5%E6%98%AF%E4%B8%80%E7%AF%87%E8%87%AA%E7%9C%81%E5%90%A7/"/>
-    <url>/2018/03/23/%E8%BF%99%E5%A4%A7%E6%8A%B5%E6%98%AF%E4%B8%80%E7%AF%87%E8%87%AA%E7%9C%81%E5%90%A7/</url>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天华东师范条例出了，给的政策还不错，一等就免笔试，晚上和帆神讨论了一些关于自招的东西，现在的成绩搞一个985的cs专业还是可以的，毕竟河南一本分数低，一等容易得，还是能上个985的，cs出来找个好工作，然而，为了什么呢？</p><p>进了大学，出来之后找个工作，就这样度过一生？忙忙碌碌，有什么意义呢？不如在出生的呢刻就死了算了</p><p>之前的16个年头，我都是浑浑噩噩的度过的，没有一个清醒的目标，只是为了活着而活着</p><p>可我TM不想这样了，我想做一些成效，干一些事情，我只度过了漫长人生的16个年头，可是我看不到未来的一点光明</p><p>我最开始学习这个竞赛的目的是什么？最开始是小时候对编程的好奇，由老师介绍来，之后对它也就仅仅停留在了兴趣上，没有动力，整天颓废。第一次觉得梦想对自己这么重要。</p><p>但是软弱的人才需要帮助，该长大的，总会长大，该觉醒的，无法阻挡。</p><pre><code>                                                   记与2018/3/23 23:19:12太原</code></pre><blockquote><p>其实我觉得，年少时有股中二的劲头，其实也挺好的。起码比在高一高二时期基于单纯欲望的玩物丧志好多了。<br>看到幼稚的话语并不觉得羞耻，而是有一种羡慕的感觉。<br>羡慕那时候还雄心勃勃，羡慕那时候的自己还有大把时光，还羡慕着 无知的幸福。<br>可能是我醒来的时机太晚，又或者是自卑的太早了吧。</p></blockquote><pre><code>                                                   Update 2021/3/11</code></pre><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
-    
-    
-    <categories>
-      
-      <category>游记</category>
-      
-      <category>山西</category>
-      
-      <category>随笔</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>游记</tag>
-      
-      <tag>随笔</tag>
-      
-      <tag>高中</tag>
       
     </tags>
     
