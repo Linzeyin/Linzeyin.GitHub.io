@@ -2463,29 +2463,29 @@ note-default {
 }
 /*鼠标样式*/
 body {
-  cursor: url("/cur/arrow.cur"), auto !important;
+  cursor: auto, url("/cur/arrow.cur"), auto !important;
 }
 div {
-  cursor: url("/cur/arrow.cur"), auto;
+  cursor: auto, url("/cur/arrow.cur"), auto;
 }
 /* a, */
 img {
-  cursor: url("/cur/butt.cur"), auto !important;
+  cursor: auto, url("/cur/butt.cur"), auto !important;
 }
 /*a标签*/
 a:hover {
-  cursor: url("/cur/link.cur"), auto;
+  cursor: auto, url("/cur/link.cur"), auto;
 }
 input:hover {
-  cursor: url("/cur/butt.cur"), auto;
+  cursor: auto, url("/cur/butt.cur"), auto;
 }
 /*按钮*/
 button:hover {
-  cursor: url("/cur/butt.cur"), auto;
+  cursor: auto, url("/cur/butt.cur"), auto;
 }
 /*i标签*/
 i:hover {
-  cursor: url("/cur/link.cur"), auto;
+  cursor: auto, url("/cur/link.cur");
 }
 /* 默认光标（通常是一个箭头) */
 /* bb样式 */
