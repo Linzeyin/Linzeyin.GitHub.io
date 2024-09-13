@@ -175,6 +175,39 @@
   
   
   <entry>
+    <title>标签画像项目开发记录</title>
+    <link href="/2022/06/27/MySQL/"/>
+    <url>/2022/06/27/MySQL/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>现在是7/17/2022，实际上是这个项目已经接近完成了，目前就剩下导师们的评审了。<br>我的项目主体是由c++的后端部分以及python的前端部分，c++的部分打包成来exe供python进行使用，之间的交互以及数据的暂存均通过文件方式。<br>c++的后端部分主要是写具体的业务逻辑，由于中途需求改动了一次，导致部分业务逻辑并没有用上，不过在本文中回阐明所有的逻辑<br>python的前端部分经历了三次主要改动，第一次是初学tkinter时搭建的简易框架，由于需要美化在csdn上找到了前人写的exbutton相关的以及ttk相关的内容，这是第二次对整体页面框架的修改。由于exbutton部分前人断更了，但是离需求需要的美化还有着不小的距离，因此在搜索进一步美化的时候找到并学习了ttkbootstrap，第三次修改主要的是页面上的具体内容。<br>单人，从mysql开始学习然后到项目结束大概是三周的时间，中间由于休息，考试，培训的时间除外（也除外mysql的学习时间的话），单论从设计到项目实施，实际的打代码时间（包括后续的一次需求变动），大概实际所用时间是是十一二天左右（3天设计，两天半后端，半天到一天后端测试，四五天前端）<br>c++部分大约是近1.4k行的代码,python的话大概是有2.3k左右行的代码，大概是课程作业量级的项目？<br>学习了很多的东西，比如项目需求的分析，项目框架以及具体的设计，mysql的初步学习使用，以及python的一大堆相关的库，等等。</p><p>大概就是这样，接下来就是项目的具体情况</p><h2 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h2><h3 id="项目需求"><a href="#项目需求" class="headerlink" title="项目需求"></a>项目需求</h3><p>基于用户数据进行数据分析，需求分析，功能设计，数据库设计，代码开发，实现用户标签和画像系统。</p><h3 id="项目要求"><a href="#项目要求" class="headerlink" title="项目要求"></a>项目要求</h3><p>考虑角色分工以及项目工作量，建议以团队协作模式开展，建议3~6人协作完成，充分体验项目分工和项目协作。<del>确实，感觉想要实现多种功能的话还是人多一点好，起码来一个人帮忙写前端就能多一半开发时间取做额外修饰</del><br>按照需求分析、设计、编码和联调、运行等过程展开项目。<br>实现用户标签和画像功能，要求满足以下功能：<br>1) 标签<br>    a) 支持分多层设计，不少于 2 层；<br>    b) 支持自定义标签阈值，调整阈值后，能重新生成标签；<br>    c) 标签总数，不少于 10 个。</p><p>2) 画像支持 2 类：<br>    a) 单客户画像，不少于 10 个字段，不少于 3 个标签；<br>    b) 客户群体画像，不少于 3 个图表（或数据指标）。</p><h3 id="技术要求"><a href="#技术要求" class="headerlink" title="技术要求"></a>技术要求</h3><p>1) 使用 Java 语言进行程序设计和开发；<del>坏了，我用的是c++和py</del><br>2) 使用 MySQL 数据库；<br>3) 前端实现技术，依据自身的掌握能力选择。如果能够实现前端页面展示，适当加分。</p><p>项目介绍大致就是这样，提供有30W条数据进行查询。</p><h2 id="程序设计框架图"><a href="#程序设计框架图" class="headerlink" title="程序设计框架图"></a>程序设计框架图</h2><p><img src="/img/postpictures/vhuisdvhuifbisdncoijeidoiehhufo.jpg" alt="项目主体架构"><br><img src="/img/postpictures/fddfgfgjuykiulfykufhntr.png" alt="业务逻辑层"><br><img src="/img/postpictures/sdvsbgtryjukijhgfdefrgthy.png" alt="数据交换层"><br><img src="/img/postpictures/xngfgdfhsrthnjghmk.png" alt="细碎模块部分"></p><p>这几个模块设计也是第二版的，由于中途需求改动，改动了一些模块的实现方式，可能会有一些细节没有更新到，导致最终程序可能和本项目规划图可能有一些细微差别。</p><h2 id="c-后端部分"><a href="#c-后端部分" class="headerlink" title="c++后端部分"></a>c++后端部分</h2><p><img src="/img/postpictures/dfsgtrshyrdjhsryghtrsyhgr.png" alt="c++模块的主要文件结构"></p><p>c++模块实际上没什么好说的，就是 把设计框架呢堆东西使用程序语言实现即可，小项目，逻辑简单，也没什么卡住的地方。唯一卡的地方可能就是前期设计时思考的不全面的问题导致中期开发时得额外加东西，比如信息流部分实际上是在写代码时才逐渐完善的，这样子搞在团队协作时可能会造成一定的冲突，因此还是主要在前期规划时要规划好。<br>大概是每完成一个小模块就测试一下，然后最后也没什么大bug，这是个好习惯。</p><h2 id="python前端部分"><a href="#python前端部分" class="headerlink" title="python前端部分"></a>python前端部分</h2><p>py的部分比较繁杂，最开始确定使用EXbutton实际上是嫖了csdn上<a href="https://blog.csdn.net/RCHT1_Hideonbush/article/details/119520839">这位</a>的框架，觉得蛮不错的就开始学tkinter，（最终实现的效果实际上就能看出这个框架的影子）。<br>python阶段的开发实际上是比较艰难的时刻，因为在学新的东西，并且py本来就不怎么适合写界面（本来是想学QT的但是被pass了<del>寄</del>）。因此写的比较混乱并且也没怎么好好规划（字体，ico，其他图片都放在一个文件夹里）。<br>所用到的库有：</p><pre><code>PILrandompathlibostkinterttkbootstrapmysqlmatplotlibwordcloudjiebaimageio</code></pre><p>可能还会有些边边角角的没有统计上，具体的可以在我的源码里看。</p><h3 id="项目结果"><a href="#项目结果" class="headerlink" title="项目结果"></a>项目结果</h3><p>我将c++后端的部分编译成了可执行文件供python调用<br>直接点击main.py即可打开主界面<br><img src="/img/postpictures/adsfdsgdhjyjytdjyg.png" alt="主界面"><br>主界面就链接了整个数据库，可以直接查询数据库中的信息<br><img src="/img/postpictures/sdgrfjukiuylhfdgh.png" alt="主界面查询"><br>当然，也支持多种方式查询，比如范围查询，时间日期类型数据查询等。<br><img src="/img/postpictures/dsafghtmjuyfrehgragw.png" alt="多种方式查询"><br>标签选择界面，一共是三个大标签类，每个标签类下有数个小标签类，每一个小标签类都有多个选项，可多选，使用标签选取数据的原则是：各个 小标签类里选择的并集 的交集部分<br><img src="/img/postpictures/safrshgtrjyghkyfufkerg.png" alt="比如这些数据就是来源地为（内蒙古或台湾或山东）同时用户等级为（VIP用户或普通用户或粉丝），用户年龄在（青年用户或中年用户）这一阶段的人。"><br>以上标签中的标签具体值是可以修改的，比如说少年标签设定的是0~18岁，我现在想要修改他的值为0~22岁。需要进入标签修改页面<br><img src="/img/postpictures/sdgfdhyjuylokdytusrtywer.png" alt="标签值修改页面"><br><img src="/img/postpictures/sdgfdhgtjykuyfrg.png" alt="具体值输入框"><br><img src="/img/postpictures/dfagtrhjytjerwtgefefew.png" alt="修改成功提示"><br>在右边小框内显示的用户编号双击后可以来道用户画像构建页面并自动建立用户画像<br>用词云图的方式呈现。<br><img src="/img/postpictures/safsdhtujyifywertewtfercvtuyrt.png" alt="词云图，我其实想尽力构建一个人像的形式，但是做的效果可能还是不太星（"><br>群体画像的话主要是选取了一些标签用图表的方式表现了出来<br>其中一些图表如下<br><img src="/img/postpictures/adfdhygkufdwetrwwrqer.png" alt="用户种类"><br><img src="/img/postpictures/asfjytiwetreyhtrhwyjnnbvw.png" alt="用户来源"><br>点击具体标签会在旁边一栏显示该标签所属人群<br>（他这数据好平均啊）</p><h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><h3 id="改进点"><a href="#改进点" class="headerlink" title="改进点"></a>改进点</h3><p>首先是词云图，应该是可以使用算法来使得构建更加智能<br>或者是完善构建方式，添加补全未知信息预测的功能<br>（对于不全的信息目前只是提示无法构建词云图，理想状态下应该是用一些分类模型来能根据原本的数据来预测的。）<br>还有就是图表的效果，由于tkinter并没有现成的图表样式，因此是自己用矩阵三角等形状元素构建的图表库，目前是只实现了样式，并没有相应的交互，理想状态应该是鼠标晃到上去可以显示相应的信息，一些逻辑处理以及显示信息的位置还做起来比较麻烦，因此目前还没有实现。</p><p>还有的是效率问题，目前每次调用数据均需要从数据库中读入，总信息量300w条，假如选取的标签所涉及的数据过多会产生较严重的延时问题。修改代码的时候也是找了一些解决方法但是用处不大。当然，也有可能是我刚学mysql，不是很熟悉其中的优化。<br>问了一下，实际工程中一般都会将数据直接预读入到内存里，数据量加大时一半加内存就行了，我应该是用不了这种方法了。</p><h3 id="学习到的东西"><a href="#学习到的东西" class="headerlink" title="学习到的东西"></a>学习到的东西</h3><p>项目开发经验，自学能力<br>完整的项目周期：做需求分析-构建xml图、类图、思维导图-程序代码实现-测试-交付<br>瀑布式开发流程-敏捷式开发流程<br>开发的具体知识：mysql python GUI工具 c++面向对象开发 一些语法糖<br>大概就是这样</p><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+    
+    
+    <categories>
+      
+      <category>工程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>大学</tag>
+      
+      <tag>项目工程</tag>
+      
+      <tag>MySQL</tag>
+      
+      <tag>数据库</tag>
+      
+      <tag>标签画像</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>信号与系统</title>
     <link href="/2022/04/12/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/"/>
     <url>/2022/04/12/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/</url>
@@ -343,6 +376,33 @@
       <tag>嵌入式</tag>
       
       <tag>Stm32</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>自省</title>
+    <link href="/2022/02/06/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/"/>
+    <url>/2022/02/06/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/</url>
+    
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="这个无趣之人的内心独白没什么好看的。" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="80c108cd856da2f1fac4fd6141d130ac657d4cd612403194559b7a604c516c60">4630436162ade97ba2718b7d0c4b3b630ef8b034c35893a7afa4c54a5752d90eba191a593f89497fdfca691efaf72d5caa0c664d8e7a85bd833fac72ade59ddbf66b4bdec75a2ed1e83f57bcb279b78c8202c7ce8d3eb34051070935a62ccbf9be563b576fcb19a6e4c095e03496f05d0fec5de7a8af18b78d977beffb6874da4670293f572d11dfa81b48ce6cd0448f0a018d399d177f54eb76d77c6c17f9c36f9f255c3de0f225f9e9c6b4f23d83fc3307cf9be8ef0d2bb8d0474ceec45d7300894f4b8f11650b44ad991ba7d432287010a42f3ec96b483ba310572d160928dd094abefb9b078942084e8bbd24290b74f1eef10b8113dac6d07578031fd04da14dc5c6bb9b5f8192f343df0bb5a433e298393acd8f902d4080f9dabafe607f3e82551dd8cacfa7aed59c82f8c5bc5674dfb4466198b1a9360bdcbe87a389711e3143638bddbf9e114afde404192b5859bd285721d9577a856612cb5ed712db5c0c466a729a84b53807c5ba8a1b8c0eff5b034e03f3444227da88f98e8a477c81cf3c813c93faed3e7a53cce06e4c9214dc6d4929743cd77815961293f882e2e223ed92a5dedb5addfe74bdcef20983fba9c647c196b2a8344ab8a735f3a155df142d999989ecbc5dccf8ff31a8db36218d159a2db8b75b3339af7326ad2bd6d9efcb5aa6079302724600662e73cd12fca4bb438b1e749b81f7f86928fca8b2f9820c548b0e9648c5557ffe039a6f66eadea0e43d0f05a6d94cdd3951110f3b1b3257d32b3098fcc1ec721239e556d4e113c54322bfe9388226b92032b38db0741777c3e7663189c809ba385db9cb7ad45596cb60b94d7c9b3ad5bd27237aebb11affb8a893d4d75a35e3ddc9a7f3cd36e2c4d544d738aae5b962b1c7a2a4fff51a120b865cd6a6d9abc79f1a67927d147e77fb71981a94586039b575bb4d9fa1f30953fa3191db4e985de92f11d7babc4b80d2f349fc925089d711e6e36b90b8a75743931425d5ff6da8f9dc47aae9ddebea18e047686e1a497af8cca1a3112537fd4df4fe0b62ee292f65c3080e8bb80702d0c775aa407434980fafffb01dd05b5e71cdcea94ce24c6b48929e8145658e3aa11248c688923919b7fdda4f79e9d6d6381102c4cc5cb407c382f202daa1e3481e1ec2d3d64c894b4f611ee15c90691fff14d1742aabad815e020b92613ab6e3779a94f6b504103729ec352787dc8411838708c915b6df16c20eea4a528bab3e1c829f6616ac042c40303397159e453b21d4b9a32129c2d9f118eccf3a9b832eee3b42ab456d7868464df970303ebe9bd4ccd40590383797b618c2a95e1e1889b5c723419eba76d40e0c6275639f446828927450b417085ef73cda6e50a08e16c4caaed8e2d557c7bbdf115a3080e6ff8ff09ede2776e38a7d0d6faa391f578118aa6f686fcef95c3155c2fb5dc8196a46e7df6131e62523aba6ff7d2407fdac9df7085f1a30df4c489b8af233fa9c94906a43f73529a9bf7396661de24ac7e97f696bc6948c02e7651d582c738d9b836701cce06302e19a2fe2d9b3966667914fe9b83128e39064d3893940490dd3586f7555d27ed9f5d706f84494b08332a67c1321c88645d5ed87335a4e89894dfbca7b68d4b705dbb33b3e3fc60f84c5be4ef6b5911b52977e95fa9eb468a5d7d4f0bc1cdc77dadcce1d541cc6fb4a6c8d47354086df31c4c4bf63c71b2122353f61ae7b5186c3c3278e1c405659fba605c09bf66e1e1ccadbcb659c188711460b3aa7a62292ac81bbcc882051a93639132c59319ae4249f8db24e34570ce06820325dfa59fb8e18384c9122701523010d0878f9d30ef0e0d1ec43d2bea9cd750698c18c007f596102c00d19e96f0d3fb707fe880eead83ec1626dac82bb19188e4c0634fde9c91c659fa787f42913a37545c9e0dce959c89ddd3fa18767a0c0a417174c54c1f42d472bb3ba2de26c7e884426f9732ac8fd4c7d874ae73033a217d4d324fda78d79222d5ff803ec49d83693654980d073229dc52954a5aff3d781bac82f32b96c867383a817f5e46f40cae5d7d920055b9f6c08236d5ac9ec8ef5d60c099bf55933e8f58d70f7c974606e3875f399ac29483597bde71ca15f7a0e58dfa869d1656d6a89d30a9b0ee4e48bcfa79f368f45757ac1999d4adec3cfc71c85758a2ba4ae777181f915b3f76081e126626f5797f066a3ae836a945d4ecdd991cdf5f801158b81f100e41d434f829ee6bb2e54216d4e5f3113f92b2653bfa8ebdc2a320d83bc5f0855d5cf28d6320f8b416a19fdaa4a472d17803e97f3bffd677d00dfd21fef1f0109e28f786434d6872e44b0963bb57b290929fcc5f098966aa73eb2636bd2faa6233474819fec8de837c9e34d60c6809dba53847353f86f90bef5a885c5dff6e802d245fb4b73cc81723116e47f35dd513bde95addb04fcd7ecb084c9c8e1cc42e20efe3d0d09446f8333ad72d27153313e3dd42a5af22f60b73f34cd171801d6aa0c53ee271158e2108c8e8e623f1180ca909473c0e28bcae7e8ab279f9298509590fed2f88f9d2abaadb99735ba1b2915f497d5b2e00b0ef13f24fe24b69773af54d4b3c708cd4dd92225eb75b00e8813188b97fe025a91cac490f356bbd91f5403199089d1f47fa48f4dfddf4ac027330cf64147022de8cf69b43975afe9ebed803399f10a0a2ecfded97e32ed4b929c2c35be09d62e6ddda0492acbae5e1de092b890a8ade4aeb252a1fe9a20ffafcb87bd75da573337ec394b449f8f277c300654db3114bf6172adc3298e8733de37ec898ac8025190f724f139a6cb584b5e6227b57da3d887340089b84e2f31128b8f2943c59ac604b6d2a3efd73e51b2aca2fbf187e653c5759fa6fea650665e749a41a672a38b6e9d007869ca8207b9b83d67a35ba648184e78cc8fa5ac1957b77fb0d23128a93620004684610b7e1006f828e37558e2a9c67d91dc4d867b7b91fbddd25c78f2a2070de36d016cde51c10408de2e5b61dd446bca7da026c0e75af06ac4b0c3bf7c26f79258e89f7142c6c143408864eb41a31e54b0a297c6a3d5df6df76c56540307e3dc697fc6968458d27799da39d368ee33fc918e3010c8ab0151f1d3968cc6b312c2b0d37f35b514c74a184f332080699dc8a8f26c86e1075e400176d770a3c34be6bc01bf1faa5db31c6a1a5116b425d0d1b07bc96da1fa81bc8d429078f5ce1ab96c775ba2d18ec226baacaf22c6a0676a523c54cb02e9044fc461559734fa035860107fd4c40c1a174aa5c87d3ae1e8e5deff3054b81c140b0b6decd5f0faedf438c12683325974651be60f2926f6f21525fa748960b3ee1840a47141626d44c3e508d32f58060c22032613a527051cd7d8d970afb4ecbcf231011b2e024a48d7ec34371dbefff30f54249a8fd5b6e8b42c769869eaba739b3151876c187e615d2b15bbd075a68d559c1d857203ffe1895714f6a921d1cadd3fb28232d9a1213a0360a40b7c89b9e00e309d339e48e60bbe179606fc4c6f7c682c9f792d6b467e8c47d7d91c29688205aec616b38ef1a6dbf17efc087ea7b6af03fdaa55d7ad0fc8bbbbf68fdeb860fc412a1bf9757e62b38526106d347c766de0e8273f93d95b665d1a47bb6452c6a91f28d3f00966d89c502e0320835c91d2a29c068b38a0f513029340dc6f5e9a0b715bcd3284d761a116af176fe0250679e44559545ec1095fe97179bd8144796f00ac14d01b16867955a73d62f9514f46bbffd473bdd3406c55e5d80fdb658eb49be22f0889c1de5a6050215f777f0d9f558bcd9392a0f7749a561af8e24eab72e68180fb15cabe20bcd9a2dde53da9bdfc65098112edb62de83e6b165299ff476e435d225a811b129e4e67de1e2f128ceef9ffac6e2777f94871558e8b24600d4b389954cbada3a28849ca9d26bf43ae60f7c4ae45b25b76188a95ad64e0d2f157eabb8761c1f19215649884a2b580d4cec52f478857e7975b47748ee98a8246d53fbc630b846064b58cc91b46222b38fcda593569d21e9c2679143af49f0dedb37b36f4b4588685f41bfecd234dadb975fc96caac152f6eea71071c25bb902becce3f2dbebd50618350f463e877c93b16c1081e487225b375030b406a9d0ef20b691648f464b9b8133ad9fc05feb05ab4da668873dd2c44b5faaeb7459f77a25f71d3d26053987ebe0a4e6d86590c96d9c57af69fa3851c4b8eb41d3d1dd7e6b01b4f17cd829719657b9744f81f3400c6055711e8358b4ff867c5a26f6b7a112576dd551234ca9c616fcecdd3d5db0716a9c04329f3266c170c2dd696f6964050b96bdc6ee98711f0fef3a60596bba3ffc06bdbdb58325d71978398863c7e69b32053ca2f5104e2f3bd5033e5b33216535b7771dcfc0cda47b27fe282d6254a5151ba9a1c79f6f935f509da5c5a848126069bdca1dd6b820471d6c117b60131ffb78747d8409a3958f30b14f4ff32282e87579a6ba45fe8572a6a83c9054a384a049d682245681a62a64438c4cee707a835c4d753b098d43bb81deeb8ed3fef16ff791b485e00ac591630f796c38414135c172d0a5c7fd423785a7f6e633e8c1165d9a2bca949f329379074ebb7861f7cc2119c2d7b282e49561aaba7d3de490565a7ff6f50178bc71c9232df8355309e49b370f83f77ada0ceaec7f2d579dcdd916fe03cf424749be9d5c9101ce4868fb5fcbf6ffbf0806205a69f02677e5ff815a24d842b722ba0e3da366bfa7785a83c39d3f1cf3f3fbc11882aa4e1e8cb9a12e12a68e908f9d1d584d68606f294c646c7d30354e52f09e6e82e4b4a387c134824b663b7005b812a130ac612e45c00fc69298d83a2aaa216e6961f108c62942b7489382ebf1f9389f2f143c632fb4564478feffa791921f077dbb3accb5d8913dafbf2915f99609c2769bd0ece</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这是一篇自省</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随笔</tag>
+      
+      <tag>在人间</tag>
       
     </tags>
     
@@ -1451,6 +1511,33 @@
   
   
   <entry>
+    <title>堕落</title>
+    <link href="/2021/03/03/%E5%A0%95%E8%90%BD/"/>
+    <url>/2021/03/03/%E5%A0%95%E8%90%BD/</url>
+    
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="此页只开放给真正的林泽音" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="7c2e2639cfdab949688baebe0f99ba375a4e737a670ee0e6474948439f82fc75">e25daf7966051531abfa76b67c57c998782c91656a729bd8a4719f92273b136121793718f3df835a43897ca872da4075250b9c0ebb5fc42090a455ee4a8826baadb39e3e57bdabb0d7f8339e1849e9bb45cf01501b292af54292392be3b6eb1d20368bc89f3d83ec6aae5d6bea0e287e247fd833936911479184baf8236370077b34b5b94bd7f41aa1ddfb8aa1c52bfc005c6904dc1fdd7ffe571578527c3b112a1c7a3155523c01336b8681d2701d789f58b63c67725832920e1b34930a0047d78d2e56f73ea25427d291b6867aeb9d7d76986268066775217a36924418d0a775aec29129b1ab0bd47df8ace3e88b504f87108b2d250c1dd905b3a2411cd5990aa35ce21a463604cfd87d0561e89a33f1f9c1e09714f73d3606778323afbdd1245ff2846e88bba9bcd29f7f22e83a2c1fc7174999c2a365208f74ec6c85e67993bb0d9117d901d78ca82a585357f89f8feba47572e11c5af95b38bf3f9655cbcd75a50d1049a2946e77c40494d0b4e1d49aed9e29314e5e5c01b1cc8b30c97b62a77f4d469a3c646234644d4a529533ab62619ef2ecff9f4ec5af0362f0b9bbfc4e43529765acf95eaf63be1c02d10bee8143a4dc2f00963fe108da4bb45e747324bf68ed8b8a561e5586d9af58b699de139115a49ede4e758f9ad6579943e4b61e91c25b378e1f17c720222e0e035070f75378ffc77f523cb78d68b0557df99bdfb71d1f710090873d382feb9944533c873d72d3f1b99fbc7999b1f93f475b28ec016625cd30bac87061cbaf90247aa569cf24fa321aa361e971e4cf4f500fe307f8c1238497ed98374aef478385187d264c0eb2957414e04dd19e5f78abcbbd38d50d11d595404081b28dbfc95dd3a229aff72cb13097c9c60d41aee91599a0a3193048e5068365d19319b358202dbe4bf4dbeb82a0142365608cb3619655afed8c34b8dfad7b20f9bfda4ca680dfdda12c0cbd17a40e60f95ffd059492687390bef1269592df7b5928967bd049a2bb7f8489280e4304179fc6fc81236320cd7d2bfba32aa7c40d7251fd137a0b969eb9fa24caf4c326b44896f3886b0f90ed106499d9b8e986d772912dea1d08ed8b63aa92a41e1c43a0af0ca844d67b0f0ac38013545889858e44eefce139845fed9b6b62d910fad06a060b9d0908a9959db7af1b822db0892bc991e62e38968a8b23f1d3b54d45edada1dfc63f61a8c003978685871a177251e3716123d6fb2146e5da548be97978e196c5ea224c2b6b0e7bbf9bcc9b99adf03e9d69c4e4478ecb46218c51806ac2bc9586dccd58a51faeaffd1aab2230257f2312b24c0ee9bafcc0439ca737f5647f092f8fe7de1215c4b7c9680e8c2e67cc3e50bb419d0244dc262e24a5e54265fd87ff7826ea7915afaa7397f6864d2c8eabe083c4c4484d7fec2f0fda25affa2d858ce2657175b11abec9456c47005a8f6a283bdba6607e60e27f5d03f7733e976c12435c82652a15560de4ccdbfd4fb3529c03928b45ce8ec3171d2eb941c6cf4d047a82a38e3757a78fb973edeb8563f028b06760a3236c0485ca111e342677081ffaafa597f77c9ffc3504cf3d0b0d7aed74620b094b214f1ec6556ea3245252e69490c2c0196c15802c0b419fdae6c9334f6a4d20001e01ec7d69744e7f5cf56ac906848213321715629ea97f9bce4d2fa8beecbd643e29f3513d8fb8012adb9045d0c2fa07c299a758ac7959adf7930c1145be8c7cc1e0ef14a65091da87f96591bd72abeac9a8bafec9b88abe3a6368c158e88ddf626f82024b43d41daee687bb05ae9422761d0ea6a5089a450243498c4cfed0ea7e5ab3ae2c5d55f143479a90dafcdaa23b52be42429f4511f1046f362082598f18f43861cdfb69cdafbf68a767f2334d62bc807569aca7247456bf31650c02e400499c0fa6d923b408eb50db33dd23ca808c35e51efecd514dea52388e6342b54a9935d97c66b64ca5ffc178ae8243b949de587c21013dd716993f27c2c8a7d46174e5238460250b4674b30671c1f798f4d44dfc492bbfd9d60886c6f21d91f1d9fbc8c3d7a75085283d579ff41f3c86319067dc2a047bc78115438db77d0f629b3a602b4828d195514a818660c7e17149220fda448d846a43d80d4e9e751e91b222b01cf7581002a277d3b671c83818ca71c49895502650800e679b74b840b9495fc232ea27abee13eb9e9229358cc039cb27f2f77a69f719e33a7171d80446bbf70afdb2dac65bc8a52c882eed14bdf9a52d1255a4ce0e4d2703db7b2253562f9c04e6a9649b2dfd70f1dea2f19376f3e7aa8110048b241c13ee550e0a1a7f08293b24c552985e15de4ca835dfccfaf7a52ff92121a61ddfa66abfc879fe63531947245e304cfca32a5e50cf0aca4da5a0cf4e331003fe5a71d51ed9859ae9770056a9743a7585ea76f49ab88cec752b8e9f96bfacef5bce3425145411bb4222d2bf198c19e338c66b46e421417dc227d726ce2134c0b25652c3e0cffe47656a4a6e645e54d7c72fabb97738c00d2b6972f4af828eadd71e304e10d7044d5406e24a879dca9585e2263add72159a34ece1961e18adcd76e03813a3e6e3e6d2778351a3c4890e7e5af4058461e035b37202d69971c4e021a3be502f94d00354a855b93dbfbfb77dd1ccf020c77d72194e3b606f75f3423f7872037a1d490fc59e3d7cfb69969b34500adf8e55fdf4dbc90005b8340451ab58567df08700d9221c643a71c7b6a9c5e8eb9ea0b7add44250d8d49ef5ef4a519a8515cfff0532424ba9bae45518cb9b9ef248eccd3feb141d7acc505bedee82ad6cf67fd0c363d1380fbf9348f07fe0766a61aae1da872d6c0a80013e868cc2639ea7cdeb36806b3d0ff7dc4edc5da1ba05b457ab268488c169d186eeadcd0872f9275128e3b7c6763b5939703dd8b492d4d1df544b2311fb86da49828c570d5cc74850cf32bcdbc7b514cd3c95642c53214d23bd4f8b77a67c29cdf77bc94626918729f0fe99f999ee2dc6d2b7491452d1a52832f6c22fab3b0afabf1b30c1591684fda66b4133ced6e01866fbcbba91fd507e8822e251312d5bdbc4bfa713e9faffdb439d2da5c4a2dcb2f2f57ddef3c99576c30c8a03c9ae7ec2d1daf3356f67e85c72ba486ce106009ac926f6c3eb3777c35ea8b81a7e6ec81db21d83958cef6326632f5a8846e155f5583c352628bd5b5dc961e7491530b92fedc572d178e60acc70d09127a05cd3683f3ade615e6afc596f17e9b3278082d305048256d63201e7a7a08009db7f2be781e477c0de658a3659020e64ab93e981844d59401c1405c2d4b3af65193fb8d79ae8a74e5378936b0f4847398f582962b8301ea7454fc65f3ca9630932fd0e69e549d72e6396f9b9fd04033f56ba22627cc17f7ea25c536d8bc6576becbd2bc5b23f49f7c80dd09b66dc6c8152e928bc779577170b487fcadeabb4070a4e87edcc5e3f9dd8df0d0b5cee70bc124c5d6320102faeb9252092b31449ea5cd1c977f413c0a529c89f5c1068201f6903dde7be7c48192da82efb18c23b9e8163a07c7750c1a29067961ad8f0ee933118c8de8e87d4903523ccd63807618db664cd8ca2d98096509e5003fc7dd4991f8ccb1e58039a5f6cbdc7a3ab14cfcfa61215afa7a6655dcfed7686a59c0f6f9e6b192f5a8dd3c4879df838374490eb5771a3d7649fb7b8c34e4b43dad2d826cc866ee81e754a447639ddfc4dcec9761b3161608a47310479988af8b4cef26070f083ad146b566ded7bf412a66d99b4e77f1427d723d94585475d07f3aee6b85d569f6cd7a68f13ab9c92a875bb7153bf60d239c33e67ea5b4e1b8e0d8dd74935912767ed614fef5392188fc828a0667d4b19226be063e00a3af03a7227c5670655a5aaa631e26941a564dfd33f382d5b19ef7161ed9a6b446f8af11ab26998952511e3524669df50c50de576987549325434acbb7a38dadb6566c423fcb95b51f5d12cf70191b3f8e36da4e99a450e22d25ef31b4e117f1dd3f76c822b9d777ceb396793f574be4e67a4c6873777358162ee58bd0d10be05d84f051f132f042dbe2b01063e06b05a0b4d5e8a695e9cc06d608f62f769039fbc9bbfd2b1f7072d0ae22905b352eb4a84bf74c18614f7911839d563d57dab8b3cc6fbf8acdabf2a49bfae6a0370bbf8fdf1011c75d9e5a8f6e017f171bab9a7f4951bfdbe39df002982c24fa64c8e322934e584aace96f221d09b5c53a2edc73bf5c424420e9fa2790a5e26f15613cd6d3fdae0d0af8d1f9835e67bc6e22385c513d62763ecde5fe5171419ef41f4a626c563108a8ca0f7e37a6cfd430d233f2ace072941200d6dffb9fbadd9c6bceefb45e44d74f4ac40aa7858e6d8f415266e64de018e18bbd391d81dcc424b797ab6ab951150217665155e9b8fe6f1bc835c0daf6649572c99604836aa51018483a8d074b5e2bb07d1676012e36f1228b8df6c6aa3d2712e0b683230de4d29d8fa5435c2e23344505d52dabbf0e98f327781c2989345a0e2e83b3553806ec172b0e9353ddcb12c55130680614d0ea424b3b6676bca87ce00207aff13098847dab887a71eec778ba5a512c66e01dd05237a39c176b78a3c6ac116a015ec29e8c07fa06f9b20436f274eb50c9c2f3665b31c3eb24929290903c1e2434ceb0008082faf52d312f327a0548ab1f38915c298edf37d20d7092e9b7784dae56c902320d66fab0091b64f28f19020d0040c96a69f918e8d3d2e99afc5a85e0cc67dc63a01d3ff4d5073720fcd3b36851a29f9618d904ffc869718407f7fb1a669ce7851dba5be8f732ec293f18db1e848e4e26995559af00a324aa9ed1e546f532b8b016b22cf42533df31efd0bf0e1d9c6b09d95cfc528073f0bad4a57990da96d0d9e44644d3efb163bbf50482af19feea9606d3b0e23b686f51092b6cd3006a52b2d3511f5510162126af495ec8273bb88d40f7e1ca20e1f32a69a72a8486ca60412a6c5b7ec6973af3fc3e0d4b198f951872c080c45564e9c19f40103e277ba1833263f75009e57969005951cbb78a6cb2a091fc3ffbbe0d7bf4a39a1eb90fd410fff01f9b82d5d8a990a7ed73e55561c47163833f6189b6a708c7219ba07c52726f86192b326acaa62fd06c17544da916fa242d149d70aadc50424e6e145e5cbb5b036f2fd619b2794d6a403de8d0db596d003800727903af42d71807d62668988b4c90eff91452cba99ad7b2362d334ae78373aab87999eb814a8481062f588e57fd7299c97e0eae11cb27a676e6eb60efe0f3fed76ed6d2077c9ed952f3dd30f762f844375633013e6fab665248dc0a368b7c0b6939ba9f023b646d63702b4a670fcbe81b7a74bea17b034b75071585182b99febf35bdfe033d70ebcf16f44e35510a5a978f4b5d8c0ed60dfda56f4c621170b9bacaa23cacd14af8a756e3e0b013a4346ab5d5190cf084e7d61d9a630943f85e2c1e9064b197eb0c096192a39ab055d340b87d3f8b38e37a1252fc1578de54d50a42dc6c8b96b09fda9967c6a35c58ef4b495cf161eda2e8e23de51f3008c63165e961423baa1a1548834897c94501f50075c053d1c8974acc5d187fe39eaf9339581d8cd7aa416c24f926c74bae3a2d4f2c38b9975b3891f3d57f41c1ca5df7236ffdd78fd153852a9baa7f06a51222d4d505a1ae38d0e8a6bc665bf4d4804f3a6ffff0dd432ce3db8f42f7ed72d6361d9b819c9c11eccbb9ecb1c8b4842353684f54106</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">我的希望</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随笔</tag>
+      
+      <tag>加密</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>一些细碎的知识点补充</title>
     <link href="/2021/03/01/%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/"/>
     <url>/2021/03/01/%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85/</url>
@@ -1559,6 +1646,33 @@
       <tag>acm</tag>
       
       <tag>testfile</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>圣诞节小故事</title>
+    <link href="/2020/12/21/%E5%9C%A3%E8%AF%9E%E8%8A%82%E5%B0%8F%E6%95%85%E4%BA%8B/"/>
+    <url>/2020/12/21/%E5%9C%A3%E8%AF%9E%E8%8A%82%E5%B0%8F%E6%95%85%E4%BA%8B/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>天冷极了，下着雪，又快黑了。这是一年的最后一天—大年夜，在这又冷又黑的晚上，一个乖巧的小女孩儿，赤着脚在街上走着，她的鞋是妈妈穿的，一只丢了，还有一只被一个小男孩抢走了说要给未来的孩子当摇篮。</p><p>小女孩一根火柴也没有卖出去，她又冷又饿，她不敢两手空空回家，她的父亲一定会动手打她的，别人窗子里透出的光那么温暖，闻着烧鹅的香味，小女孩伸出来几乎要冻僵的手 划了一根火柴—— 她太想暖和暖和了。</p><p>火柴的火焰转瞬即逝，正当小女孩要划第二根火柴时，一个白胡子的红衣老头出现在了她的面前，他的模样和善，两腮上的红色像是喝醉了酒一样，小女孩想起了那个妈妈讲过的传说。</p><p>“您，您就是来送礼物的圣诞老人吗？”</p><p>那老人闻言 笑了笑，慈爱地看着小女孩：“是啊，也许我就是圣诞老人，流落街头的可怜儿，你连个住的地方都没有，怎么许愿自己想要的礼物呢？ 你看到这栋高楼嘛？我要给门卫的孩子送去一本作业的答案，要去给中间楼层的孩子送去他想要的高级钢笔，给顶楼的孩子送去一家店铺，但是预备好给你的礼物。”</p><p>“就因为我没有钱去买圣诞树，买礼物卡片，所以我没有许愿的能力。”小女孩苦涩地说道  “我还得更努力地赚钱，对吗？”</p><p>“你是个孩子，你本来应该在明亮的教室好好学习，在温暖的家里和其他人一样度过美好的圣诞节，你的父亲因为被朋友们欺骗破产而酗酒 你的母亲为了生计奔波过劳死在了商铺却无人问津，连你这个孩子都要出来卖火柴为生，一个人的失败让一个家庭万劫不复，多么荒诞的事。”</p><p>“我该怎么做呢。”</p><p>“孩子，在那之前，我只能说要多想。”</p><p>女孩沉默着，她再次认真看了眼老人。</p><p>“你不是那位圣诞老人，对吗。”</p><p>“我？我当然不是，我只是一个红色的幽灵，你愿意接受幽灵的礼物吗？我将我的思想送给你，枪炮会生锈，而思想会一直流传着，只要存在着不公，我就永远在世间游荡着。”</p><pre><code>起来 饥寒交迫的奴隶起来 全世界受苦的人满腔的热血已经沸腾 要为真理而斗争旧世界打个落花流水 奴隶们起来 起来不要说我们一无所有 我们要做天下的主人这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现从来就没有什麽救世主 也不靠神仙皇帝要创造人类的幸福 全靠我们自己我们要夺回劳动果实 让思想冲破牢笼快把那炉火烧得通红 趁热打铁才能成功这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现最可恨那些毒蛇猛兽吃尽了我们的血肉一旦把他们消灭干净鲜红的太阳照遍全球这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现这是最后的斗争团结起来到明天英特纳雄耐尔就一定要实现英特纳雄耐尔就一定要实现</code></pre><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">]]></content>
+    
+    
+    <categories>
+      
+      <category>在人间</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随笔</tag>
+      
+      <tag>在人间</tag>
       
     </tags>
     
