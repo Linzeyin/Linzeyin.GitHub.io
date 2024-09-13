@@ -265,7 +265,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      577 字
+      469 字
     </span>
   
 
@@ -275,7 +275,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      4
        分钟
     </span>
   
@@ -317,14 +317,14 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2024年9月13日 早上
+                  本文最后更新于：2024年9月13日 上午
                 
               </p>
             
             <div class="markdown-body">
               <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>我所属的是测试中心的效能组，因此这个项目主要是为了提升测试人员的测试效率。<br>测试人员需要向模拟系统里下单来进行系统测试，他们的需求主要是：可以完成多个交易员的并发下单，可以有一定的随机量，至少可以支持限价订单，市价订单，组合订单，询价，应价单的下单，可以根据某些规则进行下单，比如说合约和交易员的约束，合约和客户的约束，下单频率的约束，下单时间的约束，下单数目的约束等，但是输入的规则不能过于繁琐，不能要求输入一大堆东西。这是最基础的下单的要求，测试人员可能还会像构建一些成交，构建一些持仓，这些都是要输入规则简单并且要支持多个规则约束的<br><del>难绷</del><br>也就是要满足最大可能的简便情况下要尽可能地满足测试人员的需求。同时由于和实际工作链接紧密，还需要学习交易所系统API的用法以及金融期货的相关知识。<br>由于要求每个交易员并发式下单，也涉及到c++多线程编程的相关知识，也学要学习一下。<br>大概就是这样。</p>
-<h2 id="项目第一版"><a href="#项目第一版" class="headerlink" title="项目第一版"></a>项目第一版</h2><h3 id="前置知识学习"><a href="#前置知识学习" class="headerlink" title="前置知识学习"></a>前置知识学习</h3><p>在项目开始的前几天，由于对业务流程还是不太熟悉所以leader发了一些资料以及API的库文件让我进行学习测试，具体学习了期货下单的相关知识，一些相关术语，翻查了一些API文档以及使用API进行了简单的下单以及信息查阅。同时也学习了多线程的一些简单知识，写了API所需要的回调函数。</p>
-<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>前置知识学习完后进行详细的需求分析。刚开始接触的时候对业务理解不是很深刻，所以一开始对需求进行的分析有一些简易，第一版设计只是考虑了基础的构建订单以及多线程发送订单的需求。</p>
+<h2 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h2><p>好像一些类图什么的不方便放出来，只能本地记录一下了。</p>
+<h2 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h2><p>收获还是蛮大的，领导哥也教了工程开发常用的设计模式，自己也试着维护了一个项目，并且认识到了自己的问题：关于类图的规划格式、代码格式、项目文件规划的不是很好。大概就是这样。</p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
             </div>
             <hr>
